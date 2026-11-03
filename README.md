@@ -86,4 +86,8 @@ GraviTas/
 - 每个问题档案头部有 YAML front-matter：`id / title / cluster / difficulty(1–5) / status / prereq / updated`。
 - 状态词表：`open`（未解决）、`candidate`（有强候选答案）、`contested`（多个方案竞争）、`settled`（已解决，可当背景）。
 - 笔记编号 `N###`，日志按日期 `YYYY-MM-DD.md`。
-- 代理协作规则见 [AGENTS.md](AGENTS.md)；提交前跑一次 `python3 scripts/check_repo.py`。
+- AI 代理协作规则见 [AGENTS.md](AGENTS.md)；提交前跑一次 `python3 scripts/check_repo.py`。
+
+## 许可证
+
+[MIT](LICENSE) © 2026 chaoskey
