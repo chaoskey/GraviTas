@@ -46,6 +46,7 @@
 ```
 GraviTas/
 ├── README.md                  # 你在读的东西：项目宣言与导航
+├── AGENTS.md                  # 给 AI 代理的维护契约（人类可跳过）
 ├── ROADMAP.md                 # 分阶段路线、时间预算、通关标准（gate）
 ├── problems/                  # 核心：每个前沿问题一个档案
 │   ├── README.md              #   索引表 + 依赖图 + 推荐顺序
@@ -85,4 +86,4 @@ GraviTas/
 - 每个问题档案头部有 YAML front-matter：`id / title / cluster / difficulty(1–5) / status / prereq / updated`。
 - 状态词表：`open`（未解决）、`candidate`（有强候选答案）、`contested`（多个方案竞争）、`settled`（已解决，可当背景）。
 - 笔记编号 `N###`，日志按日期 `YYYY-MM-DD.md`。
-- 提交前跑一次 `python3 scripts/check_repo.py`。
+- 代理协作规则见 [AGENTS.md](AGENTS.md)；提交前跑一次 `python3 scripts/check_repo.py`。
