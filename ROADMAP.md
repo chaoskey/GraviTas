@@ -28,13 +28,13 @@
 | 3 | ADM 分解、Hamiltonian 约束、Wald 熵公式 | 用 Wald 公式算 Schwarzschild 与 Kerr 的熵 |
 | 4–5 | 弯曲时空量子场论：Bogoliubov 变换、Unruh 效应、Hawking 辐射 | 从零推 Unruh 温度（两种方法） |
 | 6 | 黑洞热力学四定律；欧氏引力的路径积分 | 用欧氏周期法算 Hawking 温度（见 [N001](notes/N001-hawking-temperature.md)） |
-| 7 | 纠缠熵：定义、 replica trick、2D CFT 的结果 | 推 2D CFT 真空纠缠熵 `S = (c/3) log(ℓ/ε)` |
+| 7 | 纠缠熵：定义、 replica trick、2D CFT 的结果 | 推 2D CFT 真空纠缠熵 $S = \frac{c}{3}\log(\ell/\varepsilon)$ |
 | 8 | 缓冲 + 补漏 | 阶段复盘 |
 
 **通关标准 G0**
-- [ ] 能不看笔记，用欧氏周期法 + 表面重力法各推一次 `T_H = 1/(8πGM)`
+- [ ] 能不看笔记，用欧氏周期法 + 表面重力法各推一次 $T_{\mathrm{H}} = \frac{1}{8\pi G M}$
 - [ ] 能用 Wald 公式解释为什么熵是视界面积的函数
-- [ ] 能写出 2D CFT 单区间纠缠熵，并说明 `c` 从哪里来
+- [ ] 能写出 2D CFT 单区间纠缠熵，并说明 $c$ 从哪里来
 - [ ] 能画出 Schwarzschild 的 Penrose 图，并标出四个区域
 
 ---
@@ -51,13 +51,13 @@
 | 27–28 | 综合 | 写一份 3000 字的"信息悖论当代地图" |
 
 **通关标准 G1**（在 AdS₃/CFT₂ 里把两边算对上）
-- [ ] 用 RT 公式算 BTZ 黑洞背景下单区间纠缠熵，得到 `S = (c/3) log(ℓ/ε)`
+- [ ] 用 RT 公式算 BTZ 黑洞背景下单区间纠缠熵，得到 $S = \frac{c}{3}\log(\ell/\varepsilon)$
 - [ ] 说明为什么 RT 面必须取"极小"而不是"任意"
-- [ ] 推导 Ryu–Takayanagi 在大 N 极限下为什么是 `A/4G`
+- [ ] 推导 Ryu–Takayanagi 在大 N 极限下为什么是 $A/4G$
 
 **通关标准 G2**（信息悖论）
 - [ ] 用三句话讲清 AMPS 的三难（等价原理 / 幺正性 / 视界外无火墙）
-- [ ] 写出岛屿公式 `S = min ext [A/4G + S_bulk]`，并说明它如何给出 Page 曲线
+- [ ] 写出岛屿公式 $S = \min\operatorname{ext}\left[A/4G + S_{\mathrm{bulk}}\right]$，并说明它如何给出 Page 曲线
 - [ ] 说明"复制虫洞"求和解决了什么、又留下了什么未解
 
 ---

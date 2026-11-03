@@ -17,9 +17,9 @@ updated: 2026-11-03
 
 半经典引力假设引力是经典的，由量子物质的**期望值**源：
 
-```
-G_{μν} = 8πG ⟨T_{μν}⟩
-```
+$$
+G_{\mu\nu} = 8\pi G \langle T_{\mu\nu} \rangle
+$$
 
 这个方程在概念上很别扭（"期望值"不是可观测量），而且早就有论证指出它不自洽
 （Eppley–Hannah 1977；Page–Geilker 1981 的实验性讨论）。
@@ -55,12 +55,12 @@ BMV 提议（Bose et al. 2017；Marletto–Vedral 2017）的逻辑极其干净�
 | 2014 | Moreva et al.：从纠缠中"造出"时间（实验） |
 | 2017 | Bose et al.；Marletto–Vedral：BMV 方案 |
 | 2020 | Marshman et al.：桌面检验线性化引力的量子性 |
-| 2021–25 | 悬浮光力学：`10⁻¹⁴ kg` 量级的叠加态逼近 BMV 参数 |
+| 2021–25 | 悬浮光力学：$10^{-14}\,\mathrm{kg}$ 量级的叠加态逼近 BMV 参数 |
 
 ## 4. 当代状态（2025）
 
 **实验尚未实现**。BMV 需要的参数大致是：
-质量 `~10⁻¹⁴ kg`，空间分离 `~10² μm`，相干时间 `~1 s`，真空 `~10⁻¹⁰ mbar`。
+质量 ${\sim}10^{-14}\,\mathrm{kg}$，空间分离 ${\sim}10^{2}\,\mu\mathrm{m}$，相干时间 ${\sim}1\,\mathrm{s}$，真空 ${\sim}10^{-10}\,\mathrm{mbar}$。
 
 悬浮光力学（levitated optomechanics）在 2020 年代进展最快，
 但"宏观叠加 + 长相干时间 + 低噪声"三者仍然不能同时满足。
@@ -74,28 +74,28 @@ BMV 提议（Bose et al. 2017；Marletto–Vedral 2017）的逻辑极其干净�
 
 **半经典方程**
 
-```
-G_{μν} = 8πG ⟨T_{μν}⟩
-```
+$$
+G_{\mu\nu} = 8\pi G \langle T_{\mu\nu} \rangle
+$$
 
-**BMV 的纠缠条件**：两个质量 `m`、间距 `d`、相干时间 `τ`，
+**BMV 的纠缠条件**：两个质量 $m$、间距 $d$、相干时间 $\tau$，
 
-```
-τ ≳ ħ d / (G m²)
-```
+$$
+\tau \gtrsim \frac{\hbar d}{G m^{2}}
+$$
 
-代入 `m = 10⁻¹⁴ kg`、`d = 250 μm`，得到 `τ ~ 1 s` 量级。
+代入 $m = 10^{-14}\,\mathrm{kg}$、$d = 250\,\mu\mathrm{m}$，得到 $\tau \sim 1\,\mathrm{s}$ 量级。
 
 **Diósi–Penrose 坍缩时间**
 
-```
-τ_DP ~ ħ / E_G ,    E_G ~ G m² / R
-```
+$$
+\tau_{\mathrm{DP}} \sim \frac{\hbar}{E_{G}}, \qquad E_{G} \sim \frac{G m^{2}}{R}
+$$
 
-对 `m = 10⁻¹⁴ kg`、`R = 10⁻⁶ m`，`τ_DP` 远大于实验时间——这也是为什么它还没被排除。
+对 $m = 10^{-14}\,\mathrm{kg}$、$R = 10^{-6}\,\mathrm{m}$，$\tau_{\mathrm{DP}}$ 远大于实验时间——这也是为什么它还没被排除。
 
-**引力退相干**（Blencowe 2013）：时空涨落导致相干性按 `exp(−t/τ)` 衰减，
-`τ` 依赖质量与分离，是 BMV 实验的"背景噪声"。
+**引力退相干**（Blencowe 2013）：时空涨落导致相干性按 $\exp(-t/\tau)$ 衰减，
+$\tau$ 依赖质量与分离，是 BMV 实验的"背景噪声"。
 
 ## 6. 必读文献
 

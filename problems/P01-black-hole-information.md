@@ -43,7 +43,7 @@ updated: 2026-11-03
 | 年 | 事件 |
 |---|---|
 | 1973 | Bekenstein：黑洞熵正比于面积 |
-| 1974–75 | Hawking：黑洞辐射，温度 `T = κ/2π`，谱是热的 |
+| 1974–75 | Hawking：黑洞辐射，温度 $T = \kappa/(2\pi)$，谱是热的 |
 | 1976 | Hawking：断言信息在蒸发中丢失，量子力学需修改 |
 | 1980s–90s | 't Hooft、Susskind：全息原理；信息存储在视界上 |
 | 1993 | Page：若幺正，辐射熵先升后降（Page 曲线） |
@@ -58,7 +58,7 @@ updated: 2026-11-03
 ## 4. 当代状态（2025）
 
 **已经取得的**：在 AdS/CFT 与低维引力（JT gravity）中，引力路径积分对几何求和后，
-确实给出 Page 曲线；岛屿公式 `S = min ext [A/4G + S_bulk]` 可以从复制虫洞推导出来。
+确实给出 Page 曲线；岛屿公式 $S = \min \mathrm{ext}\,[A/4G + S_{\mathrm{bulk}}]$ 可以从复制虫洞推导出来。
 这被认为是"信息确实守恒"的强证据。
 
 **还没有的**：
@@ -73,27 +73,27 @@ updated: 2026-11-03
 
 **Bekenstein–Hawking 熵**
 
-```
-S_BH = A / (4 G ħ)
-```
+$$
+S_{\mathrm{BH}} = \frac{A}{4G\hbar}
+$$
 
 **Hawking 温度**
 
-```
-T_H = ħ c³ / (8 π G M k_B)     （Schwarzschild）
-```
+$$
+T_{\mathrm{H}} = \frac{\hbar c^3}{8\pi G M k_{\mathrm{B}}} \quad (\text{Schwarzschild})
+$$
 
 **Page 曲线**：若演化幺正，辐射熵满足
-`S_rad(t)` 先随蒸发上升，在 Page time（约蒸发一半时）达到最大，然后对称下降回 0。
+$S_{\mathrm{rad}}(t)$ 先随蒸发上升，在 Page time（约蒸发一半时）达到最大，然后对称下降回 0。
 
 **岛屿公式**（量子 extremal surface）
 
-```
-S(R) = min_{I} ext_{∂I} [ A(∂I)/(4G) + S_bulk(I ∪ R) ]
-```
+$$
+S(R) = \min_{I} \mathrm{ext}_{\partial I}\left[ \frac{A(\partial I)}{4G} + S_{\mathrm{bulk}}(I \cup R) \right]
+$$
 
-其中 `R` 是辐射区域，`I` 是"岛屿"区域（黑洞内部的一部分），`A` 是岛的边界面积。
-早期没有岛（`I = ∅`），熵上升；Page time 之后岛出现，面积项主导，熵下降。
+其中 $R$ 是辐射区域，$I$ 是"岛屿"区域（黑洞内部的一部分），$A$ 是岛的边界面积。
+早期没有岛（$I = \varnothing$），熵上升；Page time 之后岛出现，面积项主导，熵下降。
 
 ## 6. 必读文献
 
@@ -111,7 +111,7 @@ S(R) = min_{I} ext_{∂I} [ A(∂I)/(4G) + S_bulk(I ∪ R) ]
 ## 7. 进入路径
 
 **第 1 步（2 周）· 把 Hawking 计算做一遍**
-用欧氏周期法算 `T_H`，再用 Bogoliubov 系数法算一遍，对照。
+用欧氏周期法算 $T_{\mathrm{H}}$，再用 Bogoliubov 系数法算一遍，对照。
 参考：[N001](../notes/N001-hawking-temperature.md)。
 
 **第 2 步（2 周）· 理解 Page 曲线为什么是幺正性的判据**
@@ -120,14 +120,14 @@ S(R) = min_{I} ext_{∂I} [ A(∂I)/(4G) + S_bulk(I ∪ R) ]
 
 **第 3 步（4 周）· 读 AMPS 与岛屿公式**
 先读 AMPS 的引言（两页），写出三难；再读 2021 综述的第 1–3 节。
-目标：能用自己的话解释 `min ext` 里为什么有 `min`。
+目标：能用自己的话解释 $\min \mathrm{ext}$ 里为什么有 $\min$。
 
 ## 8. 自检问题
 
 1. 霍金辐射为什么是热的？如果辐射是热的，为什么这不直接证明信息丢失？
 2. Page 曲线的"下降"部分，物理上对应什么？
 3. AMPS 的三难具体是哪三个命题？为什么不能同时成立？
-4. 岛屿公式里，`min` 与 `ext` 分别对应什么物理要求？
+4. 岛屿公式里，$\min$ 与 $\mathrm{ext}$ 分别对应什么物理要求？
 5. 如果信息守恒，为什么我们**看不到**它？"重构"难在哪里？
 
 ## 9. 我的笔记

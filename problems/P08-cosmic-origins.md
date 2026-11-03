@@ -38,22 +38,22 @@ updated: 2026-11-03
 |---|---|
 | 1965 | Penrose：奇点定理 |
 | 1970 | Hawking–Penrose：宇宙学奇点定理 |
-| 1980 | Starobinsky：`R²` 暴胀 |
+| 1980 | Starobinsky：$R^2$ 暴胀 |
 | 1981 | Guth：旧暴胀；1982 Linde：新暴胀 / 混沌暴胀 |
 | 1981 | Mukhanov–Chibisov：暴胀扰动的量子起源 |
 | 1983 | Hartle–Hawking：无边界波函数 |
 | 1982 | Vilenkin：从"无"隧穿 |
-| 1990s | COBE 确认 `n_s ≈ 1` 的近标度不变谱 |
+| 1990s | COBE 确认 $n_s \approx 1$ 的近标度不变谱 |
 | 2001 | Martin–Brandenberger：trans-Planckian 问题系统化 |
 | 2006 | Ashtekar–Pawlowski–Singh：LQC 反弹 |
 | 2002 | Steinhardt–Turok：火劫模型 |
-| 2018 | Planck：`n_s = 0.9649 ± 0.0042`，`r < 0.036` |
+| 2018 | Planck：$n_s = 0.9649 \pm 0.0042$，$r < 0.036$ |
 | 2020s | 永恒暴胀的测度问题、swampland 对暴胀的约束、LiteBIRD 计划 |
 
 ## 4. 当代状态（2025）
 
-**观测已经把参数空间压得很窄**：`n_s` 略微红倾、`r` 很小。
-这排除了大量大场暴胀模型，也让"`r` 是不是恰好落在可探测边缘"成为关键问题。
+**观测已经把参数空间压得很窄**：$n_s$ 略微红倾、$r$ 很小。
+这排除了大量大场暴胀模型，也让"$r$ 是不是恰好落在可探测边缘"成为关键问题。
 
 **理论上的三个死结**：
 - **测度问题**：永恒暴胀产生无穷多个"口袋宇宙"，概率无法良定义。这是概念性的，不是技术性的。
@@ -62,30 +62,30 @@ updated: 2026-11-03
 
 ## 5. 核心概念与公式
 
-**慢滚参数**（`M_P² = 1/(8πG)`）
+**慢滚参数**（$M_{\mathrm{P}}^2 = \frac{1}{8\pi G}$）
 
-```
-ε = (M_P²/2)(V'/V)² ,    η = M_P² V''/V
-```
+$$
+\varepsilon = \frac{M_{\mathrm{P}}^2}{2}\left(\frac{V'}{V}\right)^2, \qquad \eta = M_{\mathrm{P}}^2\,\frac{V''}{V}
+$$
 
 **可观测量**
 
-```
-n_s − 1 = −6ε + 2η ,    r = 16ε
-```
+$$
+n_s - 1 = -6\varepsilon + 2\eta, \qquad r = 16\varepsilon
+$$
 
-观测：`n_s ≈ 0.965`，`r < 0.036` ⇒ `ε ≲ 0.002`，`η ≈ −0.02`。
+观测：$n_s \approx 0.965$，$r < 0.036$ $\Rightarrow$ $\varepsilon \lesssim 0.002$，$\eta \approx -0.02$。
 
 **无边界波函数**（Hartle–Hawking）
 
-```
-Ψ[h_ij] = ∫_{无边界} Dg e^{−S_E[g]}
-```
+$$
+\Psi[h_{ij}] = \int \mathcal{D}g\; e^{-S_E[g]}
+$$
 
-对 `S³` 边界上的 `h_ij`，对所有内部无边界紧致欧氏几何求和。
-结果：`Ψ ~ exp[ 1/(12πGΛ) ]`（在薄壁近似下）。
+对 $S^3$ 边界上的 $h_{ij}$，对所有内部无边界紧致欧氏几何求和。
+结果：$\Psi \sim \exp\left[\frac{1}{12\pi G\Lambda}\right]$（在薄壁近似下）。
 
-**LQC 反弹**：`H² = (8πG/3)ρ(1 − ρ/ρ_c)`，`ρ_c ~ ρ_Planck`。
+**LQC 反弹**：$H^2 = \frac{8\pi G}{3}\rho\left(1 - \frac{\rho}{\rho_c}\right)$，$\rho_c \sim \rho_{\mathrm{Planck}}$。
 
 ## 6. 必读文献
 
@@ -106,7 +106,7 @@ n_s − 1 = −6ε + 2η ,    r = 16ε
 只读 Penrose 1965 的陈述与证明思路。目标：说清"测地不完备"为什么是"理论失效"而非"物理奇点"。
 
 **第 2 步（3 周）· 暴胀的最小版本**
-单场慢滚：推 `n_s − 1 = −6ε + 2η`、`r = 16ε`。然后用 Planck 数据反推 `V` 的形状。
+单场慢滚：推 $n_s - 1 = -6\varepsilon + 2\eta$、$r = 16\varepsilon$。然后用 Planck 数据反推 $V$ 的形状。
 
 **第 3 步（3 周）· 两条量子引力路线**
 对比 Hartle–Hawking 与 LQC 反弹：它们对"奇点"的处理方式有何本质区别？哪一个更可检验？
@@ -117,7 +117,7 @@ n_s − 1 = −6ε + 2η ,    r = 16ε
 2. 暴胀真的解决了初始条件问题吗？还是把它推到了更早？
 3. Hartle–Hawking 波函数为什么"没有时间"？这与 P11 有什么联系？
 4. trans-Planckian 问题是一个技术问题，还是一个原则性问题？
-5. 如果 `r` 被 LiteBIRD 测到，能排除哪些量子引力方案？
+5. 如果 $r$ 被 LiteBIRD 测到，能排除哪些量子引力方案？
 
 ## 9. 我的笔记
 

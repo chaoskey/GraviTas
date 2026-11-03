@@ -34,7 +34,7 @@
 - 度规、联络、测地线、Riemann/Ricci/Einstein 张量；测地线偏离。
 - Einstein 方程的真空解：Schwarzschild、Kerr（至少会读）、FRW。
 - 坐标奇点 vs 曲率奇点；Kruskal 延拓；Penrose 图。
-- Killing 矢量、表面引力 `κ`、视界、事件视界 vs 表观视界。
+- Killing 矢量、表面引力 $\kappa$、视界、事件视界 vs 表观视界。
 - ADM 分解：lapse、shift、Hamiltonian 约束、动量约束。**这条是通往量子引力的门**。
 
 **够用就走**
@@ -54,9 +54,9 @@
 | Poisson, *A Relativist's Toolkit* | 视界、表面引力、奇点，工具书 |
 
 **自测（G0 级别）**
-1. 写出 Schwarzschild 的 `κ`，并说明为什么它和温度有关。
-2. 用 Killing 矢量写出 Kerr 的 `κ`。
-3. 画出 Schwarzschild 的 Penrose 图，标出 `r=2M`、`r=0`、`i±`、`i⁰`。
+1. 写出 Schwarzschild 的 $\kappa$，并说明为什么它和温度有关。
+2. 用 Killing 矢量写出 Kerr 的 $\kappa$。
+3. 画出 Schwarzschild 的 Penrose 图，标出 $r=2M$、$r=0$、$i^{\pm}$、$i^{0}$。
 4. ADM 质量怎么定义？为什么它是守恒量？
 
 ---
@@ -65,11 +65,11 @@
 
 **必须会**
 - 正则量子化、Fock 空间、产生/湮灭算符。
-- 路径积分；连通图生成泛函 `W[J]`；有效作用量 `Γ`。
-- 重整化：为什么引力不可重整（量纲论证：`[G] = -2`）。
+- 路径积分；连通图生成泛函 $W[J]$；有效作用量 $\Gamma$。
+- 重整化：为什么引力不可重整（量纲论证：$[G] = -2$）。
 - 规范理论、自发对称破缺、Higgs 机制（概念级）。
-- 共形场论基础：`T_{μν}`、Ward 恒等式、`c` 中心荷、OPE（至少会算自由场）。
-- 纠缠熵：定义、`S = -Tr ρ log ρ`、replica trick、面积律。
+- 共形场论基础：$T_{\mu\nu}$、Ward 恒等式、$c$ 中心荷、OPE（至少会算自由场）。
+- 纠缠熵：定义、$S = -\mathrm{Tr}\,\rho\log\rho$、replica trick、面积律。
 
 **够用就走**
 - 非阿贝尔规范场的完整量子化（BRST 等）。
@@ -86,8 +86,8 @@
 | Simmons-Duffin, *TASI Lectures on the Conformal Bootstrap* | CFT 的现代入口 |
 
 **自测**
-1. 为什么 `[G] = -2` 意味着引力不可重整？这个论证哪里可能失效？
-2. 写出 2D 自由玻色子的 `T(z)T(w)` OPE，读出 `c`。
+1. 为什么 $[G] = -2$ 意味着引力不可重整？这个论证哪里可能失效？
+2. 写出 2D 自由玻色子的 $T(z)T(w)$ OPE，读出 $c$。
 3. 用 replica trick 推 2D CFT 单区间纠缠熵。
 
 ---
@@ -95,16 +95,16 @@
 ## 3. 热力学与统计
 
 **必须会**
-- 四定律；`dM = T dS + Ω dJ + Φ dQ`（黑洞力学第一定律的同构）。
-- 配分函数、自由能、`S = -∂F/∂T`。
-- 欧氏路径积分与温度：`τ ~ τ + β`。
+- 四定律；$dM = T\,dS + \Omega\,dJ + \Phi\,dQ$（黑洞力学第一定律的同构）。
+- 配分函数、自由能、$S = -\partial F/\partial T$。
+- 欧氏路径积分与温度：$\tau \sim \tau + \beta$。
 
 **够用就走**
 - 相变、临界现象（做 AdS/CFT 的凝聚态应用时再补）。
 - 信息论：Shannon/von Neumann 熵、互信息、相对熵。
 
 **自测**
-1. 从 `dM = T dS + Ω dJ` 推出 Smarr 公式。
+1. 从 $dM = T\,dS + \Omega\,dJ$ 推出 Smarr 公式。
 2. 为什么欧氏时间必须是周期的？周期等于什么？
 
 ---
@@ -113,7 +113,7 @@
 
 **必须会**
 - 微分几何：流形、切丛、联络、曲率、纤维丛（概念级）。
-- 李群与李代数：`SL(2,C)`、`SU(2)`、`SO(3,1)` 及其表示。
+- 李群与李代数：$\mathrm{SL}(2,\mathbb{C})$、$\mathrm{SU}(2)$、$\mathrm{SO}(3,1)$ 及其表示。
 - 同调/同伦的**直觉**（不需要会算谱序列）。
 - 复分析：留数、共形映射。
 
@@ -152,10 +152,11 @@
 
 ## 7. 一页版（打印贴墙）
 
-```
-必须能推：Schwarzschild 的 κ / Unruh 温度 / Hawking 温度（两法）
-         / 2D CFT 纠缠熵 / RT 公式 / Bekenstein-Hawking 熵
-必须能讲：AMPS 三难 / 全息的三个版本 / 为什么引力不可重整
-必须能查：ADM 约束 / Wald 熵 / 岛屿公式 / dS 熵 / swampland
-可以不会：弦论完整形式 / LQG 完整形式 / 数值相对论
-```
+> **必须能推**：Schwarzschild 的 $\kappa$、Unruh 温度、Hawking 温度（两法）、
+> 2D CFT 纠缠熵、RT 公式、Bekenstein–Hawking 熵。
+>
+> **必须能讲**：AMPS 三难、全息的三个版本、为什么引力不可重整。
+>
+> **必须能查**：ADM 约束、Wald 熵、岛屿公式、dS 熵、swampland。
+>
+> **可以不会**：弦论完整形式、LQG 完整形式、数值相对论。

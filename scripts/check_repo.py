@@ -184,6 +184,66 @@ def check_links(report: Report, verbose: bool) -> None:
             print(f"  ok  {rel}")
 
 
+HARD_MATH = set("∫∑∏√∝≪≫∞∂∇²³½¼ħℓ")
+GREEK = set("αβγδεζηθικλμνξπρστυφχψωΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ")
+
+FENCE_RE = re.compile(r"```(\w*)\n(.*?)```", re.S)
+INLINE_CODE_RE = re.compile(r"`([^`\n]*)`")
+
+
+def looks_like_formula(text: str) -> bool:
+    """粗糙但有用的判据：含等号/希腊字母/上标，且不是命令行。"""
+    if "=" in text:
+        return True
+    if re.search(r"[\^]", text):
+        return True
+    return any(ch in GREEK for ch in text)
+
+
+def strip_math_and_code(text: str) -> str:
+    text = FENCE_RE.sub("", text)
+    text = INLINE_CODE_RE.sub("", text)
+    text = re.sub(r"\$\$.*?\$\$", "", text, flags=re.S)
+    text = re.sub(r"\$[^$\n]*\$", "", text)
+    return text
+
+
+def check_math(report: Report) -> None:
+    """公式必须用 LaTeX：不允许凑合写法（围栏块、行内代码、Unicode 符号）。"""
+    for path in iter_markdown():
+        rel = path.relative_to(ROOT)
+        text = path.read_text(encoding="utf-8")
+
+        bare = INLINE_CODE_RE.sub("", text)
+        if len(re.findall(r"(?<!\\)\$\$", bare)) % 2:
+            report.error(f"{rel}: 行间公式 $$...$$ 不配对")
+
+        for lineno, line in enumerate(bare.splitlines(), 1):
+            if line.strip().startswith("```"):
+                continue
+            if len(re.findall(r"(?<!\\)\$", line)) % 2:
+                report.error(f"{rel}:{lineno}: 行内 $ 不配对 -> {line.strip()[:50]}")
+
+        for lang, body in FENCE_RE.findall(text):
+            if lang or not looks_like_formula(body):
+                continue
+            snippet = body.strip().splitlines()[0][:50]
+            report.error(f"{rel}: 公式写在围栏代码块里，请改成 $$...$$ -> {snippet}")
+
+        for code in INLINE_CODE_RE.findall(text):
+            if not looks_like_formula(code):
+                continue
+            if any(ch in "|" for ch in code):
+                continue
+            report.error(f"{rel}: 公式写在行内代码里，请改成 $...$ -> {code[:50]}")
+
+        for lineno, line in enumerate(strip_math_and_code(text).splitlines(), 1):
+            bad = sorted({ch for ch in line if ch in HARD_MATH})
+            if bad:
+                report.error(f"{rel}:{lineno}: Unicode 数学符号 {' '.join(bad)} -> {line.strip()[:50]}")
+        report.ok()
+
+
 def main(argv: list[str]) -> int:
     verbose = "-v" in argv or "--verbose" in argv
     report = Report()
@@ -193,6 +253,7 @@ def main(argv: list[str]) -> int:
     ids = check_problems(report, verbose)
     check_index(report, ids)
     check_links(report, verbose)
+    check_math(report)
 
     print("-" * 48)
     print(f"问题档案: {len(ids)} 个   检查项: {report.checks}")
