@@ -50,6 +50,15 @@ $q$ 表象的定义就是"让 $\hat q$ 对角"。所以第 1 条不是可被实�
 所以严格陈述是：**广义本征矢存在，住在比 Hilbert 空间更大的核空间里，且不可归一化。** 看到 $\langle q\lvert q\rangle=\delta(0)$ 时不必惊慌，那是这个身份的直接后果。
 
 失效条件：$\hat q$ 不自伴（耗散、开放系统），或自由度无穷（量子场里场算子的谱是全实轴的纯连续谱，没有任何本征矢；"场构型"这个概念得靠别的办法重建，这正是场论里改走路径积分的动机之一）。
+$$
+\begin{align} \hat{q} &= \int q\, d{\color{red}{E}}(q)\qquad \text{谱定理, }E\text{ 是投影测度} \\ &= \int q\, {\color{red}{dq\, |q\rang \lang q|}}\qquad \text{投影测度换成本征矢 }\frac{dE}{dq}=|q\rang \lang q|\\ & = \int q'\, dq'\, |q'\rang \lang q'| \qquad \text{哑变量改名}\end{align}
+$$
+
+$$
+\begin{align} \hat{q}\, {\color{blue}{|q\rang}}&= \int q'\, dq'\, |q'\rang {\color{blue}{\lang q'|q\rang}}\qquad \text{简单带入}\\ &= \int q'\, dq'\, |q'\rang  {\color{red}{\delta(q'-q)}}\qquad \text{正交归一}\\ &=q\,|q\rang \end{align}
+$$
+
+
 
 ### 0.3 第 2 条：唯一的公理
 
@@ -60,11 +69,27 @@ $q$ 表象的定义就是"让 $\hat q$ 对角"。所以第 1 条不是可被实�
 **严格形式。** 裸的对易子涉及无界算子，乘积有定义域问题。严格处理用 **Weyl 关系**：
 
 $$
-e^{ia\hat p}\,e^{ib\hat q}=e^{-iab}\,e^{ib\hat q}\,e^{ia\hat p},
+e^{ia\hat p}\,e^{ib\hat q}=e^{iab}\,e^{ib\hat q}\,e^{ia\hat p},
 \qquad a,\,b\in\mathbb{R}
 $$
 
 两边都是有界酉算子，处处有定义；表示唯一性定理（Stone–von Neumann）真正适用的正是这个形式。
+
+**记忆规则：别背符号，现算。** 当 $[A,B]=c$ 是一个数时，
+
+$$
+e^{A}e^{B}=e^{c}\,e^{B}e^{A}
+$$
+
+代入 $A=ia\hat p$、$B=ib\hat q$，用 $[\hat p,\hat q]=-i$ 得 $c=iab$，所以因子是 $e^{+iab}$。**注意次序**：若写成 $q$ 在前，即 $e^{ia\hat q}e^{ib\hat p}=e^{-iab}e^{ib\hat p}e^{ia\hat q}$，因子才带负号。两式都对，但混用就会差一个 $e^{2iab}$。
+
+这个因子不是"凑出来的"，它就是对易关系本身：**去掉它，等式就等于宣称 $[\hat q,\hat p]=0$**。更对称地看，取 $W(a,b)=e^{i(a\hat q+b\hat p)}$ 时
+
+$$
+W(a,b)\,W(a',b')=e^{-\frac{i}{2}\left(ab'-ba'\right)}\,W(a+a',b+b')
+$$
+
+相位里的 $ab'-ba'$ 就是相空间辛形式——Weyl 关系的相位是**辛结构**，不是可调常数。
 
 **它在场论里会怎样。** 两件事同时坏掉：自由度无穷时表示不再唯一（必须额外指定 Fock 表示）；相互作用理论的等时对易子会被 Schwinger 项修正，不是裸的 $i\delta^{3}$。所以这条公理到了量子场论既不够用、也不严格成立——这正是 [N002](N002-finite-temperature-path-integral.md) 全程用路径积分而不用算子形式的技术原因。
 
