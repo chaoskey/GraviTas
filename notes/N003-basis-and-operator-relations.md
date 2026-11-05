@@ -83,6 +83,8 @@ $$
 
 代入 $A=ia\hat p$、$B=ib\hat q$，用 $[\hat p,\hat q]=-i$ 得 $c=iab$，所以因子是 $e^{+iab}$。**注意次序**：若写成 $q$ 在前，即 $e^{ia\hat q}e^{ib\hat p}=e^{-iab}e^{ib\hat p}e^{ia\hat q}$，因子才带负号。两式都对，但混用就会差一个 $e^{2iab}$。
 
+这条公式本身怎么来的（三行证明，即 Hadamard 引理的应用）见 [N004](N004-hadamard-lemma.md)。
+
 这个因子不是"凑出来的"，它就是对易关系本身：**去掉它，等式就等于宣称 $[\hat q,\hat p]=0$**。更对称地看，取 $W(a,b)=e^{i(a\hat q+b\hat p)}$ 时
 
 $$
