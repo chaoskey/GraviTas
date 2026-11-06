@@ -41,7 +41,7 @@
 | D02 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | 公理、D03、D04 | [D02](D02-translation.md) | ✓ |
 | D03 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | — | [D03](D03-hadamard-lemma.md) | ✓ |
 | D04 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D03 | [D04](D04-two-term-truncation.md) | ✓ |
-| D05 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D03、D04 | [N004 §5](../notes/N004-hadamard-lemma.md) | ✓ |
+| D05 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D03、D04 | [D05](D05-commutator-phase.md) | ✓ |
 | D06 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D03、D05 | [N004 §5.2](../notes/N004-hadamard-lemma.md) | ✓ |
 | D07 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | 公理、D05 | [N004 §5](../notes/N004-hadamard-lemma.md) | ✓ |
 | D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D02、D07、谱定理、Stone–von Neumann | [N003 §0.5](../notes/N003-basis-and-operator-relations.md) | ✓ |

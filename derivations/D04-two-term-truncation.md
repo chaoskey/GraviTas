@@ -72,7 +72,7 @@ $$
 |---|---|
 | 取 $[A,B]=0$（即 $c=0$） | 右边为 $B$，与 $e^{A}Be^{-A}=B$ 一致 ✅ |
 | 取 $A=ia\hat p$、$B=\hat q$ | $c=ia[\hat p,\hat q]=a$，得 $\hat q+a$，即平移（[D02](D02-translation.md)）✅ |
-| 与 [D05](README.md) 相容 | 由本式可推出 $e^{A}e^{B}=e^{c}e^{B}e^{A}$，与 D05 一致 |
+| 与 [D05](D05-commutator-phase.md) 相容 | 由本式可推出 $e^{A}e^{B}=e^{c}e^{B}e^{A}$，与 D05 一致 |
 | 若 $c$ 换成算子 $c(\hat q)$ | 第三项 $\neq0$，截断失效——反例成立 |
 | 量纲 | $c$ 与 $B$ 同量纲；两侧同量纲 ✅ |
 
