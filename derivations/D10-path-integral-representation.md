@@ -1,6 +1,6 @@
 # D10 · 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$
 
-> 建档 2026-11-06 · 上游：公理 $[\hat q,\hat p]=i$、[D08](D08-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）；位置完备性属 [D12](D12-spectral-theorem.md)
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D08](D08-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）；位置完备性属 [D12](D12-spectral-theorem.md)
 > 下游：[D09](D09-trace-is-loop.md)（取迹成环）；[N002 §2](../notes/N002-finite-temperature-path-integral.md)
 > 原为 [N002 §2.1–2.3](../notes/N002-finite-temperature-path-integral.md)，2026-11-06 移入网格。
 

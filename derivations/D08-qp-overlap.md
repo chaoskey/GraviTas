@@ -1,6 +1,6 @@
 # D08 · $\langle q\lvert p\rangle=e^{ipq}$
 
-> 建档 2026-11-06 · 上游：公理、[D02](D02-translation.md)、[D07](D07-weyl-phase.md)；**外部定理**：[D13](D13-stone-von-neumann.md)；默认 [D11](D11-functional-calculus.md)、[D12](D12-spectral-theorem.md)
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-translation.md)、[D07](D07-weyl-phase.md)；**外部定理**：[D13](D13-stone-von-neumann.md)；默认 [D11](D11-functional-calculus.md)、[D12](D12-spectral-theorem.md)
 > 下游：[D10](D10-path-integral-representation.md)（短时核要用 $\langle q\lvert p\rangle$）；[N003 §0.5](../notes/N003-basis-and-operator-relations.md)、[N002 §2.2](../notes/N002-finite-temperature-path-integral.md)
 > 原为 [N003 §0.5](../notes/N003-basis-and-operator-relations.md) 的三步概括，2026-11-06 补全并移入网格。
 

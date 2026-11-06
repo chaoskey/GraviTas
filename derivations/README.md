@@ -22,9 +22,9 @@
 
 | 规则 | 内容 |
 |---|---|
-| 格式 | `D` 加两位数字：`D01`、`D02` …… 到 `D99` |
+| 格式 | `D` 加两位数字：**`D00` 保留给公理**；`D01`–`D99` 为推导 |
 | 唯一性 | 全局唯一，**永不复用** |
-| 顺序 | 按**登记顺序**编号，**不代表逻辑先后**；逻辑关系看下表"输入"列 |
+| 顺序 | `D01` 起按**登记顺序**编号，**不代表逻辑先后**；逻辑关系看下表"输入"列 |
 | 稳定性 | 编号固定后不再改；**改的是内容，不是编号** |
 | 废弃 | 命题本身要换时，新建编号，旧编号标注"已废弃，见 D##"，**不删除** |
 | 文件名 | `derivations/D##-短横线英文名.md` |
@@ -37,16 +37,17 @@
 
 | 编号 | 命题 | 输入 | 全文 | 状态 |
 |---|---|---|---|---|
-| D01 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | 公理（旁证：D12） | [D01](D01-commutator-p-fq.md) | ✓ |
-| D02 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | 公理、D04 | [D02](D02-translation.md) | ✓ |
+| D00 | **公理**：$[\hat q,\hat p]=i$（Weyl 形式） | —（输入） | [D00](D00-commutator-axiom.md) | ✓ |
+| D01 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（旁证：D12） | [D01](D01-commutator-p-fq.md) | ✓ |
+| D02 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D04 | [D02](D02-translation.md) | ✓ |
 | D03 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | —（默认 D11） | [D03](D03-hadamard-lemma.md) | ✓ |
 | D04 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D03 | [D04](D04-two-term-truncation.md) | ✓ |
 | D05 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D04 | [D05](D05-commutator-phase.md) | ✓ |
 | D06 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D03、D04、D05 | [D06](D06-three-bch-forms.md) | ✓ |
-| D07 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | 公理、D05 | [D07](D07-weyl-phase.md) | ✓ |
-| D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D02、D07、D13 | [D08](D08-qp-overlap.md) | ✓ |
+| D07 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D05 | [D07](D07-weyl-phase.md) | ✓ |
+| D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D02、D07、D13 | [D08](D08-qp-overlap.md) | ✓ |
 | D09 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D10 | [D09](D09-trace-is-loop.md) | ✓ |
-| D10 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | 公理、D08 | [D10](D10-path-integral-representation.md) | ✓ |
+| D10 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D08 | [D10](D10-path-integral-representation.md) | ✓ |
 | D11 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D12 | [D11](D11-functional-calculus.md) | ✓ |
 | D12 | 谱定理与 Gelfand–Maurin（引用卡） | 外部定理 | [D12](D12-spectral-theorem.md) | ✓ |
 | D13 | Stone–von Neumann（引用卡） | 外部定理 | [D13](D13-stone-von-neumann.md) | ✓ |
@@ -62,12 +63,24 @@
 
 ### 2.1 依赖关系（按逻辑序重排）
 
-**公理** $[\hat q,\hat p]=i$ → **D01**（独立一线）、**D03** → **D02**、**D04** → **D05** → **D06**、**D07**
+```
+D00 公理
+ ├─ D01                       （独立：归纳 + 幂级数）
+ ├─ D03 → D04 → D05 → D06     （代数主干）
+ │         └──→ D02
+ │    D05 ─────→ D07 ──┐
+ │    D02 ─────────────┼─→ D08 ─→ D10 ─→ D09
+ │                     └── D13
+ └─ D12 → D11                 （默认被 D01/D03/D05/D06/D08 使用）
+```
 
-- D01 只依赖公理，自成一系，用于 [N004 §6.3](../notes/N004-hadamard-lemma.md) 的求和；
-- D03 用 ODE 方法独立证明，是 D02、D04、D05、D06 的共同上游；
-- D08 需要外部定理（谱定理、Stone–von Neumann），不在网格内部，故在"输入"列显式列出；
-- D09 属于有限温度这条线，与 D01–D08 的量子力学基础线暂时独立。
+- **D00 是唯一输入**：删掉它，全部卡片同时失效；
+- **D03–D06 是代数主干**：从 Hadamard 引理一路走到三条 BCH 闭式，全程只用对易子代数；
+- **D07–D08 是表象分支**：从 Weyl 相位到平面波，中间必须引用 D12（谱定理）与 D13（Stone–von Neumann）；
+- **D09–D10 是统计分支**：路径积分表示 → 取迹成环，与代数主干只有 D08 一个接口；
+- **D11、D12 是地基**：一个给"函数作用在算子上"的定义，一个给"本征矢存在"，两者都常被默认使用（见上表下方说明）。
+
+**读法**：箭头是"被用来推出"。沿箭头读是推论链，逆着读是依赖链。
 
 ---
 
