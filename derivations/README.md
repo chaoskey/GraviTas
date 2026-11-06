@@ -38,7 +38,7 @@
 | 编号 | 命题 | 输入 | 全文 | 状态 |
 |---|---|---|---|---|
 | D01 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | 公理 | [D01](D01-commutator-p-fq.md) | ✓ |
-| D02 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | 公理、D03 | [N004 §6.1](../notes/N004-hadamard-lemma.md) | ✓ |
+| D02 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | 公理、D03、D04 | [D02](D02-translation.md) | ✓ |
 | D03 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | — | [D03](D03-hadamard-lemma.md) | ✓ |
 | D04 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D03 | [D04](D04-two-term-truncation.md) | ✓ |
 | D05 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D03、D04 | [N004 §5](../notes/N004-hadamard-lemma.md) | ✓ |

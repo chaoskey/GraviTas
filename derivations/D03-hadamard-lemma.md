@@ -111,7 +111,7 @@ $$
 | $t=0$ 退化为恒等 | 左为 $B$，右为 $\mathrm{ad}_A^{0}B=B$，成立 |
 | $[A,B]=0$ | 级数只剩 $B$，两边都等于 $B$，成立 |
 | 与 [D04](D04-two-term-truncation.md) 相容 | $[A,B]=c$ 是数时 $\mathrm{ad}_A^{2}B=0$，级数两项，与 D04 一致 |
-| 与 [D02](README.md) 相容 | 取 $A=ia\hat p$、$B=\hat q$，得 $e^{ia\hat p}\hat qe^{-ia\hat p}=\hat q+a$，即平移 |
+| 与 [D02](D02-translation.md) 相容 | 取 $A=ia\hat p$、$B=\hat q$，得 $e^{ia\hat p}\hat qe^{-ia\hat p}=\hat q+a$，即平移 |
 | 与 [D05](README.md)、[D06](README.md) 相容 | 由本式可推出 $e^{A}e^{B}=e^{c}e^{B}e^{A}$ 与三条 BCH 闭式 |
 | 自同构性质 | $\mathrm{ad}_A$ 满足 Leibniz，故 $e^{\mathrm{ad}_A}$ 是代数自同构，与"共轭是自同构"一致 |
 | 例：平移 | $A=ia\hat p$、$B=\hat q$，级数在前两项截断，结果 $\hat q+a$ ✅ |

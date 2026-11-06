@@ -109,7 +109,7 @@ $$
 
 ### 2.2 平移法（三行）
 
-由 [D02](../notes/N004-hadamard-lemma.md)（平移公式）与 [D03](D03-hadamard-lemma.md)（Hadamard 引理）：
+由 [D02](D02-translation.md)（平移公式）与 [D03](D03-hadamard-lemma.md)（Hadamard 引理）：
 
 $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+a

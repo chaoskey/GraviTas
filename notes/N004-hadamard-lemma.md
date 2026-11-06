@@ -277,25 +277,13 @@ $$
 
 ### 6.1 平移：第一项就截断
 
-取 $A=ia\hat p$、$B=\hat q$：
-
-$$
-[A,B]=ia[\hat p,\hat q]=ia\cdot(-i)=a
-$$
-
-$a$ 是数，故 $\mathrm{ad}_A^2B=0$：
+取 $A=ia\hat p$、$B=\hat q$，则 $[A,B]=ia[\hat p,\hat q]=a$ 是数，两项截断给出
 
 $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+a
 $$
 
-**验证**：$e^{ia\hat p}\psi(x)=\psi(x+a)$（平移）。令 $\phi=e^{-ia\hat p}\psi$，则 $\phi(x)=\psi(x-a)$，故
-
-$$
-e^{ia\hat p}\hat q\,e^{-ia\hat p}\psi(x)=e^{ia\hat p}\bigl[x\,\psi(x-a)\bigr]=(x+a)\psi(x)
-$$
-
-与 $\bigl(\hat q+a\bigr)\psi$ 一致。
+由此得到态与波函数两种平移形式。**完整证明（含相位约定与方向辨析）见 [D02 · 平移](../derivations/D02-translation.md)。**
 
 ### 6.2 升降算符：同样截断
 
