@@ -23,7 +23,7 @@ $$
 
 **适用条件**：
 
-1. $\hat q$ 的谱**简单**（重数为 $1$），否则 $e^{ia\hat p}\lvert q\rangle$ 只能定到"同本征值的某个线性组合"；
+1. $\hat q$ 的谱**简单**（重数为 $1$，[D12](D12-spectral-theorem.md) 的术语），否则 $e^{ia\hat p}\lvert q\rangle$ 只能定到"同本征值的某个线性组合"；
 2. 相位约定：本征矢的相位取到使系数为 $1$（见 §1.3）；
 3. 归一化为 $\langle q\lvert q'\rangle=\delta(q-q')$。
 

@@ -47,7 +47,8 @@
 | D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D02、D07、谱定理、Stone–von Neumann | [D08](D08-qp-overlap.md) | ✓ |
 | D09 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D10 | [D09](D09-trace-is-loop.md) | ✓ |
 | D10 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | 公理、D08 | [D10](D10-path-integral-representation.md) | ✓ |
-| D11 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | 谱定理（外部） | [D11](D11-functional-calculus.md) | ✓ |
+| D11 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D12 | [D11](D11-functional-calculus.md) | ✓ |
+| D12 | 谱定理与 Gelfand–Maurin（引用卡） | 外部定理 | [D12](D12-spectral-theorem.md) | ✓ |
 
 **状态含义**：✓ 已逐行核对；○ 草稿；✗ 已废弃（并在"全文"列写明去哪找）。
 
