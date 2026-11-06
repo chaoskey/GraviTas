@@ -63,6 +63,7 @@ GraviTas/
 ├── reading/
 │   └── bibliography.md        # 分主题文献：教材、综述、里程碑论文
 ├── notes/                     # 推导笔记（N001 推导范例 · N002 补丁讲义 · N003 表象速查 · N004 Hadamard 引理）
+├── derivations/               # 推导网格：一命题一卡，稳定编号（D01 起）
 ├── log/                       # 研究日志：每周做了什么、卡在哪
 ├── templates/                 # 问题档案 / 笔记 / 日志的模板
 └── scripts/
