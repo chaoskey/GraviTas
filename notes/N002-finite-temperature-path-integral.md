@@ -84,66 +84,30 @@ $$
 
 ### 2.1 从振幅开始
 
-量子力学里，传播子是
-
 $$
 \langle q_f|e^{-\beta H}|q_i\rangle
-= \int_{q(0)=q_i}^{q(\beta)=q_f} \mathcal{D}q\; e^{-S_E[q]}
-$$
-
-其中
-
-$$
+= \int_{q(0)=q_i}^{q(\beta)=q_f} \mathcal{D}q\; e^{-S_E[q]},
+\qquad
 S_E[q] = \int_0^\beta d\tau\left[\frac{m}{2}\dot q^2 + V(q)\right]
 $$
 
-为什么？把 $e^{-\beta H}$ 切成 $N$ 片，每片 $\varepsilon = \beta/N$：
-
-$$
-e^{-\beta H} = \left(e^{-\varepsilon H}\right)^N
-$$
-
-在每两片之间插入完备性 $\int dq_k\,|q_k\rangle\langle q_k| = \mathbb{1}$，得
-
-$$
-\langle q_f|e^{-\beta H}|q_i\rangle
-= \int \prod_{k=1}^{N-1} dq_k\;
-  \prod_{k=0}^{N-1} \langle q_{k+1}|e^{-\varepsilon H}|q_k\rangle
-$$
-
-其中 $q_0 = q_i$，$q_N = q_f$。
+**这一步怎么来的**：把 $e^{-\beta H}$ 切成 $N$ 片、每两片之间插入完备性、对单片做高斯积分、再取 $N\to\infty$。完整推导见 [D10 · 路径积分表示](../derivations/D10-path-integral-representation.md)。
 
 ### 2.2 单片矩阵元
 
-$$
-\langle q'|e^{-\varepsilon H}|q\rangle
-= \int \frac{dp}{2\pi}\; e^{ip(q'-q)}\; e^{-\varepsilon\left[p^2/2m + V(q)\right]}
-$$
-
-对 $p$ 做高斯积分：
+短时核是整条推导的引擎：
 
 $$
 \langle q'|e^{-\varepsilon H}|q\rangle
-= \left(\frac{m}{2\pi\varepsilon}\right)^{1/2}
-  \exp\left[-\frac{m(q'-q)^2}{2\varepsilon} - \varepsilon V(q)\right]
+=\left(\frac{m}{2\pi\varepsilon}\right)^{1/2}
+\exp\left[-\frac{m(q'-q)^2}{2\varepsilon}-\varepsilon V(q)\right]
 $$
+
+它由"Trotter 分裂 + 动量完备性 + $\langle q|p\rangle=e^{ipq}$ + 高斯积分"四步得到，见 [D10](../derivations/D10-path-integral-representation.md) §1.2。
 
 ### 2.3 拼回去
 
-把 $N$ 个因子相乘。指数上是
-
-$$
--\sum_k\left[\frac{m(q_{k+1}-q_k)^2}{2\varepsilon} + \varepsilon V(q_k)\right]
-$$
-
-当 $\varepsilon\to 0$，$(q_{k+1}-q_k)/\varepsilon \to \dot q$，$\varepsilon\sum_k \to \int_0^\beta d\tau$，于是
-
-$$
--\sum_k\left[\cdots\right] \;\longrightarrow\;
--\int_0^\beta d\tau\left[\frac{m}{2}\dot q^2 + V(q)\right] = -S_E[q]
-$$
-
-连同前面的 $\prod_k (m/2\pi\varepsilon)^{1/2}$（它是测度的归一化因子），就得到 2.1 的路径积分。
+$N$ 个因子相乘，$\varepsilon\to0$ 时指数上的和收敛为 $-S_E$，测度归一化因子也一起趋于确定极限。细节见 [D10](../derivations/D10-path-integral-representation.md) §1.3–1.4。
 
 ### 2.4 取迹：闭合
 

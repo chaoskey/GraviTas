@@ -45,7 +45,8 @@
 | D06 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D03、D05 | [D06](D06-three-bch-forms.md) | ✓ |
 | D07 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | 公理、D05 | [D07](D07-weyl-phase.md) | ✓ |
 | D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D02、D07、谱定理、Stone–von Neumann | [D08](D08-qp-overlap.md) | ✓ |
-| D09 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | 路径积分表示（N002 §2.1–2.3） | [D09](D09-trace-is-loop.md) | ✓ |
+| D09 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D10 | [D09](D09-trace-is-loop.md) | ✓ |
+| D10 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | 公理、D08 | [D10](D10-path-integral-representation.md) | ✓ |
 
 **状态含义**：✓ 已逐行核对；○ 草稿；✗ 已废弃（并在"全文"列写明去哪找）。
 
@@ -101,6 +102,5 @@
 
 ## 4. 待办
 
-- [ ] 把 [N002 §2.2](../notes/N002-finite-temperature-path-integral.md) 的短时核独立成卡片
 - [ ] 把 [N001 §2](../notes/N001-hawking-temperature.md) 的 $\beta=2\pi/\kappa$ 独立成卡片
 - [ ] 高斯积分 $\int e^{-ap^{2}+bp}$ 是否值得单独编号（出现频率高，但太初等）

@@ -1,6 +1,6 @@
 # D09 · 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$
 
-> 建档 2026-11-06 · 上游：路径积分表示 $\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$（[N002 §2.1–2.3](../notes/N002-finite-temperature-path-integral.md)，**尚未建卡**）
+> 建档 2026-11-06 · 上游：[D10](D10-path-integral-representation.md)（路径积分表示 $\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$）
 > 下游：[N002 §3](../notes/N002-finite-temperature-path-integral.md)（温度 = 周期倒数）、[N002 §5](../notes/N002-finite-temperature-path-integral.md)（Matsubara 频率）
 > 原为 [N002 §2.4](../notes/N002-finite-temperature-path-integral.md)，2026-11-06 移入网格。
 
