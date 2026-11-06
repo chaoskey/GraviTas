@@ -12,7 +12,7 @@
 - `notes/N###` 是**叙事**：一个主题、一条线、可以很长，可以有"我一开始错在哪"。
 - `derivations/D##` 是**卡片**：一个命题、一个证明、一组检验，通常一页以内。
 
-两者的关系：笔记里需要某个中间结论时，不再重推一遍，而是引用编号（例：见 D03）。卡片里需要长篇背景时，指向笔记（例：见 [N004 §2](../notes/N004-hadamard-lemma.md)）。
+两者的关系：笔记里需要某个中间结论时，不再重推一遍，而是引用编号（例：见 D03）。卡片里需要长篇背景时，指向笔记（例：见 [N004](../notes/N004-hadamard-lemma.md)）。
 
 **这意味着什么**：以后你在任何地方写下一个"因为 $X$，所以 $Y$"，先查网格里有没有编号。有就引用，没有就新建一张卡片。重复推导是漂移的开始。
 
@@ -39,7 +39,7 @@
 |---|---|---|---|---|
 | D01 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | 公理 | [D01](D01-commutator-p-fq.md) | ✓ |
 | D02 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | 公理、D03 | [N004 §6.1](../notes/N004-hadamard-lemma.md) | ✓ |
-| D03 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | — | [N004 §2](../notes/N004-hadamard-lemma.md) | ✓ |
+| D03 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | — | [D03](D03-hadamard-lemma.md) | ✓ |
 | D04 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D03 | [N004 §4](../notes/N004-hadamard-lemma.md) | ✓ |
 | D05 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D03、D04 | [N004 §5](../notes/N004-hadamard-lemma.md) | ✓ |
 | D06 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D03、D05 | [N004 §5.2](../notes/N004-hadamard-lemma.md) | ✓ |

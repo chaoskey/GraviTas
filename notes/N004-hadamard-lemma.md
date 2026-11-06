@@ -1,7 +1,7 @@
 # N004 · Hadamard 引理：共轭的生成元是对易子
 
 > 写于 2026-11-05 · 关联：[N003](N003-basis-and-operator-relations.md)、[N002](N002-finite-temperature-path-integral.md)
-> 目标：把 $e^{A}Be^{-A}$ 展开成对易子的幂级数，并用它三行推出 Weyl 关系的相位因子。
+> 目标：把 $e^{A}Be^{-A}$ 的展开**用起来**——截断条件、Weyl 相位、三条 BCH 闭式。证明本身已在 [D03](../derivations/D03-hadamard-lemma.md)。
 > 用途：[N003 §0.3](N003-basis-and-operator-relations.md) 只给了 Weyl 关系的结论，这一页给它的来历。
 > 约定：$\hbar=1$；$\hat p=-i\partial_q$；$[\hat q,\hat p]=i$，故 $[\hat p,\hat q]=-i$。
 
@@ -58,70 +58,15 @@ $$
 
 ---
 
-## 2. 推导：三步
+## 2. 推导（已移入网格）
 
-### 2.1 第一步：求导，得到一个方程
+完整证明见 [D03 · Hadamard 引理](../derivations/D03-hadamard-lemma.md)。这里只留骨架，方便读下文时定位：
 
-定义
+1. 定义 $F(t)=e^{tA}Be^{-tA}$；
+2. 求导得 $\dot F=\mathrm{ad}_AF$——一个常系数线性方程；
+3. 解方程得 $F(t)=e^{t\,\mathrm{ad}_A}B$，取 $t=1$ 展开。
 
-$$
-F(t)\equiv e^{tA}\,B\,e^{-tA}
-$$
-
-对 $t$ 求导。两项各求一次，且 $A$ 与 $e^{tA}$ 对易（$Ae^{tA}=e^{tA}A$）：
-
-$$
-\frac{dF}{dt}
-=A\,e^{tA}Be^{-tA}-e^{tA}B\,A\,e^{-tA}
-=e^{tA}\bigl(AB-BA\bigr)e^{-tA}
-=e^{tA}[A,B]\,e^{-tA}
-$$
-
-再用一次 $A$ 与 $e^{\pm tA}$ 对易，把结果写成对易子：
-
-$$
-\frac{dF}{dt}=\bigl[A,\ e^{tA}Be^{-tA}\bigr]=[A,F(t)]
-$$
-
-于是
-
-$$
-\boxed{\ \frac{dF}{dt}=\mathrm{ad}_A F(t)\ },\qquad F(0)=B
-$$
-
-**这一步的实质**：求导被翻译成"作用一个线性算子"。原本要算的是无穷多个对易子，现在得到一个常系数线性方程。
-
-### 2.2 第二步：解方程
-
-常系数线性方程 $\dot F=LF$，$L=\mathrm{ad}_A$。用积分因子：
-
-$$
-G(t)\equiv e^{-t\,\mathrm{ad}_A}F(t)
-$$
-
-$$
-\frac{dG}{dt}
-=-e^{-t\,\mathrm{ad}_A}\,\mathrm{ad}_A F+e^{-t\,\mathrm{ad}_A}\,\dot F
-=-e^{-t\,\mathrm{ad}_A}\mathrm{ad}_A F+e^{-t\,\mathrm{ad}_A}\mathrm{ad}_A F=0
-$$
-
-所以 $G$ 是常数，$G(t)=G(0)=F(0)=B$。因此
-
-$$
-F(t)=e^{t\,\mathrm{ad}_A}B
-$$
-
-### 2.3 第三步：展开，取 $t=1$
-
-按指数函数的定义展开 $e^{t\,\mathrm{ad}_A}$：
-
-$$
-F(t)=\sum_{n=0}^{\infty}\frac{t^{n}}{n!}\,\mathrm{ad}_A^{\,n}B
-$$
-
-取 $t=1$，得 §0 的结论。
-
-**注意这一步没有用到任何技巧**：级数收敛性由 $\mathrm{ad}_A$ 的谱半径决定，而物理上我们只在"两边都良定义"的范围内用它。
+**为什么移出去**：这条推导是 §4–§6 与 [N003 §0.3](N003-basis-and-operator-relations.md) 的公共上游，独立成卡片才有稳定编号可引用。网格说明见 [derivations/README](../derivations/README.md)。
 
 ---
 
@@ -246,7 +191,7 @@ $$
 \end{aligned}
 $$
 
-第二行插入了 $e^{-tA}e^{tA}=\mathbb{1}$。由 Hadamard 引理（取 $A\to tA$）：
+第二行插入了 $e^{-tA}e^{tA}=\mathbb{1}$。由 Hadamard 引理（[D03](../derivations/D03-hadamard-lemma.md)，取 $A\to tA$）：
 
 $$
 e^{tA}B\,e^{-tA}=B+t[A,B]=B+tc
@@ -446,6 +391,8 @@ $$
 ---
 
 ## 10. 自检
+
+> 下面是自检记录（手写原件留档，保留原样不改）。整理后的证明见 [D03](../derivations/D03-hadamard-lemma.md)。
 
 - [x] 不看本文，三行重推 Hadamard 引理（定义 $F(t)$、求导得 $\dot F=\mathrm{ad}_AF$、解方程）
 
