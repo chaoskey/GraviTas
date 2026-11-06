@@ -2,7 +2,7 @@
 
 > 建档 2026-11-06 · 类型：**引用卡**——陈述定理、说清用法与边界，**不复现证明**（证明属泛函分析，不在本仓库范围内）
 > 上游：无（外部数学定理）
-> 下游：[D01](D01-commutator-p-fq.md)、[D02](D02-translation.md)、[D08](D08-qp-overlap.md)、[D11](D11-functional-calculus.md)
+> 下游：[D11](D11-functional-calculus.md)（核心）；默认被 [D01](D01-commutator-p-fq.md)（旁证）、[D02](D02-translation.md)、[D08](D08-qp-overlap.md)、[D09](D09-trace-is-loop.md)、[D10](D10-path-integral-representation.md) 使用
 
 ---
 

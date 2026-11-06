@@ -1,6 +1,6 @@
 # D05 · $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数）
 
-> 建档 2026-11-06 · 上游：公理、[D03](D03-hadamard-lemma.md)、[D04](D04-two-term-truncation.md)
+> 建档 2026-11-06 · 上游：[D04](D04-two-term-truncation.md)；默认 [D11](D11-functional-calculus.md)
 > 下游：[D06](D06-three-bch-forms.md)、[D07](D07-weyl-phase.md)；[N004 §5](../notes/N004-hadamard-lemma.md)
 > 原为 [N004 §5](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 

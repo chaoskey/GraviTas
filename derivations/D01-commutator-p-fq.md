@@ -1,7 +1,7 @@
 # D01 · 对易子 $[\hat p,f(\hat q)]=-i f'(\hat q)$
 
-> 建档 2026-11-06 · 上游：公理 $[\hat q,\hat p]=i$、[D12](D12-spectral-theorem.md)（分布意义下的 $\lvert q\rangle$）
-> 下游：用于 [N004 §6.3](../notes/N004-hadamard-lemma.md) 的等比求和（"不幂零但可求和"）
+> 建档 2026-11-06 · 上游：公理 $[\hat q,\hat p]=i$；**旁证**（另证与备注）用 [D12](D12-spectral-theorem.md)；默认 [D11](D11-functional-calculus.md)
+> 下游：无卡片把它列为上游；用于 [N004 §6.3](../notes/N004-hadamard-lemma.md) 的等比求和（不幂零但可求和）
 > 网格登记见 [derivations/README](README.md)
 
 ---

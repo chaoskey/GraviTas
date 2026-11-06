@@ -37,14 +37,14 @@
 
 | 编号 | 命题 | 输入 | 全文 | 状态 |
 |---|---|---|---|---|
-| D01 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | 公理 | [D01](D01-commutator-p-fq.md) | ✓ |
-| D02 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | 公理、D03、D04 | [D02](D02-translation.md) | ✓ |
-| D03 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | — | [D03](D03-hadamard-lemma.md) | ✓ |
+| D01 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | 公理（旁证：D12） | [D01](D01-commutator-p-fq.md) | ✓ |
+| D02 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | 公理、D04 | [D02](D02-translation.md) | ✓ |
+| D03 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | —（默认 D11） | [D03](D03-hadamard-lemma.md) | ✓ |
 | D04 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D03 | [D04](D04-two-term-truncation.md) | ✓ |
-| D05 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D03、D04 | [D05](D05-commutator-phase.md) | ✓ |
-| D06 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D03、D05 | [D06](D06-three-bch-forms.md) | ✓ |
+| D05 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D04 | [D05](D05-commutator-phase.md) | ✓ |
+| D06 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D03、D04、D05 | [D06](D06-three-bch-forms.md) | ✓ |
 | D07 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | 公理、D05 | [D07](D07-weyl-phase.md) | ✓ |
-| D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D02、D07、D12、D13 | [D08](D08-qp-overlap.md) | ✓ |
+| D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D02、D07、D13 | [D08](D08-qp-overlap.md) | ✓ |
 | D09 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D10 | [D09](D09-trace-is-loop.md) | ✓ |
 | D10 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | 公理、D08 | [D10](D10-path-integral-representation.md) | ✓ |
 | D11 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D12 | [D11](D11-functional-calculus.md) | ✓ |
@@ -52,6 +52,13 @@
 | D13 | Stone–von Neumann（引用卡） | 外部定理 | [D13](D13-stone-von-neumann.md) | ✓ |
 
 **状态含义**：✓ 已逐行核对；○ 草稿；✗ 已废弃（并在"全文"列写明去哪找）。
+
+**默认依赖（不逐行重复）**：
+
+- 凡出现 $e^{X}$、$f(\hat A)$ 的卡片，默认使用 [D11](D11-functional-calculus.md)（函数演算）；
+- 凡出现 $\lvert q\rangle$、完备性、迹的卡片，默认使用 [D12](D12-spectral-theorem.md)（谱定理）。
+
+上表"输入"列只列**实质或特定**的上游；"旁证"指仅在另证或备注中用到的。
 
 ### 2.1 依赖关系（按逻辑序重排）
 

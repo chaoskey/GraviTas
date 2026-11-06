@@ -1,7 +1,7 @@
 # D11 · 函数演算：$f(\hat A)$ 到底是什么意思
 
 > 建档 2026-11-06 · 上游：[D12](D12-spectral-theorem.md)（谱定理）
-> 下游：[D01](D01-commutator-p-fq.md)、[D03](D03-hadamard-lemma.md)、[D05](D05-commutator-phase.md)、[D06](D06-three-bch-forms.md)、[D08](D08-qp-overlap.md)——五张卡都在用，却都没交代它是什么
+> 下游：[D01](D01-commutator-p-fq.md)、[D03](D03-hadamard-lemma.md)、[D05](D05-commutator-phase.md)、[D06](D06-three-bch-forms.md)、[D08](D08-qp-overlap.md)（默认使用）；[D02](D02-translation.md)、[D04](D04-two-term-truncation.md)、[D07](D07-weyl-phase.md) 也用到指数
 > 原散见于 [N003 §4.1](../notes/N003-basis-and-operator-relations.md) 与各卡片的"条件"里，2026-11-06 汇总成卡。
 
 ---

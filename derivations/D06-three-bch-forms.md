@@ -1,7 +1,7 @@
 # D06 · 三条 BCH 闭式
 
-> 建档 2026-11-06 · 上游：公理、[D03](D03-hadamard-lemma.md)、[D04](D04-two-term-truncation.md)、[D05](D05-commutator-phase.md)
-> 下游：[D07](D07-weyl-phase.md)；[N004 §5.1](../notes/N004-hadamard-lemma.md)、[§5.2](../notes/N004-hadamard-lemma.md)
+> 建档 2026-11-06 · 上游：[D03](D03-hadamard-lemma.md)、[D04](D04-two-term-truncation.md)、[D05](D05-commutator-phase.md)；默认 [D11](D11-functional-calculus.md)
+> 下游：无卡片直接依赖（[D07](D07-weyl-phase.md) 经 D05 得到相位）；[N004 §5.1](../notes/N004-hadamard-lemma.md)、[§5.2](../notes/N004-hadamard-lemma.md)
 > 原为 [N004 §5.2](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---

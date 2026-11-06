@@ -1,7 +1,7 @@
 # D04 · 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$
 
 > 建档 2026-11-06 · 上游：[D03](D03-hadamard-lemma.md)
-> 下游：[D05](D05-commutator-phase.md)、[D06](D06-three-bch-forms.md)、[D07](D07-weyl-phase.md)；[N004 §6.1](../notes/N004-hadamard-lemma.md)、[§6.2](../notes/N004-hadamard-lemma.md)
+> 下游：[D02](D02-translation.md)、[D05](D05-commutator-phase.md)、[D06](D06-three-bch-forms.md)；[N004 §6.1](../notes/N004-hadamard-lemma.md)、[§6.2](../notes/N004-hadamard-lemma.md)
 > 原为 [N004 §4](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---

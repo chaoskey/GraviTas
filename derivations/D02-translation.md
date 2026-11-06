@@ -1,6 +1,6 @@
 # D02 · 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$
 
-> 建档 2026-11-06 · 上游：公理 $[\hat q,\hat p]=i$、[D03](D03-hadamard-lemma.md)、[D04](D04-two-term-truncation.md)
+> 建档 2026-11-06 · 上游：公理 $[\hat q,\hat p]=i$、[D04](D04-two-term-truncation.md)（D04 已含 D03）；默认 [D11](D11-functional-calculus.md)
 > 下游：[D08](D08-qp-overlap.md)（用 $\lvert q\rangle=e^{-iq\hat p}\lvert 0\rangle$）；[N004 §6.1](../notes/N004-hadamard-lemma.md)
 > 原为 [N004 §6.1](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 

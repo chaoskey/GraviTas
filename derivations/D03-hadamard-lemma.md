@@ -1,7 +1,7 @@
 # D03 · Hadamard 引理：$e^{A}Be^{-A}$ 的对易子展开
 
-> 建档 2026-11-06 · 上游：无（只用到函数的幂级数定义与 $\mathrm{ad}_A$ 的定义）
-> 下游：D02、D04、D05、D06；[N004](../notes/N004-hadamard-lemma.md) 全文
+> 建档 2026-11-06 · 上游：无；只用 $\mathrm{ad}_A$ 的定义与 [D11](D11-functional-calculus.md) 的幂级数定义
+> 下游：[D04](D04-two-term-truncation.md)、[D06](D06-three-bch-forms.md)（D02、D05 经 D04 传递）；[N004](../notes/N004-hadamard-lemma.md) 全文
 > 原为 [N004 §2](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格以便引用。
 
 ---
