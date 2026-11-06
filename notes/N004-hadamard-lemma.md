@@ -94,36 +94,23 @@ $$
 
 ---
 
-## 5. 用途：三行推出 Weyl 关系的相位
+## 5. Weyl 相位
 
-设 $[A,B]=c$ 是数。三步可得
+$[A,B]=c$ 是数时由 [D05](../derivations/D05-commutator-phase.md) 得 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。代回物理量 $A=ia\hat p$、$B=ib\hat q$：
 
-$$
-e^{A}e^{B}=e^{c}\,e^{B}e^{A}
-$$
-
-（三步：共轭作用于函数即作用于自变量；用 [D04](../derivations/D04-two-term-truncation.md) 的两项截断；取 $f=e^{B}$。）
-
-**完整证明与边界（含"只定比值、不定绝对值"的说明）见 [D05 · 交换相位](../derivations/D05-commutator-phase.md)。**
-
-**代回物理量**：$A=ia\hat p$、$B=ib\hat q$，
 $$
 [A,B]=(ia)(ib)[\hat p,\hat q]=-ab\cdot(-i)=iab
 $$
 
-所以
+于是
 
 $$
 e^{ia\hat p}\,e^{ib\hat q}=e^{iab}\,e^{ib\hat q}\,e^{ia\hat p}
 $$
 
-**如果换成 $q$ 在前的次序**：$A=ia\hat q$、$B=ib\hat p$，则 $[A,B]=(ia)(ib)[\hat q,\hat p]=-iab$，得
+**完整证明、符号判据与失效条件见 [D07 · Weyl 相位](../derivations/D07-weyl-phase.md)。**
 
-$$
-e^{ia\hat q}\,e^{ib\hat p}=e^{-iab}\,e^{ib\hat p}\,e^{ia\hat q}
-$$
-
-两式都对，但混用会差一个 $e^{2iab}$。
+**次序提醒**：$q$ 在前时 $[A,B]=(ia)(ib)[\hat q,\hat p]=-iab$，因子变负号，得 $e^{ia\hat q}e^{ib\hat p}=e^{-iab}e^{ib\hat p}e^{ia\hat q}$。两式都对，**混用会差一个 $e^{2iab}$**。
 
 ### 5.1 为什么是 $e^{c}$ 不是 $e^{c/2}$
 

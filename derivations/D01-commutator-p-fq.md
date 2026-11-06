@@ -156,7 +156,7 @@ $$
 $$
 
 两条路给出同一个结果，后者不涉及任何"对算子求导"的说法。
-4. **符号约定的影响。** 本页用 $[\hat q,\hat p]=i$。若某文献取 $[\hat q,\hat p]=-i$（等价于 $\hat p=+i\partial_q$），则同一命题写成 $[\hat p,f]=+if'$。**判据**：看 $e^{ia\hat p}$ 把 $\lvert q\rangle$ 移到 $q+a$ 还是 $q-a$（见 [D02](README.md)）。
+4. **符号约定的影响。** 本页用 $[\hat q,\hat p]=i$。若某文献取 $[\hat q,\hat p]=-i$（等价于 $\hat p=+i\partial_q$），则同一命题写成 $[\hat p,f]=+if'$。**判据**：看 $e^{ia\hat p}$ 把 $\lvert q\rangle$ 移到 $q+a$ 还是 $q-a$（见 [D02](D02-translation.md)）。
 5. **无界算子。** $\hat p$ 与 $f(\hat q)$ 都无界，等式不是"处处成立"，而是"在共同的稠密定义域上成立"。物理推导里通常默认这一点；写严格论证时要交代。
 
 ---

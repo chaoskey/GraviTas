@@ -1,7 +1,7 @@
 # D04 · 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$
 
 > 建档 2026-11-06 · 上游：[D03](D03-hadamard-lemma.md)
-> 下游：[D05](README.md)、[D06](D06-three-bch-forms.md)、[D07](README.md)；[N004 §6.1](../notes/N004-hadamard-lemma.md)、[§6.2](../notes/N004-hadamard-lemma.md)
+> 下游：[D05](D05-commutator-phase.md)、[D06](D06-three-bch-forms.md)、[D07](D07-weyl-phase.md)；[N004 §6.1](../notes/N004-hadamard-lemma.md)、[§6.2](../notes/N004-hadamard-lemma.md)
 > 原为 [N004 §4](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---
@@ -83,7 +83,7 @@ $$
 1. **"数"必须是 $c\mathbb{1}$，不是标量函数。** $c(\hat q)$ 与 $\hat q$ 对易、与 $\hat p$ 不对易，代入即失效。这是本题最容易被含糊带过的地方。
 2. **截断与大小无关。** $c=10^{6}$ 与 $c=10^{-6}$ 结论相同；决定因素只有 $\mathrm{ad}_A^{2}B=0$。
 3. **与"多项式截断"是两条路。** 本卡片靠"$c$ 是数 ⇒ 两阶归零"；另一条靠"$B$ 是多项式 ⇒ 每作用一次降一次次数"。两条互不包含，见 [D03](D03-hadamard-lemma.md) §3。
-4. **它是 [D05](README.md) 的全部前提。** 没有这一条，就推不出 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。
+4. **它是 [D05](D05-commutator-phase.md) 的全部前提。** 没有这一条，就推不出 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。
 
 ---
 
