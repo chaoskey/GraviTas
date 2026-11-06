@@ -58,15 +58,19 @@ git add -A && git commit -m "..." # 每次有实质输出就提交
 
 - **禁止把代理写进任何配置文件**：不改仓库级或全局的 `git config`、不改 `~/.gitconfig`、
   不改 shell 配置、不写进任何受版本控制的文件。代理是临时工具，不是仓库状态。
-- **只在单条命令内临时覆盖**，命令结束即失效，无需另写清理脚本：
+- **用哪个代理**：协议 http，端口 `10808`；IP 取默认网关，**不写死**——网关地址随网络环境
+  变化，写死在换网时就失效。端口变了要同步改本节。
 
 ```bash
-git -c http.proxy=http://HOST:PORT -c https.proxy=http://HOST:PORT push origin main
+HOST_IP=$(ip route show default | awk '{print $3}')
+git -c http.proxy="http://$HOST_IP:10808" -c https.proxy="http://$HOST_IP:10808" push origin main
 ```
 
-- **每次使用后核验并报告四项**：仓库级与全局的 `http.proxy`、环境变量中的代理变量
+- **只在单条命令内临时覆盖**：`-c` 随进程结束失效，不落盘，无需另写清理脚本。
+- **每次使用后核验并报告五项**：仓库级与全局的 `http.proxy`、环境变量中的代理变量
   （含 `NO_PROXY`）、以及按 URL 细分的 `http.<url>.proxy`（用 `git config --get-regexp proxy` 查漏网）。
-- **代理地址属于本机基础设施**，永远不写进本仓库。
+- **代理参数属于本机基础设施**：除本节的这条操作说明外，不得写进任何受版本控制的文件，
+  尤其不得写进 `.git/config`、`~/.gitconfig`、shell 配置。
 
 ## 判断边界
 
