@@ -260,7 +260,7 @@ $$
 \langle p|\hat q|\psi\rangle=i\,\frac{d}{dp}\tilde\psi(p)
 $$
 
-**注意**：$\hat p=-i\partial_q$ 是**表示**，不是定义。定义只有 $[\hat q,\hat p]=i$ 加 $\hat q$ 的谱。换成别的基，$\hat p$ 就换成别的样子。
+**注意**：$\hat p=-i\partial_q$ 是**表示**，不是定义。定义只有 $[\hat q,\hat p]=i$ 加 $\hat q$ 的谱。推导见 [D16](../derivations/D16-momentum-representation.md)。
 
 ### 3.2 核（矩阵元）
 
@@ -276,7 +276,7 @@ $$
 \langle p'|\hat p|p''\rangle=p'\,2\pi\delta(p'-p'')
 $$
 
-读法：**对角项带 $\delta$，非对角项带 $\delta$ 的导数。** 这个模式在所有表象里重复。
+读法：**对角项带 $\delta$，非对角项带 $\delta$ 的导数。** 这个模式在所有表象里重复。核的推导见 [D16](../derivations/D16-momentum-representation.md) §2。
 
 ### 3.3 乘积的核（路径积分的引擎）
 
@@ -284,7 +284,7 @@ $$
 \langle q'|\hat A\hat B|q''\rangle=\int dq\;\langle q'|\hat A|q\rangle\langle q|\hat B|q''\rangle
 $$
 
-这一条就是"在中间插一张快照"。[N002 §2.1](N002-finite-temperature-path-integral.md) 的时间切片全靠它；连乘 $N$ 次再取极限，得到的对象就叫路径积分。
+一行证明：插 $\mathbb{1}=\int dq|q\rangle\langle q|$。**完整版与推广（$N$ 重乘积）见 [D15](../derivations/D15-product-kernel.md)。**
 
 ### 3.4 波函数与其傅里叶变换
 
@@ -328,9 +328,7 @@ $$
 \text{核}\propto\delta(q'-q'')
 $$
 
-**对易子为零，核必然对角。** 这条判据的好处是它不需要 $f$ 解析、不需要展开，也不怕 $f$ 是哪个具体函数。
-
-顺带解释一件事：为什么 $V(q)$ 和 $V(q')$ 在 $\langle q'\lvert e^{-\varepsilon V(\hat q)}\lvert q''\rangle$ 里可以随便换？因为 $\delta$ 的支撑上 $q'=q''$，两者**精确**相等。上一轮讨论过的 $\mathcal{O}(\varepsilon^{3/2})$ 差别不在这里，它出现在**把 $\delta$ 用 $p$ 积分抹开成高斯之后**——那时两点不再重合，差别才显形。
+**对易子为零，核必然对角。** 这条判据不需要 $f$ 解析、不需要展开。**证明与用途见 [D14](../derivations/D14-diagonal-criterion.md)。**
 
 ### 4.3 平移算子
 
@@ -379,6 +377,8 @@ $$
 \qquad
 [\hat p,g(\hat q)]=-i\,g'(\hat q)
 $$
+
+不确定关系的证明（Cauchy–Schwarz + 对易子）见 [D17](../derivations/D17-uncertainty.md)；对易子公式的镜像来源见 [D01](../derivations/D01-commutator-p-fq.md)。
 
 ### 5.2 迹（基无关）
 

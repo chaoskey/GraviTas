@@ -47,10 +47,14 @@
 | D07 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D05 | [D07](D07-weyl-phase.md) | ✓ |
 | D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D02、D07、D13 | [D08](D08-qp-overlap.md) | ✓ |
 | D09 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D10 | [D09](D09-trace-is-loop.md) | ✓ |
-| D10 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D08 | [D10](D10-path-integral-representation.md) | ✓ |
+| D10 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D08、D15 | [D10](D10-path-integral-representation.md) | ✓ |
 | D11 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D12 | [D11](D11-functional-calculus.md) | ✓ |
 | D12 | 谱定理与 Gelfand–Maurin（引用卡） | 外部定理 | [D12](D12-spectral-theorem.md) | ✓ |
 | D13 | Stone–von Neumann（引用卡） | 外部定理 | [D13](D13-stone-von-neumann.md) | ✓ |
+| D14 | 对角判据：$[\hat q,f(\hat q)]=0\Rightarrow$ 核 $\propto\delta$ | D00、D12 | [D14](D14-diagonal-criterion.md) | ✓ |
+| D15 | 乘积的核：$\langle q'\lvert\hat A\hat B\lvert q''\rangle=\int dq\cdots$ | D12 | [D15](D15-product-kernel.md) | ✓ |
+| D16 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D08、D12 | [D16](D16-momentum-representation.md) | ✓ |
+| D17 | 不确定关系 $\Delta q\,\Delta p\ge\frac{1}{2}$ | D00、D12 | [D17](D17-uncertainty.md) | ✓ |
 
 **状态含义**：✓ 已逐行核对；○ 草稿；✗ 已废弃（并在"全文"列写明去哪找）。
 
@@ -69,16 +73,20 @@ D00 公理
  ├─ D03 → D04 → D05 → D06     （代数主干）
  │         └──→ D02
  │    D05 ─────→ D07 ──┐
- │    D02 ─────────────┼─→ D08 ─→ D10 ─→ D09
- │                     └── D13
- └─ D12 → D11                 （默认被 D01/D03/D05/D06/D08 使用）
+ │    D02 ─────────────┼─→ D08 ─→ D16
+ │                     └── D13         └──→ D10 ─→ D09
+ └─ D12 → D11                 （默认被 D01/D03/D05/D06/D08/D14/D17 使用）
+      ├─ D14 对角判据
+      ├─ D15 乘积的核 ──→ D10
+      └─ D17 不确定关系
 ```
 
 - **D00 是唯一输入**：删掉它，全部卡片同时失效；
 - **D03–D06 是代数主干**：从 Hadamard 引理一路走到三条 BCH 闭式，全程只用对易子代数；
 - **D07–D08 是表象分支**：从 Weyl 相位到平面波，中间必须引用 D12（谱定理）与 D13（Stone–von Neumann）；
 - **D09–D10 是统计分支**：路径积分表示 → 取迹成环，与代数主干只有 D08 一个接口；
-- **D11、D12 是地基**：一个给"函数作用在算子上"的定义，一个给"本征矢存在"，两者都常被默认使用（见上表下方说明）。
+- **D11、D12 是地基**：一个给"函数作用在算子上"的定义，一个给"本征矢存在"，两者都常被默认使用（见上表下方说明）；
+- **D14、D15、D16、D17 是表象工具**：分别解决"什么时候对角"、"怎么插入完备性"、"$\hat p$ 怎么表示"、"两个量的弥散下限"。它们不依赖代数主干，但 D16 依赖 D08。
 
 **读法**：箭头是"被用来推出"。沿箭头读是推论链，逆着读是依赖链。
 
