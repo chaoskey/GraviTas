@@ -1,7 +1,7 @@
 # D05 · $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数）
 
 > 建档 2026-11-06 · 上游：公理、[D03](D03-hadamard-lemma.md)、[D04](D04-two-term-truncation.md)
-> 下游：[D06](README.md)、[D07](README.md)；[N004 §5](../notes/N004-hadamard-lemma.md)
+> 下游：[D06](D06-three-bch-forms.md)、[D07](README.md)；[N004 §5](../notes/N004-hadamard-lemma.md)
 > 原为 [N004 §5](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---
@@ -26,7 +26,7 @@ $$
 \frac{e^{A}e^{B}}{e^{B}e^{A}}=e^{c}
 $$
 
-这对**任意** $\lambda$ 都成立：取 $e^{A}e^{B}=e^{\lambda c}e^{A+B}$、$e^{B}e^{A}=e^{(\lambda-1)c}e^{A+B}$，比值仍是 $e^{c}$。所以本条**不能**推出 $e^{A}e^{B}=e^{c/2}e^{A+B}$——那是 [D06](README.md) 的活，需要额外输入（对 $t$ 的连续依赖）。
+这对**任意** $\lambda$ 都成立：取 $e^{A}e^{B}=e^{\lambda c}e^{A+B}$、$e^{B}e^{A}=e^{(\lambda-1)c}e^{A+B}$，比值仍是 $e^{c}$。所以本条**不能**推出 $e^{A}e^{B}=e^{c/2}e^{A+B}$——那是 [D06](D06-three-bch-forms.md) 的活，需要额外输入（对 $t$ 的连续依赖）。
 
 ---
 
@@ -79,7 +79,7 @@ $$
 |---|---|
 | $c=0$（即 $[A,B]=0$） | 两边都是 $e^{A}e^{B}=e^{B}e^{A}$ ✅ |
 | 与 [D04](D04-two-term-truncation.md) 相容 | D04 是 $f(B)$ 取恒等函数的情形；本式取 $f=e^{B}$，是它的推广 |
-| 与 [D06](README.md) 相容 | D06 的 $e^{c/2}$ 与 $e^{-c/2}$ 之商正是 $e^{c}$ ✅ |
+| 与 [D06](D06-three-bch-forms.md) 相容 | D06 的 $e^{c/2}$ 与 $e^{-c/2}$ 之商正是 $e^{c}$ ✅ |
 | 代回 $\hat q,\hat p$ | $A=ia\hat p$、$B=ib\hat q$，$[A,B]=iab$，得各向异性相位（见 [D07](README.md)）✅ |
 | 反例检查 | 若 $c$ 是算子，$\exp(B+c)\neq e^{B}e^{c}$，第三步失效 |
 
@@ -87,7 +87,7 @@ $$
 
 ## 3. 备注与边界
 
-1. **只定比值，不定绝对值。** 见 §0 的 $\lambda$ 参数族。想定 $\lambda=1/2$，必须另加"对 $t$ 的连续依赖"——那是 [D06](README.md)。
+1. **只定比值，不定绝对值。** 见 §0 的 $\lambda$ 参数族。想定 $\lambda=1/2$，必须另加"对 $t$ 的连续依赖"——那是 [D06](D06-three-bch-forms.md)。
 2. **$c$ 必须是数。** 第三步要把 $e^{c}$ 从指数里提出来，用的正是"$c$ 与 $B$ 对易"。$c$ 若是算子，整条链断在这里。
 3. **函数演算那一步不是显然的。** $e^{A}f(B)e^{-A}=f(e^{A}Be^{-A})$ 对多项式显然，对一般 $f$ 需要级数收敛（或用谱定理）。这里 $f=e^{B}$ 是整函数，安全。
 4. **相位不是"凑出来的"。** 去掉 $e^{c}$，等式等于宣称 $[\hat q,\hat p]=0$——量子力学当场退化成经典力学。
