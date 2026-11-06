@@ -12,7 +12,7 @@
 - `notes/N###` 是**叙事**：一个主题、一条线、可以很长，可以有"我一开始错在哪"。
 - `derivations/D##` 是**卡片**：一个命题、一个证明、一组检验，通常一页以内。
 
-两者的关系：笔记里需要某个中间结论时，不再重推一遍，而是引用编号（例：见 D03）。卡片里需要长篇背景时，指向笔记（例：见 [N004](../notes/N004-hadamard-lemma.md)）。
+两者的关系：笔记里需要某个中间结论时，不再重推一遍，而是引用编号（例：见 D07）。卡片里需要长篇背景时，指向笔记（例：见 [N004](../notes/N004-hadamard-lemma.md)）。
 
 **这意味着什么**：以后你在任何地方写下一个"因为 $X$，所以 $Y$"，先查网格里有没有编号。有就引用，没有就新建一张卡片。重复推导是漂移的开始。
 
@@ -24,71 +24,74 @@
 |---|---|
 | 格式 | `D` 加两位数字：**`D00` 保留给公理**；`D01`–`D99` 为推导 |
 | 唯一性 | 全局唯一，**永不复用** |
-| 顺序 | `D01` 起按**登记顺序**编号，**不代表逻辑先后**；逻辑关系看下表"输入"列 |
-| 稳定性 | 编号固定后不再改；**改的是内容，不是编号** |
-| 废弃 | 命题本身要换时，新建编号，旧编号标注"已废弃，见 D##"，**不删除** |
+| **顺序** | **输入编号必须小于自身编号**（拓扑序）。新增卡片必须排在它**所有输入之后** |
+| 稳定性 | 编号一旦满足次序就不再改动；改命题就新建编号（见"废弃"） |
+| 废弃 | 命题要换时新建编号，旧编号标"已废弃，见 D##"，**不删除** |
 | 文件名 | `derivations/D##-短横线英文名.md` |
 
-**为什么按登记顺序而不是逻辑顺序**：逻辑顺序会随认识变化（比如后来发现某条其实依赖另一条），编号若跟着逻辑走，引用就会全部失效。**编号只保证"指得到"，不保证"指得准"**——后者由下表的"输入"列负责。
+**为什么强制"输入在前"**：任何卡片的上游只出现在**更小编号**里，顺着编号读就是一条合法的推导顺序，依赖图不会"往回跳"。这比"按登记顺序"更严；代价是**新增一条基础结论时要重排后面所有编号**——所以能放末尾就放末尾。
+
+**一次性重排记录**：2026-11-07 从旧的"登记顺序"整体重排为拓扑序（此前 D01–D17 全部换号，文件同时改名）。此后遵守上表。
 
 ---
 
-## 2. 网格（在建）
+## 2. 网格
 
 | 编号 | 命题 | 输入 | 全文 | 状态 |
 |---|---|---|---|---|
-| D00 | **公理**：$[\hat q,\hat p]=i$（Weyl 形式） | —（输入） | [D00](D00-commutator-axiom.md) | ✓ |
-| D01 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（旁证：D12） | [D01](D01-commutator-p-fq.md) | ✓ |
-| D02 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D04 | [D02](D02-translation.md) | ✓ |
-| D03 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | —（默认 D11） | [D03](D03-hadamard-lemma.md) | ✓ |
-| D04 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D03 | [D04](D04-two-term-truncation.md) | ✓ |
-| D05 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D04 | [D05](D05-commutator-phase.md) | ✓ |
-| D06 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D03、D04、D05 | [D06](D06-three-bch-forms.md) | ✓ |
-| D07 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D05 | [D07](D07-weyl-phase.md) | ✓ |
-| D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D02、D07、D13 | [D08](D08-qp-overlap.md) | ✓ |
-| D09 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D10 | [D09](D09-trace-is-loop.md) | ✓ |
-| D10 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D08、D15 | [D10](D10-path-integral-representation.md) | ✓ |
-| D11 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D12 | [D11](D11-functional-calculus.md) | ✓ |
-| D12 | 谱定理与 Gelfand–Maurin（引用卡） | 外部定理 | [D12](D12-spectral-theorem.md) | ✓ |
-| D13 | Stone–von Neumann（引用卡） | 外部定理 | [D13](D13-stone-von-neumann.md) | ✓ |
-| D14 | 对角判据：$[\hat q,f(\hat q)]=0\Rightarrow$ 核 $\propto\delta$ | D00、D12 | [D14](D14-diagonal-criterion.md) | ✓ |
-| D15 | 乘积的核：$\langle q'\lvert\hat A\hat B\lvert q''\rangle=\int dq\cdots$ | D12 | [D15](D15-product-kernel.md) | ✓ |
-| D16 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D08、D12 | [D16](D16-momentum-representation.md) | ✓ |
-| D17 | 不确定关系 $\Delta q\,\Delta p\ge\frac{1}{2}$ | D00、D12 | [D17](D17-uncertainty.md) | ✓ |
+| D00 | **公理**：$[\hat q,\hat p]=i$（Weyl 形式） | — | [D00](D00-commutator-axiom.md) | ✓ |
+| D01 | 谱定理与 Gelfand–Maurin（引用卡） | 外部定理 | [D01](D01-spectral-theorem.md) | ✓ |
+| D02 | Stone–von Neumann（引用卡） | 外部定理 | [D02](D02-stone-von-neumann.md) | ✓ |
+| D03 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D01 | [D03](D03-functional-calculus.md) | ✓ |
+| D04 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（默认 D03；旁证 D01） | [D04](D04-commutator-p-fq.md) | ✓ |
+| D05 | 对角判据：$[\hat q,f(\hat q)]=0\Rightarrow$ 核 $\propto\delta$ | D00、D01 | [D05](D05-diagonal-criterion.md) | ✓ |
+| D06 | 乘积的核：$\langle q'\lvert\hat A\hat B\lvert q''\rangle=\int dq\cdots$ | D01 | [D06](D06-product-kernel.md) | ✓ |
+| D07 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | —（默认：D03） | [D07](D07-hadamard-lemma.md) | ✓ |
+| D08 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D07 | [D08](D08-two-term-truncation.md) | ✓ |
+| D09 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D08（默认：D03） | [D09](D09-commutator-phase.md) | ✓ |
+| D10 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D07、D08、D09（默认：D03） | [D10](D10-three-bch-forms.md) | ✓ |
+| D11 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D09（默认：D03） | [D11](D11-weyl-phase.md) | ✓ |
+| D12 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D08（默认：D03） | [D12](D12-translation.md) | ✓ |
+| D13 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D12、D11、D02（默认：D03、D01） | [D13](D13-qp-overlap.md) | ✓ |
+| D14 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D13（默认：D01） | [D14](D14-momentum-representation.md) | ✓ |
+| D15 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D13、D06（默认：D01） | [D15](D15-path-integral-representation.md) | ✓ |
+| D16 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D15（默认：D01） | [D16](D16-trace-is-loop.md) | ✓ |
+| D17 | 不确定关系 $\Delta q\,\Delta p\ge\frac{1}{2}$ | D00、D01 | [D17](D17-uncertainty.md) | ✓ |
 
 **状态含义**：✓ 已逐行核对；○ 草稿；✗ 已废弃（并在"全文"列写明去哪找）。
 
-**默认依赖（不逐行重复）**：
+**"输入"列的两种标记**：
 
-- 凡出现 $e^{X}$、$f(\hat A)$ 的卡片，默认使用 [D11](D11-functional-calculus.md)（函数演算）；
-- 凡出现 $\lvert q\rangle$、完备性、迹的卡片，默认使用 [D12](D12-spectral-theorem.md)（谱定理）。
+- **（默认 Dxx）**——该卡隐式使用 Dxx，为不使表格臃肿而单列。典型例子：凡出现 $e^{X}$ 的卡片都默认使用 D03（函数演算），凡出现 $\lvert q\rangle$ 或完备性的都默认使用 D01（谱定理）。
+- **（旁证 Dxx）**——只在另证或备注中用到，主证明不需要。
 
-上表"输入"列只列**实质或特定**的上游；"旁证"指仅在另证或备注中用到的。
+**硬性约束**：任何条目的输入——**含默认与旁证**——其编号都必须**小于自身编号**。这条由脚本逐条校验过（见 §2.1）。
 
-### 2.1 依赖关系（按逻辑序重排）
+### 2.1 依赖分层（编号即拓扑序）
 
-```
-D00 公理
- ├─ D01                       （独立：归纳 + 幂级数）
- ├─ D03 → D04 → D05 → D06     （代数主干）
- │         └──→ D02
- │    D05 ─────→ D07 ──┐
- │    D02 ─────────────┼─→ D08 ─→ D16
- │                     └── D13         └──→ D10 ─→ D09
- └─ D12 → D11                 （默认被 D01/D03/D05/D06/D08/D14/D17 使用）
-      ├─ D14 对角判据
-      ├─ D15 乘积的核 ──→ D10
-      └─ D17 不确定关系
-```
+| 层 | 卡片 | 输入 |
+|---|---|---|
+| 0 | **D00 公理** | —（唯一输入） |
+| 1 | **D01 谱定理**、**D02 S–vN** | 外部定理 |
+| 2 | D03 函数演算 | D01 |
+| 3 | D04 对易子公式、D05 对角判据、D06 乘积的核、D17 不确定关系 | D00、D01、D03 |
+| 4 | D07 Hadamard | D03 |
+| 5 | D08 两项截断 | D07 |
+| 6 | D09 交换相位 | D08 |
+| 7 | D10 三条 BCH、D11 Weyl 相位、D12 平移 | D07、D08、D09、D00 |
+| 8 | D13 $\langle q\lvert p\rangle$ | D00、D12、D11、D02 |
+| 9 | D14 动量表示、D15 路径积分 | D00、D13、D01、D06 |
+| 10 | D16 迹即闭合路径 | D15 |
 
-- **D00 是唯一输入**：删掉它，全部卡片同时失效；
-- **D03–D06 是代数主干**：从 Hadamard 引理一路走到三条 BCH 闭式，全程只用对易子代数；
-- **D07–D08 是表象分支**：从 Weyl 相位到平面波，中间必须引用 D12（谱定理）与 D13（Stone–von Neumann）；
-- **D09–D10 是统计分支**：路径积分表示 → 取迹成环，与代数主干只有 D08 一个接口；
-- **D11、D12 是地基**：一个给"函数作用在算子上"的定义，一个给"本征矢存在"，两者都常被默认使用（见上表下方说明）；
-- **D14、D15、D16、D17 是表象工具**：分别解决"什么时候对角"、"怎么插入完备性"、"$\hat p$ 怎么表示"、"两个量的弥散下限"。它们不依赖代数主干，但 D16 依赖 D08。
+**这张表的用法**：只要每一行的"输入"列里出现的编号都**小于**本行编号，全表就自洽。**加卡片之前先查这一列**，否则就要重排。
 
-**读法**：箭头是"被用来推出"。沿箭头读是推论链，逆着读是依赖链。
+**三条主干**：
+
+- **代数主干**：D07 → D08 → D09 → D10 / D11（从 Hadamard 到 BCH 与 Weyl 相位）；
+- **表象主干**：D12 → D13 → D14（从平移到平面波到 $\hat p=-i\partial_q$）；
+- **统计主干**：D13、D06 → D15 → D16（从平面波与乘积核到路径积分到取迹）。
+
+**D01、D02 是地基**：两张引用卡，不证但被多处默认使用（见上表下方说明）。
 
 ---
 

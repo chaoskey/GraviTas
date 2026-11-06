@@ -1,7 +1,7 @@
-# D06 · 三条 BCH 闭式
+# D10 · 三条 BCH 闭式
 
-> 建档 2026-11-06 · 上游：[D03](D03-hadamard-lemma.md)、[D04](D04-two-term-truncation.md)、[D05](D05-commutator-phase.md)；默认 [D11](D11-functional-calculus.md)
-> 下游：无卡片直接依赖（[D07](D07-weyl-phase.md) 经 D05 得到相位）；[N004 §5.1](../notes/N004-hadamard-lemma.md)、[§5.2](../notes/N004-hadamard-lemma.md)
+> 建档 2026-11-06 · 上游：[D07](D07-hadamard-lemma.md)、[D08](D08-two-term-truncation.md)、[D09](D09-commutator-phase.md)；默认：D03
+> 下游：无卡片依赖（结论只被笔记引用）
 > 原为 [N004 §5.2](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---
@@ -30,15 +30,15 @@ $$
 e^{A/2}e^{B}e^{A/2}=e^{A+B}
 $$
 
-——把 $A$ 的一半放在两侧，正好落回 $e^{A+B}$。**所以"对称序"不是一种近似或约定，它是一个精确的算子恒等式**；两个次序与它各差 $e^{\pm c/2}$，彼此相差 $e^{c}$（[D05](D05-commutator-phase.md)）。
+——把 $A$ 的一半放在两侧，正好落回 $e^{A+B}$。**所以"对称序"不是一种近似或约定，它是一个精确的算子恒等式**；两个次序与它各差 $e^{\pm c/2}$，彼此相差 $e^{c}$（[D09](D09-commutator-phase.md)）。
 
-**它比 D05 强在哪**：D05 只给出比值 $e^{c}$，对 $\lambda$ 参数族 $e^{A}e^{B}=e^{\lambda c}e^{A+B}$ 全部适用；本卡片把 $\lambda$ 钉死为 $1/2$。**多出来的信息来自"对 $t$ 的连续依赖"**，见 §1 第一步。
+**它比 D09 强在哪**：D09 只给出比值 $e^{c}$，对 $\lambda$ 参数族 $e^{A}e^{B}=e^{\lambda c}e^{A+B}$ 全部适用；本卡片把 $\lambda$ 钉死为 $1/2$。**多出来的信息来自"对 $t$ 的连续依赖"**，见 §1 第一步。
 
 ---
 
 ## 1. 证明
 
-全程只用到 [D03](D03-hadamard-lemma.md)（Hadamard 引理）与 [D05](D05-commutator-phase.md)。
+全程只用到 [D07](D07-hadamard-lemma.md)（Hadamard 引理）与 [D09](D09-commutator-phase.md)。
 
 ### 1.1 第一步：化为微分方程
 
@@ -57,7 +57,7 @@ $$
 \end{aligned}
 $$
 
-由 [D03](D03-hadamard-lemma.md)（取 $A\to tA$）：
+由 [D07](D07-hadamard-lemma.md)（取 $A\to tA$）：
 
 $$
 e^{tA}B\,e^{-tA}=B+t[A,B]=B+tc
@@ -69,7 +69,7 @@ $$
 \boxed{\ \frac{dF}{dt}=\bigl(A+B+tc\bigr)F(t)\ }
 $$
 
-这是**算子系数**的一阶线性方程。**注意：走到这一步就用到了"对 $t$ 求导"，这是 D05 没有的信息。**
+这是**算子系数**的一阶线性方程。**注意：走到这一步就用到了"对 $t$ 求导"，这是 D09 没有的信息。**
 
 ### 1.2 第二步：解方程
 
@@ -109,7 +109,7 @@ $$
 
 ### 1.4 第四步：交换次序，得第二条
 
-由 [D05](D05-commutator-phase.md) 的 $e^{A}e^{B}=e^{c}e^{B}e^{A}$：
+由 [D09](D09-commutator-phase.md) 的 $e^{A}e^{B}=e^{c}e^{B}e^{A}$：
 
 $$
 e^{B}e^{A}=e^{-c}e^{A}e^{B}=e^{-c}\cdot e^{c/2}\,e^{A+B}=e^{-c/2}\,e^{A+B}
@@ -149,7 +149,7 @@ $$
 
 | 检验 | 结果 |
 |---|---|
-| 两式相除 | $\dfrac{e^{A}e^{B}}{e^{B}e^{A}}=e^{c/2-(-c/2)}=e^{c}$，与 [D05](D05-commutator-phase.md) 一致 ✅ |
+| 两式相除 | $\dfrac{e^{A}e^{B}}{e^{B}e^{A}}=e^{c/2-(-c/2)}=e^{c}$，与 [D09](D09-commutator-phase.md) 一致 ✅ |
 | 第三条与第一、二条相容 | 取 $A\to A/2$、$B\to A/2+B$ 两次应用，两个 $c/4$ 相消 ✅ |
 | $c=0$ | 三条都退化为 $e^{A+B}$ ✅ |
 | 与 $t$ 的展开对照 | 把 $F(t)$ 展开到 $t^{2}$：指数上是 $t(A+B)+\frac{c}{2}t^{2}$，与方程一致 ✅ |
@@ -173,4 +173,4 @@ $$
 - [ ] 说明积分因子 $G=e^{-f}F$ 为什么能把方程解出来，以及 $[f,\dot f]=0$ 在哪里用上
 - [ ] 说明 $K=0$ 是由什么定出来的
 - [ ] 用第五步推出第三条，并指出配对方式如何决定 $c/4$ 还是 $c/8$
-- [ ] 说明这三条比 D05 多了什么信息，多出来的信息来自哪一步
+- [ ] 说明这三条比 D09 多了什么信息，多出来的信息来自哪一步

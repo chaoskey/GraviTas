@@ -1,8 +1,8 @@
-# D12 · 谱定理与 Gelfand–Maurin
+# D01 · 谱定理与 Gelfand–Maurin
 
 > 建档 2026-11-06 · 类型：**引用卡**——陈述定理、说清用法与边界，**不复现证明**（证明属泛函分析，不在本仓库范围内）
-> 上游：无（外部数学定理）
-> 下游：[D11](D11-functional-calculus.md)（核心）；默认被 [D01](D01-commutator-p-fq.md)（旁证）、[D02](D02-translation.md)、[D08](D08-qp-overlap.md)、[D09](D09-trace-is-loop.md)、[D10](D10-path-integral-representation.md) 使用
+> 上游：外部数学定理（本仓库不证明）
+> 下游：[D03](D03-functional-calculus.md)、[D04](D04-commutator-p-fq.md)、[D05](D05-diagonal-criterion.md)、[D06](D06-product-kernel.md)、[D13](D13-qp-overlap.md)、[D14](D14-momentum-representation.md)、[D15](D15-path-integral-representation.md)、[D16](D16-trace-is-loop.md)、[D17](D17-uncertainty.md)
 
 ---
 
@@ -39,8 +39,8 @@ $$
 
 ### 1.2 它给什么（四条）
 
-1. **函数演算**——[D11](D11-functional-calculus.md) §1.2 的全部依据；
-2. **resolution of identity**——$\mathbb{1}=\int dE(\lambda)$，取 $f=1$ 即得（[D08](D08-qp-overlap.md) §1.5 的完备性）；
+1. **函数演算**——[D03](D03-functional-calculus.md) §1.2 的全部依据；
+2. **resolution of identity**——$\mathbb{1}=\int dE(\lambda)$，取 $f=1$ 即得（[D13](D13-qp-overlap.md) §1.5 的完备性）；
 3. **谱的信息**——$\sigma(\hat A)$ 是 $E$ 的支撑；$E(\{\lambda\})\neq0$ 的点就是点谱；
 4. **一个"对角化"模型**——谱简单时 $\hat A$ 酉等价于"在 $L^{2}(\mathbb{R},d\mu)$ 上乘以 $\lambda$"。**"让 $\hat q$ 对角"这句话的严格含义就是这个。**
 
@@ -48,7 +48,7 @@ $$
 
 1. **连续谱时不给本征矢。** 对连续谱的每个单点，$E(\{q\})=0$，于是**不存在** $\psi\in\mathcal{H}$ 满足 $\hat A\psi=q\psi$。谱定理给的是"一族投影"，不是"一族向量"。
 2. **不告诉你谱是什么。** 定理对**任何**自伴算子都成立，所以它对"$\hat q$ 的谱是 $\mathbb{R}$ 还是格点"一无所知。谱由你选的算子与边界条件决定。
-3. **不固定归一化。** 广义本征矢的归一化系数是约定（[D02](D02-translation.md) 的相位、[D08](D08-qp-overlap.md) 的整体相位都是这一类）。
+3. **不固定归一化。** 广义本征矢的归一化系数是约定（[D12](D12-translation.md) 的相位、[D13](D13-qp-overlap.md) 的整体相位都是这一类）。
 
 ---
 
@@ -100,10 +100,10 @@ $$
 
 | 卡片 | 依赖哪一条 |
 |---|---|
-| [D11](D11-functional-calculus.md) | §1.2 的函数演算与谱映射定理 |
-| [D01](D01-commutator-p-fq.md) | §2.2 的 $\lvert q\rangle$（"分布意义"的来源） |
-| [D02](D02-translation.md) | §1.2 的"重数为 1"（谱定理术语）+ §2.2 的基 |
-| [D08](D08-qp-overlap.md) | §1.5 的完备性 + §2.2 的 $\lvert q\rangle$ |
+| [D03](D03-functional-calculus.md) | §1.2 的函数演算与谱映射定理 |
+| [D04](D04-commutator-p-fq.md) | §2.2 的 $\lvert q\rangle$（"分布意义"的来源） |
+| [D12](D12-translation.md) | §1.2 的"重数为 1"（谱定理术语）+ §2.2 的基 |
+| [D13](D13-qp-overlap.md) | §1.5 的完备性 + §2.2 的 $\lvert q\rangle$ |
 
 **这就是网格最底下的那层**。它之上的一切都用它，它自己则不被本仓库证明。
 
@@ -114,9 +114,9 @@ $$
 | 检验 | 结果 |
 |---|---|
 | 乘法算子（$\hat q$ 乘 $x$） | 谱为 $\mathbb{R}$，$E(B)$ 为"乘以 $B$ 的特征函数"，广义本征矢为 $\delta(x-q)$（即求值泛函）✅ |
-| 动量算子（$\hat p=-i\partial_q$） | 广义本征矢为 $e^{ipx}$，$\langle p\lvert p'\rangle=2\pi\delta(p-p')$，与 [D08](D08-qp-overlap.md) 一致 ✅ |
-| 离散谱特例 | 有界区间上的算子给出 $\sum_n$ 而非 $\int$，$\delta$ 变 $\delta_{nm}$——与 [D02](D02-translation.md) §3 第 2 条一致 ✅ |
-| 与 D11 自洽 | $\sigma(f(\hat A))=f(\sigma(\hat A))$ 是谱定理的直接推论（[D11](D11-functional-calculus.md) §2）✅ |
+| 动量算子（$\hat p=-i\partial_q$） | 广义本征矢为 $e^{ipx}$，$\langle p\lvert p'\rangle=2\pi\delta(p-p')$，与 [D13](D13-qp-overlap.md) 一致 ✅ |
+| 离散谱特例 | 有界区间上的算子给出 $\sum_n$ 而非 $\int$，$\delta$ 变 $\delta_{nm}$——与 [D12](D12-translation.md) §3 第 2 条一致 ✅ |
+| 与 D03 自洽 | $\sigma(f(\hat A))=f(\sigma(\hat A))$ 是谱定理的直接推论（[D03](D03-functional-calculus.md) §2）✅ |
 
 ---
 
@@ -126,7 +126,7 @@ $$
 2. **核性不可省。** 换成一般的稠密子空间，Gelfand–Maurin 可能失效。所以"随便找个稠密子空间就能定义 $\lvert q\rangle$"是错的。
 3. **归一化依赖谱测度密度。** 若 $d\mu=\rho(q)\,dq$，则 $\langle q\lvert q'\rangle=\delta(q-q')/\rho(q)$。平直空间 $\rho=1$，弯曲空间 $\rho=\sqrt{g}$——**这是曲空间路径积分里测度因子的数学出处**。
 4. **重数大于 1 时要加标签。** 本征矢写成 $F_{\lambda,i}$，完备性多一个 $\sum_i$，归一化变成 $\delta_{ij}$。物理上就是自旋、味道、超选扇区。
-5. **这张卡不做证明。** 本仓库不重推泛函分析；能推的是"给定这些定理，物理结论如何落地"。**引用与证明的界限要一直守住**——[D08](D08-qp-overlap.md) §3 已经因此错过一次（把引用当证明）。
+5. **这张卡不做证明。** 本仓库不重推泛函分析；能推的是"给定这些定理，物理结论如何落地"。**引用与证明的界限要一直守住**——[D13](D13-qp-overlap.md) §3 已经因此错过一次（把引用当证明）。
 
 ---
 

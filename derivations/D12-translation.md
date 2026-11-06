@@ -1,7 +1,7 @@
-# D02 · 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$
+# D12 · 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D04](D04-two-term-truncation.md)（D04 已含 D03）；默认 [D11](D11-functional-calculus.md)
-> 下游：[D08](D08-qp-overlap.md)（用 $\lvert q\rangle=e^{-iq\hat p}\lvert 0\rangle$）；[N004 §6.1](../notes/N004-hadamard-lemma.md)
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D08](D08-two-term-truncation.md)；默认：D03
+> 下游：[D13](D13-qp-overlap.md)
 > 原为 [N004 §6.1](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---
@@ -23,7 +23,7 @@ $$
 
 **适用条件**：
 
-1. $\hat q$ 的谱**简单**（重数为 $1$，[D12](D12-spectral-theorem.md) 的术语），否则 $e^{ia\hat p}\lvert q\rangle$ 只能定到"同本征值的某个线性组合"；
+1. $\hat q$ 的谱**简单**（重数为 $1$，[D01](D01-spectral-theorem.md) 的术语），否则 $e^{ia\hat p}\lvert q\rangle$ 只能定到"同本征值的某个线性组合"；
 2. 相位约定：本征矢的相位取到使系数为 $1$（见 §1.3）；
 3. 归一化为 $\langle q\lvert q'\rangle=\delta(q-q')$。
 
@@ -41,7 +41,7 @@ $$
 [A,B]=ia[\hat p,\hat q]=ia\cdot(-i)=a
 $$
 
-$a$ 是数，于是由 [D04](D04-two-term-truncation.md)（两项截断）：
+$a$ 是数，于是由 [D08](D08-two-term-truncation.md)（两项截断）：
 
 $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+[A,B]=\hat q+a
@@ -118,7 +118,7 @@ $$
 1. **方向最容易错。** 记法：$e^{ia\hat p}$ 把"位置标签"推向小的一侧（$q-a$），把"波函数自变量"推向大的一侧（$x+a$）。两者差一个负号，来源是 $\langle x\lvert q\rangle=\delta(x-q)$。
 2. **重数为 $1$ 是前提。** 若 $\hat q$ 有内部指标（自旋、超选扇区），$e^{ia\hat p}$ 可以混合同一本征值的不同指标，结论要改成 $\sum_j S_{ij}(a)\lvert q-a,j\rangle$。
 3. **相位不是定理的一部分。** $\lvert c\rvert=1$ 是定理，$c=1$ 是约定。丢掉这句话，换一套基就会"证出"矛盾。
-4. **它支撑 D08。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用 $\lvert q\rangle=e^{-iq\hat p}\lvert 0\rangle$，那正是本卡片取 $a=-q$。
+4. **它支撑 D13。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用 $\lvert q\rangle=e^{-iq\hat p}\lvert 0\rangle$，那正是本卡片取 $a=-q$。
 
 ---
 
