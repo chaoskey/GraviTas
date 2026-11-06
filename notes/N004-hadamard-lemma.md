@@ -186,7 +186,6 @@ $$
 $$
 
 **代回物理量**：$A=ia\hat p$、$B=ib\hat q$，
-
 $$
 [A,B]=(ia)(ib)[\hat p,\hat q]=-ab\cdot(-i)=iab
 $$
@@ -207,18 +206,135 @@ $$
 
 ### 5.1 为什么是 $e^{c}$ 不是 $e^{c/2}$
 
-把两个次序都与对称序比较（BCH 在 $[A,B]$ 为常数时的精确形式）：
+$[A,B]=c$ 为常数时，下面三条都是**精确**等式（BCH 的闭式）:
 
 $$
 e^{A}e^{B}=e^{c/2}\,e^{A+B},
 \qquad
-e^{B}e^{A}=e^{-c/2}\,e^{A+B}
+e^{B}e^{A}=e^{-c/2}\,e^{A+B},
+\qquad
+e^{A/2}e^{B}e^{A/2}=e^{A+B}
 $$
 
-- 每一个单独看，相对对称序的相位是 $c/2$；
+**第三条说明了"对称"二字的来历**：把 $A$ 的一半放在两侧，结果正好落回 $e^{A+B}$。所以 $e^{A+B}$ 是**对称中点**，两个次序与它各自相差 $e^{\pm c/2}$：
+
+- 每一个单独看，相对对称中点的相位是 $c/2$；
 - 两者相比，相位是 $c/2-(-c/2)=c$。
 
-**记住分工**：$c/2$ 属于"相对于对称序"，$c$ 属于"两个次序之间"。Weyl 关系比较的是两个次序，所以是 $c$。
+**记住分工**：$c/2$ 属于"相对于对称中点"，$c$ 属于"两个次序之间"。Weyl 关系比较的是两个次序，所以是 $c$。
+
+这三条**不能**由前文已证的 $e^{A}e^{B}=e^{c}e^{B}e^{A}$ 推出来——那条只约束两个次序的**比值**，不约束它们各自与中点的**距离**：取 $e^{A}e^{B}=e^{\lambda c}e^{A+B}$、$e^{B}e^{A}=e^{(\lambda-1)c}e^{A+B}$，任意 $\lambda$ 都满足比值关系。要定出 $\lambda=1/2$，必须另加"对 $t$ 的连续依赖"。推导见 §5.2。
+
+### 5.2 三条 BCH 等式的推导
+
+前提与前文相同：$[A,B]=c$ 是**数**（即 $c\mathbb{1}$）。全程只用到 §2 的 Hadamard 引理。
+
+#### 第一步：把问题化为微分方程
+
+$$
+F(t)\equiv e^{tA}\,e^{tB}
+$$
+
+对 $t$ 求导：
+
+$$
+\begin{aligned}
+\frac{dF}{dt}
+&=A\,e^{tA}e^{tB}+e^{tA}B\,e^{tB}\\
+&=A\,F(t)+e^{tA}B\,e^{-tA}\,e^{tA}e^{tB}\\
+&=A\,F(t)+\bigl(e^{tA}Be^{-tA}\bigr)F(t)
+\end{aligned}
+$$
+
+第二行插入了 $e^{-tA}e^{tA}=\mathbb{1}$。由 Hadamard 引理（取 $A\to tA$）：
+
+$$
+e^{tA}B\,e^{-tA}=B+t[A,B]=B+tc
+$$
+
+于是
+
+$$
+\boxed{\ \frac{dF}{dt}=\bigl(A+B+tc\bigr)F(t)\ }
+$$
+
+这是**算子系数**的一阶线性方程。
+
+#### 第二步：解方程
+
+设积分因子
+
+$$
+G(t)\equiv e^{-f(t)}F(t)
+$$
+
+其中 $f(t)$ 待定。求导时用了 $\frac{d}{dt}e^{-f(t)}=-\dot f(t)\,e^{-f(t)}$，这要求 $[f(t),\dot f(t)]=0$；本例中 $f$ 与 $\dot f$ 都只由 $A+B$ 与数 $c$ 构成，故成立。
+
+$$
+\frac{dG}{dt}=e^{-f(t)}\Bigl(-\frac{df}{dt}+A+B+tc\Bigr)F(t)
+$$
+
+要求 $G$ 为常量，只需括号为零：
+
+$$
+\frac{df}{dt}=A+B+tc
+\quad\Longrightarrow\quad
+f(t)=(A+B)t+\frac{c}{2}t^{2}+K
+$$
+
+**$K$ 由初条件定**，不能随手丢：$F(0)=e^{0}e^{0}=\mathbb{1}$，故 $G(0)=e^{-f(0)}=\mathbb{1}$，给出 $K=0$（$K$ 平移 $2\pi i$ 不改变 $e^{f}$）。于是 $G(t)\equiv\mathbb{1}$，即
+
+$$
+F(t)=e^{f(t)}=\exp\Bigl((A+B)t+\frac{c}{2}t^{2}\Bigr)
+$$
+
+#### 第三步：取 $t=1$，得第一条
+
+$$
+e^{A}e^{B}=F(1)=\exp\Bigl(A+B+\frac{c}{2}\Bigr)=e^{c/2}\,e^{A+B}
+$$
+
+末步用到 $c/2$ 是数与 $A+B$ 对易。
+
+#### 第四步：交换次序，得第二条
+
+由 §5 已证的 $e^{A}e^{B}=e^{c}e^{B}e^{A}$：
+
+$$
+e^{B}e^{A}=e^{-c}e^{A}e^{B}=e^{-c}\cdot e^{c/2}\,e^{A+B}=e^{-c/2}\,e^{A+B}
+$$
+
+也可直接把第一条里的 $A$、$B$ 互换——此时 $[B,A]=-c$，符号自然出现。
+
+#### 第五步：对称中点，得第三条
+
+$$
+e^{A/2}e^{B}e^{A/2}=\bigl(e^{A/2}e^{B}\bigr)e^{A/2}
+$$
+
+**先合并前两个因子**（这是关键：$A/2$ 与**整个** $B$ 配对）。用第一条，取 $A\to A/2$，注意 $[A/2,B]=c/2$：
+
+$$
+e^{A/2}e^{B}=\exp\Bigl(\frac{A}{2}+B+\frac{1}{2}\cdot\frac{c}{2}\Bigr)=e^{c/4}\,e^{A/2+B}
+$$
+
+再与右边的 $e^{A/2}$ 合并。此时 $X=A/2+B$、$Y=A/2$，而 $[X,Y]=[B,A/2]=-c/2$：
+
+$$
+e^{(A/2+B)}\,e^{A/2}=e^{-c/4}\,e^{A+B}
+$$
+
+两式相乘，两个 $c/4$ 相消：
+
+$$
+e^{A/2}e^{B}e^{A/2}=e^{c/4}\cdot e^{-c/4}\cdot e^{A+B}=e^{A+B}
+$$
+
+#### 三点注意
+
+1. **配对决定指数。** 第五步若误配成 $(e^{A/2}e^{B/2})(e^{B/2}e^{A/2})$，因子会是 $e^{c/8}$ 而不是 $e^{c/4}$（因为 $[A/2,B/2]=c/4$，其半为 $c/8$）——最终结果仍相消为 $e^{A+B}$，但**中间量错了一倍**。写的时候必须指明谁与谁配对。
+2. **$K=0$ 来自初条件**，不是可以省略的常数。
+3. **"$c$ 是数"共用了三次**：解方程时保证 $A+B+tc$ 与 $A+B+sc$ 对易；$e^{A+B+c/2}=e^{c/2}e^{A+B}$；$e^{c/4}$ 可以提到乘积外面。少了这一条，三步全废。
 
 ---
 
@@ -331,9 +447,90 @@ $$
 
 ## 10. 自检
 
-- [ ] 不看本文，三行重推 Hadamard 引理（定义 $F(t)$、求导得 $\dot F=\mathrm{ad}_AF$、解方程）
-- [ ] 说明为什么 $[A,B]=c$ 是数时级数只有两项，并指出哪一步用到"$c$ 与一切对易"
-- [ ] 用这条引理推出 Weyl 相位，并说清 $p$ 在前与 $q$ 在前的符号差别
+- [x] 不看本文，三行重推 Hadamard 引理（定义 $F(t)$、求导得 $\dot F=\mathrm{ad}_AF$、解方程）
+
+引入 $F(t)=e^{tA} B e^{-tA}$  ，于是有：
+
+$$
+\begin{align} \frac{d F(t)}{dt}&=\frac{d}{dt}\left(e^{tA} B e^{-tA}\right) \\ &=\left(e^{tA}A B e^{-tA}\right)-\left(e^{tA} B e^{-tA}A\right) \qquad A \text{ 和 } e^{\pm tA} \text{ 是可对易的 } \\ &=A\left(e^{tA} B e^{-tA}\right)-\left(e^{tA} B e^{-tA}\right)A\\ &=A F(t)-F(t) A \\ &= [A, F(t)] \end{align}
+$$
+
+引入 $\mathrm{ad}_A X= [A, X]$ ,  于是 得到一个线性微分方程 ：
+$$
+\frac{d F(t)}{dt} = \mathrm{ad}_A F(t)
+$$
+构造积分因子： $G(t)=e^{-t \mathrm{ad}_A} F(t)$   ，于是：
+
+
+$$
+\begin{align} \frac{d G(t)}{dt}&=-e^{-t \mathrm{ad}_A}\mathrm{ad}_A F(t)+e^{-t \mathrm{ad}_A}  \frac{d F(t)}{dt} \\ &=-e^{-t \mathrm{ad}_A}\mathrm{ad}_A F(t)+e^{-t \mathrm{ad}_A} \mathrm{ad}_A F(t) \\ &=0\end{align}
+$$
+这意味着 $G(t)$ 是常量 ：$G(t)=F(0)$  ，即 ：
+$$
+e^{-t \mathrm{ad}_A} F(t)=B\quad \Longrightarrow\quad  F(t)=e^{t\mathrm{ad}_A} B=\sum_{n=0}^{\infty}\frac{t^{n}}{n!}\,\mathrm{ad}_A^{\,n}B
+$$
+取 $t=1$ 即：
+$$
+\boxed{\begin{aligned} e^{A} B e^{-A}&=\sum_{n=0}^{\infty}\frac{1}{n!}\,\mathrm{ad}_A^{\,n}B \\ &=B+[A,B]+\frac{1}{2!}\bigl[A,[A,B]\bigr]+\frac{1}{3!}\Bigl[A,\bigl[A,[A,B]\bigr]\Bigr]+\cdots \end{aligned}}
+$$
+
+
+- [x] 说明为什么 $[A,B]=c$ 是数时级数只有两项，并指出哪一步用到"$c$ 与一切对易"
+
+我们注意到，数 $c$ 和任意算子都是对易的。 所以，上面这个表达式中，从第三项开始都是 0 。 即：
+$$
+e^{A} B e^{-A}=B+[A,B] \qquad \Longrightarrow \qquad e^{A} B e^{-A}=B+c
+$$
+
+具体地：
+
+$$
+\mathrm{ad}_A^{2}B=[A,[A,B]]=[A,c]=0
+$$
+**这一步就是“$c$ 与一切对易”起作用的位置**：若 $c$ 是算子（例如 $c(\hat q)$），$[A,c]\neq0$，第二项就不为零。
+
+$n\ge3$ 的各项都是 $\mathrm{ad}_A$ 继续作用在 $0$ 上，故仍为零：
+$$
+\mathrm{ad}_A^{\,n}B=\mathrm{ad}_A^{\,n-2}\bigl(\mathrm{ad}_A^{2}B\bigr)=0
+$$
+
+所以截断是**精确**的，不是小 $c$ 的近似。这里“数”指 $c\mathbb{1}$，不是标量函数。
+
+- [x] 用这条引理推出 Weyl 相位，并说清 $p$ 在前与 $q$ 在前的符号差别
+
+对任意能展成幂级数的 $f$，即：
+$$
+f(X)=\sum_{n=0}^\infty \frac{1}{n!}f^{(n)}(0) X^n\qquad \|X\|<R
+$$
+于是
+$$
+\begin{align} e^A f(B)e^{-A}&=e^A \left(\sum_{n=0}^\infty \frac{1}{n!}f^{(n)}(0) B^n\right)e^{-A} \\ &= \sum_{n=0}^\infty \frac{1}{n!}f^{(n)}(0) \left(e^AB^ne^{-A}\right)\\ &= \sum_{n=0}^\infty \frac{1}{n!}f^{(n)}(0) \left(e^A B {\color{red}{e^{-A}e^A}}B^{n-1}e^{-A}\right) \\ &= \sum_{n=0}^\infty \frac{1}{n!}f^{(n)}(0) \left(e^A Be^{-A}\right)^1 \left(e^AB^{n-1}e^{-A}\right)\\ &= \sum_{n=0}^\infty \frac{1}{n!}f^{(n)}(0) \left(e^A Be^{-A}\right)^2 \left(e^AB^{n-2}e^{-A}\right)\\ &= \dots \\ &= \sum_{n=0}^\infty \frac{1}{n!}f^{(n)}(0) \left(e^A Be^{-A}\right)^n \left(e^AB^{0}e^{-A}\right) \\ &= \sum_{n=0}^\infty \frac{1}{n!}f^{(n)}(0) \left(e^A Be^{-A}\right)^n \\ &= f \left(e^A Be^{-A}\right) \end{align}
+$$
+即：
+$$
+e^A f(B)e^{-A}=f \left(e^A Be^{-A}\right)
+$$
+取  $f(B)=e^B$  ，则有：
+
+
+$$
+e^A e^B e^{-A}=\exp\left(e^A Be^{-A}\right)=e^{B+c}=e^B e^c=e^c e^B
+$$
+即：
+$$
+\boxed{e^A e^B = e^c e^B e^A}
+$$
+取 ：$A=ia\hat p$、$B=ib\hat q$，
+$$
+e^{ia\hat p} e^{ib\hat q} = e^{[ia\hat p,ib\hat q]} e^{ib\hat q} e^{ia\hat p}\qquad \Longrightarrow\qquad e^{ia\hat p} e^{ib\hat q} = e^{-ab{\color{red}{[\hat p,\hat q]}}} e^{ib\hat q} e^{ia\hat p}= e^{-ab{\color{red}{(-i)}}} e^{ib\hat q} e^{ia\hat p}= e^{iab} e^{ib\hat q} e^{ia\hat p}
+$$
+即：
+$$
+\boxed{e^{ia\hat p} e^{ib\hat q}= e^{iab} e^{ib\hat q} e^{ia\hat p}}
+$$
+前面最近的红色标记的，说明了  $p$ 在前与 $q$ 在前的符号差别，相差一个负号 。
+
 - [ ] 解释为什么 $e^{c}\neq e^{c/2}$：分别说明 $c/2$ 与 $c$ 各自对应什么比较
 - [ ] 举一个 $\mathrm{ad}_A$ 不幂零的例子，并把级数求和（§6.3 可作答案）
 - [ ] 用迹论证说明为什么不能用有限维矩阵检验 CCR
+
