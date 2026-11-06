@@ -1,7 +1,7 @@
 # D07 · Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$
 
 > 建档 2026-11-06 · 上游：公理 $[\hat q,\hat p]=i$、[D05](D05-commutator-phase.md)
-> 下游：[D08](README.md)、[N003 §0.3](../notes/N003-basis-and-operator-relations.md)；[N004 §5](../notes/N004-hadamard-lemma.md)
+> 下游：[D08](D08-qp-overlap.md)、[N003 §0.3](../notes/N003-basis-and-operator-relations.md)；[N004 §5](../notes/N004-hadamard-lemma.md)
 > 原为 [N004 §5](../notes/N004-hadamard-lemma.md) 尾部，2026-11-06 移入网格。
 
 ---

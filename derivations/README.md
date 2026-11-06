@@ -44,7 +44,7 @@
 | D05 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D03、D04 | [D05](D05-commutator-phase.md) | ✓ |
 | D06 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D03、D05 | [D06](D06-three-bch-forms.md) | ✓ |
 | D07 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | 公理、D05 | [D07](D07-weyl-phase.md) | ✓ |
-| D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D02、D07、谱定理、Stone–von Neumann | [N003 §0.5](../notes/N003-basis-and-operator-relations.md) | ✓ |
+| D08 | $\langle q\lvert p\rangle=e^{ipq}$ | D02、D07、谱定理、Stone–von Neumann | [D08](D08-qp-overlap.md) | ✓ |
 | D09 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | 切片构造 | [N002 §2.4](../notes/N002-finite-temperature-path-integral.md) | ✓ |
 
 **状态含义**：✓ 已逐行核对；○ 草稿；✗ 已废弃（并在"全文"列写明去哪找）。
