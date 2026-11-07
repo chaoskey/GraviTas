@@ -94,6 +94,81 @@ $$
 
 **具体画面**（这也是"为什么必须扩大空间"的最短说明）：取 $\hat q$ 为 $L^{2}(\mathbb{R})$ 上"乘以 $x$"。则 $\lvert q\rangle$ 就是求值泛函 $\psi\mapsto\psi(q)$。这个泛函在 $L^{2}$ 上**不连续**（函数可在一点很高而范数很小），但在 Schwartz 空间 $\mathcal{S}$ 上连续——所以它住在 $\mathcal{S}^{\times}$ 里，不在 $\mathcal{H}$ 里。
 
+### 2.4 取 $\hat q$：位置基的三件套
+
+把 §2.2 的定理取 $\hat A=\hat q$，得到三条。**它们互相配套，缺一条另外两条就没法用**：
+
+| 性质 | 内容 | 来源 |
+|---|---|---|
+| 本征方程 | $\hat q\lvert q\rangle=q\lvert q\rangle$ | §2.2 取 $\hat A=\hat q$ |
+| 正交归一 | $\langle q\lvert q'\rangle=\delta(q-q')$ | 谱测度密度为 $1$ |
+| 完备性 | $\int dq\,\lvert q\rangle\langle q\rvert=\mathbb{1}$ | §1.2 的 resolution of identity |
+
+#### 为什么是 $\delta$（而不是别的函数）
+
+$\hat q$ 的谱测度对 Lebesgue 测度绝对连续，一般可写
+
+$$
+dE(q)=\rho(q)\,\lvert q\rangle\langle q\rvert\,dq
+$$
+
+**取 $\hat q$ 为"乘以 $x$"的模型时 $\rho=1$**，于是
+
+$$
+\langle q\lvert q'\rangle=\frac{\delta(q-q')}{\rho(q)}
+\Big|_{\rho=1}=\delta(q-q')
+$$
+
+换成别的 $\rho$（例如弯曲空间的 $\sqrt{g}$），$\delta$ 前面就要挂系数 $\rho^{-1}$。**所以"系数为 1"是选出来的，不是自明的**——这条正是[曲空间路径积分测度项](../notes/N003-basis-and-operator-relations.md)的数学出处（§5 第 3 条）。
+
+#### 为什么系数必须与完备性配对
+
+设正交归一带系数 $c$、完备性带权重 $w$：
+
+$$
+\langle q\lvert q'\rangle=c\,\delta(q-q'),
+\qquad
+\int dq\,w\,\lvert q\rangle\langle q\rvert=\mathbb{1}
+$$
+
+用完备性展开 $\langle q'\lvert q''\rangle$：
+
+$$
+\int dq\,w\,\langle q'\lvert q\rangle\langle q\lvert q''\rangle
+=\int dq\,w\cdot c\,\delta(q'-q)\cdot c\,\delta(q-q'')
+=w\,c^{2}\,\delta(q'-q'')
+$$
+
+它必须等于 $\langle q'\lvert q''\rangle=c\,\delta(q'-q'')$，故
+
+$$
+w\,c=1
+$$
+
+**所以 $c$ 与 $w$ 互为倒数，不能各自独立地选**。本仓库取 $c=1$，于是 $w=1$。**这就是"归一化必须成对改"的算术根据。**
+
+#### 顺带解释 $\hat p$ 基的 $2\pi$
+
+同一个规则用在 $\hat p$ 上。$\hat p$ 基的 resolution 习惯写成
+
+$$
+\int\frac{dp}{2\pi}\,\lvert p\rangle\langle p\rvert=\mathbb{1},
+\qquad\text{即}\quad w=\frac{1}{2\pi}
+$$
+
+由 $w\,c=1$ 立刻得 $c=2\pi$：
+
+$$
+\langle p\lvert p'\rangle=2\pi\,\delta(p-p')
+$$
+
+**所以 $\delta$ 前那个 $2\pi$ 不是"多出来的"，它是完备性里 $1/2\pi$ 的倒数**。$dq$ 前没有系数、$dp$ 前有 $2\pi$，只是因为两个基的习惯写法不同（[N003 §1.1](../notes/N003-basis-and-operator-relations.md) 有对照表）。
+
+#### 两条注意
+
+1. **$\delta$ 是分布，不是函数值。** 三件套都在 $\Phi^{\times}$ 意义下成立（§2.3），$\langle q\lvert q'\rangle=\delta(q-q')$ 不能按普通内积理解。
+2. **$q$ 是实数。** $\hat q$ 自伴 $\Rightarrow$ 谱在 $\mathbb{R}$，本征值不自伴就会是复数——[D05](D05-diagonal-criterion.md) §1.2 的推导用到这一点。
+
 ---
 
 ## 3. 在本网格里的位置
@@ -101,9 +176,15 @@ $$
 | 卡片 | 依赖哪一条 |
 |---|---|
 | [D03](D03-functional-calculus.md) | §1.2 的函数演算与谱映射定理 |
-| [D04](D04-commutator-p-fq.md) | §2.2 的 $\lvert q\rangle$（"分布意义"的来源） |
-| [D12](D12-translation.md) | §1.2 的"重数为 1"（谱定理术语）+ §2.2 的基 |
+| [D04](D04-commutator-p-fq.md) | §2.2 的 $\lvert q\rangle$（旁证：表象法） |
+| [D05](D05-diagonal-criterion.md) | §2.4 的本征方程 + 正交归一 |
+| [D06](D06-product-kernel.md) | §2.4 的完备性（resolution of identity） |
+| [D12](D12-translation.md) | §2.4 的三件套 + §1.2 的"重数为 1" |
 | [D13](D13-qp-overlap.md) | §1.5 的完备性 + §2.2 的 $\lvert q\rangle$ |
+| [D14](D14-momentum-representation.md) | §2.4 的完备性 |
+| [D15](D15-path-integral-representation.md) | §2.4 的完备性与正交归一 |
+| [D16](D16-trace-is-loop.md) | §2.4 的完备性（取迹要用） |
+| [D17](D17-uncertainty.md) | §2.4 的本征方程（$\Delta q$ 的计算） |
 
 **这就是网格最底下的那层**。它之上的一切都用它，它自己则不被本仓库证明。
 
@@ -137,4 +218,5 @@ $$
 - [ ] 用"求值泛函"说明 $\lvert q\rangle$ 为什么不在 $\mathcal{H}$ 里
 - [ ] 说明核空间条件为什么不可省
 - [ ] 指出 $\langle q\lvert q'\rangle=\delta(q-q')$ 里的"$\delta$ 系数"由什么决定
+- [ ] 用 $w\,c=1$ 推出 $\langle p\lvert p'\rangle=2\pi\delta(p-p')$ 里的 $2\pi$
 - [ ] 举一个本网格里"引用谱定理"而非"证明"的具体位置
