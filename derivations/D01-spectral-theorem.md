@@ -106,6 +106,22 @@ $$
 
 **本征方程与正交归一都是可推的**：前者由谱分解一行得出，后者由 $E$ 的投影性推出——完整推导见 [D02](D02-position-eigen-equation.md)。
 
+**完备性同样是推出来的，而且只有一步**：$E$ 作为投影值测度，按定义满足
+
+$$
+E(\mathbb{R})=\mathbb{1}
+$$
+
+代入密度形式 $dE(q)=\rho(q)\,dq\,\lvert q\rangle\langle q\rvert$：
+
+$$
+\mathbb{1}=\int_{\mathbb{R}}dE(q)=\int dq\;\rho(q)\,\lvert q\rangle\langle q\rvert
+\quad\overset{\rho=1}{\Longrightarrow}\quad
+\mathbb{1}=\int dq\,\lvert q\rangle\langle q\rvert
+$$
+
+**所以完备性不是新假设，而是"PVM 归一化 + 密度识别"的合成**。$\rho\neq1$ 时权重跟着变——这与 [D03](D03-normalization-convention.md) 的 $w\,c=1$ 是同一条规则。
+
 #### 为什么是 $\delta$（而不是别的函数）
 
 $\hat q$ 的谱测度对 Lebesgue 测度绝对连续，一般可写
