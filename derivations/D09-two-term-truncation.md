@@ -1,7 +1,7 @@
-# D08 · 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$
+# D09 · 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$
 
-> 建档 2026-11-06 · 上游：[D07](D07-hadamard-lemma.md)
-> 下游：[D09](D09-commutator-phase.md)、[D10](D10-three-bch-forms.md)、[D12](D12-translation.md)
+> 建档 2026-11-06 · 上游：[D08](D08-hadamard-lemma.md)
+> 下游：[D10](D10-commutator-phase.md)、[D11](D11-three-bch-forms.md)、[D13](D13-translation.md)
 > 原为 [N004 §4](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---
@@ -19,7 +19,7 @@ $$
 **适用条件**：
 
 1. $c$ 与一切算子对易（这是全部内容的前提）；
-2. $e^{\pm A}$ 与级数展开的合法性沿用 [D07](D07-hadamard-lemma.md) 的条件。
+2. $e^{\pm A}$ 与级数展开的合法性沿用 [D08](D08-hadamard-lemma.md) 的条件。
 
 **最关键的一句**：这是**精确**等式，不是"小 $c$ 的一阶近似"。级数停止的原因是对易子**幂零**，不是 $c$ 小。
 
@@ -27,7 +27,7 @@ $$
 
 ## 1. 证明
 
-由 [D07](D07-hadamard-lemma.md)：
+由 [D08](D08-hadamard-lemma.md)：
 
 $$
 e^{A}Be^{-A}
@@ -71,8 +71,8 @@ $$
 | 检验 | 结果 |
 |---|---|
 | 取 $[A,B]=0$（即 $c=0$） | 右边为 $B$，与 $e^{A}Be^{-A}=B$ 一致 ✅ |
-| 取 $A=ia\hat p$、$B=\hat q$ | $c=ia[\hat p,\hat q]=a$，得 $\hat q+a$，即平移（[D12](D12-translation.md)）✅ |
-| 与 [D09](D09-commutator-phase.md) 相容 | 由本式可推出 $e^{A}e^{B}=e^{c}e^{B}e^{A}$，与 D09 一致 |
+| 取 $A=ia\hat p$、$B=\hat q$ | $c=ia[\hat p,\hat q]=a$，得 $\hat q+a$，即平移（[D13](D13-translation.md)）✅ |
+| 与 [D10](D10-commutator-phase.md) 相容 | 由本式可推出 $e^{A}e^{B}=e^{c}e^{B}e^{A}$，与 D10 一致 |
 | 若 $c$ 换成算子 $c(\hat q)$ | 第三项 $\neq0$，截断失效——反例成立 |
 | 量纲 | $c$ 与 $B$ 同量纲；两侧同量纲 ✅ |
 
@@ -82,8 +82,8 @@ $$
 
 1. **"数"必须是 $c\mathbb{1}$，不是标量函数。** $c(\hat q)$ 与 $\hat q$ 对易、与 $\hat p$ 不对易，代入即失效。这是本题最容易被含糊带过的地方。
 2. **截断与大小无关。** $c=10^{6}$ 与 $c=10^{-6}$ 结论相同；决定因素只有 $\mathrm{ad}_A^{2}B=0$。
-3. **与"多项式截断"是两条路。** 本卡片靠"$c$ 是数 ⇒ 两阶归零"；另一条靠"$B$ 是多项式 ⇒ 每作用一次降一次次数"。两条互不包含，见 [D07](D07-hadamard-lemma.md) §3。
-4. **它是 [D09](D09-commutator-phase.md) 的全部前提。** 没有这一条，就推不出 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。
+3. **与"多项式截断"是两条路。** 本卡片靠"$c$ 是数 ⇒ 两阶归零"；另一条靠"$B$ 是多项式 ⇒ 每作用一次降一次次数"。两条互不包含，见 [D08](D08-hadamard-lemma.md) §3。
+4. **它是 [D10](D10-commutator-phase.md) 的全部前提。** 没有这一条，就推不出 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。
 
 ---
 

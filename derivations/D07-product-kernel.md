@@ -1,7 +1,7 @@
-# D06 · 乘积的核：插入完备性
+# D07 · 乘积的核：插入完备性
 
 > 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)
-> 下游：[D16](D16-path-integral-representation.md)
+> 下游：[D17](D17-path-integral-representation.md)
 > 原为 [N003 §3.3](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 
 ---
@@ -37,7 +37,7 @@ $$
 =\int\prod_{k=1}^{N-1}dq_k\;\prod_{k=0}^{N-1}\langle q_{k+1}\lvert\hat A_{k+1}\lvert q_k\rangle
 $$
 
-**每插入一次，就多一个"中途位置"**。取 $N\to\infty$，这些中途位置连成一条路径——这正是 [D16](D16-path-integral-representation.md) §1.1 的全部内容。
+**每插入一次，就多一个"中途位置"**。取 $N\to\infty$，这些中途位置连成一条路径——这正是 [D17](D17-path-integral-representation.md) §1.1 的全部内容。
 
 ---
 
@@ -47,7 +47,7 @@ $$
 |---|---|
 | $\hat A=\hat B=\mathbb{1}$ | 右边 $\int dq\,\delta(q'-q)\delta(q-q'')=\delta(q'-q'')$ ✅ |
 | $\hat A=\lvert q_1\rangle\langle q_1\rvert$ | 右边塌缩为 $\langle q'\lvert q_1\rangle\langle q_1\lvert\hat B\lvert q''\rangle$，与直接计算一致 ✅ |
-| 与 [D16](D16-path-integral-representation.md) §1.1 对照 | 同一式子，只是那里取 $\hat A_k=e^{-\varepsilon H}$ ✅ |
+| 与 [D17](D17-path-integral-representation.md) §1.1 对照 | 同一式子，只是那里取 $\hat A_k=e^{-\varepsilon H}$ ✅ |
 | 与 [D01](D01-spectral-theorem.md) 一致 | 完备性 $\int dq\lvert q\rangle\langle q\rvert=\mathbb{1}$ 是它的 resolution of identity ✅ |
 
 ---

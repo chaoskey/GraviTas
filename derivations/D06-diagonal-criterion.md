@@ -1,6 +1,6 @@
-# D05 · 对角判据：$[\hat q,f(\hat q)]=0$ ⇒ 核正比于 $\delta$
+# D06 · 对角判据：$[\hat q,f(\hat q)]=0$ ⇒ 核正比于 $\delta$
 
-> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)
+> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)、[D02](D02-position-eigen-equation.md)
 > 下游：无卡片依赖（结论只被笔记引用）
 > 原为 [N003 §4.2](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 
@@ -28,7 +28,7 @@ $$
 
 ### 1.1 路线一：谱分解
 
-由 [D03](D03-functional-calculus.md) 与 [D01](D01-spectral-theorem.md)：
+由 [D04](D04-functional-calculus.md) 与 [D01](D01-spectral-theorem.md)：
 
 $$
 f(\hat q)=\int dq\,f(q)\,\lvert q\rangle\langle q\rvert
@@ -76,7 +76,7 @@ $$
 
 ## 2. 它用在哪
 
-1. **$e^{-\varepsilon V(\hat q)}$ 在 $q$ 基下对角**——这是 [D12](D12-translation.md) 与 [D08](D08-two-term-truncation.md) 里"位能那块直接提出去"的前提；
+1. **$e^{-\varepsilon V(\hat q)}$ 在 $q$ 基下对角**——这是 [D13](D13-translation.md) 与 [D09](D09-two-term-truncation.md) 里"位能那块直接提出去"的前提；
 2. **解释一个常见困惑**：为什么 $V(q)$ 与 $V(q')$ 在 $\langle q'\lvert e^{-\varepsilon V(\hat q)}\lvert q''\rangle$ 里可以随便换？因为 $\delta$ 的支撑上 $q'=q''$，两者**精确**相等。差 $\mathcal{O}(\varepsilon^{3/2})$ 的说法只出现在"$\delta$ 被 $p$ 积分抹成高斯之后"——那时两点不再重合。
 3. **判据可推广**：任何"与某算子对易"的算子，在该算子的表象下都对角。
 
@@ -88,7 +88,7 @@ $$
 |---|---|
 | $f=1$ | 核 $=\delta(q'-q'')$ ✅ |
 | $f=\hat q$ | 核 $=q'\delta(q'-q'')$ ✅ |
-| 与 [D04](D04-commutator-p-fq.md) 对照 | $[\hat p,f(\hat q)]\neq0$（等于 $-if'$），$[\hat q,f(\hat q)]=0$——**方向不同，结论相反** ✅ |
+| 与 [D05](D05-commutator-p-fq.md) 对照 | $[\hat p,f(\hat q)]\neq0$（等于 $-if'$），$[\hat q,f(\hat q)]=0$——**方向不同，结论相反** ✅ |
 | 不解析的 $f$（如阶跃） | 路线二仍成立，路线一需谱分解 ✅ |
 
 ---

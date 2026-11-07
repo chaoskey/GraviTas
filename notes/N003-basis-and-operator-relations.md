@@ -116,7 +116,7 @@ $$
 - **可推的部分**：模长 $\lvert\langle q\lvert p\rangle\rvert=1$ 由归一化逼出；相位线性于 $pq$ 由平移性质逼出；
 - **不可推的部分**：这个表示**存在且唯一**，只能引用 Stone–von Neumann。
 
-五步推导（平移、作用到本征矢、规范相位、连到 $\lvert 0\rangle$、由 $\delta$ 归一化定模长）见 [D13 · 重叠](../derivations/D13-qp-overlap.md)。
+五步推导（平移、作用到本征矢、规范相位、连到 $\lvert 0\rangle$、由 $\delta$ 归一化定模长）见 [D14 · 重叠](../derivations/D14-qp-overlap.md)。
 
 **"平面波不是猜出来的"的准确含义**：它的模长与相位都被条件锁死，只有整体相位是约定。
 
@@ -260,7 +260,7 @@ $$
 \langle p|\hat q|\psi\rangle=i\,\frac{d}{dp}\tilde\psi(p)
 $$
 
-**注意**：$\hat p=-i\partial_q$ 是**表示**，不是定义。定义只有 $[\hat q,\hat p]=i$ 加 $\hat q$ 的谱。推导见 [D15](../derivations/D15-momentum-representation.md)。
+**注意**：$\hat p=-i\partial_q$ 是**表示**，不是定义。定义只有 $[\hat q,\hat p]=i$ 加 $\hat q$ 的谱。推导见 [D16](../derivations/D16-momentum-representation.md)。
 
 ### 3.2 核（矩阵元）
 
@@ -276,7 +276,7 @@ $$
 \langle p'|\hat p|p''\rangle=p'\,2\pi\delta(p'-p'')
 $$
 
-读法：**对角项带 $\delta$，非对角项带 $\delta$ 的导数。** 这个模式在所有表象里重复。核的推导见 [D15](../derivations/D15-momentum-representation.md) §2。
+读法：**对角项带 $\delta$，非对角项带 $\delta$ 的导数。** 这个模式在所有表象里重复。核的推导见 [D16](../derivations/D16-momentum-representation.md) §2。
 
 ### 3.3 乘积的核（路径积分的引擎）
 
@@ -284,7 +284,7 @@ $$
 \langle q'|\hat A\hat B|q''\rangle=\int dq\;\langle q'|\hat A|q\rangle\langle q|\hat B|q''\rangle
 $$
 
-一行证明：插 $\mathbb{1}=\int dq|q\rangle\langle q|$。**完整版与推广（$N$ 重乘积）见 [D06](../derivations/D06-product-kernel.md)。**
+一行证明：插 $\mathbb{1}=\int dq|q\rangle\langle q|$。**完整版与推广（$N$ 重乘积）见 [D07](../derivations/D07-product-kernel.md)。**
 
 ### 3.4 波函数与其傅里叶变换
 
@@ -328,7 +328,7 @@ $$
 \text{核}\propto\delta(q'-q'')
 $$
 
-**对易子为零，核必然对角。** 这条判据不需要 $f$ 解析、不需要展开。**证明与用途见 [D05](../derivations/D05-diagonal-criterion.md)。**
+**对易子为零，核必然对角。** 这条判据不需要 $f$ 解析、不需要展开。**证明与用途见 [D06](../derivations/D06-diagonal-criterion.md)。**
 
 ### 4.3 平移算子
 
@@ -378,7 +378,7 @@ $$
 [\hat p,g(\hat q)]=-i\,g'(\hat q)
 $$
 
-不确定关系的证明（Cauchy–Schwarz + 对易子）见 [D18](../derivations/D18-uncertainty.md)；对易子公式的镜像来源见 [D04](../derivations/D04-commutator-p-fq.md)。
+不确定关系的证明（Cauchy–Schwarz + 对易子）见 [D19](../derivations/D19-uncertainty.md)；对易子公式的镜像来源见 [D05](../derivations/D05-commutator-p-fq.md)。
 
 ### 5.2 迹（基无关）
 
