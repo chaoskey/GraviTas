@@ -43,9 +43,17 @@ $$
 对任意 $q',q''$：
 
 $$
-0=\bigl\langle q'\bigr\lvert\bigl[\hat q,f(\hat q)\bigr]\bigr\lvert q''\bigr\rangle
-=(q'-q'')\,\langle q'\lvert f(\hat q)\lvert q''\rangle
+\begin{align}
+0&=\bigl\langle q'\bigr\lvert\bigl[\hat q,f(\hat q)\bigr]\bigl\lvert q''\bigr\rangle \\
+&={\color{red}{\bigl\langle q'\bigr\lvert\hat q}}\,f(\hat q)\bigl\lvert q''\bigr\rangle
+-\bigl\langle q'\bigr\lvert f(\hat q)\,{\color{blue}{\hat q\bigl\lvert q''\bigr\rangle}} \\
+&={\color{red}{q'\bigl\langle q'\bigr\lvert}}\,f(\hat q)\bigl\lvert q''\bigr\rangle
+-{\color{blue}{q''}}\bigl\langle q'\bigr\lvert f(\hat q)\,{\color{blue}{\bigl\lvert q''\bigr\rangle}} \\
+&=(q'-q'')\,\langle q'\lvert f(\hat q)\lvert q''\rangle
+\end{align}
 $$
+
+**第 3 行第一个等号依赖 $\hat q$ 自伴**：本征方程只给右矢 $\hat q\lvert q'\rangle=q'\lvert q'\rangle$；取伴随并用 $\hat q^{\dagger}=\hat q$，才得到左矢版本 $\langle q'\rvert\hat q=q'\langle q'\rvert$。而第二个等号（取出 $q''$）直接来自右矢本征方程——**两边的来源并不对称**，这一步不能省。
 
 所以要么 $q'=q''$，要么核为零：
 
