@@ -1,4 +1,4 @@
-# D19 · 不确定关系：$\Delta q\,\Delta p\ge\frac{1}{2}$
+# D20 · 不确定关系：$\Delta q\,\Delta p\ge\frac{1}{2}$
 
 > 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)
 > 下游：无卡片依赖（结论只被笔记引用）

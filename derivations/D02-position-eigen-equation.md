@@ -1,7 +1,7 @@
 # D02 · 位置本征方程：$\hat q\lvert q\rangle=q\lvert q\rangle$
 
 > 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)（谱分解与 $\hat q$ 的简单谱）
-> 下游：[D06](D06-diagonal-criterion.md)、[D13](D13-translation.md)
+> 下游：[D03](D03-normalization-convention.md)、[D07](D07-diagonal-criterion.md)、[D14](D14-translation.md)
 > 本卡把"本征方程"从前提变成结论，并顺手交代**正交归一从哪来**。
 
 ---
@@ -87,10 +87,10 @@ $$
 
 | 说法 | 用在 |
 |---|---|
-| $\hat q=\int q\,dq\lvert q\rangle\langle q\rvert$ | 算子的谱分解（[D04](D04-functional-calculus.md) 的函数演算） |
-| $\hat q\lvert q\rangle=q\lvert q\rangle$ | 作用在**单个矢**上（[D06](D06-diagonal-criterion.md) 的对易子论证、[D13](D13-translation.md) 的平移） |
+| $\hat q=\int q\,dq\lvert q\rangle\langle q\rvert$ | 算子的谱分解（[D05](D05-functional-calculus.md) 的函数演算） |
+| $\hat q\lvert q\rangle=q\lvert q\rangle$ | 作用在**单个矢**上（[D07](D07-diagonal-criterion.md) 的对易子论证、[D14](D14-translation.md) 的平移） |
 
-**本征方程是把"对角"从算子层面降到矢量层面的那句话。** [D06](D06-diagonal-criterion.md) 的整条推导都靠它。
+**本征方程是把"对角"从算子层面降到矢量层面的那句话。** [D07](D07-diagonal-criterion.md) 的整条推导都靠它。
 
 ---
 
@@ -100,8 +100,8 @@ $$
 |---|---|
 | 谱为实数 | $\hat q$ 自伴 $\Rightarrow$ 本征值 $q\in\mathbb{R}$，与 [D01](D01-spectral-theorem.md) §1.1 一致 ✅ |
 | 与 [D01](D01-spectral-theorem.md) §2.2 相容 | Gelfand–Maurin 的 $\hat A F_\lambda=\lambda F_\lambda$ 取 $\hat A=\hat q$ 即本卡命题 ✅ |
-| 与 [D06](D06-diagonal-criterion.md) 相容 | 那里用 $\langle q'\lvert\hat q=q'\langle q'\rvert$（需自伴）与本卡右矢版本配对 ✅ |
-| 与 [D15](D15-p-completeness.md) 对称 | 那边对 $\hat p$ 做同一件事，只是权重带 $2\pi$ ✅ |
+| 与 [D07](D07-diagonal-criterion.md) 相容 | 那里用 $\langle q'\lvert\hat q=q'\langle q'\rvert$（需自伴）与本卡右矢版本配对 ✅ |
+| 与 [D16](D16-p-completeness.md) 对称 | 那边对 $\hat p$ 做同一件事，只是权重带 $2\pi$ ✅ |
 
 ---
 
@@ -120,4 +120,4 @@ $$
 - [ ] 说明 $dE=dq\lvert q\rangle\langle q\rvert$ 是"识别"而非"推导"，以及它的非循环来源
 - [ ] 用投影性 $E(B)E(B')=0$ 推出正交归一的支撑
 - [ ] 说明重数大于 1 时本卡哪一步失效
-- [ ] 对比本卡与 [D15](D15-p-completeness.md)：为什么 $\hat p$ 那边要多一个 $2\pi$
+- [ ] 对比本卡与 [D16](D16-p-completeness.md)：为什么 $\hat p$ 那边要多一个 $2\pi$

@@ -1,7 +1,7 @@
-# D15 · 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$
+# D16 · 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$
 
-> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)（位置基的完备性）、[D14](D14-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）
-> 下游：[D16](D16-momentum-representation.md)、[D17](D17-path-integral-representation.md)
+> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)（位置基的完备性）、[D03](D03-normalization-convention.md)（归一化）、[D15](D15-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）
+> 下游：[D17](D17-momentum-representation.md)、[D18](D18-path-integral-representation.md)
 > 本卡补的是"换基"这一步：它**不是新假设**，是从位置基推出来的。
 
 ---
@@ -38,7 +38,7 @@ $$
 
 ### 1.2 第二步：代入重叠
 
-由 [D14](D14-qp-overlap.md)，$\langle q\lvert p\rangle=e^{ipq}$，故 $\langle p\lvert q''\rangle=\overline{e^{ipq''}}=e^{-ipq''}$：
+由 [D15](D15-qp-overlap.md)，$\langle q\lvert p\rangle=e^{ipq}$，故 $\langle p\lvert q''\rangle=\overline{e^{ipq''}}=e^{-ipq''}$：
 
 $$
 =\int\frac{dp}{2\pi}\,e^{ip(q'-q'')}
@@ -83,9 +83,9 @@ $$
 | 检验 | 结果 |
 |---|---|
 | 作用在平面波上 | $\int\frac{dp'}{2\pi}\lvert p'\rangle\langle p'\lvert p\rangle=\lvert p\rangle$，与 $\int\frac{dp'}{2\pi}2\pi\delta(p'-p)=1$ 一致 ✅ |
-| 与 [D14](D14-qp-overlap.md) §1.5 相容 | 那里由 $\int dq\lvert q\rangle\langle q\rvert$ 反推 $\lvert c(p)\rvert=1$；本卡是同一恒等式的另一侧 ✅ |
-| 与 [D16](D16-momentum-representation.md) 相容 | 那里插入 $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert$ 得 $\hat p=-i\partial_q$，系数与本卡一致 ✅ |
-| 与 [D17](D17-path-integral-representation.md) 相容 | 短时核的动量积分正是用本卡的权重 ✅ |
+| 与 [D15](D15-qp-overlap.md) §1.5 相容 | 那里由 $\int dq\lvert q\rangle\langle q\rvert$ 反推 $\lvert c(p)\rvert=1$；本卡是同一恒等式的另一侧 ✅ |
+| 与 [D17](D17-momentum-representation.md) 相容 | 那里插入 $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert$ 得 $\hat p=-i\partial_q$，系数与本卡一致 ✅ |
+| 与 [D18](D18-path-integral-representation.md) 相容 | 短时核的动量积分正是用本卡的权重 ✅ |
 
 ---
 

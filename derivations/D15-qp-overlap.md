@@ -1,7 +1,7 @@
-# D14 · $\langle q\lvert p\rangle=e^{ipq}$
+# D15 · $\langle q\lvert p\rangle=e^{ipq}$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D13](D13-translation.md)、[D12](D12-weyl-phase.md)、[D03](D03-stone-von-neumann.md)；默认：D04、D01
-> 下游：[D15](D15-p-completeness.md)、[D16](D16-momentum-representation.md)、[D17](D17-path-integral-representation.md)
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D03](D03-normalization-convention.md)、[D14](D14-translation.md)、[D13](D13-weyl-phase.md)、[D04](D04-stone-von-neumann.md)；默认：D05、D01
+> 下游：[D16](D16-p-completeness.md)、[D17](D17-momentum-representation.md)、[D18](D18-path-integral-representation.md)
 > 原为 [N003 §0.5](../notes/N003-basis-and-operator-relations.md) 的三步概括，2026-11-06 补全并移入网格。
 
 ---
@@ -15,7 +15,7 @@ $$
 **适用条件**（缺一不可，这是本条最要紧的部分）：
 
 1. $\hat q$ 的谱**简单**（重数为 $1$）、纯绝对连续、等于 $\mathbb{R}$——于是有 $\delta$ 归一化的 $\lvert q\rangle$；
-2. 位置与动量满足 Weyl 关系（[D12](D12-weyl-phase.md)）；
+2. 位置与动量满足 Weyl 关系（[D13](D13-weyl-phase.md)）；
 3. 归一化方案：$\langle q\lvert q'\rangle=\delta(q-q')$、$\langle p\lvert p'\rangle=2\pi\delta(p-p')$；
 4. 相位约定：本征矢的相位取到使 $\langle 0\lvert p\rangle=1$（见 §1 第五步）。
 
@@ -36,7 +36,7 @@ $$
 
 ### 1.1 第一步：$e^{ia\hat p}$ 在谱上是平移
 
-由 [D09](D09-two-term-truncation.md)（取 $A=ia\hat p$、$B=\hat q$）：
+由 [D10](D10-two-term-truncation.md)（取 $A=ia\hat p$、$B=\hat q$）：
 
 $$
 [A,B]=ia[\hat p,\hat q]=ia\cdot(-i)=a
@@ -48,7 +48,7 @@ $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+a
 $$
 
-（这正是 [D13](D13-translation.md) 的起点。）
+（这正是 [D14](D14-translation.md) 的起点。）
 
 ### 1.2 第二步：作用到本征矢上
 
@@ -150,7 +150,7 @@ $$
 | 模长 | $\lvert e^{ipq}\rvert=1$，与第五步一致 ✅ |
 | 回到波函数 | $\psi_p(q)=e^{ipq}$，正是 $\hat p=-i\partial_q$ 的本征函数：$-i\partial_q e^{ipq}=p\,e^{ipq}$ ✅ |
 | 直接模型验算 | 取 $\langle x\lvert q\rangle=\delta(x-q)$、$\langle x\lvert p\rangle=e^{ipx}$，则 $\langle q\lvert p\rangle=\int dx\,\delta(x-q)e^{ipx}=e^{ipq}$ ✅ |
-| 与 D13 相容 | $\langle q\lvert=\langle 0\lvert e^{iq\hat p}$ 正是 [D13](D13-translation.md) 取 $a=-q$ ✅ |
+| 与 D14 相容 | $\langle q\lvert=\langle 0\lvert e^{iq\hat p}$ 正是 [D14](D14-translation.md) 取 $a=-q$ ✅ |
 | $q\to0$ | $\langle 0\lvert p\rangle=1$，与相位约定一致 ✅ |
 
 **注意第三行只是"存在一个模型使结论成立"，不是证明。** 唯一性仍靠 Stone–von Neumann——举一个例子 ≠ 证明所有情形。
@@ -170,7 +170,7 @@ $$
 
 3. **Stone–von Neumann 负责的是"存在且唯一"。** 本卡片的五步只证明：**若**存在这样的表示，则重叠必为 $e^{ipq}$（差归一化）。存在性与唯一性无法由这五步得到，必须引用定理。**把引用当证明，是本条最常见的误读。**
 
-4. **符号约定。** 若取 $[\hat q,\hat p]=-i$（即 $\hat p=+i\partial_q$），则结果变为 $e^{-ipq}$。判据仍是 [D13](D13-translation.md)：看 $e^{ia\hat p}\lvert q\rangle$ 移到 $q+a$ 还是 $q-a$。
+4. **符号约定。** 若取 $[\hat q,\hat p]=-i$（即 $\hat p=+i\partial_q$），则结果变为 $e^{-ipq}$。判据仍是 [D14](D14-translation.md)：看 $e^{ia\hat p}\lvert q\rangle$ 移到 $q+a$ 还是 $q-a$。
 
 5. **无穷自由度时失效。** 表示不唯一，"平面波"不再有唯一含义；这是量子场论的入口。
 

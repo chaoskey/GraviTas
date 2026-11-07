@@ -1,6 +1,6 @@
-# D16 · $\hat p$ 在 $q$ 表象下是 $-i\partial_q$
+# D17 · $\hat p$ 在 $q$ 表象下是 $-i\partial_q$
 
-> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D14](D14-qp-overlap.md)、[D15](D15-p-completeness.md)；默认：D01
+> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D15](D15-qp-overlap.md)、[D16](D16-p-completeness.md)；默认：D01
 > 下游：无卡片依赖（结论只被笔记引用）
 > 原为 [N003 §3.1–3.2](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 
@@ -24,7 +24,7 @@ $$
 
 ## 1. 证明
 
-由 [D14](D14-qp-overlap.md)，$\langle q\lvert p\rangle=e^{ipq}$；由 [D01](D01-spectral-theorem.md)，$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$。于是
+由 [D15](D15-qp-overlap.md)，$\langle q\lvert p\rangle=e^{ipq}$；由 [D01](D01-spectral-theorem.md)，$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$。于是
 
 $$
 \langle q\lvert\hat p\lvert\psi\rangle
@@ -68,9 +68,9 @@ $$
 | 检验 | 结果 |
 |---|---|
 | 平面波 | $-i\partial_q e^{ipq}=p\,e^{ipq}$，正是 $\hat p$ 的本征函数 ✅ |
-| 平移 | $e^{ia\hat p}=e^{a\partial_q}$，作用为 $\psi(q)\to\psi(q+a)$，与 [D13](D13-translation.md) 一致 ✅ |
+| 平移 | $e^{ia\hat p}=e^{a\partial_q}$，作用为 $\psi(q)\to\psi(q+a)$，与 [D14](D14-translation.md) 一致 ✅ |
 | 对易子 | $[\hat p,\hat q]=-i\partial_q(q\psi)-q(-i\partial_q\psi)=-i$ ✅ |
-| 与 [D05](D05-commutator-p-fq.md) 一致 | $-i\partial_q(f\psi)-f(-i\partial_q\psi)=-if'\psi$，正是 D05 的结论 ✅ |
+| 与 [D06](D06-commutator-p-fq.md) 一致 | $-i\partial_q(f\psi)-f(-i\partial_q\psi)=-if'\psi$，正是 D06 的结论 ✅ |
 | $p$ 表象对称形式 | $\langle p\lvert\hat q\lvert\psi\rangle=i\partial_p\tilde\psi(p)$，符号相反（互换 $q\leftrightarrow p$ 所致）✅ |
 
 ---
@@ -78,9 +78,9 @@ $$
 ## 4. 边界
 
 1. **它是"表示"，不是"定义"。** 换成 $p$ 表象，$\hat p$ 就是"乘以 $p$"；换到相空间，又是另一个样子。定义只有 [D00](D00-commutator-axiom.md)。
-2. **依赖两个前提**：$\langle q\lvert p\rangle=e^{ipq}$（[D14](D14-qp-overlap.md)，需 S–vN 与谱定理）与完备性（[D01](D01-spectral-theorem.md)）。缺一个，推导不成立。
+2. **依赖两个前提**：$\langle q\lvert p\rangle=e^{ipq}$（[D15](D15-qp-overlap.md)，需 S–vN 与谱定理）与完备性（[D01](D01-spectral-theorem.md)）。缺一个，推导不成立。
 3. **无界性**：$\hat p$ 无界，求导只在稠密定义域（绝对连续且导数平方可积的函数）上有意义。
-4. **符号约定**：若取 $\hat p=+i\partial_q$（即 $[\hat q,\hat p]=-i$），符号全反。判据仍是 [D13](D13-translation.md) 的平移方向。
+4. **符号约定**：若取 $\hat p=+i\partial_q$（即 $[\hat q,\hat p]=-i$），符号全反。判据仍是 [D14](D14-translation.md) 的平移方向。
 
 ---
 
