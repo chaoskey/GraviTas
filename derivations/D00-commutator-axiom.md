@@ -3,7 +3,7 @@
 > 建档 2026-11-07 · 类型：**公理卡**——整个网格的输入，不是推导
 > 上游：无
 > 下游：[D04](D04-commutator-p-fq.md)、[D05](D05-diagonal-criterion.md)、[D11](D11-weyl-phase.md)、[D12](D12-translation.md)、[D13](D13-qp-overlap.md)、[D14](D14-momentum-representation.md)、[D15](D15-path-integral-representation.md)、[D17](D17-uncertainty.md)
-> 编号规则见 [derivations/README](README.md)：D00 保留给公理，D04 起按登记顺序。
+> 编号规则见 [derivations/README](README.md)：D00 保留给公理，D01 起按拓扑序。
 
 ---
 
@@ -31,6 +31,62 @@ $$
 **为什么对易子推不出 Weyl 关系**：$[\hat q,\hat p]=i$ 只是"在某个稠密子集上成立的一个等式"，它没有规定算子是否自伴、定义域是否被算子保持。缺这些条件时，$e^{ia\hat p}$ 可能根本不存在或不是酉算子，Weyl 关系无从谈起（例：半直线上的 $\hat p=-i\partial_x$ 只是对称的，自伴扩张不唯一）。
 
 **为什么仍用指数形式**：$\hat q,\hat p$ 无界，乘积有定义域问题；指数化后两边都是有界酉算子，处处有定义，并且把中心荷 $e^{iab}$ 显式写出来，这正是 [D02](D02-stone-von-neumann.md) 唯一性定理所需的输入。
+
+### 0.1 从 Weyl 关系导出对易子（求导法）
+
+**前提**：$U,V$ 强连续（Stone 定理给出生成元 $\hat p,\hat q$）；$\psi$ 取在公共不变稠密域内，保证下面每一步求导合法。
+
+把 Weyl 关系写成"差为零"的形式：
+
+$$
+W(a,b)\equiv U(a)\,V(b)-e^{iab}\,V(b)\,U(a)=0
+$$
+
+**第一步：对 $b$ 求导。**
+
+$$
+\partial_b W
+=U(a)\,\partial_b V(b)-\bigl(ia\,e^{iab}\bigr)V(b)U(a)
+-e^{iab}\bigl(\partial_b V(b)\bigr)U(a)
+$$
+
+这里用到 $\partial_b e^{iab}=ia\,e^{iab}$。
+
+**第二步：再对 $a$ 求导。**
+
+$$
+\begin{aligned}
+\partial_a\partial_b W
+={}&(\partial_aU)\,(\partial_bV)
+-i\,e^{iab}VU+ab\,e^{iab}VU-ia\,e^{iab}V(\partial_aU)\\
+&-ib\,e^{iab}(\partial_bV)U-e^{iab}(\partial_bV)(\partial_aU)
+\end{aligned}
+$$
+
+**第三步：取 $a=b=0$。** 含 $a$ 或 $b$ 的项全部为零，只剩三项：
+
+$$
+0=\partial_a\partial_b W\big|_{0}
+=(i\hat p)(i\hat q)-i-(i\hat q)(i\hat p)
+=-\hat p\hat q-i+\hat q\hat p
+=[\hat q,\hat p]-i
+$$
+
+故
+
+$$
+\boxed{\ [\hat q,\hat p]=i\ }
+$$
+
+**那个 $-i$ 从哪来**：$\partial_b e^{iab}=ia\,e^{iab}$，再对 $a$ 求导时那个 $ia$ 变成常数 $i$。**它是中心荷的残余**——若两个群对易（相因子为 $1$），这一项消失，得到 $[\hat q,\hat p]=0$。所以**非零对易子完全由相位 $e^{iab}$ 产生**，这也解释了为什么反过来推不出：对易子只记住了"有一个 $i$"，没记住"相位是 $iab$"。
+
+**另证（更短）**：把关系写成共轭形式 $U(a)V(b)U(a)^{-1}=e^{iab}V(b)$。先对 $a$ 求导得 $[\hat p,V(b)]=b\,V(b)$，再对 $b$ 求导得 $i[\hat p,\hat q]=\mathbb{1}$。
+
+**三点注意**：
+
+1. **结论只在稠密子集上成立**：$[\hat q,\hat p]\psi=i\psi$（$\psi\in D$），不是全空间的算子等式；
+2. **$W$ 是算子的差**，$W=0$ 指它在 $D$ 上作用为零；
+3. 这只是"Weyl 推出对易子"这一方向；反向不成立，见上文的方向表。
 
 ---
 
@@ -87,3 +143,4 @@ $$
 - [ ] 举出至少三条由它导出的结论及其卡片编号
 - [ ] 说明它在无穷自由度下为什么不再是完整描述
 - [ ] 说明它在量子引力语境下可能被改写，以及改写后哪些卡片会失效
+- [ ] 不做任何假设，从 Weyl 关系求导导出 $[\hat q,\hat p]=i$，并指出那个 $-i$ 从哪来
