@@ -55,11 +55,18 @@ $$
 
 **第 3 行第一个等号依赖 $\hat q$ 自伴**：本征方程只给右矢 $\hat q\lvert q'\rangle=q'\lvert q'\rangle$；取伴随并用 $\hat q^{\dagger}=\hat q$，才得到左矢版本 $\langle q'\rvert\hat q=q'\langle q'\rvert$。而第二个等号（取出 $q''$）直接来自右矢本征方程——**两边的来源并不对称**，这一步不能省。
 
-所以要么 $q'=q''$，要么核为零：
+由 $(q'-q'')\,T=0$（记 $T\equiv\langle q'\lvert f(\hat q)\lvert q''\rangle$）：
+
+- 若 $q'\ne q''$，则 $T=0$——**对角线之外一律为零**；
+- 若 $q'=q''$，方程不约束 $T$——**对角线上可以"无限大"**。
+
+所以 $T$ 只能集中在 $q'=q''$ 上，形如
 
 $$
-\langle q'\lvert f(\hat q)\lvert q''\rangle=c(q')\,\delta(q'-q'')
+T=c(q')\,\delta(q'-q'')
 $$
+
+**为什么是 $\delta$，而不是它的导数**：把 $(q'-q'')$ 乘回去验算——$\delta$ 给出 $0$（符合要求），而 $\delta'$ 给出 $-\delta$（不符合）。所以对角线上只能放 $\delta$ 本身，不能放它的导数。
 
 系数由"作用在态上"定：$f(\hat q)\lvert q''\rangle=f(q'')\lvert q''\rangle$，故 $c=f$。
 
