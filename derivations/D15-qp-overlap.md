@@ -139,6 +139,14 @@ $$
 \boxed{\ \langle q\lvert p\rangle=e^{ipq}\ }
 $$
 
+**反过来读也可以，而且更省事**：既然已经取了 $c=1$，同一个积分就直接给出 $\hat p$ 基的归一化——
+
+$$
+\langle p\lvert p'\rangle=\int dq\;e^{i(p'-p)q}=2\pi\,\delta(p-p')
+$$
+
+**所以 $2\pi$ 是算出来的，不是新约定。** 条件 3 与条件 4 只需取一个，另一个自动成立——差别只是 $\lvert c(p)\rvert^{2}=1$。
+
 **证毕。**
 
 ---

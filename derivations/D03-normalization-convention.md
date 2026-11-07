@@ -54,6 +54,15 @@ $$
 
 两套方案**都对**，只是把 $2\pi$ 放在不同位置。**混用必错**：$\langle q\lvert p\rangle$ 用一套、$\langle p\lvert p'\rangle$ 用另一套，算出的中间结果会差 $\sqrt{2\pi}$ 的因子，量纲上看不出来。
 
+**注意：$\langle p\lvert p'\rangle=2\pi\delta$ 这一行不是独立选择。** 它由 $\langle q\lvert p\rangle=e^{ipq}$ 加 $q$ 的完备性算出：
+
+$$
+\langle p\lvert p'\rangle=\int dq\,\langle p\lvert q\rangle\langle q\lvert p'\rangle
+=\int dq\,e^{-ipq}\,e^{ip'q}=2\pi\,\delta(p-p')
+$$
+
+**所以换方案时，改 $\langle q\lvert p\rangle$ 是主动的，改 $\langle p\lvert p'\rangle$ 是被动的**——前者定了，后者就没得选。
+
 ---
 
 ## 3. 怎么验：两条互锁
