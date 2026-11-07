@@ -31,7 +31,7 @@
 
 **为什么强制"输入在前"**：任何卡片的上游只出现在**更小编号**里，顺着编号读就是一条合法的推导顺序，依赖图不会"往回跳"。这比"按登记顺序"更严；代价是**新增一条基础结论时要重排后面所有编号**——所以能放末尾就放末尾。
 
-**一次性重排记录**：2026-11-07 从旧的"登记顺序"整体重排为拓扑序（此前 D01–D17 全部换号，文件同时改名）。此后遵守上表。
+**一次性重排记录**：2026-11-07 从旧的"登记顺序"整体重排为拓扑序（此前 D01–D18 全部换号，文件同时改名）。此后遵守上表。
 
 ---
 
@@ -53,10 +53,11 @@
 | D11 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D09（默认：D03） | [D11](D11-weyl-phase.md) | ✓ |
 | D12 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D08（默认：D03） | [D12](D12-translation.md) | ✓ |
 | D13 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D12、D11、D02（默认：D03、D01） | [D13](D13-qp-overlap.md) | ✓ |
-| D14 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D13（默认：D01） | [D14](D14-momentum-representation.md) | ✓ |
-| D15 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D13、D06（默认：D01） | [D15](D15-path-integral-representation.md) | ✓ |
-| D16 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D15（默认：D01） | [D16](D16-trace-is-loop.md) | ✓ |
-| D17 | 不确定关系 $\Delta q\,\Delta p\ge\frac{1}{2}$ | D00、D01 | [D17](D17-uncertainty.md) | ✓ |
+| D14 | 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | D01、D13 | [D14](D14-p-completeness.md) | ✓ |
+| D15 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D13、D14（默认：D01） | [D15](D15-momentum-representation.md) | ✓ |
+| D16 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D13、D06、D14（默认：D01） | [D16](D16-path-integral-representation.md) | ✓ |
+| D17 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D16（默认：D01） | [D17](D17-trace-is-loop.md) | ✓ |
+| D18 | 不确定关系 $\Delta q\,\Delta p\ge\frac{1}{2}$ | D00、D01 | [D18](D18-uncertainty.md) | ✓ |
 
 **状态含义**：✓ 已逐行核对；○ 草稿；✗ 已废弃（并在"全文"列写明去哪找）。
 
@@ -74,22 +75,22 @@
 | 0 | **D00 公理** | —（唯一输入） |
 | 1 | **D01 谱定理**、**D02 S–vN** | 外部定理 |
 | 2 | D03 函数演算 | D01 |
-| 3 | D04 对易子公式、D05 对角判据、D06 乘积的核、D17 不确定关系 | D00、D01、D03 |
+| 3 | D04 对易子公式、D05 对角判据、D06 乘积的核、D18 不确定关系 | D00、D01、D03 |
 | 4 | D07 Hadamard | D03 |
 | 5 | D08 两项截断 | D07 |
 | 6 | D09 交换相位 | D08 |
 | 7 | D10 三条 BCH、D11 Weyl 相位、D12 平移 | D07、D08、D09、D00 |
 | 8 | D13 $\langle q\lvert p\rangle$ | D00、D12、D11、D02 |
-| 9 | D14 动量表示、D15 路径积分 | D00、D13、D01、D06 |
-| 10 | D16 迹即闭合路径 | D15 |
+| 9 | D15 动量表示、D16 路径积分 | D00、D13、D01、D06 |
+| 10 | D17 迹即闭合路径 | D16 |
 
 **这张表的用法**：只要每一行的"输入"列里出现的编号都**小于**本行编号，全表就自洽。**加卡片之前先查这一列**，否则就要重排。
 
 **三条主干**：
 
 - **代数主干**：D07 → D08 → D09 → D10 / D11（从 Hadamard 到 BCH 与 Weyl 相位）；
-- **表象主干**：D12 → D13 → D14（从平移到平面波到 $\hat p=-i\partial_q$）；
-- **统计主干**：D13、D06 → D15 → D16（从平面波与乘积核到路径积分到取迹）。
+- **表象主干**：D12 → D13 → D15（从平移到平面波到 $\hat p=-i\partial_q$）；
+- **统计主干**：D13、D06 → D16 → D17（从平面波与乘积核到路径积分到取迹）。
 
 **D01、D02 是地基**：两张引用卡，不证但被多处默认使用（见上表下方说明）。
 

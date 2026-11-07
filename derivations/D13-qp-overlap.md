@@ -1,7 +1,7 @@
 # D13 · $\langle q\lvert p\rangle=e^{ipq}$
 
 > 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D12](D12-translation.md)、[D11](D11-weyl-phase.md)、[D02](D02-stone-von-neumann.md)；默认：D03、D01
-> 下游：[D14](D14-momentum-representation.md)、[D15](D15-path-integral-representation.md)
+> 下游：[D14](D14-p-completeness.md)、[D15](D15-momentum-representation.md)、[D16](D16-path-integral-representation.md)
 > 原为 [N003 §0.5](../notes/N003-basis-and-operator-relations.md) 的三步概括，2026-11-06 补全并移入网格。
 
 ---

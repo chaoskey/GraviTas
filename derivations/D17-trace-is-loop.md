@@ -1,6 +1,6 @@
-# D16 · 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$
+# D17 · 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$
 
-> 建档 2026-11-06 · 上游：[D15](D15-path-integral-representation.md)；默认：D01
+> 建档 2026-11-06 · 上游：[D16](D16-path-integral-representation.md)；默认：D01
 > 下游：无卡片依赖（结论只被笔记引用）
 > 原为 [N002 §2.4](../notes/N002-finite-temperature-path-integral.md)，2026-11-06 移入网格。
 

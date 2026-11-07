@@ -2,7 +2,7 @@
 
 > 建档 2026-11-06 · 类型：**引用卡**——陈述定理、说清用法与边界，**不复现证明**（证明属泛函分析，不在本仓库范围内）
 > 上游：外部数学定理（本仓库不证明）
-> 下游：[D03](D03-functional-calculus.md)、[D04](D04-commutator-p-fq.md)、[D05](D05-diagonal-criterion.md)、[D06](D06-product-kernel.md)、[D13](D13-qp-overlap.md)、[D14](D14-momentum-representation.md)、[D15](D15-path-integral-representation.md)、[D16](D16-trace-is-loop.md)、[D17](D17-uncertainty.md)
+> 下游：[D03](D03-functional-calculus.md)、[D04](D04-commutator-p-fq.md)、[D05](D05-diagonal-criterion.md)、[D06](D06-product-kernel.md)、[D13](D13-qp-overlap.md)、[D14](D14-p-completeness.md)、[D15](D15-momentum-representation.md)、[D16](D16-path-integral-representation.md)、[D17](D17-trace-is-loop.md)、[D18](D18-uncertainty.md)
 
 ---
 
@@ -181,10 +181,10 @@ $$
 | [D06](D06-product-kernel.md) | §2.4 的完备性（resolution of identity） |
 | [D12](D12-translation.md) | §2.4 的三件套 + §1.2 的"重数为 1" |
 | [D13](D13-qp-overlap.md) | §1.5 的完备性 + §2.2 的 $\lvert q\rangle$ |
-| [D14](D14-momentum-representation.md) | §2.4 的完备性 |
-| [D15](D15-path-integral-representation.md) | §2.4 的完备性与正交归一 |
-| [D16](D16-trace-is-loop.md) | §2.4 的完备性（取迹要用） |
-| [D17](D17-uncertainty.md) | §2.4 的本征方程（$\Delta q$ 的计算） |
+| [D15](D15-momentum-representation.md) | §2.4 的完备性 |
+| [D16](D16-path-integral-representation.md) | §2.4 的完备性与正交归一 |
+| [D17](D17-trace-is-loop.md) | §2.4 的完备性（取迹要用） |
+| [D18](D18-uncertainty.md) | §2.4 的本征方程（$\Delta q$ 的计算） |
 
 **这就是网格最底下的那层**。它之上的一切都用它，它自己则不被本仓库证明。
 

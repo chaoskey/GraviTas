@@ -61,7 +61,7 @@ $$
 
 **这就是 [D04](D04-commutator-p-fq.md) 与 [N003 §4.1](../notes/N003-basis-and-operator-relations.md) 一直用的形式。** 它是 1.2 的"谱简单"特例：$dE(\lambda)$ 写成 $\lvert\lambda\rangle\langle\lambda\rvert\,d\lambda$。
 
-**注意**：这个写法隐含条件"-归一化密度为 1"，即谱测度对 Lebesgue 测度的密度为 $1$。弯曲空间里密度是 $\sqrt{g}$，$dE$ 与 $\lvert a\rangle\langle a\rvert\,da$ 之间会差一个因子（见 [D12](D12-translation.md) 的同期讨论与 [D16](D16-trace-is-loop.md) §3 的测度问题）。
+**注意**：这个写法隐含条件"-归一化密度为 1"，即谱测度对 Lebesgue 测度的密度为 $1$。弯曲空间里密度是 $\sqrt{g}$，$dE$ 与 $\lvert a\rangle\langle a\rvert\,da$ 之间会差一个因子（见 [D12](D12-translation.md) 的同期讨论与 [D17](D17-trace-is-loop.md) §3 的测度问题）。
 
 ### 1.4 三者为何一致
 

@@ -2,7 +2,7 @@
 
 > 建档 2026-11-07 · 类型：**公理卡**——整个网格的输入，不是推导
 > 上游：无
-> 下游：[D04](D04-commutator-p-fq.md)、[D05](D05-diagonal-criterion.md)、[D11](D11-weyl-phase.md)、[D12](D12-translation.md)、[D13](D13-qp-overlap.md)、[D14](D14-momentum-representation.md)、[D15](D15-path-integral-representation.md)、[D17](D17-uncertainty.md)
+> 下游：[D04](D04-commutator-p-fq.md)、[D05](D05-diagonal-criterion.md)、[D11](D11-weyl-phase.md)、[D12](D12-translation.md)、[D13](D13-qp-overlap.md)、[D15](D15-momentum-representation.md)、[D16](D16-path-integral-representation.md)、[D18](D18-uncertainty.md)
 > 编号规则见 [derivations/README](README.md)：D00 保留给公理，D01 起按拓扑序。
 
 ---
@@ -97,7 +97,7 @@ $$
 | 它是定义吗？ | **不是。** $\hat q,\hat p$ 已经由"可观测量是自伴算子 + 谱"确定；对易子是**额外**的输入 |
 | 它是什么？ | **量子化的唯一输入项。** 给定这一条，其余全被锁死（[D02](D02-stone-von-neumann.md)） |
 
-**这意味着什么**：整个网格（D01–D17）都建立在这一行之上。删掉它，所有卡片同时失效——$e^{ia\hat p}$ 不再平移、Weyl 相位变成 1、$\langle q\lvert p\rangle$ 失去定义。
+**这意味着什么**：整个网格（D01–D18）都建立在这一行之上。删掉它，所有卡片同时失效——$e^{ia\hat p}$ 不再平移、Weyl 相位变成 1、$\langle q\lvert p\rangle$ 失去定义。
 
 ---
 
@@ -110,7 +110,7 @@ $$
 | $e^{ia\hat p}\hat qe^{-ia\hat p}=\hat q+a$ | [D08](D08-two-term-truncation.md) → [D12](D12-translation.md) |
 | Weyl 相位 $e^{iab}$ | [D11](D11-weyl-phase.md) |
 | $\langle q\lvert p\rangle=e^{ipq}$ | [D13](D13-qp-overlap.md) |
-| 路径积分里的 $(q'-q)^{2}/\varepsilon$ | [D15](D15-path-integral-representation.md) |
+| 路径积分里的 $(q'-q)^{2}/\varepsilon$ | [D16](D16-path-integral-representation.md) |
 
 **注意最后一行**：路径积分的动能项是这一条公理的影子——若二者对易，$p$ 积分给 $\delta(q'-q)$，就没有"路径"可走。
 

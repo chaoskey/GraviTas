@@ -260,7 +260,7 @@ $$
 \langle p|\hat q|\psi\rangle=i\,\frac{d}{dp}\tilde\psi(p)
 $$
 
-**注意**：$\hat p=-i\partial_q$ 是**表示**，不是定义。定义只有 $[\hat q,\hat p]=i$ 加 $\hat q$ 的谱。推导见 [D14](../derivations/D14-momentum-representation.md)。
+**注意**：$\hat p=-i\partial_q$ 是**表示**，不是定义。定义只有 $[\hat q,\hat p]=i$ 加 $\hat q$ 的谱。推导见 [D15](../derivations/D15-momentum-representation.md)。
 
 ### 3.2 核（矩阵元）
 
@@ -276,7 +276,7 @@ $$
 \langle p'|\hat p|p''\rangle=p'\,2\pi\delta(p'-p'')
 $$
 
-读法：**对角项带 $\delta$，非对角项带 $\delta$ 的导数。** 这个模式在所有表象里重复。核的推导见 [D14](../derivations/D14-momentum-representation.md) §2。
+读法：**对角项带 $\delta$，非对角项带 $\delta$ 的导数。** 这个模式在所有表象里重复。核的推导见 [D15](../derivations/D15-momentum-representation.md) §2。
 
 ### 3.3 乘积的核（路径积分的引擎）
 
@@ -378,7 +378,7 @@ $$
 [\hat p,g(\hat q)]=-i\,g'(\hat q)
 $$
 
-不确定关系的证明（Cauchy–Schwarz + 对易子）见 [D17](../derivations/D17-uncertainty.md)；对易子公式的镜像来源见 [D04](../derivations/D04-commutator-p-fq.md)。
+不确定关系的证明（Cauchy–Schwarz + 对易子）见 [D18](../derivations/D18-uncertainty.md)；对易子公式的镜像来源见 [D04](../derivations/D04-commutator-p-fq.md)。
 
 ### 5.2 迹（基无关）
 

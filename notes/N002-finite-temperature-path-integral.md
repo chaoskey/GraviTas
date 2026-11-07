@@ -91,7 +91,7 @@ $$
 S_E[q] = \int_0^\beta d\tau\left[\frac{m}{2}\dot q^2 + V(q)\right]
 $$
 
-**这一步怎么来的**：把 $e^{-\beta H}$ 切成 $N$ 片、每两片之间插入完备性、对单片做高斯积分、再取 $N\to\infty$。完整推导见 [D15 · 路径积分表示](../derivations/D15-path-integral-representation.md)。
+**这一步怎么来的**：把 $e^{-\beta H}$ 切成 $N$ 片、每两片之间插入完备性、对单片做高斯积分、再取 $N\to\infty$。完整推导见 [D16 · 路径积分表示](../derivations/D16-path-integral-representation.md)。
 
 ### 2.2 单片矩阵元
 
@@ -103,11 +103,11 @@ $$
 \exp\left[-\frac{m(q'-q)^2}{2\varepsilon}-\varepsilon V(q)\right]
 $$
 
-它由"Trotter 分裂 + 动量完备性 + $\langle q|p\rangle=e^{ipq}$ + 高斯积分"四步得到，见 [D15](../derivations/D15-path-integral-representation.md) §1.2。
+它由"Trotter 分裂 + 动量完备性 + $\langle q|p\rangle=e^{ipq}$ + 高斯积分"四步得到，见 [D16](../derivations/D16-path-integral-representation.md) §1.2。
 
 ### 2.3 拼回去
 
-$N$ 个因子相乘，$\varepsilon\to0$ 时指数上的和收敛为 $-S_E$，测度归一化因子也一起趋于确定极限。细节见 [D15](../derivations/D15-path-integral-representation.md) §1.3–1.4。
+$N$ 个因子相乘，$\varepsilon\to0$ 时指数上的和收敛为 $-S_E$，测度归一化因子也一起趋于确定极限。细节见 [D16](../derivations/D16-path-integral-representation.md) §1.3–1.4。
 
 ### 2.4 取迹：闭合
 
@@ -118,7 +118,7 @@ $$
 
 **一句话**：迹 = 把两端焊起来，再对焊点积分。所以配分函数"绕一圈回来"，这一圈的周长就是 $\beta$。
 
-**完整证明、零模来源与费米反周期见 [D16 · 迹即闭合路径](../derivations/D16-trace-is-loop.md)。**
+**完整证明、零模来源与费米反周期见 [D17 · 迹即闭合路径](../derivations/D17-trace-is-loop.md)。**
 
 ### 2.5 两个容易混的点
 

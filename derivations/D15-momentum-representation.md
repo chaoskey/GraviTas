@@ -1,6 +1,6 @@
-# D14 · $\hat p$ 在 $q$ 表象下是 $-i\partial_q$
+# D15 · $\hat p$ 在 $q$ 表象下是 $-i\partial_q$
 
-> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D13](D13-qp-overlap.md)；默认：D01
+> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D13](D13-qp-overlap.md)、[D14](D14-p-completeness.md)；默认：D01
 > 下游：无卡片依赖（结论只被笔记引用）
 > 原为 [N003 §3.1–3.2](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 
