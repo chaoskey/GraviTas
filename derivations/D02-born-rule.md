@@ -52,14 +52,27 @@ $$
 
 ## 2. 三条直接推论
 
-**① 本征态必得本征值。** 若 $\hat A\lvert\psi\rangle=a\lvert\psi\rangle$，则 $E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle$，故
+**① 本征态必得本征值。** 若 $\hat A\lvert\psi\rangle=a\lvert\psi\rangle$，则
 
 $$
-p(\{a\})=\langle\psi\lvert\psi\rangle=1
+E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle
+\quad\Longrightarrow\quad
+p(\{a\})=\langle\psi\lvert E(\{a\})\lvert\psi\rangle=\langle\psi\lvert\psi\rangle=1
 $$
+
+**中间那一步不是本征方程给的，要交代清楚**：本征方程只说"$\hat A$ 作用上去等于乘 $a$"，它**没有说** $E(\{a\})$ 会保留 $\lvert\psi\rangle$。这一步来自**谱定理**——$E(\{a\})$ 正是"投影到 $a$ 的本征子空间"的那个投影。
+
+**另一条不依赖这个识别的走法（方差论证）**：记 $\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$，它是概率测度。由 $\int\lambda\,d\mu_\psi=\langle\hat A\rangle=a$ 与 $\int\lambda^{2}d\mu_\psi=\langle\hat A^{2}\rangle=a^{2}$，
+
+$$
+\int(\lambda-a)^{2}\,d\mu_\psi=a^{2}-2a\cdot a+a^{2}=0
+$$
+
+**方差为零的概率测度只能是 $\delta_a$**，故 $\mu_\psi(\{a\})=1$。
+
+**边界**：本条只对**点谱**成立。连续谱时 $E(\{q\})=0$，而 $\lvert q\rangle$ 不可归一、概率无定义——所以"本征态"在这里默认指点谱本征态。
 
 **② 概率归一。** $E(\mathbb{R})=\mathbb{1}$（[D01](D01-spectral-theorem.md) §1.2 的 resolution of identity），故
-
 $$
 p(\mathbb{R})=\langle\psi\lvert\mathbb{1}\lvert\psi\rangle=1
 $$
