@@ -39,7 +39,9 @@ $$
 
 ### 1.2 态与测量：Born 规则（[D02](../derivations/D02-born-rule.md)）
 
-**白话**：谱定理告诉你"$\hat A$ 是一堆投影拼起来的"；Born 规则告诉你"**这些投影就是概率**"。这两句之间没有数学，只有这一条公理。
+**白话**：谱定理告诉你"$\hat A$ 是一堆投影拼起来的"——那是**算子**，不含态的信息；Born 规则告诉你：**把投影夹在 $\langle\psi\lvert$ 与 $\lvert\psi\rangle$ 之间**，得到的数才是概率。
+
+三种对象要分清：$E(B)$ 是**算子**（谱定理给），$\langle\psi\lvert E(B)\lvert\psi\rangle$ 是**数**（Born 规则给），$d\langle\psi\lvert E(\lambda)\lvert\psi\rangle$ 是**测度**（夹取后的密度形式）。
 
 $$
 p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle,
