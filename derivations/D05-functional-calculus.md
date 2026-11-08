@@ -1,6 +1,8 @@
 # D05 · 函数演算：$f(\hat A)$ 到底是什么意思
 
-> 建档 2026-11-06 · 上游：[D01](D01-spectral-theorem.md)
+> 建档 2026-11-06 · 类型：**定义 + 性质**——定义 $f(\hat A)$，并列出下游要用的运算规则；
+> 其中**谱映射定理与范数公式是定理**，不是定义的复述
+> 上游：[D01](D01-spectral-theorem.md)
 > 下游：[D06](D06-commutator-p-fq.md)、[D09](D09-hadamard-lemma.md)、[D11](D11-commutator-phase.md)、[D12](D12-three-bch-forms.md)、[D13](D13-weyl-phase.md)、[D14](D14-translation.md)、[D15](D15-qp-overlap.md)
 > 原散见于 [N003 §4.1](../notes/N003-basis-and-operator-relations.md) 与各卡片的"条件"里，2026-11-06 汇总成卡。
 
@@ -73,20 +75,36 @@ $$
 
 ---
 
-## 2. 必须记住的六条性质
+## 2. 六条性质：两条来自定义，两条来自谱映射，两条要证
 
-| 性质 | 内容 |
+读者容易把六条当成同等分量。**其实只有两条是真定理**。分清之后，该记的记、该查的查。
+
+### 2.1 由定义直接得到（两条）
+
+| 性质 | 内容 | 为什么"直接" |
+|---|---|---|
+| 同态 | $(fg)(\hat A)=f(\hat A)\,g(\hat A)$ | 同一个 $E$：$\int f g\,dE=\bigl(\int f\,dE\bigr)\bigl(\int g\,dE\bigr)$ |
+| 与自变量对易 | $[f(\hat A),\hat A]=0$ | 两者用同一个 $E$，投影互相交换 |
+
+**这两条不需要证**：它们是"同一族投影"的直接算术。**注意同态只对同一个算子的函数成立**——$f(\hat A)g(\hat B)\neq g(\hat B)f(\hat A)$，除非 $\hat A,\hat B$ 对易。
+
+### 2.2 由谱映射读出（两条）
+
+| 判据 | 内容 |
 |---|---|
-| 同态 | $(fg)(\hat A)=f(\hat A)\,g(\hat A)$（对同一算子的函数） |
-| 与自变量对易 | $[f(\hat A),\hat A]=0$ |
-| 谱映射定理 | $\sigma\bigl(f(\hat A)\bigr)=f\bigl(\sigma(\hat A)\bigr)$（$f$ 连续） |
-| 自伴判据 | $f(\hat A)$ 自伴 $\iff$ $f$ 在谱上取实值 |
-| 酉判据 | $f(\hat A)$ 酉 $\iff$ $\lvert f\rvert=1$ 在谱上 |
-| 有界性 | $\lVert f(\hat A)\rVert=\sup_{\lambda\in\sigma(\hat A)}\lvert f(\lambda)\rvert$ |
+| 自伴 | $f(\hat A)$ 自伴 $\iff$ $f$ 在谱上取实值 |
+| 酉 | $f(\hat A)$ 酉 $\iff$ $\lvert f\rvert=1$ 在谱上 |
 
-**谱映射定理是最有用的一条**：它把"算子是否有界/自伴/酉"变成"函数在谱上是否有界/实/模 1"。例如 $\hat A$ 自伴 $\Rightarrow$ $e^{i\hat A}$ 是酉算子，用的就是这条。
+**这两条不是新定理**：把它们代进 $\sigma(f(\hat A))=f(\sigma(\hat A))$ 就直接读出来。所以它们的分量取决于 §2.3 那条谱映射。
 
-**注意同态只对同一个算子的函数成立**：$f(\hat A)g(\hat B)\neq g(\hat B)f(\hat A)$，除非 $\hat A,\hat B$ 对易。
+### 2.3 需要证明的两条
+
+| 定理 | 内容 | 证明思路 |
+|---|---|---|
+| **谱映射** | $\sigma\bigl(f(\hat A)\bigr)=f\bigl(\sigma(\hat A)\bigr)$（$f$ 连续） | 若 $\lambda_0\notin f(\sigma)$，则 $1/(f-\lambda_0)$ 在谱上有界，用函数演算造出有界逆 ⇒ $\lambda_0$ 不在谱里；反向由 $f$ 的连续性 |
+| **范数公式** | $\lVert f(\hat A)\rVert=\sup_{\lambda\in\sigma(\hat A)}\lvert f(\lambda)\rvert$ | C\*-恒等式；等价说法："算子多大，就是函数多大" |
+
+**谱映射是最有用的一条**：它把"算子是否有界/自伴/酉"变成"函数在谱上是否有界/实/模 $1$"。例如 $\hat A$ 自伴 $\Rightarrow$ $e^{i\hat A}$ 是酉算子，用的就是它。
 
 ---
 
@@ -118,6 +136,7 @@ $$
 - [ ] 写出函数演算的三种定义，并说明它们各自的适用范围
 - [ ] 说明为什么"多项式上三者一致"能推出"解析函数上三者一致"
 - [ ] 用谱映射定理证明：$\hat A$ 自伴 $\Rightarrow$ $e^{i\hat A}$ 酉
+- [ ] 把六条性质分成三组：定义直接给的两条、由谱映射读出的两条、要证的两条
 - [ ] 举一个不能用幂级数定义的函数，并说明该走哪条定义
 - [ ] 解释 $\lVert f(\hat A)\rVert=\sup\lvert f\rvert$ 是从哪来的
 - [ ] 说明为什么非自伴算子没有这套演算
