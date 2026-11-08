@@ -163,7 +163,7 @@ $$
 
 **这两个式子是同一个 $\lvert\psi\rangle$ 的两副面孔**，读数方式不同而已。注意 $dp$ 前有 $2\pi$、$dq$ 前没有——这是 [D04](D04-normalization-convention.md) 的约定在起作用。
 
-**它在哪被用到**：[D19](D19-momentum-representation.md) 把 $\hat p$ 写成 $-i\partial_q$、[D07](D07-trace.md) 证明迹与基无关、[D18](D18-p-completeness.md) 证明动量完备性，用的都是这一对。
+**下游怎么用它**（见 §3）：[D19](D19-momentum-representation.md) 把 $\hat p$ 写成 $-i\partial_q$、[D07](D07-trace.md) 证明迹与基无关，用的都是这一对。
 
 ---
 

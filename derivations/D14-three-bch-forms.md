@@ -1,7 +1,7 @@
 # D14 · 三条 BCH 闭式
 
 > 建档 2026-11-06 · 上游：[D11](D11-hadamard-lemma.md)、[D12](D12-two-term-truncation.md)、[D13](D13-commutator-phase.md)；默认：D06
-> 下游：无卡片依赖（本卡闭合既有链路）
+> 下游：无卡片依赖
 > 原为 [N004 §5.2](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---

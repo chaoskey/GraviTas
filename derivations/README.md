@@ -46,7 +46,7 @@
 | D04 | 归一化约定：$\langle q\lvert q'\rangle=\delta(q-q')$（形式被迫、系数自选） | D01、D03 | [D04](D04-normalization-convention.md) | ✓ |
 | D05 | Stone–von Neumann（引用卡） | 外部定理 | [D05](D05-stone-von-neumann.md) | ✓ |
 | D06 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D01 | [D06](D06-functional-calculus.md) | ✓ |
-| D07 | 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$（基无关） | D01、D04 | [D07](D07-trace.md) | ✓ |
+| D07 | 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$（基无关） | D01、D03、D04 | [D07](D07-trace.md) | ✓ |
 | D08 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（默认 D06；旁证 D01） | [D08](D08-commutator-p-fq.md) | ✓ |
 | D09 | 对角判据：$[\hat q,f(\hat q)]=0\Rightarrow$ 核 $\propto\delta$ | D00、D01、D03、D04 | [D09](D09-diagonal-criterion.md) | ✓ |
 | D10 | 乘积的核：$\langle q'\lvert\hat A\hat B\lvert q''\rangle=\int dq\cdots$ | D01 | [D10](D10-product-kernel.md) | ✓ |
@@ -55,10 +55,10 @@
 | D13 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D12（默认：D06） | [D13](D13-commutator-phase.md) | ✓ |
 | D14 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D11、D12、D13（默认：D06） | [D14](D14-three-bch-forms.md) | ✓ |
 | D15 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D13（默认：D06） | [D15](D15-weyl-phase.md) | ✓ |
-| D16 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D03、D04、D12（默认：D06） | [D16](D16-translation.md) | ✓ |
+| D16 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D03、D04、D12（默认：D06；旁证：D08、D11） | [D16](D16-translation.md) | ✓ |
 | D17 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D04、D05、D15、D16（默认：D06、D01） | [D17](D17-qp-overlap.md) | ✓ |
 | D18 | 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | D01、D04、D17 | [D18](D18-p-completeness.md) | ✓ |
-| D19 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D17、D18（默认：D01） | [D19](D19-momentum-representation.md) | ✓ |
+| D19 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D17、D18（默认：D01；旁证：D08） | [D19](D19-momentum-representation.md) | ✓ |
 | D20 | Hamiltonian 与时间演化：$\hat H=\frac{\hat p^{2}}{2m}+V(\hat q)$ | D00、D06、D09 | [D20](D20-hamiltonian.md) | ✓ |
 | D21 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D17、D10、D18、D20（默认：D01） | [D21](D21-path-integral-representation.md) | ✓ |
 | D22 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D07、D21（默认：D01） | [D22](D22-trace-is-loop.md) | ✓ |

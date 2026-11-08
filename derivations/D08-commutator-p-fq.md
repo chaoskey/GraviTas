@@ -1,7 +1,7 @@
 # D08 · 对易子 $[\hat p,f(\hat q)]=-i f'(\hat q)$
 
 > 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)；默认：D06；旁证：[D01](D01-spectral-theorem.md)
-> 下游：无卡片依赖（本卡闭合既有链路）
+> 下游：[D16](D16-translation.md)、[D19](D19-momentum-representation.md)
 > 网格登记见 [derivations/README](README.md)
 
 ---
@@ -89,40 +89,16 @@ $$
 
 ---
 
-## 2. 另证
+## 2. 另证（在下游，不在本卡）
 
-### 2.1 表象法（两行）
+这条公式还有两条更直观的证明，但它们都要用到**编号更大**的卡片，所以放在下游，不在本卡展开：
 
-在 $q$ 表象中，$\hat p=-i\partial_q$，$\hat q$ 是乘 $q$。取任意可微 $\psi$：
+| 走法 | 用到 | 在哪 |
+|---|---|---|
+| 表象法：$\hat p=-i\partial_q$ 直接算 | [D19](D19-momentum-representation.md) | [D19](D19-momentum-representation.md) §2 |
+| 平移法：对 $e^{ia\hat p}f(\hat q)e^{-ia\hat p}=f(\hat q+a)$ 求导 | [D16](D16-translation.md)、[D11](D11-hadamard-lemma.md) | [D16](D16-translation.md) §1.4 |
 
-$$
-\begin{aligned}
-[\hat p,f(\hat q)]\psi
-&=-i\frac{d}{dq}\bigl(f\psi\bigr)-f\Bigl(-i\frac{d}{dq}\psi\Bigr)\\
-&=-i\bigl(f'\psi+f\psi'\bigr)+if\psi'=-i f'\psi
-\end{aligned}
-$$
-
-第二项用乘积法则，再与 $+if\psi'$ 相消。
-
-### 2.2 平移法（三行）
-
-由 [D16](D16-translation.md)（平移公式）与 [D11](D11-hadamard-lemma.md)（Hadamard 引理）：
-
-$$
-e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+a
-\quad\Longrightarrow\quad
-e^{ia\hat p}f(\hat q)e^{-ia\hat p}=f(\hat q+a)
-$$
-
-两边对 $a$ 求导、取 $a=0$：左边得 $i[\hat p,f(\hat q)]$，右边得 $f'(\hat q)$。故 $[\hat p,f]=-if'$。
-
-**这条路线的价值**：它说明该公式的物理内容——$\hat p$ 是 $q$ 方向平移的生成元，**$[\hat p,\cdot]$ 就是"沿 $q$ 平移"这个导子**。用 [N004](../notes/N004-hadamard-lemma.md) 的记号：
-
-$$
-\mathrm{ad}_{\hat p}=-i\,\partial_q
-\qquad(\text{作用在 }\hat q\text{ 的函数上})
-$$
+**为什么挪出去**：本卡的拓扑序在它们之前，若在正文里用它们，就等于让 D08 依赖 D16 与 D19——**违反"输入编号必须更小"**。放在下游既保留了两条直观证明，又维持了顺序。
 
 ---
 

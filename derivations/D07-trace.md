@@ -1,6 +1,6 @@
 # D07 · 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$
 
-> 建档 2026-11-08 · 上游：[D01](D01-spectral-theorem.md)（完备性）、[D04](D04-normalization-convention.md)
+> 建档 2026-11-08 · 上游：[D01](D01-spectral-theorem.md)（完备性）、[D03](D03-position-eigen-equation.md)（位置基）、[D04](D04-normalization-convention.md)
 > 下游：[D22](D22-trace-is-loop.md)、[D23](D23-density-matrix.md)、[D26](D26-energy-basis.md)
 > 本卡补的是"迹"这个对象的定义与基无关性——[D22](D22-trace-is-loop.md) 一直在用它，却没人交代过。
 
@@ -8,44 +8,52 @@
 
 ## 0. 命题
 
-对一组正交完备基（任意表象）：
+对**任意**一组正交完备基：
 
 $$
 \mathrm{Tr}\,\hat A=\sum_n\langle n\lvert\hat A\lvert n\rangle
-=\int dq\,\langle q\lvert\hat A\lvert q\rangle
-=\int\frac{dp}{2\pi}\,\langle p\lvert\hat A\lvert p\rangle
 $$
 
-**它在讲什么**：迹是"对角元之和"，而且**与选哪组基无关**。这个"无关"不是假设，是下面一行证明的结论。
+特别地，取位置基：
+
+$$
+\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle
+$$
+
+**它在讲什么**：迹是"对角元之和"，而且**与选哪组基无关**——这个"无关"不是假设，是下面两行证明的结论。
+
+**说明**：动量基下的写法 $\int\frac{dp}{2\pi}\langle p\lvert\hat A\lvert p\rangle$ 也是对的，但那要用动量完备性（[D18](D18-p-completeness.md)），是**下游结论**；本卡不需要它。
 
 ---
 
 ## 1. 证明：基无关
 
-用 $\lvert q\rangle$ 算，插入动量完备性 $1=\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert$（[D18](D18-p-completeness.md)）：
+设 $\{\lvert n\rangle\}$ 与 $\{\lvert m\rangle\}$ 是**任意两组**正交完备基。用两次完备性：
 
 $$
-\int dq\,\langle q\lvert\hat A\lvert q\rangle
-=\int dq\int\frac{dp}{2\pi}\,\langle q\lvert p\rangle\,\langle p\lvert\hat A\lvert q\rangle
+\sum_n\langle n\lvert\hat A\lvert n\rangle
+=\sum_n\sum_m\langle n\lvert m\rangle\,\langle m\lvert\hat A\lvert n\rangle
 $$
 
-再把 $\langle p\lvert\hat A\lvert q\rangle$ 用位置完备性展开：
+再把 $\langle n\lvert m\rangle=\overline{\langle m\lvert n\rangle}$ 挪到右边，重新配对：
 
 $$
-\langle p\lvert\hat A\lvert q\rangle=\int dq'\,\langle p\lvert q'\rangle\,\langle q'\lvert\hat A\lvert q\rangle
+=\sum_m\sum_n\langle m\lvert\hat A\lvert n\rangle\,\langle n\lvert m\rangle
+=\sum_m\Bigl\langle m\Bigl\lvert\hat A\Bigl(\sum_n\lvert n\rangle\langle n\rvert\Bigr)\Bigr\lvert m\Bigr\rangle
+=\sum_m\langle m\lvert\hat A\lvert m\rangle
 $$
 
-代回去，对 $q$ 积分：
+**两边相等。** 因为 $\{\lvert n\rangle\}$ 与 $\{\lvert m\rangle\}$ 是任意选的，所以迹与基无关。**证毕。**
+
+（只用到两件事：两组完备性 $\sum\lvert\cdot\rangle\langle\cdot\rvert=\mathbb{1}$，来自 [D01](D01-spectral-theorem.md)；以及求和的绝对收敛，见 §4。）
+
+**取位置基**就是把 $\{\lvert n\rangle\}$ 换成 $\{\lvert q\rangle\}$、求和换成积分：
 
 $$
-\int dq\;e^{ipq}e^{-ipq'}=\ 2\pi\,\delta(q-q')
-\quad\Longrightarrow\quad
-\int\frac{dp}{2\pi}\,\langle p\lvert\hat A\lvert p\rangle
+\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle
 $$
 
-**两边相等。** 对任意两组正交完备基都成立，所以迹与基无关。
-
-（用到的两条：$\langle q\lvert p\rangle=e^{ipq}$ 与两组完备性。这就是 [D17](D17-qp-overlap.md) 与 [D18](D18-p-completeness.md)。）
+这一步用到 [D03](D03-position-eigen-equation.md) 的本征基与 [D04](D04-normalization-convention.md) 的归一化，但它**不影响基无关性本身**——那是 §1 已经证过的。
 
 ---
 

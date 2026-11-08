@@ -1,7 +1,7 @@
 # D11 · Hadamard 引理：$e^{A}Be^{-A}$ 的对易子展开
 
 > 建档 2026-11-06 · 上游：无；默认：D06
-> 下游：[D12](D12-two-term-truncation.md)、[D14](D14-three-bch-forms.md)
+> 下游：[D12](D12-two-term-truncation.md)、[D14](D14-three-bch-forms.md)、[D16](D16-translation.md)
 > 原为 [N004 §2](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格以便引用。
 
 ---

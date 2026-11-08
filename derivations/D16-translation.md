@@ -1,6 +1,6 @@
 # D16 · 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)、[D12](D12-two-term-truncation.md)；默认：D06
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)、[D12](D12-two-term-truncation.md)；默认：D06；旁证：D08、D11
 > 下游：[D17](D17-qp-overlap.md)
 > 原为 [N004 §6.1](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
@@ -98,6 +98,33 @@ e^{ia\hat p}\,\lvert q\rangle=\lvert q-a\rangle
 $$
 
 **证毕。**
+
+---
+
+### 1.4 顺带：用平移验证 $[\hat p,f(\hat q)]=-if'$
+
+本卡只用到更早的卡（[D08](D08-commutator-p-fq.md)、[D11](D11-hadamard-lemma.md)），所以这条验证放在这里，不放回 D08。
+
+由平移公式与 [D11](D11-hadamard-lemma.md)（Hadamard 引理）：
+
+$$
+e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+a
+\quad\Longrightarrow\quad
+e^{ia\hat p}f(\hat q)e^{-ia\hat p}=f(\hat q+a)
+$$
+
+两边对 $a$ 求导、取 $a=0$：左边得 $i[\hat p,f(\hat q)]$，右边得 $f'(\hat q)$。故
+
+$$
+\bigl[\hat p,f(\hat q)\bigr]=-i\,f'(\hat q)
+$$
+
+**这条路的物理内容**：$\hat p$ 是 $q$ 方向平移的生成元，$[\hat p,\cdot]$ 就是"沿 $q$ 平移"这个导子。用 [N004](../notes/N004-hadamard-lemma.md) 的记号：
+
+$$
+\mathrm{ad}_{\hat p}=-i\,\partial_q
+\qquad(\text{作用在 }\hat q\text{ 的函数上})
+$$
 
 ---
 

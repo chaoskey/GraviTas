@@ -1,7 +1,7 @@
 # D25 · 不确定关系：$\Delta q\,\Delta p\ge\frac{1}{2}$
 
 > 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)、[D02](D02-born-rule.md)
-> 下游：无卡片依赖（本卡闭合既有链路）
+> 下游：无卡片依赖
 > 原为 [N003 §5.1](../notes/N003-basis-and-operator-relations.md) 的一句话，2026-11-07 补全证明并移入网格。
 
 ---

@@ -108,8 +108,6 @@ $$
 - $F_\lambda$ 住在 $\Phi^{\times}$，**不在 $\mathcal{H}$ 里**——这才是"广义"二字的全部含义；
 - $\mu$ 是**谱测度**，不一定是 Lebesgue。把它选成 $dq$ 是后来的约定（[D03](../derivations/D03-position-eigen-equation.md) §1.2）。
 
-**取 $\hat A=\hat q$ 就是** [D03](../derivations/D03-position-eigen-equation.md)：本征方程变成 $\hat q\lvert q\rangle=q\lvert q\rangle$，完备性变成 $\int\lvert q\rangle\langle q\rvert\,d\mu(q)=\mathbb{1}$。
-
 **为什么需要三层结构**：定理里的 $F_\lambda$ 不在 $\mathcal{H}$ 里，得给它安排一个能住的地方。
 
 $$

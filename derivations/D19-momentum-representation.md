@@ -1,7 +1,7 @@
 # D19 · $\hat p$ 在 $q$ 表象下是 $-i\partial_q$
 
-> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)；默认：D01
-> 下游：无卡片依赖（本卡闭合既有链路）
+> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)；默认：D01；旁证：D08
+> 下游：无卡片依赖
 > 原为 [N003 §3.1–3.2](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 
 ---
@@ -60,6 +60,26 @@ $$
 $$
 
 **模式**：对角项带 $\delta$（如 $\hat q$ 的核），非对角项带 $\delta$ 的**导数**。这个模式在所有表象里重复。
+
+---
+
+## 2.5 顺带：用表象验证 $[\hat p,f(\hat q)]=-if'$
+
+本卡只用到更早的卡，所以这条验证放在这里，不放回 [D08](D08-commutator-p-fq.md)。
+
+在 $q$ 表象中 $\hat p=-i\partial_q$、$\hat q$ 乘以 $q$。取任意可微 $\psi$：
+
+$$
+\begin{aligned}
+[\hat p,f(\hat q)]\psi
+&=-i\frac{d}{dq}\bigl(f\psi\bigr)-f\Bigl(-i\frac{d}{dq}\psi\Bigr)\\
+&=-i\bigl(f'\psi+f\psi'\bigr)+if\psi'=-i f'\psi
+\end{aligned}
+$$
+
+第二项用乘积法则，再与 $+if\psi'$ 相消。
+
+**这条路的价值**：它说明 [D08](D08-commutator-p-fq.md) 那条公式在表象里就是"乘积法则"——**求导算子与乘法算子之差**。
 
 ---
 
