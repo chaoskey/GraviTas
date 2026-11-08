@@ -1,7 +1,7 @@
-# D16 · 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$
+# D18 · 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$
 
-> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)（位置基的完备性）、[D03](D03-normalization-convention.md)（归一化）、[D15](D15-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）
-> 下游：[D17](D17-momentum-representation.md)、[D18](D18-path-integral-representation.md)
+> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)（位置基的完备性）、[D04](D04-normalization-convention.md)（归一化）、[D17](D17-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）
+> 下游：[D19](D19-momentum-representation.md)、[D21](D21-path-integral-representation.md)
 > 本卡补的是"换基"这一步：它**不是新假设**，是从位置基推出来的。
 
 ---
@@ -38,7 +38,7 @@ $$
 
 ### 1.2 第二步：代入重叠
 
-由 [D15](D15-qp-overlap.md)，$\langle q\lvert p\rangle=e^{ipq}$，故 $\langle p\lvert q''\rangle=\overline{e^{ipq''}}=e^{-ipq''}$：
+由 [D17](D17-qp-overlap.md)，$\langle q\lvert p\rangle=e^{ipq}$，故 $\langle p\lvert q''\rangle=\overline{e^{ipq''}}=e^{-ipq''}$：
 
 $$
 =\int\frac{dp}{2\pi}\,e^{ip(q'-q'')}
@@ -74,7 +74,7 @@ $$
 
 **只有 $\frac{dp}{2\pi}$ 给出恒等算子。** 所以它不是"配平出来"的，而是被 $\delta$ 的傅里叶表示**唯一钉死**的。
 
-这与 [D03](D03-normalization-convention.md) §1 的 $w\,c=1$ 是同一件事的两面：$\langle p\lvert p'\rangle=2\pi\delta$ 给出 $c=2\pi$，于是完备性权重只能是 $w=\frac{1}{2\pi}$。
+这与 [D04](D04-normalization-convention.md) §1 的 $w\,c=1$ 是同一件事的两面：$\langle p\lvert p'\rangle=2\pi\delta$ 给出 $c=2\pi$，于是完备性权重只能是 $w=\frac{1}{2\pi}$。
 
 ---
 
@@ -83,9 +83,9 @@ $$
 | 检验 | 结果 |
 |---|---|
 | 作用在平面波上 | $\int\frac{dp'}{2\pi}\lvert p'\rangle\langle p'\lvert p\rangle=\lvert p\rangle$，与 $\int\frac{dp'}{2\pi}2\pi\delta(p'-p)=1$ 一致 ✅ |
-| 与 [D15](D15-qp-overlap.md) §1.5 相容 | 那里由 $\int dq\lvert q\rangle\langle q\rvert$ 反推 $\lvert c(p)\rvert=1$；本卡是同一恒等式的另一侧 ✅ |
-| 与 [D17](D17-momentum-representation.md) 相容 | 那里插入 $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert$ 得 $\hat p=-i\partial_q$，系数与本卡一致 ✅ |
-| 与 [D18](D18-path-integral-representation.md) 相容 | 短时核的动量积分正是用本卡的权重 ✅ |
+| 与 [D17](D17-qp-overlap.md) §1.5 相容 | 那里由 $\int dq\lvert q\rangle\langle q\rvert$ 反推 $\lvert c(p)\rvert=1$；本卡是同一恒等式的另一侧 ✅ |
+| 与 [D19](D19-momentum-representation.md) 相容 | 那里插入 $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert$ 得 $\hat p=-i\partial_q$，系数与本卡一致 ✅ |
+| 与 [D21](D21-path-integral-representation.md) 相容 | 短时核的动量积分正是用本卡的权重 ✅ |
 
 ---
 
@@ -103,5 +103,5 @@ $$
 - [ ] 用"算核"的方式写出证明，并说明为什么核相同就能断定算子相同
 - [ ] 说明 $2\pi$ 为什么必须在积分测度里，而不在 $\lvert p\rangle$ 的定义里
 - [ ] 把 $\int dp$ 的写法代进去，算出它等于 $2\pi\mathbb{1}$ 而不是 $\mathbb{1}$
-- [ ] 用 $w\,c=1$ 把本卡与 [D03](D03-normalization-convention.md) §1 对上
+- [ ] 用 $w\,c=1$ 把本卡与 [D04](D04-normalization-convention.md) §1 对上
 - [ ] 说明换成对称归一时 $2\pi$ 去哪了

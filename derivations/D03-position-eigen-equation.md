@@ -1,8 +1,8 @@
-# D02 · 位置本征方程：$\hat q\lvert q\rangle=q\lvert q\rangle$
+# D03 · 位置本征方程：$\hat q\lvert q\rangle=q\lvert q\rangle$
 
 > 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)
-> 下游：[D03](D03-normalization-convention.md)、[D07](D07-diagonal-criterion.md)、[D14](D14-translation.md)
-> 本卡只做"取 $\hat A=\hat q$"这一步，读出本征方程与谱分解；**归一化属于 [D03](D03-normalization-convention.md)**，本卡不预设也不推出它。
+> 下游：[D04](D04-normalization-convention.md)、[D09](D09-diagonal-criterion.md)、[D16](D16-translation.md)
+> 本卡只做"取 $\hat A=\hat q$"这一步，读出本征方程与谱分解；**归一化属于 [D04](D04-normalization-convention.md)**，本卡不预设也不推出它。
 
 ---
 
@@ -16,7 +16,7 @@ $$
 
 **它在讲什么**：$\lvert q\rangle$ 是 $\hat q$ 的本征矢；把本征矢"填回"谱定理，就得到 $\hat q$ 的谱分解。
 
-**本卡不做什么**：不讨论归一化（[D03](D03-normalization-convention.md)），不重复 Gelfand–Maurin 的证明（[D01](D01-spectral-theorem.md)）。本卡只把 D01 的两条定理**各取一次** $\hat A=\hat q$，再把结果对起来。
+**本卡不做什么**：不讨论归一化（[D04](D04-normalization-convention.md)），不重复 Gelfand–Maurin 的证明（[D01](D01-spectral-theorem.md)）。本卡只把 D01 的两条定理**各取一次** $\hat A=\hat q$，再把结果对起来。
 
 ---
 
@@ -58,7 +58,7 @@ $$
 \mathbb{1}=\int\lvert q\rangle\langle q\rvert\,dq
 $$
 
-这个自由度的系统处理见 [D03](D03-normalization-convention.md)（它是本卡的下游）。
+这个自由度的系统处理见 [D04](D04-normalization-convention.md)（它是本卡的下游）。
 
 ### 1.3 第三步：与谱定理逐点对照，读出密度
 
@@ -94,10 +94,10 @@ $$
 
 | 说法 | 用在 |
 |---|---|
-| $\hat q=\int q\,dq\lvert q\rangle\langle q\rvert$ | 算子的谱分解（[D05](D05-functional-calculus.md) 的函数演算） |
-| $\hat q\lvert q\rangle=q\lvert q\rangle$ | 作用在**单个矢**上（[D07](D07-diagonal-criterion.md) 的对易子论证、[D14](D14-translation.md) 的平移） |
+| $\hat q=\int q\,dq\lvert q\rangle\langle q\rvert$ | 算子的谱分解（[D06](D06-functional-calculus.md) 的函数演算） |
+| $\hat q\lvert q\rangle=q\lvert q\rangle$ | 作用在**单个矢**上（[D09](D09-diagonal-criterion.md) 的对易子论证、[D16](D16-translation.md) 的平移） |
 
-**本征方程是把"对角"从算子层面降到矢量层面的那句话。** [D07](D07-diagonal-criterion.md) 的整条推导都靠它。
+**本征方程是把"对角"从算子层面降到矢量层面的那句话。** [D09](D09-diagonal-criterion.md) 的整条推导都靠它。
 
 ---
 
@@ -107,9 +107,9 @@ $$
 |---|---|
 | 谱为实数 | $\hat q$ 自伴 $\Rightarrow$ 本征值 $q\in\mathbb{R}$，与 [D01](D01-spectral-theorem.md) §1.1 一致 ✅ |
 | 与 [D01](D01-spectral-theorem.md) §2.2 相容 | 本卡就是 $\hat A F_\lambda=\lambda F_\lambda$ 取 $\hat A=\hat q$ ✅ |
-| 与 [D07](D07-diagonal-criterion.md) 相容 | 那里用 $\langle q'\lvert\hat q=q'\langle q'\rvert$（需自伴）与本卡右矢版本配对 ✅ |
-| 与 [D16](D16-p-completeness.md) 对称 | 那边对 $\hat p$ 做同一件事，只是权重带 $2\pi$ ✅ |
-| 自洽 | §1.1 与 §1.4 得到的是同一条谱分解；配上归一化之后的显式验算见 [D03](D03-normalization-convention.md) ✅ |
+| 与 [D09](D09-diagonal-criterion.md) 相容 | 那里用 $\langle q'\lvert\hat q=q'\langle q'\rvert$（需自伴）与本卡右矢版本配对 ✅ |
+| 与 [D18](D18-p-completeness.md) 对称 | 那边对 $\hat p$ 做同一件事，只是权重带 $2\pi$ ✅ |
+| 自洽 | §1.1 与 §1.4 得到的是同一条谱分解；配上归一化之后的显式验算见 [D04](D04-normalization-convention.md) ✅ |
 
 ---
 
@@ -119,7 +119,7 @@ $$
 2. **绝对连续是前提。** 纯点谱时没有密度，$\delta$ 要换成 $\delta_{qq'}$，求和代替积分（[D01](D01-spectral-theorem.md) §5 的离散特例）。
 3. **$\lvert q\rangle$ 不在 $\mathcal{H}$ 内。** 本征方程是 $\Phi^{\times}$ 意义下的等式（[D01](D01-spectral-theorem.md) §2.1）。
 4. **不能拿本卡去"证明"Gelfand–Maurin。** 本卡的起点就是那条定理；循环的方向是 D01 → 本卡，不是反过来。
-5. **归一化不在本卡。** 正交归一既不预设、也不推出——它属于 [D03](D03-normalization-convention.md)。
+5. **归一化不在本卡。** 正交归一既不预设、也不推出——它属于 [D04](D04-normalization-convention.md)。
 
 ---
 
@@ -129,4 +129,4 @@ $$
 - [ ] 说明 $d\mu\to dq$ 是一次选择而非推论，以及这个选择等价于什么
 - [ ] 说明为什么"逐 Borel 集比对"比"比对整体 $\mathbb{1}$"更强
 - [ ] 说明重数大于 1 时哪一步失效
-- [ ] 对比本卡与 [D16](D16-p-completeness.md)：为什么 $\hat p$ 那边要多一个 $2\pi$
+- [ ] 对比本卡与 [D18](D18-p-completeness.md)：为什么 $\hat p$ 那边要多一个 $2\pi$

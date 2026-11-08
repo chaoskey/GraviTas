@@ -1,7 +1,7 @@
 # N004 · Hadamard 引理：共轭的生成元是对易子
 
 > 写于 2026-11-05 · 关联：[N003](N003-basis-and-operator-relations.md)、[N002](N002-finite-temperature-path-integral.md)
-> 目标：把 $e^{A}Be^{-A}$ 的展开**用起来**——截断条件、Weyl 相位、三条 BCH 闭式。证明本身已在 [D09](../derivations/D09-hadamard-lemma.md)。
+> 目标：把 $e^{A}Be^{-A}$ 的展开**用起来**——截断条件、Weyl 相位、三条 BCH 闭式。证明本身已在 [D11](../derivations/D11-hadamard-lemma.md)。
 > 用途：[N003 §0.3](N003-basis-and-operator-relations.md) 只给了 Weyl 关系的结论，这一页给它的来历。
 > 约定：$\hbar=1$；$\hat p=-i\partial_q$；$[\hat q,\hat p]=i$，故 $[\hat p,\hat q]=-i$。
 
@@ -60,7 +60,7 @@ $$
 
 ## 2. 推导（已移入网格）
 
-完整证明见 [D09 · Hadamard 引理](../derivations/D09-hadamard-lemma.md)。这里只留骨架，方便读下文时定位：
+完整证明见 [D11 · Hadamard 引理](../derivations/D11-hadamard-lemma.md)。这里只留骨架，方便读下文时定位：
 
 1. 定义 $F(t)=e^{tA}Be^{-tA}$；
 2. 求导得 $\dot F=\mathrm{ad}_AF$——一个常系数线性方程；
@@ -88,7 +88,7 @@ $$
 
 一般情形级数是**无穷**的。截断只发生在 $\mathrm{ad}_A$ 对 $B$ **幂零**时，即某个 $N$ 使 $\mathrm{ad}_A^{\,N}B=0$。
 
-**最重要的特例**：$[A,B]=c$ 是数时，$\mathrm{ad}_A^{2}B=[A,c]=0$，级数只剩两项，得 $e^{A}Be^{-A}=B+c$。**证明与边界见 [D10 · 两项截断](../derivations/D10-two-term-truncation.md)。**
+**最重要的特例**：$[A,B]=c$ 是数时，$\mathrm{ad}_A^{2}B=[A,c]=0$，级数只剩两项，得 $e^{A}Be^{-A}=B+c$。**证明与边界见 [D12 · 两项截断](../derivations/D12-two-term-truncation.md)。**
 
 **这一条是 §5 的全部前提。** 如果 $[A,B]$ 不是数而是算子，$\mathrm{ad}_A^2B\neq0$，级数就停不下来——那正是 Baker–Campbell–Hausdorff 级数一般没有闭式的原因。
 
@@ -96,7 +96,7 @@ $$
 
 ## 5. Weyl 相位
 
-$[A,B]=c$ 是数时由 [D11](../derivations/D11-commutator-phase.md) 得 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。代回物理量 $A=ia\hat p$、$B=ib\hat q$：
+$[A,B]=c$ 是数时由 [D13](../derivations/D13-commutator-phase.md) 得 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。代回物理量 $A=ia\hat p$、$B=ib\hat q$：
 
 $$
 [A,B]=(ia)(ib)[\hat p,\hat q]=-ab\cdot(-i)=iab
@@ -108,7 +108,7 @@ $$
 e^{ia\hat p}\,e^{ib\hat q}=e^{iab}\,e^{ib\hat q}\,e^{ia\hat p}
 $$
 
-**完整证明、符号判据与失效条件见 [D13 · Weyl 相位](../derivations/D13-weyl-phase.md)。**
+**完整证明、符号判据与失效条件见 [D15 · Weyl 相位](../derivations/D15-weyl-phase.md)。**
 
 **次序提醒**：$q$ 在前时 $[A,B]=(ia)(ib)[\hat q,\hat p]=-iab$，因子变负号，得 $e^{ia\hat q}e^{ib\hat p}=e^{-iab}e^{ib\hat p}e^{ia\hat q}$。两式都对，**混用会差一个 $e^{2iab}$**。
 
@@ -131,7 +131,7 @@ $$
 
 **记住分工**：$c/2$ 属于"相对于对称中点"，$c$ 属于"两个次序之间"。Weyl 关系比较的是两个次序，所以是 $c$。
 
-这三条**不能**由前文已证的 $e^{A}e^{B}=e^{c}e^{B}e^{A}$ 推出来——那条只约束两个次序的**比值**，不约束它们各自与中点的**距离**：取 $e^{A}e^{B}=e^{\lambda c}e^{A+B}$、$e^{B}e^{A}=e^{(\lambda-1)c}e^{A+B}$，任意 $\lambda$ 都满足比值关系。要定出 $\lambda=1/2$，必须另加"对 $t$ 的连续依赖"。推导见 [D12](../derivations/D12-three-bch-forms.md)。
+这三条**不能**由前文已证的 $e^{A}e^{B}=e^{c}e^{B}e^{A}$ 推出来——那条只约束两个次序的**比值**，不约束它们各自与中点的**距离**：取 $e^{A}e^{B}=e^{\lambda c}e^{A+B}$、$e^{B}e^{A}=e^{(\lambda-1)c}e^{A+B}$，任意 $\lambda$ 都满足比值关系。要定出 $\lambda=1/2$，必须另加"对 $t$ 的连续依赖"。推导见 [D14](../derivations/D14-three-bch-forms.md)。
 
 ### 5.2 三条 BCH 闭式（已移入网格）
 
@@ -145,9 +145,9 @@ e^{B}e^{A}=e^{-c/2}\,e^{A+B},
 e^{A/2}e^{B}e^{A/2}=e^{A+B}
 $$
 
-**证明见 [D12 · 三条 BCH 闭式](../derivations/D12-three-bch-forms.md)。**
+**证明见 [D14 · 三条 BCH 闭式](../derivations/D14-three-bch-forms.md)。**
 
-**为什么这三条比 [D11](../derivations/D11-commutator-phase.md) 强**：D11 只定两个次序的比值，对 $\lambda$ 参数族 $e^{A}e^{B}=e^{\lambda c}e^{A+B}$ 全部成立；这三条把 $\lambda$ 钉死为 $1/2$。多出来的信息来自"把 $e^{tA}e^{tB}$ 对 $t$ 求导"——也就是对 $t$ 的连续依赖。
+**为什么这三条比 [D13](../derivations/D13-commutator-phase.md) 强**：D13 只定两个次序的比值，对 $\lambda$ 参数族 $e^{A}e^{B}=e^{\lambda c}e^{A+B}$ 全部成立；这三条把 $\lambda$ 钉死为 $1/2$。多出来的信息来自"把 $e^{tA}e^{tB}$ 对 $t$ 求导"——也就是对 $t$ 的连续依赖。
 
 ---
 
@@ -161,7 +161,7 @@ $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+a
 $$
 
-由此得到态与波函数两种平移形式。**完整证明（含相位约定与方向辨析）见 [D14 · 平移](../derivations/D14-translation.md)。**
+由此得到态与波函数两种平移形式。**完整证明（含相位约定与方向辨析）见 [D16 · 平移](../derivations/D16-translation.md)。**
 
 ### 6.2 升降算符：同样截断
 
@@ -248,7 +248,7 @@ $$
 
 ## 10. 自检
 
-> 下面是自检记录（手写原件留档，保留原样不改）。整理后的证明见 [D09](../derivations/D09-hadamard-lemma.md)。
+> 下面是自检记录（手写原件留档，保留原样不改）。整理后的证明见 [D11](../derivations/D11-hadamard-lemma.md)。
 
 - [x] 不看本文，三行重推 Hadamard 引理（定义 $F(t)$、求导得 $\dot F=\mathrm{ad}_AF$、解方程）
 
@@ -335,7 +335,7 @@ $$
 
 - [x] 解释为什么 $e^{c}\neq e^{c/2}$：分别说明 $c/2$ 与 $c$ 各自对应什么比较
 
-注意：三条 BCH 闭式的推导（现已移至 [D12](../derivations/D12-three-bch-forms.md)）其实我人工给出的，应该可以作为这个自检的答案。
+注意：三条 BCH 闭式的推导（现已移至 [D14](../derivations/D14-three-bch-forms.md)）其实我人工给出的，应该可以作为这个自检的答案。
 
 - [ ] 举一个 $\mathrm{ad}_A$ 不幂零的例子，并把级数求和（§6.3 可作答案）
 - [ ] 用迹论证说明为什么不能用有限维矩阵检验 CCR

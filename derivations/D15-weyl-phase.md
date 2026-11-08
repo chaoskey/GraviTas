@@ -1,7 +1,7 @@
-# D13 · Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$
+# D15 · Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D11](D11-commutator-phase.md)；默认：D05
-> 下游：[D15](D15-qp-overlap.md)
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D13](D13-commutator-phase.md)；默认：D06
+> 下游：[D17](D17-qp-overlap.md)
 > 原为 [N004 §5](../notes/N004-hadamard-lemma.md) 尾部，2026-11-06 移入网格。
 
 ---
@@ -31,7 +31,7 @@ $$
 
 ## 1. 证明
 
-由 [D11](D11-commutator-phase.md)：若 $[A,B]=c$ 是数，则 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。
+由 [D13](D13-commutator-phase.md)：若 $[A,B]=c$ 是数，则 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。
 
 取
 
@@ -46,7 +46,7 @@ $$
 =-ab\cdot(-i)=iab
 $$
 
-于是 $c=iab$ 是数，代入 D11：
+于是 $c=iab$ 是数，代入 D13：
 
 $$
 \boxed{\,e^{ia\hat p}\,e^{ib\hat q}=e^{iab}\,e^{ib\hat q}\,e^{ia\hat p}\,}
@@ -60,7 +60,7 @@ $$
 
 ### 1.6 反过来：从 Weyl 关系回到对易子
 
-本卡的关系可以"求导"回到 [D00](D00-commutator-axiom.md) 的公理。**这一步是 D13 与 D00 的接缝**，放在这里而不是 D00，是因为它用的全是 Weyl 关系。
+本卡的关系可以"求导"回到 [D00](D00-commutator-axiom.md) 的公理。**这一步是 D15 与 D00 的接缝**，放在这里而不是 D00，是因为它用的全是 Weyl 关系。
 
 **前提**：$U(a)=e^{ia\hat p}$、$V(b)=e^{ib\hat q}$ 强连续（Stone 定理给出生成元）；$\psi$ 取在公共不变稠密域内。
 
@@ -116,27 +116,27 @@ $$
 | 检验 | 结果 |
 |---|---|
 | $a=0$ 或 $b=0$ | 因子为 $1$，两边相等 ✅ |
-| 与 [D11](D11-commutator-phase.md) 一致 | $c=iab$ 直接代回 ✅ |
+| 与 [D13](D13-commutator-phase.md) 一致 | $c=iab$ 直接代回 ✅ |
 | 两式相除 | $e^{iab}/e^{-iab}=e^{2iab}$，与"$q$ 在前"版本相差 $e^{2iab}$ ✅ |
-| 与 $[\hat p,\hat q]=-i$ 一致 | 若误用 $[\hat p,\hat q]=+i$，会得 $e^{-iab}$，与 D14 的平移方向矛盾 |
+| 与 $[\hat p,\hat q]=-i$ 一致 | 若误用 $[\hat p,\hat q]=+i$，会得 $e^{-iab}$，与 D16 的平移方向矛盾 |
 | 模长 | $\lvert e^{iab}\rvert=1$（$a,b$ 实），两边都是酉算子 ✅ |
 
 ---
 
 ## 3. 备注与边界
 
-1. **符号判据只有一条**：$e^{ia\hat p}$ 把 $\lvert q\rangle$ 移到 $q+a$ 还是 $q-a$（见 [D14](D14-translation.md)）。本仓库取 $e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$，故 $p$ 在前时因子取 $+iab$。
+1. **符号判据只有一条**：$e^{ia\hat p}$ 把 $\lvert q\rangle$ 移到 $q+a$ 还是 $q-a$（见 [D16](D16-translation.md)）。本仓库取 $e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$，故 $p$ 在前时因子取 $+iab$。
 2. **混用两式会差 $e^{2iab}$。** 这不是"差不多"，是相位差一个有限量；在高斯积分里会变成一个实因子 $e^{-2ab}$ 或 $e^{+2ab}$，量纲上看不出来。
-3. **它是 D15 的直接上游。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用本式把 $\lvert p\rangle$ 的平移性质定下来。
+3. **它是 D17 的直接上游。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用本式把 $\lvert p\rangle$ 的平移性质定下来。
 4. **更对称的生成元形式**：若取 $W(a,b)=e^{i(a\hat q+b\hat p)}$，则乘法律为
 
 $$
 W(a,b)\,W(a',b')=e^{-\frac{i}{2}(ab'-ba')}\,W(a+a',b+b')
 $$
 
-相位里的 $ab'-ba'$ 是相空间辛形式。**注意这里出现 $1/2$**，与 D13 的 $e^{iab}$ 不矛盾：那个 $1/2$ 是"与对称中点比"的结果（见 [D12](D12-three-bch-forms.md) §0），这里是"两个群元相乘"。两条不同的比较，各自的系数不同。
+相位里的 $ab'-ba'$ 是相空间辛形式。**注意这里出现 $1/2$**，与 D15 的 $e^{iab}$ 不矛盾：那个 $1/2$ 是"与对称中点比"的结果（见 [D14](D14-three-bch-forms.md) §0），这里是"两个群元相乘"。两条不同的比较，各自的系数不同。
 
-5. **无穷自由度时失效。** [D04](D04-stone-von-neumann.md) 在无穷自由度下不成立，Weyl 关系的不可约表示不唯一，本式只在指定表示（如 Fock 表示）内有意义。
+5. **无穷自由度时失效。** [D05](D05-stone-von-neumann.md) 在无穷自由度下不成立，Weyl 关系的不可约表示不唯一，本式只在指定表示（如 Fock 表示）内有意义。
 
 ---
 
@@ -148,4 +148,4 @@ $$
 - [ ] 写出 $q$ 在前的版本，说明两者相差多少
 - [ ] 说明符号如何由 $e^{ia\hat p}$ 的平移方向决定
 - [ ] 解释为什么 $W(a,b)$ 的乘法律出现 $1/2$，而本式没有
-- [ ] 说明本式在哪一步被 D15 用到
+- [ ] 说明本式在哪一步被 D17 用到

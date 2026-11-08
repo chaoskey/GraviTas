@@ -1,7 +1,7 @@
-# D06 · 对易子 $[\hat p,f(\hat q)]=-i f'(\hat q)$
+# D08 · 对易子 $[\hat p,f(\hat q)]=-i f'(\hat q)$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)；默认：D05；旁证：[D01](D01-spectral-theorem.md)
-> 下游：无卡片依赖（结论只被笔记引用）
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)；默认：D06；旁证：[D01](D01-spectral-theorem.md)
+> 下游：无卡片依赖
 > 网格登记见 [derivations/README](README.md)
 
 ---
@@ -9,9 +9,7 @@
 ## 0. 命题
 
 $$
-[\hat q,\hat p]=i
-\quad\Longrightarrow\quad
-\boxed{\;[\hat p,f(\hat q)]=-i\,f'(\hat q)\;}
+[\hat p,f(\hat q)]=-i\,f'(\hat q)
 $$
 
 **适用条件**：
@@ -109,7 +107,7 @@ $$
 
 ### 2.2 平移法（三行）
 
-由 [D14](D14-translation.md)（平移公式）与 [D09](D09-hadamard-lemma.md)（Hadamard 引理）：
+由 [D16](D16-translation.md)（平移公式）与 [D11](D11-hadamard-lemma.md)（Hadamard 引理）：
 
 $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+a
@@ -141,11 +139,19 @@ $$
 
 **镜像那一行值得记住**：交换 $\hat q$ 与 $\hat p$，正负号也跟着换。写错符号是这条公式最常见的错误。
 
+**还有一条所有推导都默认的性质：Jacobi 恒等式**
+
+$$
+\bigl[A,[B,C]\bigr]+\bigl[B,[C,A]\bigr]+\bigl[C,[A,B]\bigr]=0
+$$
+
+它不是"额外的定理"，而是对易子作为**导子**的必然结果（展开即得）。**整条代数主干（[D11](D11-hadamard-lemma.md)–[D14](D14-three-bch-forms.md)）都在默默使用它**：$\mathrm{ad}_A$ 能当"求导"用，靠的就是这一条。
+
 ---
 
 ## 4. 备注与边界
 
-1. **$f$ 的条件不能省。** 右侧出现 $f'$，所以 $f$ 至少要可微。对不可微的 $f$（例如阶跃 $\theta(q)$），$f'=\delta$，等式仍成立，但要在分布意义下读，且 $f(\hat q)$ 的幂级数定义随之失效，需改用谱分解定义 $f(\hat q)$（见 [D05](D05-functional-calculus.md)）。
+1. **$f$ 的条件不能省。** 右侧出现 $f'$，所以 $f$ 至少要可微。对不可微的 $f$（例如阶跃 $\theta(q)$），$f'=\delta$，等式仍成立，但要在分布意义下读，且 $f(\hat q)$ 的幂级数定义随之失效，需改用谱分解定义 $f(\hat q)$（见 [D06](D06-functional-calculus.md)）。
 2. **无穷求和的交换是形式的。** 对多项式，求和是有限的，一步不多；对解析函数，交换 $[\hat p,\cdot]$ 与 $\sum$ 需要收敛性，严格做法是先对部分和证明、再取极限（或只在解析向量上操作）。
 3. **$\dfrac{d}{d\hat q}$ 是形式导数。** 它不是"对算子求导"这种可疑操作，而是"对多项式逐项降次"的简写。等价写法是换元：
 
@@ -156,7 +162,7 @@ $$
 $$
 
 两条路给出同一个结果，后者不涉及任何"对算子求导"的说法。
-4. **符号约定的影响。** 本页用 $[\hat q,\hat p]=i$。若某文献取 $[\hat q,\hat p]=-i$（等价于 $\hat p=+i\partial_q$），则同一命题写成 $[\hat p,f]=+if'$。**判据**：看 $e^{ia\hat p}$ 把 $\lvert q\rangle$ 移到 $q+a$ 还是 $q-a$（见 [D14](D14-translation.md)）。
+4. **符号约定的影响。** 本页用 $[\hat q,\hat p]=i$。若某文献取 $[\hat q,\hat p]=-i$（等价于 $\hat p=+i\partial_q$），则同一命题写成 $[\hat p,f]=+if'$。**判据**：看 $e^{ia\hat p}$ 把 $\lvert q\rangle$ 移到 $q+a$ 还是 $q-a$（见 [D16](D16-translation.md)）。
 5. **无界算子。** $\hat p$ 与 $f(\hat q)$ 都无界，等式不是"处处成立"，而是"在共同的稠密定义域上成立"。物理推导里通常默认这一点；写严格论证时要交代。
 
 ---

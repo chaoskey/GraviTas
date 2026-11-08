@@ -12,7 +12,7 @@
 - `notes/N###` 是**叙事**：一个主题、一条线、可以很长，可以有"我一开始错在哪"。
 - `derivations/D##` 是**卡片**：一个命题、一个证明、一组检验，通常一页以内。
 
-两者的关系：笔记里需要某个中间结论时，不再重推一遍，而是引用编号（例：见 D09）。卡片里需要长篇背景时，指向笔记（例：见 [N004](../notes/N004-hadamard-lemma.md)）。
+两者的关系：笔记里需要某个中间结论时，不再重推一遍，而是引用编号（例：见 D11）。卡片里需要长篇背景时，指向笔记（例：见 [N004](../notes/N004-hadamard-lemma.md)）。
 
 **这意味着什么**：以后你在任何地方写下一个"因为 $X$，所以 $Y$"，先查网格里有没有编号。有就引用，没有就新建一张卡片。重复推导是漂移的开始。
 
@@ -31,7 +31,7 @@
 
 **为什么强制"输入在前"**：任何卡片的上游只出现在**更小编号**里，顺着编号读就是一条合法的推导顺序，依赖图不会"往回跳"。这比"按登记顺序"更严；代价是**新增一条基础结论时要重排后面所有编号**——所以能放末尾就放末尾。
 
-**一次性重排记录**：2026-11-07 从旧的"登记顺序"整体重排为拓扑序（此前 D01–D20 全部换号，文件同时改名）。此后遵守上表。
+**一次性重排记录**：2026-11-07 从旧的"登记顺序"整体重排为拓扑序（此前 D01–D25 全部换号，文件同时改名）。此后遵守上表。
 
 ---
 
@@ -41,31 +41,36 @@
 |---|---|---|---|---|
 | D00 | **公理**：$[\hat q,\hat p]=i$（Weyl 形式） | — | [D00](D00-commutator-axiom.md) | ✓ |
 | D01 | 谱定理与 Gelfand–Maurin（引用卡） | 外部定理 | [D01](D01-spectral-theorem.md) | ✓ |
-| D02 | 位置本征方程 $\hat q\lvert q\rangle=q\lvert q\rangle$ 与谱分解（Gelfand–Maurin 的直接特化） | D01 | [D02](D02-position-eigen-equation.md) | ✓ |
-| D03 | 归一化约定：$\langle q\lvert q'\rangle=\delta(q-q')$（形式被迫、系数自选） | D01、D02 | [D03](D03-normalization-convention.md) | ✓ |
-| D04 | Stone–von Neumann（引用卡） | 外部定理 | [D04](D04-stone-von-neumann.md) | ✓ |
-| D05 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D01 | [D05](D05-functional-calculus.md) | ✓ |
-| D06 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（默认 D05；旁证 D01） | [D06](D06-commutator-p-fq.md) | ✓ |
-| D07 | 对角判据：$[\hat q,f(\hat q)]=0\Rightarrow$ 核 $\propto\delta$ | D00、D01、D02、D03 | [D07](D07-diagonal-criterion.md) | ✓ |
-| D08 | 乘积的核：$\langle q'\lvert\hat A\hat B\lvert q''\rangle=\int dq\cdots$ | D01 | [D08](D08-product-kernel.md) | ✓ |
-| D09 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | —（默认：D05） | [D09](D09-hadamard-lemma.md) | ✓ |
-| D10 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D09 | [D10](D10-two-term-truncation.md) | ✓ |
-| D11 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D10（默认：D05） | [D11](D11-commutator-phase.md) | ✓ |
-| D12 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D09、D10、D11（默认：D05） | [D12](D12-three-bch-forms.md) | ✓ |
-| D13 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D11（默认：D05） | [D13](D13-weyl-phase.md) | ✓ |
-| D14 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D02、D03、D10（默认：D05） | [D14](D14-translation.md) | ✓ |
-| D15 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D03、D04、D13、D14（默认：D05、D01） | [D15](D15-qp-overlap.md) | ✓ |
-| D16 | 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | D01、D03、D15 | [D16](D16-p-completeness.md) | ✓ |
-| D17 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D15、D16（默认：D01） | [D17](D17-momentum-representation.md) | ✓ |
-| D18 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D15、D08、D16（默认：D01） | [D18](D18-path-integral-representation.md) | ✓ |
-| D19 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D18（默认：D01） | [D19](D19-trace-is-loop.md) | ✓ |
-| D20 | 不确定关系 $\Delta q\,\Delta p\ge\frac{1}{2}$ | D00、D01 | [D20](D20-uncertainty.md) | ✓ |
+| D02 | 态与测量：Born 规则 $p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$ | D00、D01 | [D02](D02-born-rule.md) | ✓ |
+| D03 | 位置本征方程 $\hat q\lvert q\rangle=q\lvert q\rangle$ 与谱分解（Gelfand–Maurin 的直接特化） | D01 | [D03](D03-position-eigen-equation.md) | ✓ |
+| D04 | 归一化约定：$\langle q\lvert q'\rangle=\delta(q-q')$（形式被迫、系数自选） | D01、D03 | [D04](D04-normalization-convention.md) | ✓ |
+| D05 | Stone–von Neumann（引用卡） | 外部定理 | [D05](D05-stone-von-neumann.md) | ✓ |
+| D06 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D01 | [D06](D06-functional-calculus.md) | ✓ |
+| D07 | 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$（基无关） | D01、D04 | [D07](D07-trace.md) | ✓ |
+| D08 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（默认 D06；旁证 D01） | [D08](D08-commutator-p-fq.md) | ✓ |
+| D09 | 对角判据：$[\hat q,f(\hat q)]=0\Rightarrow$ 核 $\propto\delta$ | D00、D01、D03、D04 | [D09](D09-diagonal-criterion.md) | ✓ |
+| D10 | 乘积的核：$\langle q'\lvert\hat A\hat B\lvert q''\rangle=\int dq\cdots$ | D01 | [D10](D10-product-kernel.md) | ✓ |
+| D11 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | —（默认：D06） | [D11](D11-hadamard-lemma.md) | ✓ |
+| D12 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D11 | [D12](D12-two-term-truncation.md) | ✓ |
+| D13 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D12（默认：D06） | [D13](D13-commutator-phase.md) | ✓ |
+| D14 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D11、D12、D13（默认：D06） | [D14](D14-three-bch-forms.md) | ✓ |
+| D15 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D13（默认：D06） | [D15](D15-weyl-phase.md) | ✓ |
+| D16 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D03、D04、D12（默认：D06） | [D16](D16-translation.md) | ✓ |
+| D17 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D04、D05、D15、D16（默认：D06、D01） | [D17](D17-qp-overlap.md) | ✓ |
+| D18 | 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | D01、D04、D17 | [D18](D18-p-completeness.md) | ✓ |
+| D19 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D17、D18（默认：D01） | [D19](D19-momentum-representation.md) | ✓ |
+| D20 | Hamiltonian 与时间演化：$\hat H=\frac{\hat p^{2}}{2m}+V(\hat q)$ | D00、D06、D09 | [D20](D20-hamiltonian.md) | ✓ |
+| D21 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D17、D10、D18、D20（默认：D01） | [D21](D21-path-integral-representation.md) | ✓ |
+| D22 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D07、D21（默认：D01） | [D22](D22-trace-is-loop.md) | ✓ |
+| D23 | 密度矩阵与配分函数：$\rho=e^{-\beta H}/Z$、$Z=\mathrm{Tr}\,e^{-\beta H}$ | D07、D20、D22 | [D23](D23-density-matrix.md) | ✓ |
+| D24 | 温度 = 周期的倒数：$\beta=1/T$（虚时间圆周长） | D21、D22、D23 | [D24](D24-temperature-period.md) | ✓ |
+| D25 | 不确定关系 $\Delta q\,\Delta p\ge\frac{1}{2}$ | D00、D01、D02 | [D25](D25-uncertainty.md) | ✓ |
 
 **状态含义**：✓ 已逐行核对；○ 草稿；✗ 已废弃（并在"全文"列写明去哪找）。
 
 **"输入"列的两种标记**：
 
-- **（默认 Dxx）**——该卡隐式使用 Dxx，为不使表格臃肿而单列。典型例子：凡出现 $e^{X}$ 的卡片都默认使用 D05（函数演算），凡出现 $\lvert q\rangle$ 或完备性的都默认使用 D01（谱定理）。
+- **（默认 Dxx）**——该卡隐式使用 Dxx，为不使表格臃肿而单列。典型例子：凡出现 $e^{X}$ 的卡片都默认使用 D06（函数演算），凡出现 $\lvert q\rangle$ 或完备性的都默认使用 D01（谱定理）。
 - **（旁证 Dxx）**——只在另证或备注中用到，主证明不需要。
 
 **硬性约束**：任何条目的输入——**含默认与旁证**——其编号都必须**小于自身编号**。这条由脚本逐条校验过（见 §2.1）。
@@ -75,26 +80,26 @@
 | 层 | 卡片 | 输入 |
 |---|---|---|
 | 0 | **D00 公理** | —（唯一输入） |
-| 1 | **D01 谱定理**、**D04 S–vN** | 外部定理 |
-| 2 | D05 函数演算 | D01 |
-| 3 | D06 对易子公式、D07 对角判据、D08 乘积的核、D20 不确定关系 | D00、D01、D05 |
-| 4 | D09 Hadamard | D05 |
-| 5 | D10 两项截断 | D09 |
-| 6 | D11 交换相位 | D10 |
-| 7 | D12 三条 BCH、D13 Weyl 相位、D14 平移 | D09、D10、D11、D00 |
-| 8 | D15 $\langle q\lvert p\rangle$ | D00、D14、D13、D04 |
-| 9 | D17 动量表示、D18 路径积分 | D00、D15、D01、D08 |
-| 10 | D19 迹即闭合路径 | D18 |
+| 1 | **D01 谱定理**、**D05 S–vN** | 外部定理 |
+| 2 | D06 函数演算 | D01 |
+| 3 | D08 对易子公式、D09 对角判据、D10 乘积的核、D25 不确定关系 | D00、D01、D06 |
+| 4 | D11 Hadamard | D06 |
+| 5 | D12 两项截断 | D11 |
+| 6 | D13 交换相位 | D12 |
+| 7 | D14 三条 BCH、D15 Weyl 相位、D16 平移 | D11、D12、D13、D00 |
+| 8 | D17 $\langle q\lvert p\rangle$ | D00、D16、D15、D05 |
+| 9 | D19 动量表示、D21 路径积分 | D00、D17、D01、D10 |
+| 10 | D22 迹即闭合路径 | D21 |
 
 **这张表的用法**：只要每一行的"输入"列里出现的编号都**小于**本行编号，全表就自洽。**加卡片之前先查这一列**，否则就要重排。
 
 **三条主干**：
 
-- **代数主干**：D09 → D10 → D11 → D12 / D13（从 Hadamard 到 BCH 与 Weyl 相位）；
-- **表象主干**：D14 → D15 → D17（从平移到平面波到 $\hat p=-i\partial_q$）；
-- **统计主干**：D15、D08 → D18 → D19（从平面波与乘积核到路径积分到取迹）。
+- **代数主干**：D11 → D12 → D13 → D14 / D15（从 Hadamard 到 BCH 与 Weyl 相位）；
+- **表象主干**：D16 → D17 → D19（从平移到平面波到 $\hat p=-i\partial_q$）；
+- **统计主干**：D17、D10 → D21 → D22（从平面波与乘积核到路径积分到取迹）。
 
-**D01、D04 是地基**：两张引用卡，不证但被多处默认使用（见上表下方说明）。
+**D01、D05 是地基**：两张引用卡，不证但被多处默认使用（见上表下方说明）。
 
 ---
 

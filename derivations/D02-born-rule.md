@@ -1,0 +1,95 @@
+# D02 · 态与测量：Born 规则
+
+> 建档 2026-11-08 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)
+> 下游：[D25](D25-uncertainty.md)
+> 本卡补的是"数学怎么变成预言"的那一步。没有它，整个网格算不出一个可检验的数。
+
+---
+
+## 0. 命题
+
+**态**：单位射线 $\lvert\psi\rangle$，$\langle\psi\lvert\psi\rangle=1$。
+
+**测量**：设可观测量 $\hat A=\int\lambda\,dE(\lambda)$（[D01](D01-spectral-theorem.md) 的谱分解）。对 Borel 集 $B$，测得结果落在 $B$ 内的概率是
+
+$$
+p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle
+$$
+
+**期望值**：
+
+$$
+\langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle=\int\lambda\;d\langle\psi\lvert E(\lambda)\lvert\psi\rangle
+$$
+
+**它在讲什么**：谱分解告诉你"$\hat A$ 是投影的组合"；Born 规则告诉你"**那些投影就是概率**"。两者之间没有任何数学推导，只有这一条公理。
+
+---
+
+## 1. 为什么必须当成公理
+
+| 谱定理给什么 | Born 规则加什么 |
+|---|---|
+| $\hat A=\int\lambda\,dE(\lambda)$——算子的结构 | $E(B)$ 的**期望值**是 $\langle\psi\lvert E(B)\lvert\psi\rangle$ |
+| 谱在 $\mathbb{R}$，本征矢完备 | 本征值是**测量读数**，模方是**概率** |
+
+**没有一步数学能推出 Born 规则**：给定同一个算子，你完全可以把"概率"定义成别的函数（只要归一）。之所以取模方，是因为**实验**（干涉、符合计数）支持它。
+
+**这跟 [D00](D00-commutator-axiom.md) 的地位一样**：它是输入，不是结论。
+
+---
+
+## 2. 三条直接推论
+
+**① 本征态必得本征值。** 若 $\hat A\lvert\psi\rangle=a\lvert\psi\rangle$，则 $E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle$，故
+
+$$
+p(\{a\})=\langle\psi\lvert\psi\rangle=1
+$$
+
+**② 概率归一。** $E(\mathbb{R})=\mathbb{1}$（[D01](D01-spectral-theorem.md) §1.2 的 resolution of identity），故
+
+$$
+p(\mathbb{R})=\langle\psi\lvert\mathbb{1}\lvert\psi\rangle=1
+$$
+
+**③ 期望值就是双线性形式。** 对 $\hat A=\int\lambda\,dE$，按 Born 规则加权：
+
+$$
+\int\lambda\,dp(\lambda)=\int\lambda\,d\langle\psi\lvert E(\lambda)\lvert\psi\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle
+$$
+
+**这三条合起来说明**：谱分解 + Born 规则 = 全部可观测量的统计。
+
+---
+
+## 3. 一致性检验
+
+| 检验 | 结果 |
+|---|---|
+| 与 [D01](D01-spectral-theorem.md) §1.2 相容 | $E(\mathbb{R})=\mathbb{1}$ 给 $p=1$ ✅ |
+| 与 [D06](D06-functional-calculus.md) 相容 | $\langle f(\hat A)\rangle=\int f(\lambda)\,dp(\lambda)$，正是函数演算的期望 ✅ |
+| 简并情形 | $E(\{a\})$ 是投影而非一维时，$p$ 仍是迹式，无需改定义 ✅ |
+| 与其他态的叠加 | $p$ 对 $\lvert\psi\rangle$ **非线性**（$\lvert c\psi\rangle$ 给同一 $p$）——这正是"射线"的说法 ✅ |
+
+---
+
+## 4. 边界
+
+1. **它只说"概率是多少"，不说"为什么是概率"。** 测量问题（波函数何时坍缩、谁在测量）不在本卡范围内，物理上仍是开放的（[P11](../problems/P11-problem-of-time.md) 相关）。
+2. **坍缩（投影假设）是额外的一条。** 只算期望值不需要它；要算"测量后再测"才需要：
+   $$
+   \lvert\psi\rangle\;\longrightarrow\;\frac{E(B)\lvert\psi\rangle}{\sqrt{p(B)}}
+   $$
+3. **连续谱时 $p$ 是"落在区间"的概率**，密度 $d p/d q$ 才可谈；单点概率为零。
+4. **纯态才用本卡**。混合态（热平衡、统计混合）要换成密度矩阵，见 [D23](D23-density-matrix.md)。
+
+---
+
+## 5. 自检
+
+- [ ] 写出 Born 规则与期望值公式，并说明它们与谱分解的分工
+- [ ] 说明为什么 Born 规则不能从谱定理推出来
+- [ ] 用 $E(\mathbb{R})=\mathbb{1}$ 证明概率归一
+- [ ] 说明"本征态必得本征值"用到了哪一条
+- [ ] 指出本卡**不**包含哪一条（坍缩、测量问题）

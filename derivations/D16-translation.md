@@ -1,7 +1,7 @@
-# D14 · 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$
+# D16 · 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-position-eigen-equation.md)、[D03](D03-normalization-convention.md)、[D10](D10-two-term-truncation.md)；默认：D05
-> 下游：[D15](D15-qp-overlap.md)
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)、[D12](D12-two-term-truncation.md)；默认：D06
+> 下游：[D17](D17-qp-overlap.md)
 > 原为 [N004 §6.1](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---
@@ -41,7 +41,7 @@ $$
 [A,B]=ia[\hat p,\hat q]=ia\cdot(-i)=a
 $$
 
-$a$ 是数，于是由 [D10](D10-two-term-truncation.md)（两项截断）：
+$a$ 是数，于是由 [D12](D12-two-term-truncation.md)（两项截断）：
 
 $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+[A,B]=\hat q+a
@@ -118,7 +118,7 @@ $$
 1. **方向最容易错。** 记法：$e^{ia\hat p}$ 把"位置标签"推向小的一侧（$q-a$），把"波函数自变量"推向大的一侧（$q+a$）。两者差一个负号，来源是 $\langle q'\lvert q\rangle=\delta(q'-q)$。
 2. **重数为 $1$ 是前提。** 若 $\hat q$ 有内部指标（自旋、超选扇区），$e^{ia\hat p}$ 可以混合同一本征值的不同指标，结论要改成 $\sum_j S_{ij}(a)\lvert q-a,j\rangle$。
 3. **相位不是定理的一部分。** $\lvert c\rvert=1$ 是定理，$c=1$ 是约定。丢掉这句话，换一套基就会"证出"矛盾。
-4. **它支撑 D15。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用 $\lvert q\rangle=e^{-iq\hat p}\lvert 0\rangle$，那正是本卡片取 $a=-q$。
+4. **它支撑 D17。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用 $\lvert q\rangle=e^{-iq\hat p}\lvert 0\rangle$，那正是本卡片取 $a=-q$。
 
 ---
 

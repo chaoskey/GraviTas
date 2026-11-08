@@ -1,8 +1,8 @@
-# D03 · 归一化约定：$\langle q\lvert q'\rangle=\delta(q-q')$
+# D04 · 归一化约定：$\langle q\lvert q'\rangle=\delta(q-q')$
 
 > 建档 2026-11-07 · 类型：**约定卡**——记下"哪些是被迫的、哪些是选的"，并给出两套方案与换算
-> 上游：[D01](D01-spectral-theorem.md)（谱定理）、[D02](D02-position-eigen-equation.md)（$\delta$ 的**形式**是被迫的）
-> 下游：[D07](D07-diagonal-criterion.md)、[D14](D14-translation.md)、[D15](D15-qp-overlap.md)、[D16](D16-p-completeness.md)
+> 上游：[D01](D01-spectral-theorem.md)（谱定理）、[D03](D03-position-eigen-equation.md)（$\delta$ 的**形式**是被迫的）
+> 下游：[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)
 
 ---
 
@@ -31,7 +31,7 @@ $$
 E(B)\,E(B')=0
 $$
 
-由 [D02](D02-position-eigen-equation.md) §1.3 的密度形式 $E(B)=\int_B dq\,\lvert q\rangle\langle q\rvert$：
+由 [D03](D03-position-eigen-equation.md) §1.3 的密度形式 $E(B)=\int_B dq\,\lvert q\rangle\langle q\rvert$：
 
 $$
 0=\int_B\!\!\int_{B'}\langle q\lvert q'\rangle\,\lvert q\rangle\langle q'\rvert\,dq\,dq'
