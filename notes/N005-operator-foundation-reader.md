@@ -87,6 +87,31 @@ $$
 
 **白话**：谱定理给了"一族投影"，但我们要的是"一族**矢**"（$\lvert q\rangle$）。办法是把它们请出希尔伯特空间——搬到外面去住。
 
+**条件**：$\hat A$ 自伴；$\Phi$ 是核空间、连续稠密地嵌进 $\mathcal{H}$；且 $\hat A$ **不把好函数弄坏**，即 $\hat A\Phi\subset\Phi$。
+
+**结论一：本征方程。** 存在一族广义本征矢 $F_\lambda\in\Phi^{\times}$，使
+
+$$
+\hat A F_\lambda=\lambda F_\lambda
+$$
+
+**结论二：完备性。** 存在谱测度 $\mu$，使对任意 $\phi,\psi\in\Phi$，
+
+$$
+\langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\;d\mu(\lambda)
+\qquad\Longleftrightarrow\qquad
+\mathbb{1}=\int\lvert F_\lambda\rangle\langle F_\lambda\rvert\;d\mu(\lambda)
+$$
+
+**这两条就是全部结论，但有两点要看清**：
+
+- $F_\lambda$ 住在 $\Phi^{\times}$，**不在 $\mathcal{H}$ 里**——这才是"广义"二字的全部含义；
+- $\mu$ 是**谱测度**，不一定是 Lebesgue。把它选成 $dq$ 是后来的约定（[D03](../derivations/D03-position-eigen-equation.md) §1.2）。
+
+**取 $\hat A=\hat q$ 就是** [D03](../derivations/D03-position-eigen-equation.md)：本征方程变成 $\hat q\lvert q\rangle=q\lvert q\rangle$，完备性变成 $\int\lvert q\rangle\langle q\rvert\,d\mu(q)=\mathbb{1}$。
+
+**为什么需要三层结构**：定理里的 $F_\lambda$ 不在 $\mathcal{H}$ 里，得给它安排一个能住的地方。
+
 $$
 \Phi\;\subset\;\mathcal{H}\;\subset\;\Phi^{\times}
 $$
