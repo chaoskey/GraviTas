@@ -145,7 +145,7 @@ $$
 | 正交归一 | $\langle q\lvert q'\rangle=\delta(q-q')$ | 谱测度密度为 $1$ |
 | 完备性 | $\int dq\,\lvert q\rangle\langle q\rvert=\mathbb{1}$ | §1.2 的 resolution of identity |
 
-**本征方程与正交归一都是可推的**：前者由谱分解一行得出，后者由 $E$ 的投影性推出——完整推导见 [D02](D02-position-eigen-equation.md)。
+**三件套各有归属**：本征方程与谱分解见 [D02](D02-position-eigen-equation.md)（Gelfand–Maurin 的直接特化）；正交归一的**形式**见 [D03](D03-normalization-convention.md) §0.1（投影性的后果），它的**系数**见 §2.4 下方的 $w\,c=1$。
 
 **完备性同样是推出来的，而且只有一步**：$E$ 作为投影值测度，按定义满足
 

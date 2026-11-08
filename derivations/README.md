@@ -41,7 +41,7 @@
 |---|---|---|---|---|
 | D00 | **公理**：$[\hat q,\hat p]=i$（Weyl 形式） | — | [D00](D00-commutator-axiom.md) | ✓ |
 | D01 | 谱定理与 Gelfand–Maurin（引用卡） | 外部定理 | [D01](D01-spectral-theorem.md) | ✓ |
-| D02 | 位置本征方程：$\hat q\lvert q\rangle=q\lvert q\rangle$，并推出正交归一 | D01 | [D02](D02-position-eigen-equation.md) | ✓ |
+| D02 | 位置本征方程 $\hat q\lvert q\rangle=q\lvert q\rangle$ 与谱分解（Gelfand–Maurin 的直接特化） | D01 | [D02](D02-position-eigen-equation.md) | ✓ |
 | D03 | 归一化约定：$\langle q\lvert q'\rangle=\delta(q-q')$（形式被迫、系数自选） | D01、D02 | [D03](D03-normalization-convention.md) | ✓ |
 | D04 | Stone–von Neumann（引用卡） | 外部定理 | [D04](D04-stone-von-neumann.md) | ✓ |
 | D05 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D01 | [D05](D05-functional-calculus.md) | ✓ |

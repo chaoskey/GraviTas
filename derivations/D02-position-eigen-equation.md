@@ -1,8 +1,8 @@
 # D02 · 位置本征方程：$\hat q\lvert q\rangle=q\lvert q\rangle$
 
-> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)（谱分解与 $\hat q$ 的简单谱）
+> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)
 > 下游：[D03](D03-normalization-convention.md)、[D07](D07-diagonal-criterion.md)、[D14](D14-translation.md)
-> 本卡把"本征方程"从前提变成结论，并顺手交代**正交归一从哪来**。
+> 本卡只做"取 $\hat A=\hat q$"这一步，读出本征方程与谱分解；**归一化属于 [D03](D03-normalization-convention.md)**，本卡不预设也不推出它。
 
 ---
 
@@ -11,77 +11,84 @@
 $$
 \hat q\,\lvert q\rangle=q\,\lvert q\rangle,
 \qquad
-\langle q\lvert q'\rangle=\delta(q-q')
+\hat q=\int q\,dq\,\lvert q\rangle\langle q\rvert
 $$
 
-**它在讲什么**：$\lvert q\rangle$ 是 $\hat q$ 的本征矢，本征值 $q$ 是实数。
+**它在讲什么**：$\lvert q\rangle$ 是 $\hat q$ 的本征矢；把本征矢"填回"谱定理，就得到 $\hat q$ 的谱分解。
 
-**本卡的定位要说清**：它**不是**从零证明"存在这样的矢"，而是证明——**给定 [D01](D01-spectral-theorem.md) 的谱分解与"简单谱"识别，本征方程一行得出，正交归一是投影测度性质推出来的**。非循环的存在性来源仍是 [D01](D01-spectral-theorem.md) §2.2 的 Gelfand–Maurin。
+**本卡不做什么**：不讨论归一化（[D03](D03-normalization-convention.md)），不重复 Gelfand–Maurin 的证明（[D01](D01-spectral-theorem.md)）。本卡只把 D01 的两条定理**各取一次** $\hat A=\hat q$，再把结果对起来。
 
 ---
 
 ## 1. 证明
 
-### 1.1 第一步：谱分解
+### 1.1 第一步：Gelfand–Maurin 直接给本征方程与完备性
 
-由 [D01](D01-spectral-theorem.md) §1.1，自伴的 $\hat q$ 对应唯一的投影值测度 $E$：
-
-$$
-\hat q=\int_{\sigma(\hat q)}q\;dE(q)
-$$
-
-### 1.2 第二步：把测度写成密度
-
-谱**简单且绝对连续**时（[D01](D01-spectral-theorem.md) §2.4 的条件），$E$ 对 Lebesgue 测度有密度：
+[D01](D01-spectral-theorem.md) §2.2：存在谱测度 $\mu$ 与广义本征矢 $F_\lambda\in\Phi^{\times}$，使
 
 $$
+\hat A F_\lambda=\lambda F_\lambda,
+\qquad
+\mathbb{1}=\int\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)
+$$
+
+取 $\hat A=\hat q$、$F_\lambda=\lvert q\rangle$、$\lambda=q$：
+
+$$
+\hat q\lvert q\rangle=q\lvert q\rangle,
+\qquad
+\mathbb{1}=\int\lvert q\rangle\langle q\rvert\,d\mu(q)
+$$
+
+**本征方程在这里是一行**——它不是推出来的，是定理的直接特化。**存在性的全部来源就是这一步。**
+
+### 1.2 第二步：把测度定成 Lebesgue（本卡的选择）
+
+定理给的是 $d\mu$，不一定是 $dq$。本卡取
+
+$$
+d\mu(q)=dq
+$$
+
+**这是一次选择，不是定理的推论**。等价于固定 $\lvert q\rangle$ 的尺度：把 $\lvert q\rangle$ 乘常数、同时把 $d\mu$ 除以同一因子，整条式子不变。
+
+取定后：
+
+$$
+\mathbb{1}=\int\lvert q\rangle\langle q\rvert\,dq
+$$
+
+这个自由度的系统处理见 [D03](D03-normalization-convention.md)（它是本卡的下游）。
+
+### 1.3 第三步：与谱定理逐点对照，读出密度
+
+[D01](D01-spectral-theorem.md) §1.2 给另一条：
+
+$$
+\mathbb{1}=\int dE(q)
+$$
+
+对**每个 Borel 集** $B$ 对照两边的"部分和"：
+
+$$
+E(B)=\int_B dq\,\lvert q\rangle\langle q\rvert
+\qquad\Longrightarrow\qquad
 dE(q)=dq\,\lvert q\rangle\langle q\rvert
 $$
 
-**这一步是"识别"，不是"推导"**：它把"$\lvert q\rangle$ 是本征矢族"作为识别的内容写进来——所以本卡证明的是**自洽性**，存在性靠 D01。
+**必须逐 $B$ 比，不能只比整块的 $\mathbb{1}$**：只比整体，只能说明两边"总质量"相同，定不了每一点的密度。
 
-于是
-
-$$
-\hat q=\int q\,dq\,\lvert q\rangle\langle q\rvert
-\qquad\text{（哑变量改名为 $q'$ 得 } \hat q=\int q'\,dq'\,\lvert q'\rangle\langle q'\rvert\text{）}
-$$
-
-### 1.3 第三步：作用在本征矢上
+### 1.4 第四步：代回谱定理
 
 $$
-\hat q\lvert q\rangle
-=\int q'\,dq'\;\lvert q'\rangle\;\langle q'\lvert q\rangle
-\overset{(*)}=
-\int q'\,dq'\;\lvert q'\rangle\;\delta(q'-q)
-=q\,\lvert q\rangle
+\hat q=\int q\,dE(q)=\int q\,dq\,\lvert q\rangle\langle q\rvert
 $$
-
-其中 $(*)$ 用下一节的结论：$\langle q'\lvert q\rangle=\delta(q'-q)$。
 
 **证毕。**
 
-### 1.4 正交归一从哪来（不是假设）
-
-$E$ 是**投影值**测度，故对不交的 $B,B'$
-
-$$
-E(B)E(B')=E(B\cap B')=0
-$$
-
-代入密度形式：
-
-$$
-0=\int_B\!\!\int_{B'}\langle q\lvert q'\rangle\,\lvert q\rangle\langle q'\rvert\,dq\,dq'
-$$
-
-这要求 $\langle q\lvert q'\rangle$ 的支撑只在 $q=q'$，即正比于 $\delta(q-q')$；系数取 $1$ 是 [D01](D01-spectral-theorem.md) §2.4 的归一化选择。
-
-**所以正交归一是"投影性 + 密度识别"的推论，不是独立假设。** 这一条以前散落在各处、没人负责，本卡把它收下。
-
 ---
 
-## 2. 为什么必须写成"本征方程"而不是"直接说 $\hat q$ 对角"
+## 2. 为什么值得单列（本征方程 vs 谱分解）
 
 两种说法等价，但**用途不同**：
 
@@ -99,25 +106,27 @@ $$
 | 检验 | 结果 |
 |---|---|
 | 谱为实数 | $\hat q$ 自伴 $\Rightarrow$ 本征值 $q\in\mathbb{R}$，与 [D01](D01-spectral-theorem.md) §1.1 一致 ✅ |
-| 与 [D01](D01-spectral-theorem.md) §2.2 相容 | Gelfand–Maurin 的 $\hat A F_\lambda=\lambda F_\lambda$ 取 $\hat A=\hat q$ 即本卡命题 ✅ |
+| 与 [D01](D01-spectral-theorem.md) §2.2 相容 | 本卡就是 $\hat A F_\lambda=\lambda F_\lambda$ 取 $\hat A=\hat q$ ✅ |
 | 与 [D07](D07-diagonal-criterion.md) 相容 | 那里用 $\langle q'\lvert\hat q=q'\langle q'\rvert$（需自伴）与本卡右矢版本配对 ✅ |
 | 与 [D16](D16-p-completeness.md) 对称 | 那边对 $\hat p$ 做同一件事，只是权重带 $2\pi$ ✅ |
+| 自洽 | §1.1 与 §1.4 得到的是同一条谱分解；配上归一化之后的显式验算见 [D03](D03-normalization-convention.md) ✅ |
 
 ---
 
 ## 4. 边界
 
-1. **"简单谱"是前提。** 重数大于 1 时 $E$ 的密度不是 $\lvert q\rangle\langle q\rvert$，而要写成 $\sum_i\lvert q,i\rangle\langle q,i\rvert$，本征方程要加指标。
-2. **绝对连续是前提。** 纯点谱时没有密度，$\delta$ 要换成 $\delta_{qq'}$，求和代替积分（[D01](D01-spectral-theorem.md) §4 第 3 条的离散特例）。
-3. **$\lvert q\rangle$ 不在 $\mathcal{H}$ 内。** 本征方程是 $\Phi^{\times}$ 意义下的等式（[D01](D01-spectral-theorem.md) §2.3）。
-4. **不能拿本卡去"证明"Gelfand–Maurin。** 本卡的起点（密度识别）已经预设了那个家族存在；循环的方向是 D01 → 本卡，不是反过来。
+1. **"简单谱"是前提。** 重数大于 1 时 $dE$ 的密度不是 $\lvert q\rangle\langle q\rvert$，而要写成 $\sum_i\lvert q,i\rangle\langle q,i\rvert$，本征方程要加指标。
+2. **绝对连续是前提。** 纯点谱时没有密度，$\delta$ 要换成 $\delta_{qq'}$，求和代替积分（[D01](D01-spectral-theorem.md) §5 的离散特例）。
+3. **$\lvert q\rangle$ 不在 $\mathcal{H}$ 内。** 本征方程是 $\Phi^{\times}$ 意义下的等式（[D01](D01-spectral-theorem.md) §2.1）。
+4. **不能拿本卡去"证明"Gelfand–Maurin。** 本卡的起点就是那条定理；循环的方向是 D01 → 本卡，不是反过来。
+5. **归一化不在本卡。** 正交归一既不预设、也不推出——它属于 [D03](D03-normalization-convention.md)。
 
 ---
 
 ## 5. 自检
 
-- [ ] 从 $\hat q=\int q\,dE$ 出发，写出本征方程的三步
-- [ ] 说明 $dE=dq\lvert q\rangle\langle q\rvert$ 是"识别"而非"推导"，以及它的非循环来源
-- [ ] 用投影性 $E(B)E(B')=0$ 推出正交归一的支撑
-- [ ] 说明重数大于 1 时本卡哪一步失效
+- [ ] 说明本征方程为什么是"一行"，它的存在性来自哪条定理
+- [ ] 说明 $d\mu\to dq$ 是一次选择而非推论，以及这个选择等价于什么
+- [ ] 说明为什么"逐 Borel 集比对"比"比对整体 $\mathbb{1}$"更强
+- [ ] 说明重数大于 1 时哪一步失效
 - [ ] 对比本卡与 [D16](D16-p-completeness.md)：为什么 $\hat p$ 那边要多一个 $2\pi$
