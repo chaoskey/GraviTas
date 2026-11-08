@@ -58,6 +58,59 @@ $$
 
 ---
 
+### 1.6 反过来：从 Weyl 关系回到对易子
+
+本卡的关系可以"求导"回到 [D00](D00-commutator-axiom.md) 的公理。**这一步是 D13 与 D00 的接缝**，放在这里而不是 D00，是因为它用的全是 Weyl 关系。
+
+**前提**：$U(a)=e^{ia\hat p}$、$V(b)=e^{ib\hat q}$ 强连续（Stone 定理给出生成元）；$\psi$ 取在公共不变稠密域内。
+
+把关系写成"差为零"：
+
+$$
+W(a,b)\equiv U(a)\,V(b)-e^{iab}\,V(b)\,U(a)=0
+$$
+
+**对 $b$ 求导**：
+
+$$
+\partial_b W
+=U(a)\,\partial_b V(b)-\bigl(ia\,e^{iab}\bigr)V(b)U(a)
+-e^{iab}\bigl(\partial_b V(b)\bigr)U(a)
+$$
+
+**再对 $a$ 求导**：
+
+$$
+\begin{aligned}
+\partial_a\partial_b W
+={}&(\partial_aU)\,(\partial_bV)
+-i\,e^{iab}VU+ab\,e^{iab}VU-ia\,e^{iab}V(\partial_aU)\\
+&-ib\,e^{iab}(\partial_bV)U-e^{iab}(\partial_bV)(\partial_aU)
+\end{aligned}
+$$
+
+**取 $a=b=0$**，只剩三项：
+
+$$
+0=(i\hat p)(i\hat q)-i-(i\hat q)(i\hat p)
+=-\hat p\hat q-i+\hat q\hat p
+=[\hat q,\hat p]-i
+\quad\Longrightarrow\quad
+[\hat q,\hat p]=i
+$$
+
+**那个 $-i$ 从哪来**：$\partial_b e^{iab}=ia\,e^{iab}$，再对 $a$ 求导时那个 $ia$ 变成常数 $i$。**它是中心荷的残余**——若两个群对易（相因子为 $1$），这一项消失，得到 $[\hat q,\hat p]=0$。所以**非零对易子完全由相位 $e^{iab}$ 产生**。
+
+**另证（更短）**：把关系写成共轭形式 $U(a)V(b)U(a)^{-1}=e^{iab}V(b)$。先对 $a$ 求导得 $[\hat p,V(b)]=b\,V(b)$，再对 $b$ 求导得 $i[\hat p,\hat q]=\mathbb{1}$。
+
+**三点注意**：
+
+1. **结论只在稠密子集上成立**：$[\hat q,\hat p]\psi=i\psi$（$\psi\in D$），不是全空间的算子等式；
+2. **$W$ 是算子的差**，$W=0$ 指它在 $D$ 上作用为零；
+3. **反向不成立**：由对易子推回本卡的关系，还要补"自伴、公共不变稠密域、强连续"三条——这正是本卡比公理"更强"的地方。
+
+---
+
 ## 2. 一致性检验
 
 | 检验 | 结果 |
@@ -89,6 +142,8 @@ $$
 
 ## 4. 自检
 
+- [ ] 写出裸对易子与 Weyl 关系，并说明为什么后者更严格
+- [ ] 不做任何假设，从 Weyl 关系求导导出 $[\hat q,\hat p]=i$，并指出那个 $-i$ 从哪来
 - [ ] 不看本文，算出 $[ia\hat p,ib\hat q]$，并指出两个负号的来源
 - [ ] 写出 $q$ 在前的版本，说明两者相差多少
 - [ ] 说明符号如何由 $e^{ia\hat p}$ 的平移方向决定
