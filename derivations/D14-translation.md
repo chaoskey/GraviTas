@@ -19,7 +19,7 @@ $$
 |---|---|
 | 态 | $e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ |
 | 左矢 | $\langle q\lvert\,e^{-ia\hat p}=\langle q-a\lvert$ |
-| 波函数 | $\langle x\lvert e^{ia\hat p}\lvert\psi\rangle=\psi(x+a)$ |
+| 波函数 | $\langle q\lvert e^{ia\hat p}\lvert\psi\rangle=\psi(q+a)$ |
 
 **适用条件**：
 
@@ -27,7 +27,7 @@ $$
 2. 相位约定：本征矢的相位取到使系数为 $1$（见 §1.3）；
 3. 归一化为 $\langle q\lvert q'\rangle=\delta(q-q')$。
 
-**它在讲什么**：$\hat p$ 是 $q$ 方向平移的生成元。**注意方向**：态标签往下移 $a$，而波函数的自变量往上移 $a$——两者不矛盾，因为 $\langle x\lvert q\rangle=\delta(x-q)$。
+**它在讲什么**：$\hat p$ 是 $q$ 方向平移的生成元。**注意方向**：态标签往下移 $a$，而波函数的自变量往上移 $a$——两者不矛盾，因为 $\langle q'\lvert q\rangle=\delta(q'-q)$。
 
 ---
 
@@ -107,15 +107,15 @@ $$
 |---|---|
 | $a=0$ | 两边都是 $\lvert q\rangle$ ✅ |
 | 群律 | $e^{i(a+b)\hat p}=e^{ia\hat p}e^{ib\hat p}$：两次平移分别把 $q$ 移到 $q-a$、$q-a-b$，合起来是 $e^{i(a+b)\hat p}\lvert q\rangle=\lvert q-a-b\rangle$ ✅ |
-| 波函数形式 | $\langle x\lvert e^{ia\hat p}\lvert q\rangle=\delta(x-q+a)$；而 $\langle x\lvert q-a\rangle=\delta(x-q+a)$ ✅ |
-| 与 $e^{a\partial_x}$ 对照 | $\hat p=-i\partial_x$ 时 $e^{ia\hat p}=e^{a\partial_x}$，作用为 $\psi(x)\to\psi(x+a)$，与表中第三行一致 ✅ |
+| 波函数形式 | $\langle q'\lvert e^{ia\hat p}\lvert q\rangle=\delta(q'-q+a)$；而 $\langle q'\lvert q-a\rangle=\delta(q'-q+a)$ ✅ |
+| 与 $e^{a\partial_q}$ 对照 | $\hat p=-i\partial_q$ 时 $e^{ia\hat p}=e^{a\partial_q}$，作用为 $\psi(q)\to\psi(q+a)$，与表中第三行一致 ✅ |
 | 谱不变 | 共轭保持谱，$\hat q$ 与 $\hat q+a$ 的谱都是 $\mathbb{R}$ ✅ |
 
 ---
 
 ## 3. 备注与边界
 
-1. **方向最容易错。** 记法：$e^{ia\hat p}$ 把"位置标签"推向小的一侧（$q-a$），把"波函数自变量"推向大的一侧（$x+a$）。两者差一个负号，来源是 $\langle x\lvert q\rangle=\delta(x-q)$。
+1. **方向最容易错。** 记法：$e^{ia\hat p}$ 把"位置标签"推向小的一侧（$q-a$），把"波函数自变量"推向大的一侧（$q+a$）。两者差一个负号，来源是 $\langle q'\lvert q\rangle=\delta(q'-q)$。
 2. **重数为 $1$ 是前提。** 若 $\hat q$ 有内部指标（自旋、超选扇区），$e^{ia\hat p}$ 可以混合同一本征值的不同指标，结论要改成 $\sum_j S_{ij}(a)\lvert q-a,j\rangle$。
 3. **相位不是定理的一部分。** $\lvert c\rvert=1$ 是定理，$c=1$ 是约定。丢掉这句话，换一套基就会"证出"矛盾。
 4. **它支撑 D15。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用 $\lvert q\rangle=e^{-iq\hat p}\lvert 0\rangle$，那正是本卡片取 $a=-q$。

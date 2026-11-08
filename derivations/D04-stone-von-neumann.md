@@ -20,7 +20,7 @@
 
 对易关系是**抽象的**：它只说"有两个自伴算子 $\hat q,\hat p$，满足 $\hat q\hat p-\hat p\hat q=i$"，没说它们具体长什么样。
 
-要真算东西，得把它们落到具体的空间与算子上：作用在 $L^{2}(\mathbb{R})$ 上？$\hat q$ 是乘 $x$ 吗？$\hat p$ 是导数吗？
+要真算东西，得把它们落到具体的空间与算子上：作用在 $L^{2}(\mathbb{R})$ 上？$\hat q$ 是乘以 $q$ 吗？$\hat p$ 是求导吗？
 
 **每一次这样的"落地"，就叫一个表示。** 同一条对易关系可以有很多种落地方式。
 
@@ -68,7 +68,7 @@ $$
 \Omega\,V(b)\,\Omega^{\dagger}=e^{ib\hat q_{\mathrm{Sch}}}
 $$
 
-其中标准表示就是：$\hat q_{\mathrm{Sch}}$ 乘 $x$、$\hat p_{\mathrm{Sch}}=-i\partial_x$，作用在 $L^{2}(\mathbb{R})$ 上。
+其中标准表示就是：$\hat q_{\mathrm{Sch}}$ 乘以 $q$、$\hat p_{\mathrm{Sch}}=-i\partial_q$，作用在 $L^{2}(\mathbb{R})$ 上。
 
 **多个自由度**取张量积——$n$ 份标准表示，即 $L^{2}(\mathbb{R}^{n})$。
 
@@ -86,7 +86,7 @@ $$
 
 | 后果 | 说明 |
 |---|---|
-| 可以放心写 $\hat q\to x$、$\hat p\to-i\partial_q$ | 不是"挑了个方便的"，而是**唯一**的选择（差等价） |
+| 可以放心写 $\hat q\to q$、$\hat p\to-i\partial_q$ | 不是"挑了个方便的"，而是**唯一**的选择（差等价） |
 | $\langle q\lvert p\rangle=e^{ipq}$ 是**定理** | 根子在本卡——[D15](D15-qp-overlap.md) 的定位就靠这一条 |
 | "量子化"在有限自由度下没有自由度 | 给出对易关系，物理就锁死 |
 

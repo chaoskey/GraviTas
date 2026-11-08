@@ -133,7 +133,7 @@ $$
 - **本征矢族的存在性**——它怎么特化成 $\hat q$ 的本征方程，见 [D02](D02-position-eigen-equation.md)；归一化怎么定，见 [D03](D03-normalization-convention.md)。本卡只负责"存在"这一步；
 - 狄拉克记号的下限——$\langle q\lvert\psi\rangle=\psi(q)$ 是**求值泛函**，不是 $L^{2}$ 内积。
 
-**具体画面**（这也是"为什么必须扩大空间"的最短说明）：取 $\hat q$ 为 $L^{2}(\mathbb{R})$ 上"乘以 $x$"。则 $\lvert q\rangle$ 就是求值泛函 $\psi\mapsto\psi(q)$。这个泛函在 $L^{2}$ 上**不连续**（函数可在一点很高而范数很小），但在 Schwartz 空间 $\mathcal{S}$ 上连续——所以它住在 $\mathcal{S}^{\times}$ 里，不在 $\mathcal{H}$ 里。
+**具体画面**（这也是"为什么必须扩大空间"的最短说明）：取 $\hat q$ 为 $L^{2}(\mathbb{R})$ 上"乘以 $q$"。则 $\lvert q\rangle$ 就是求值泛函 $\psi\mapsto\psi(q)$。这个泛函在 $L^{2}$ 上**不连续**（函数可在一点很高而范数很小），但在 Schwartz 空间 $\mathcal{S}$ 上连续——所以它住在 $\mathcal{S}^{\times}$ 里，不在 $\mathcal{H}$ 里。
 
 ---
 
@@ -157,7 +157,7 @@ $$
 
 | 检验 | 结果 |
 |---|---|
-| 乘法算子（$\hat q$ 乘 $x$） | 谱为 $\mathbb{R}$，$E(B)$ 为"乘以 $B$ 的特征函数"，广义本征矢为 $\delta(x-q)$（即求值泛函）✅ |
+| 乘法算子（$\hat q$ 乘以 $q$） | 谱为 $\mathbb{R}$，$E(B)$ 为"乘以 $B$ 的特征函数"，广义本征矢为 $\delta(q'-q)$（即求值泛函，$q'$ 为自变量）✅ |
 | 动量算子（$\hat p=-i\partial_q$） | 广义本征矢为 $e^{ipx}$，$\langle p\lvert p'\rangle=2\pi\delta(p-p')$，与 [D15](D15-qp-overlap.md) 一致 ✅ |
 | 离散谱特例 | 有界区间上的算子给出 $\sum_n$ 而非 $\int$，$\delta$ 变 $\delta_{nm}$——与 [D14](D14-translation.md) §3 第 2 条一致 ✅ |
 | 与 D05 自洽 | $\sigma(f(\hat A))=f(\sigma(\hat A))$ 是谱定理的直接推论（[D05](D05-functional-calculus.md) §2）✅ |

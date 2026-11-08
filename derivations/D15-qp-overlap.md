@@ -157,7 +157,7 @@ $$
 |---|---|
 | 模长 | $\lvert e^{ipq}\rvert=1$，与第五步一致 ✅ |
 | 回到波函数 | $\psi_p(q)=e^{ipq}$，正是 $\hat p=-i\partial_q$ 的本征函数：$-i\partial_q e^{ipq}=p\,e^{ipq}$ ✅ |
-| 直接模型验算 | 取 $\langle x\lvert q\rangle=\delta(x-q)$、$\langle x\lvert p\rangle=e^{ipx}$，则 $\langle q\lvert p\rangle=\int dx\,\delta(x-q)e^{ipx}=e^{ipq}$ ✅ |
+| 直接模型验算 | 取 $\langle q'\lvert q\rangle=\delta(q'-q)$、$\langle q'\lvert p\rangle=e^{ipq'}$，则 $\langle q\lvert p\rangle=\int dq'\,\delta(q'-q)e^{ipq'}=e^{ipq}$ ✅ |
 | 与 D14 相容 | $\langle q\lvert=\langle 0\lvert e^{iq\hat p}$ 正是 [D14](D14-translation.md) 取 $a=-q$ ✅ |
 | $q\to0$ | $\langle 0\lvert p\rangle=1$，与相位约定一致 ✅ |
 
