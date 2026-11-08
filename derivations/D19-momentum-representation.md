@@ -1,7 +1,7 @@
 # D19 · $\hat p$ 在 $q$ 表象下是 $-i\partial_q$
 
 > 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)；默认：D01
-> 下游：无卡片依赖
+> 下游：无卡片依赖（本卡闭合既有链路）
 > 原为 [N003 §3.1–3.2](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 
 ---

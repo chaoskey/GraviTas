@@ -1,7 +1,7 @@
 # D08 · 对易子 $[\hat p,f(\hat q)]=-i f'(\hat q)$
 
 > 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)；默认：D06；旁证：[D01](D01-spectral-theorem.md)
-> 下游：无卡片依赖
+> 下游：无卡片依赖（本卡闭合既有链路）
 > 网格登记见 [derivations/README](README.md)
 
 ---

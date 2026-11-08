@@ -1,7 +1,7 @@
 # D20 · Hamiltonian 与时间演化
 
 > 建档 2026-11-08 · 上游：[D00](D00-commutator-axiom.md)、[D06](D06-functional-calculus.md)、[D09](D09-diagonal-criterion.md)
-> 下游：[D21](D21-path-integral-representation.md)、[D23](D23-density-matrix.md)
+> 下游：[D21](D21-path-integral-representation.md)、[D23](D23-density-matrix.md)、[D26](D26-energy-basis.md)
 > 本卡补的是"$\hat H$ 从哪来"——[D21](D21-path-integral-representation.md) 一上来就写 $e^{-\beta H}$，却从没交代过它。
 
 ---

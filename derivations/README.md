@@ -65,6 +65,7 @@
 | D23 | 密度矩阵与配分函数：$\rho=e^{-\beta H}/Z$、$Z=\mathrm{Tr}\,e^{-\beta H}$ | D07、D20、D22 | [D23](D23-density-matrix.md) | ✓ |
 | D24 | 温度 = 周期的倒数：$\beta=1/T$（虚时间圆周长） | D21、D22、D23 | [D24](D24-temperature-period.md) | ✓ |
 | D25 | 不确定关系 $\Delta q\,\Delta p\ge\frac{1}{2}$ | D00、D01、D02 | [D25](D25-uncertainty.md) | ✓ |
+| D26 | 能量表象与能级展开：$Z=\sum_n e^{-\beta E_n}$，热核 $\sum_n e^{-\beta E_n}\psi_n(q_f)\psi_n^{*}(q_i)$ | D06、D07、D20、D23 | [D26](D26-energy-basis.md) | ✓ |
 
 **状态含义**：✓ 已逐行核对；○ 草稿；✗ 已废弃（并在"全文"列写明去哪找）。
 
