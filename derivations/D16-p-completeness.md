@@ -74,7 +74,7 @@ $$
 
 **只有 $\frac{dp}{2\pi}$ 给出恒等算子。** 所以它不是"配平出来"的，而是被 $\delta$ 的傅里叶表示**唯一钉死**的。
 
-这与 [D01](D01-spectral-theorem.md) §2.4 的 $w\,c=1$ 是同一件事的两面：$\langle p\lvert p'\rangle=2\pi\delta$ 给出 $c=2\pi$，于是完备性权重只能是 $w=\frac{1}{2\pi}$。
+这与 [D03](D03-normalization-convention.md) §1 的 $w\,c=1$ 是同一件事的两面：$\langle p\lvert p'\rangle=2\pi\delta$ 给出 $c=2\pi$，于是完备性权重只能是 $w=\frac{1}{2\pi}$。
 
 ---
 
@@ -103,5 +103,5 @@ $$
 - [ ] 用"算核"的方式写出证明，并说明为什么核相同就能断定算子相同
 - [ ] 说明 $2\pi$ 为什么必须在积分测度里，而不在 $\lvert p\rangle$ 的定义里
 - [ ] 把 $\int dp$ 的写法代进去，算出它等于 $2\pi\mathbb{1}$ 而不是 $\mathbb{1}$
-- [ ] 用 $w\,c=1$ 把本卡与 [D01](D01-spectral-theorem.md) §2.4 对上
+- [ ] 用 $w\,c=1$ 把本卡与 [D03](D03-normalization-convention.md) §1 对上
 - [ ] 说明换成对称归一时 $2\pi$ 去哪了
