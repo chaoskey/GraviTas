@@ -86,11 +86,13 @@ $$
 **条件**：$\hat A$ 自伴；$\Phi$ 是核空间、连续稠密地嵌进 $\mathcal{H}$；且 $\hat A$ **不把好函数弄坏**，即 $\hat A\Phi\subset\Phi$。
 
 **结论一：本征方程。** 存在一族广义本征矢 $F_\lambda\in\Phi^{\times}$，使
+
 $$
 \hat A F_\lambda=\lambda F_\lambda
 $$
 
 **结论二：完备性。** 存在谱测度 $\mu$，使对任意 $\phi,\psi\in\Phi$，
+
 $$
 \langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\;d\mu(\lambda)
 \qquad\Longleftrightarrow\qquad
@@ -103,6 +105,7 @@ $$
 - $\mu$ 是**谱测度**，不一定是 Lebesgue。把它选成 $dq$ 是后来的约定（[D03](../derivations/D03-position-eigen-equation.md) §1.2）。
 
 **为什么需要三层结构**：定理里的 $F_\lambda$ 不在 $\mathcal{H}$ 里，得给它安排一个能住的地方。
+
 $$
 \Phi\;\subset\;\mathcal{H}\;\subset\;\Phi^{\times}
 $$
@@ -121,15 +124,19 @@ $$
 
 ### 2.3 位置本征方程（[D03](../derivations/D03-position-eigen-equation.md)）
 
-**白话**：把 2.2 的定理取 $\hat q$，就得到位置基。
+**白话**：把 2.2 的定理取 $\hat q$，就得到位置基。**位置基的"三件套"里有两条出在本卡**：
 
 $$
 \hat q\lvert q\rangle=q\lvert q\rangle,
+\qquad
+\mathbb{1}=\int\lvert q\rangle\langle q\rvert\,dq,
 \qquad
 \hat q=\int q\,dq\,\lvert q\rangle\langle q\rvert
 $$
 
 **证明只有一步**：取 $\hat A=\hat q$、$F_\lambda=\lvert q\rangle$、$\lambda=q$。
+
+**归属**：本征方程与**完备性**（中间那条）都在本卡（D03 §1.2）；第三件"正交归一的系数"属于 [D04](../derivations/D04-normalization-convention.md)。**完备性不在 D04，别去那里找。**
 
 **唯一的选择**：定理给的测度是 $d\mu$，写成 $dq$ 是**我们选的**（等价于固定 $\lvert q\rangle$ 的尺度）。
 
@@ -139,16 +146,14 @@ $$
 \langle q\lvert q'\rangle=\delta(q-q')
 $$
 
-**完备性那条已在 §2.3 给出**（$\int dq\lvert q\rangle\langle q\rvert=\mathbb{1}$，来自 D03），本节不重复。
-
-**成分不同，必须分开**：
+**完备性那一半在 §2.3**（属于 D03），本节不重复。这里只管**正交归一的系数**，并说明它必须与 D03 的完备性权重配对：
 
 | 成分 | 地位 |
 |---|---|
 | 为什么是 $\delta$（不是别的函数） | **被迫**：投影测度的投影性推出来的 |
 | $\delta$ 前系数为什么是 1 | **选的**：与 D03 的完备性权重配对，$w\,c=1$ |
 
-**改一个必须改另一个**。两套常用方案：
+**系数与权重必须一起改**（否则 $w\,c=1$ 不成立）。两套常用方案：
 
 | 方案 | $\langle q\lvert q'\rangle$ | $\langle p\lvert p'\rangle$ | $\langle q\lvert p\rangle$ |
 |---|---|---|---|
