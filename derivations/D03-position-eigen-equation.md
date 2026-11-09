@@ -11,6 +11,8 @@
 $$
 \hat q\,\lvert q\rangle=q\,\lvert q\rangle,
 \qquad
+\mathbb{1}=\int\lvert q\rangle\langle q\rvert\;dq
+\qquad
 \hat q=\int q\,dq\,\lvert q\rangle\langle q\rvert
 $$
 

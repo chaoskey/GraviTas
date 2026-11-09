@@ -64,13 +64,9 @@ $$
 ### 2.1 谱定理（[D01](../derivations/D01-spectral-theorem.md) §1）
 
 **白话**：任何一个自伴算子，都能拆成一族**互相垂直的投影**，权重是它的谱。
-
 $$
-\mathbb{1}=\int dE(\lambda),
-\qquad
-\hat A=\int\lambda\,dE(\lambda)
+\int dE(\lambda)=\mathbb{1} \qquad\hat A=\int\lambda\,dE(\lambda)
 $$
-
 **两条性质就是定理的全部内容**：投影拼回整个空间；算子按权重把投影加起来。
 
 **它不给什么**（很重要）：
@@ -90,13 +86,11 @@ $$
 **条件**：$\hat A$ 自伴；$\Phi$ 是核空间、连续稠密地嵌进 $\mathcal{H}$；且 $\hat A$ **不把好函数弄坏**，即 $\hat A\Phi\subset\Phi$。
 
 **结论一：本征方程。** 存在一族广义本征矢 $F_\lambda\in\Phi^{\times}$，使
-
 $$
 \hat A F_\lambda=\lambda F_\lambda
 $$
 
 **结论二：完备性。** 存在谱测度 $\mu$，使对任意 $\phi,\psi\in\Phi$，
-
 $$
 \langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\;d\mu(\lambda)
 \qquad\Longleftrightarrow\qquad
@@ -109,7 +103,6 @@ $$
 - $\mu$ 是**谱测度**，不一定是 Lebesgue。把它选成 $dq$ 是后来的约定（[D03](../derivations/D03-position-eigen-equation.md) §1.2）。
 
 **为什么需要三层结构**：定理里的 $F_\lambda$ 不在 $\mathcal{H}$ 里，得给它安排一个能住的地方。
-
 $$
 \Phi\;\subset\;\mathcal{H}\;\subset\;\Phi^{\times}
 $$
@@ -143,17 +136,17 @@ $$
 ### 2.4 归一化（[D04](../derivations/D04-normalization-convention.md)）
 
 $$
-\langle q\lvert q'\rangle=\delta(q-q'),
-\qquad
-\int dq\,\lvert q\rangle\langle q\rvert=\mathbb{1}
+\langle q\lvert q'\rangle=\delta(q-q')
 $$
 
-**这两条成分不同**，必须分开：
+**完备性那条已在 §2.3 给出**（$\int dq\lvert q\rangle\langle q\rvert=\mathbb{1}$，来自 D03），本节不重复。
+
+**成分不同，必须分开**：
 
 | 成分 | 地位 |
 |---|---|
 | 为什么是 $\delta$（不是别的函数） | **被迫**：投影测度的投影性推出来的 |
-| $\delta$ 前系数为什么是 1 | **选的**：与完备性权重配对，$w\,c=1$ |
+| $\delta$ 前系数为什么是 1 | **选的**：与 D03 的完备性权重配对，$w\,c=1$ |
 
 **改一个必须改另一个**。两套常用方案：
 

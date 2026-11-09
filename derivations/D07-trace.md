@@ -92,7 +92,7 @@ $$
 
 1. **无界算子可能不可迹。** $\mathrm{Tr}\,\mathbb{1}$ 无穷；但 $e^{-\beta H}$ 对 $\beta>0$ 通常可迹——这正是 [D23](D23-density-matrix.md) 能定义 $Z$ 的原因。
 2. **连续谱时"迹"是形式的。** $\int dq\langle q\lvert A\lvert q\rangle$ 对一般 $A$ 发散；只有衰减足够快的算符（如 $e^{-\beta H}$）给出有限值。
-3. **它不依赖归一化约定的具体取值**，但依赖"完备性写成 $\int dq\lvert q\rangle\langle q\rvert$"这一形式（[D04](D04-normalization-convention.md)）。若换成带权重的写法，$\int dq$ 前要补同样的权重。
+3. **它不依赖归一化约定的具体取值**，但依赖"完备性写成 $\int dq\lvert q\rangle\langle q\rvert$"这一形式（[D03](D03-position-eigen-equation.md)）。若换成带权重的写法，$\int dq$ 前要补同样的权重。
 
 ---
 

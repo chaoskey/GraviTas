@@ -9,19 +9,19 @@
 ## 0. 约定
 
 $$
-\langle q\lvert q'\rangle=\delta(q-q'),
-\qquad
-\int dq\,\lvert q\rangle\langle q\rvert=\mathbb{1}
+\langle q\lvert q'\rangle=\delta(q-q')
 $$
 
-**这两条是一对，必须同时成立。** 但其中**成分不同**，必须分开说：
+**本卡只定这一条。** 完备性 $\int dq\lvert q\rangle\langle q\rvert=\mathbb{1}$ **不在本卡**——它是 [D03](D03-position-eigen-equation.md) §1.2 的结论，本卡不重复。
+
+**但这两条必须配对**，成分也不同：
 
 | 成分 | 地位 | 依据 |
 |---|---|---|
 | 为什么是 $\delta$（不是别的函数） | **被迫** | 投影测度的投影性（见 §0.1） |
-| $\delta$ 前的系数为什么是 $1$ | **选的** | 与完备性权重配对（§1 的 $w\,c=1$） |
+| $\delta$ 前的系数为什么是 $1$ | **选的** | 与 [D03](D03-position-eigen-equation.md) 的完备性权重配对（§1） |
 
-**这意味着什么**：不要把整条当成"约定"一笔勾销——形式有来源，只有系数是自由的。反过来也不要以为系数能随便取：改一个必须改另一个。
+**这意味着什么**：不要把整条当成"约定"一笔勾销——形式有来源，只有系数是自由的。反过来也不要以为系数能随便取：它必须与完备性的权重配合。
 
 ### 0.1 为什么形式是 $\delta$（不是别的函数）
 
@@ -43,17 +43,33 @@ $$
 
 ---
 
-## 1. 为什么必须成对改
+## 1. 为什么必须与 D03 的完备性配对
 
-设正交归一带系数 $c$、完备性带权重 $w$：
+[D03](D03-position-eigen-equation.md) §1.2 已把完备性写成
 
 $$
-\langle q\lvert q'\rangle=c\,\delta(q-q'),
-\qquad
+\int dq\,\lvert q\rangle\langle q\rvert=\mathbb{1}
+\qquad(\text{即权重 }w=1)
+$$
+
+一般地，若完备性带权重 $w$：
+
+$$
 \int dq\,w\,\lvert q\rangle\langle q\rvert=\mathbb{1}
 $$
 
-用完备性展开 $\langle q'\lvert q''\rangle$ 得 $w\,c=1$。**所以改一个必须改另一个**，否则自相矛盾。
+而正交归一带系数 $c$，则用完备性展开 $\langle q'\lvert q''\rangle$：
+
+$$
+\langle q'\lvert q''\rangle
+=\int dq\,w\,\langle q'\lvert q\rangle\langle q\lvert q''\rangle
+=w\,c^{2}\,\delta(q'-q'')
+=c\,\delta(q'-q'')
+\quad\Longrightarrow\quad
+w\,c=1
+$$
+
+**D03 取了 $w=1$，于是 $c=1$ 被逼定**；若改 $w$，$c$ 必须跟着改。**所以 D04 的"系数为 1"不是独立的约定，是 D03 那个选择的后果。**
 
 ---
 
@@ -93,6 +109,8 @@ $$
 
 **两条必须同时成立。** 只验一条是不够的：完备性（"用不用得上"）与正交归一（"系数对不对"）是两件事，一条错了另一条可能仍然成立。
 
+（这两条里的动量基 $\lvert p\rangle$ 是下游内容，见 [D17](D17-qp-overlap.md) 与 [D18](D18-p-completeness.md)；本卡只把它们当**检验**，不作为推理依据。）
+
 ---
 
 ## 4. 边界
@@ -107,7 +125,7 @@ $$
 ## 5. 自检
 
 - [ ] 说清"形式被迫、系数自选"分别是哪一半，各自依据哪张卡
-- [ ] 用 $w\,c=1$ 说明为什么两个式子必须成对改
+- [ ] 用 $w\,c=1$ 说明为什么正交归一的系数必须与 D03 的完备性权重配对
 - [ ] 写出两套方案的三个式子，并给出 $\lvert p\rangle$ 的换算
 - [ ] 解释为什么"只验一条互锁"不够
 - [ ] 说明弯曲空间里 $\delta$ 前为什么多一个 $\rho^{-1}$
