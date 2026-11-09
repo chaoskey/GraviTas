@@ -100,19 +100,55 @@ $$
 
 #### 第一步：多项式上逐项相等
 
-$E$ 是 $\hat A$ 的谱测度，故有**矩性质**
+这一步的全部内容是**矩性质**：
 
 $$
 \int\lambda^{n}\,dE(\lambda)=\hat A^{n}
 $$
 
-于是对任意多项式 $p(\lambda)=\sum_{n\le N}c_n\lambda^{n}$：
+**它在说什么**：乘方只作用在**权重** $\lambda$ 上，不作用在**投影** $E$ 上。
+
+**有限维一眼可见**。若 $\hat A=\sum_i a_i\lvert i\rangle\langle i\rvert$，则
+
+$$
+\hat A^{2}=\sum_i a_i^{2}\lvert i\rangle\langle i\rvert,
+\qquad
+\int\lambda^{2}\,dE=\sum_i a_i^{2}\lvert i\rangle\langle i\rvert
+$$
+
+两边相同。取 $\hat A=\mathrm{diag}(2,3)$ 手验：
+
+$$
+\int\lambda^{2}dE=4E(\{2\})+9E(\{3\})=\mathrm{diag}(4,9)=\hat A^{2}
+$$
+
+**一般情形靠投影的乘法律**：
+
+$$
+E(B)E(B')=E(B\cap B')
+\quad\Longrightarrow\quad
+\Bigl(\int f\,dE\Bigr)\Bigl(\int g\,dE\Bigr)=\int fg\,dE
+$$
+
+取 $f=g=\mathrm{id}$（即 $f(\lambda)=\lambda$）并重复 $n$ 次：
+
+$$
+\int\lambda^{n}dE
+=\underbrace{\Bigl(\int\lambda\,dE\Bigr)\cdots\Bigl(\int\lambda\,dE\Bigr)}_{n\text{ 个}}
+=\hat A^{n}
+$$
+
+第一个等号用谱定理 $\hat A=\int\lambda\,dE$，第二个用上面的乘法律。
+
+**不循环**：这条只用到谱定理与投影性，**与幂级数定义无关**——幂级数在这段论证里根本不出场。
+
+**有了矩性质，多项式就逐项相等**。对 $p(\lambda)=\sum_{n\le N}c_n\lambda^{n}$：
 
 $$
 \int p\,dE=\sum_{n\le N}c_n\int\lambda^{n}dE=\sum_{n\le N}c_n\hat A^{n}=p(\hat A)
 $$
 
-**两边逐项相同**——多项式情形不需要任何极限论证。
+**多项式情形不需要任何极限论证。**
 
 #### 第二步：把"逐项相等"抬到"极限相等"
 
