@@ -90,7 +90,6 @@ $$
 ### 1.4 两者为什么一致（这是一条定理）
 
 **要证的事**：对解析 $f$（收敛半径 $R>\lVert\hat A\rVert$），
-
 $$
 \sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}\,\hat A^{n}
 =\int f(\lambda)\,dE(\lambda)
@@ -125,12 +124,53 @@ $$
 **一般情形靠投影的乘法律**：
 
 $$
-E(B)E(B')=E(B\cap B')
-\quad\Longrightarrow\quad
-\Bigl(\int f\,dE\Bigr)\Bigl(\int g\,dE\Bigr)=\int fg\,dE
+E(B)\,E(B')=E(B\cap B')
 $$
 
-取 $f=g=\mathrm{id}$（即 $f(\lambda)=\lambda$）并重复 $n$ 次：
+**它的含义**：指示函数相乘，对应投影相乘——
+
+$$
+\mathbf{1}_B\cdot\mathbf{1}_{B'}=\mathbf{1}_{B\cap B'}
+\qquad\longleftrightarrow\qquad
+E(B)\,E(B')=E(B\cap B')
+$$
+
+**有限维再验一次**（这次看乘法）：$\int f\,dE=\sum_i f(a_i)\lvert i\rangle\langle i\rvert$，两个这样的算子相乘，交叉项因 $\langle i\lvert j\rangle=\delta_{ij}$ 全消：
+
+$$
+\Bigl(\sum_i f(a_i)\lvert i\rangle\langle i\rvert\Bigr)
+\Bigl(\sum_j g(a_j)\lvert j\rangle\langle j\rvert\Bigr)
+=\sum_i f(a_i)g(a_i)\lvert i\rangle\langle i\rvert
+=\int fg\,dE
+$$
+
+**一般情形分三步，三层各靠一样东西**：
+
+**（1）指示函数**——唯一用到乘法律的一步：
+
+$$
+\Bigl(\int\mathbf{1}_B\,dE\Bigr)\Bigl(\int\mathbf{1}_{B'}\,dE\Bigr)
+=E(B)E(B')=E(B\cap B')=\int\mathbf{1}_B\mathbf{1}_{B'}\,dE
+$$
+
+**（2）简单函数**——靠积分的**线性**。取 $f=\sum_i a_i\mathbf{1}_{B_i}$、$g=\sum_j b_j\mathbf{1}_{B'_j}$：
+
+$$
+\Bigl(\int f\,dE\Bigr)\Bigl(\int g\,dE\Bigr)
+=\sum_{i,j}a_ib_j\,E(B_i)E(B'_j)
+=\sum_{i,j}a_ib_j\,E(B_i\cap B'_j)
+=\int fg\,dE
+$$
+
+**（3）一般函数**——靠**一致逼近 + 保范**（§2.3）：取简单函数 $f_n\to f$、$g_n\to g$，三边同时按范数收敛，逐项相等即极限相等。
+
+| 层 | 靠什么 |
+|---|---|
+| 指示函数 | **乘法律**（唯一需要它的一步） |
+| 简单函数 | 积分的**线性** |
+| 一般函数 | 逼近 + **保范** |
+
+**有了这条乘法性质，取 $f=g=\mathrm{id}$ 重复 $n$ 次**：
 
 $$
 \int\lambda^{n}dE
@@ -138,7 +178,7 @@ $$
 =\hat A^{n}
 $$
 
-第一个等号用谱定理 $\hat A=\int\lambda\,dE$，第二个用上面的乘法律。
+第一个等号用谱定理 $\hat A=\int\lambda\,dE$，第二个用刚证的乘法性质。
 
 **不循环**：这条只用到谱定理与投影性，**与幂级数定义无关**——幂级数在这段论证里根本不出场。
 
