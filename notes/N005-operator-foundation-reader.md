@@ -179,18 +179,38 @@ $$
 ### 2.6 函数演算（[D06](../derivations/D06-functional-calculus.md)）
 
 **白话**：把函数作用在算子上，就是"**把谱上的 $\lambda$ 换成 $f(\lambda)$**"。
-
 $$
 f(\hat A)=\int f(\lambda)\,dE(\lambda),
 \qquad
 f(\hat q)=\int dq\,f(q)\,\lvert q\rangle\langle q\rvert
 $$
 
-**三种写法，适用范围不同**：
+**两种定义 + 一种特化**——**幂级数与谱分解是并列的两个定义**（前者不需要谱定理），本征基展开只是后者的特化：
 
-1. **幂级数**：只对解析函数、收敛半径内有效；
-2. **谱分解**：一般 Borel 函数——**这才是真正的定义**；
-3. **本征基展开**：谱简单时的显式形式，实际计算用这个。
+1. **幂级数**（**定义**，不需要谱定理）：只对解析函数、收敛半径内有效；
+   $$
+   f(\hat A)\equiv\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}\,\hat A^{n}
+   $$
+   
+2. **谱分解**（**定义**，需谱定理，最一般）：
+   $$
+   \hat A=\int_{\sigma(\hat A)}\lambda\;dE(\lambda),
+   \qquad
+   f(\hat A)\equiv\int_{\sigma(\hat A)}f(\lambda)\;dE(\lambda)
+   $$
+   
+3. **本征基展开**（**不是独立定义**，是第 2 条的"简单谱"特化）：谱简单时的显式形式，实际计算用这个。
+   $$
+   f(\hat A)=\int da\;f(a)\,\lvert a\rangle\langle a\rvert
+   $$
+   
+
+**两个定义为什么一致（这是定理，不是定义的复述）**：
+
+- **第一步**：多项式上逐项相等——由矩性质 $\int\lambda^{n}dE=\hat A^{n}$；
+- **第二步**：有界函数演算**保范** $\lVert\int g\,dE\rVert=\sup_{\sigma}\lvert g\rvert$，故"谱上一致收敛"传到"算子范数收敛"。
+
+**部分和恒等 + 两边都收敛 ⇒ 极限相同。** 缺"保范"传不过去，缺"逐项相等"起点就断。
 
 **六条性质，分量不同**：
 

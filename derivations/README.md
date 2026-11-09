@@ -45,7 +45,7 @@
 | D03 | 位置本征方程 $\hat q\lvert q\rangle=q\lvert q\rangle$ 与谱分解（Gelfand–Maurin 的直接特化） | D01 | [D03](D03-position-eigen-equation.md) | ✓ |
 | D04 | 归一化约定：$\langle q\lvert q'\rangle=\delta(q-q')$（形式被迫、系数自选） | D01、D03 | [D04](D04-normalization-convention.md) | ✓ |
 | D05 | Stone–von Neumann（引用卡） | 外部定理 | [D05](D05-stone-von-neumann.md) | ✓ |
-| D06 | 函数演算：$f(\hat A)$ 的定义（幂级数 / 谱分解 / 本征基展开） | D01 | [D06](D06-functional-calculus.md) | ✓ |
+| D06 | 函数演算：$f(\hat A)$ 的两个定义（幂级数、谱分解）+ 本征基特化 | D01 | [D06](D06-functional-calculus.md) | ✓ |
 | D07 | 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$（基无关） | D01、D03、D04 | [D07](D07-trace.md) | ✓ |
 | D08 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（默认 D06；旁证 D01） | [D08](D08-commutator-p-fq.md) | ✓ |
 | D09 | 对角判据：$[\hat q,f(\hat q)]=0\Rightarrow$ 核 $\propto\delta$ | D00、D01、D03、D04 | [D09](D09-diagonal-criterion.md) | ✓ |
