@@ -55,8 +55,8 @@ $$
 
 ### 1.2 它给什么（四条）
 
-1. **函数演算**——[D06](D06-functional-calculus.md) §1.2 的全部依据；
-2. **resolution of identity**——$\mathbb{1}=\int dE(\lambda)$，取 $f=1$ 即得（[D17](D17-qp-overlap.md) §1.5 的完备性）；
+1. **函数演算**——本卡的谱分解是它的全部依据；
+2. **resolution of identity**——$\mathbb{1}=\int dE(\lambda)$，取 $f=1$ 即得；
 3. **谱的信息**——$\sigma(\hat A)$ 是 $E$ 的支撑；$E(\{\lambda\})\neq0$ 的点就是点谱；
 4. **一个"对角化"模型**——谱简单时 $\hat A$ 酉等价于"在 $L^{2}(\mathbb{R},d\mu)$ 上乘以 $\lambda$"。**"让 $\hat q$ 对角"这句话的严格含义就是这个。**
 
@@ -64,7 +64,7 @@ $$
 
 1. **连续谱时不给本征矢。** 对连续谱的每个单点，$E(\{q\})=0$，于是**不存在** $\psi\in\mathcal{H}$ 满足 $\hat A\psi=q\psi$。谱定理给的是"一族投影"，不是"一族向量"。
 2. **不告诉你谱是什么。** 定理对**任何**自伴算子都成立，所以它对"$\hat q$ 的谱是 $\mathbb{R}$ 还是格点"一无所知。谱由你选的算子与边界条件决定。
-3. **不固定归一化。** 广义本征矢的归一化系数是约定（[D16](D16-translation.md) 的相位、[D17](D17-qp-overlap.md) 的整体相位都是这一类）。
+3. **不固定归一化。** 广义本征矢的归一化系数是约定（相位与整体相位都属于这一类）。
 
 ---
 
@@ -130,7 +130,7 @@ $$
 ### 2.3 它给什么
 
 - $\lvert q\rangle$ **本身**：$[\hat q,f(\hat q)]$ 与 $\hat q$ 的谱分解都能写出来，靠的就是它；
-- **本征矢族的存在性**——它怎么特化成 $\hat q$ 的本征方程，见 [D03](D03-position-eigen-equation.md)；归一化怎么定，见 [D04](D04-normalization-convention.md)。本卡只负责"存在"这一步；
+- **本征矢族的存在性**——本卡只负责“存在”这一步；它如何特化成具体算子的本征方程、归一化如何定，都是下游的事；
 - 狄拉克记号的下限——$\langle q\lvert\psi\rangle=\psi(q)$ 是**求值泛函**，不是 $L^{2}$ 内积。
 
 **具体画面**（这也是"为什么必须扩大空间"的最短说明）：取 $\hat q$ 为 $L^{2}(\mathbb{R})$ 上"乘以 $q$"。则 $\lvert q\rangle$ 就是求值泛函 $\psi\mapsto\psi(q)$。这个泛函在 $L^{2}$ 上**不连续**（函数可在一点很高而范数很小），但在 Schwartz 空间 $\mathcal{S}$ 上连续——所以它住在 $\mathcal{S}^{\times}$ 里，不在 $\mathcal{H}$ 里。
@@ -139,15 +139,7 @@ $$
 
 ## 3. 在本网格里的位置
 
-| 卡片 | 依赖哪一条 |
-|---|---|
-| [D03](D03-position-eigen-equation.md) | §2.2 的本征矢族（取 $\hat A=\hat q$） |
-| [D04](D04-normalization-convention.md) | §1.2 的 resolution of identity + §2.2 的完备性 |
-| [D06](D06-functional-calculus.md) | §1.2 的函数演算与谱映射定理 |
-| [D08](D08-commutator-p-fq.md) | §2.2 的 $\lvert q\rangle$（旁证：表象法） |
-| [D10](D10-product-kernel.md)、[D18](D18-p-completeness.md)、[D25](D25-uncertainty.md) | §1.2 的 resolution of identity |
-| [D17](D17-qp-overlap.md) | §1.5 的完备性 + §2.2 的 $\lvert q\rangle$ |
-| 其余（D09、D16、D19、D21、D22） | 经 D03、D04 间接使用，不直接引用本卡 |
+依赖关系见 [网格](README.md) 的“输入”列，此处不重复。
 
 **这就是网格最底下的那层**。它之上的一切都用它，它自己则不被本仓库证明。
 
@@ -158,9 +150,6 @@ $$
 | 检验 | 结果 |
 |---|---|
 | 乘法算子（$\hat q$ 乘以 $q$） | 谱为 $\mathbb{R}$，$E(B)$ 为"乘以 $B$ 的特征函数"，广义本征矢为 $\delta(q'-q)$（即求值泛函，$q'$ 为自变量）✅ |
-| 动量算子（$\hat p=-i\partial_q$） | 广义本征矢为 $e^{ipx}$，$\langle p\lvert p'\rangle=2\pi\delta(p-p')$，与 [D17](D17-qp-overlap.md) 一致 ✅ |
-| 离散谱特例 | 有界区间上的算子给出 $\sum_n$ 而非 $\int$，$\delta$ 变 $\delta_{nm}$——与 [D16](D16-translation.md) §3 第 2 条一致 ✅ |
-| 与 D06 自洽 | $\sigma(f(\hat A))=f(\sigma(\hat A))$ 是谱定理的直接推论（[D06](D06-functional-calculus.md) §2）✅ |
 
 ---
 
@@ -170,7 +159,7 @@ $$
 2. **核性不可省。** 换成一般的稠密子空间，Gelfand–Maurin 可能失效。所以"随便找个稠密子空间就能定义 $\lvert q\rangle$"是错的。
 3. **归一化依赖谱测度密度。** 若 $d\mu=\rho(q)\,dq$，则 $\langle q\lvert q'\rangle=\delta(q-q')/\rho(q)$。平直空间 $\rho=1$，弯曲空间 $\rho=\sqrt{g}$——**这是曲空间路径积分里测度因子的数学出处**。
 4. **重数大于 1 时要加标签。** 本征矢写成 $F_{\lambda,i}$，完备性多一个 $\sum_i$，归一化变成 $\delta_{ij}$。物理上就是自旋、味道、超选扇区。
-5. **这张卡不做证明。** 本仓库不重推泛函分析；能推的是"给定这些定理，物理结论如何落地"。**引用与证明的界限要一直守住**——[D17](D17-qp-overlap.md) §3 已经因此错过一次（把引用当证明）。
+5. **这张卡不做证明。** 本仓库不重推泛函分析；能推的是“给定这些定理，物理结论如何落地”。**引用与证明的界限要一直守住**。
 
 ---
 
@@ -181,4 +170,4 @@ $$
 - [ ] 用"求值泛函"说明 $\lvert q\rangle$ 为什么不在 $\mathcal{H}$ 里
 - [ ] 说明核空间条件为什么不可省
 - [ ] 举一个本网格里"引用谱定理"而非"证明"的具体位置
-- [ ] 说明 D03 与 D04 分别是 §2.2 的哪一部分特化
+- [ ] 说明 §2.2 的两条定理分别给“存在性”与“完备性”

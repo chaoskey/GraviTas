@@ -84,8 +84,6 @@ $$
 |---|---|
 | 作用在平面波上 | $\int\frac{dp'}{2\pi}\lvert p'\rangle\langle p'\lvert p\rangle=\lvert p\rangle$，与 $\int\frac{dp'}{2\pi}2\pi\delta(p'-p)=1$ 一致 ✅ |
 | 与 [D17](D17-qp-overlap.md) §1.5 相容 | 那里由 $\int dq\lvert q\rangle\langle q\rvert$ 反推 $\lvert c(p)\rvert=1$；本卡是同一恒等式的另一侧 ✅ |
-| 与 [D19](D19-momentum-representation.md) 相容 | 那里插入 $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert$ 得 $\hat p=-i\partial_q$，系数与本卡一致 ✅ |
-| 与 [D21](D21-path-integral-representation.md) 相容 | 短时核的动量积分正是用本卡的权重 ✅ |
 
 ---
 

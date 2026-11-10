@@ -145,7 +145,7 @@ $$
 1. **方向最容易错。** 记法：$e^{ia\hat p}$ 把"位置标签"推向小的一侧（$q-a$），把"波函数自变量"推向大的一侧（$q+a$）。两者差一个负号，来源是 $\langle q'\lvert q\rangle=\delta(q'-q)$。
 2. **重数为 $1$ 是前提。** 若 $\hat q$ 有内部指标（自旋、超选扇区），$e^{ia\hat p}$ 可以混合同一本征值的不同指标，结论要改成 $\sum_j S_{ij}(a)\lvert q-a,j\rangle$。
 3. **相位不是定理的一部分。** $\lvert c\rvert=1$ 是定理，$c=1$ 是约定。丢掉这句话，换一套基就会"证出"矛盾。
-4. **它支撑 D17。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用 $\lvert q\rangle=e^{-iq\hat p}\lvert 0\rangle$，那正是本卡片取 $a=-q$。
+4. **它支撑下游的平面波公式。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用 $\lvert q\rangle=e^{-iq\hat p}\lvert 0\rangle$，那正是本卡取 $a=-q$。
 
 ---
 

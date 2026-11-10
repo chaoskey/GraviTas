@@ -76,7 +76,7 @@ $$
 
 ## 2. 它用在哪
 
-1. **$e^{-\varepsilon V(\hat q)}$ 在 $q$ 基下对角**——这是 [D16](D16-translation.md) 与 [D12](D12-two-term-truncation.md) 里"位能那块直接提出去"的前提；
+1. **$e^{-\varepsilon V(\hat q)}$ 在 $q$ 基下对角**——这是下游"位能那块直接提出去"的前提；
 2. **解释一个常见困惑**：为什么 $V(q)$ 与 $V(q')$ 在 $\langle q'\lvert e^{-\varepsilon V(\hat q)}\lvert q''\rangle$ 里可以随便换？因为 $\delta$ 的支撑上 $q'=q''$，两者**精确**相等。差 $\mathcal{O}(\varepsilon^{3/2})$ 的说法只出现在"$\delta$ 被 $p$ 积分抹成高斯之后"——那时两点不再重合。
 3. **判据可推广**：任何"与某算子对易"的算子，在该算子的表象下都对角。
 

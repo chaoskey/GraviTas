@@ -28,7 +28,7 @@ $$
 
 ---
 
-## 2. 为什么它是路径积分的引擎
+## 2. 为什么它是切片构造的引擎
 
 把 $\hat A\hat B$ 换成 $\hat A_1\hat A_2\cdots\hat A_N$，逐次插入，得 $N-1$ 重积分：
 
@@ -37,7 +37,7 @@ $$
 =\int\prod_{k=1}^{N-1}dq_k\;\prod_{k=0}^{N-1}\langle q_{k+1}\lvert\hat A_{k+1}\lvert q_k\rangle
 $$
 
-**每插入一次，就多一个"中途位置"**。取 $N\to\infty$，这些中途位置连成一条路径——这正是 [D21](D21-path-integral-representation.md) §1.1 的全部内容。
+**每插入一次，就多一个"中途位置"**。取 $N\to\infty$，这些中途位置连成一条路径。
 
 ---
 
@@ -47,7 +47,6 @@ $$
 |---|---|
 | $\hat A=\hat B=\mathbb{1}$ | 右边 $\int dq\,\delta(q'-q)\delta(q-q'')=\delta(q'-q'')$ ✅ |
 | $\hat A=\lvert q_1\rangle\langle q_1\rvert$ | 右边塌缩为 $\langle q'\lvert q_1\rangle\langle q_1\lvert\hat B\lvert q''\rangle$，与直接计算一致 ✅ |
-| 与 [D21](D21-path-integral-representation.md) §1.1 对照 | 同一式子，只是那里取 $\hat A_k=e^{-\varepsilon H}$ ✅ |
 | 与 [D01](D01-spectral-theorem.md) 一致 | 完备性 $\int dq\lvert q\rangle\langle q\rvert=\mathbb{1}$ 是它的 resolution of identity ✅ |
 
 ---
@@ -64,5 +63,5 @@ $$
 
 - [ ] 用一行写出证明，并说明插的是什么
 - [ ] 把二重乘积推广到 $N$ 重，并说出积分的重数
-- [ ] 说明为什么它"就是"路径积分的切片构造
+- [ ] 说明为什么它"就是"切片构造的核心
 - [ ] 举例说明 $\hat A\hat B$ 与 $\hat B\hat A$ 的核不同

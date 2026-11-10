@@ -244,6 +244,32 @@ def check_math(report: Report) -> None:
         report.ok()
 
 
+DERIV_RE = re.compile(r"D(\d{2})")
+
+
+def check_derivation_independence(report: Report) -> None:
+    """正文（非头部元数据行）不得出现编号更大的推导卡片。"""
+    deriv_dir = ROOT / "derivations"
+    if not deriv_dir.is_dir():
+        report.ok()
+        return
+    for path in sorted(deriv_dir.glob("D*.md")):
+        m = DERIV_RE.match(path.name)
+        if not m:
+            continue
+        own = int(m.group(1))
+        rel = path.relative_to(ROOT)
+        for lineno, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            if line.startswith(">"):
+                continue
+            for hit in DERIV_RE.findall(line):
+                if int(hit) > own:
+                    report.error(
+                        f"{rel}:{lineno}: 正文引用了编号更大的 D{hit}（卡片须独立，只能引用更小编号）"
+                    )
+        report.ok()
+
+
 def main(argv: list[str]) -> int:
     verbose = "-v" in argv or "--verbose" in argv
     report = Report()
@@ -254,6 +280,7 @@ def main(argv: list[str]) -> int:
     check_index(report, ids)
     check_links(report, verbose)
     check_math(report)
+    check_derivation_independence(report)
 
     print("-" * 48)
     print(f"问题档案: {len(ids)} 个   检查项: {report.checks}")

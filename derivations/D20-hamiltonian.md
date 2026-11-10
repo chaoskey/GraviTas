@@ -54,7 +54,7 @@ $$
 e^{-i\hat Ht}\;\longrightarrow\;e^{-\beta\hat H}
 $$
 
-**这件事的意义**：实时间下是"振荡"（$\lvert e^{-iEt}\rvert=1$），虚时间下变成"衰减"（$e^{-\beta E}$）。**这是 [D21](D21-path-integral-representation.md) 与 [D22](D22-trace-is-loop.md) 全部内容的起点。**
+**这件事的意义**：实时间下是"振荡"（$\lvert e^{-iEt}\rvert=1$），虚时间下变成"衰减"（$e^{-\beta E}$）。**这是下游全部内容的起点。**
 
 ---
 
@@ -65,7 +65,6 @@ $$
 | 概率守恒 | $\frac{d}{dt}\langle\psi\lvert\psi\rangle=\langle\psi\lvert i\hat H^{\dagger}-i\hat H\lvert\psi\rangle=0$ ✅ |
 | 经典极限 | 位能 $V(\hat q)$ 在 $\hbar\to0$ 时回到经典势 ✅ |
 | 与 [D09](D09-diagonal-criterion.md) 相容 | $V(\hat q)$ 在 $q$ 基对角，故 $\langle q\lvert V(\hat q)\lvert q'\rangle=V(q)\delta(q-q')$ ✅ |
-| 与 [D21](D21-path-integral-representation.md) 相容 | 短时核 $e^{-\varepsilon H}$ 的动能/位能分裂正基于本卡形式 ✅ |
 
 ---
 

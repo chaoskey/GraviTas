@@ -118,16 +118,16 @@ $$
 | $a=0$ 或 $b=0$ | 因子为 $1$，两边相等 ✅ |
 | 与 [D13](D13-commutator-phase.md) 一致 | $c=iab$ 直接代回 ✅ |
 | 两式相除 | $e^{iab}/e^{-iab}=e^{2iab}$，与"$q$ 在前"版本相差 $e^{2iab}$ ✅ |
-| 与 $[\hat p,\hat q]=-i$ 一致 | 若误用 $[\hat p,\hat q]=+i$，会得 $e^{-iab}$，与 D16 的平移方向矛盾 |
+| 与 $[\hat p,\hat q]=-i$ 一致 | 若误用 $[\hat p,\hat q]=+i$，会得 $e^{-iab}$，与平移方向矛盾 |
 | 模长 | $\lvert e^{iab}\rvert=1$（$a,b$ 实），两边都是酉算子 ✅ |
 
 ---
 
 ## 3. 备注与边界
 
-1. **符号判据只有一条**：$e^{ia\hat p}$ 把 $\lvert q\rangle$ 移到 $q+a$ 还是 $q-a$（见 [D16](D16-translation.md)）。本仓库取 $e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$，故 $p$ 在前时因子取 $+iab$。
+1. **符号判据只有一条**：$e^{ia\hat p}$ 把 $\lvert q\rangle$ 移到 $q+a$ 还是 $q-a$。本仓库取后者。
 2. **混用两式会差 $e^{2iab}$。** 这不是"差不多"，是相位差一个有限量；在高斯积分里会变成一个实因子 $e^{-2ab}$ 或 $e^{+2ab}$，量纲上看不出来。
-3. **它是 D17 的直接上游。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用本式把 $\lvert p\rangle$ 的平移性质定下来。
+3. **它是下游平面波公式的直接上游。** $\langle q\lvert p\rangle=e^{ipq}$ 的推导要用本式把 $\lvert p\rangle$ 的平移性质定下来。
 4. **更对称的生成元形式**：若取 $W(a,b)=e^{i(a\hat q+b\hat p)}$，则乘法律为
 
 $$
@@ -148,4 +148,4 @@ $$
 - [ ] 写出 $q$ 在前的版本，说明两者相差多少
 - [ ] 说明符号如何由 $e^{ia\hat p}$ 的平移方向决定
 - [ ] 解释为什么 $W(a,b)$ 的乘法律出现 $1/2$，而本式没有
-- [ ] 说明本式在哪一步被 D17 用到
+- [ ] 说明本式在下游哪一步被用到

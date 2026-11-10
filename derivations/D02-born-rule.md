@@ -92,7 +92,6 @@ $$
 | 检验 | 结果 |
 |---|---|
 | 与 [D01](D01-spectral-theorem.md) §1.2 相容 | $E(\mathbb{R})=\mathbb{1}$ 给 $p=1$ ✅ |
-| 与 [D06](D06-functional-calculus.md) 相容 | $\langle f(\hat A)\rangle=\int f(\lambda)\,dp(\lambda)$，正是函数演算的期望 ✅ |
 | 简并情形 | $E(\{a\})$ 是投影而非一维时，$p$ 仍是迹式，无需改定义 ✅ |
 | 与其他态的叠加 | $p$ 对 $\lvert\psi\rangle$ **非线性**（$\lvert c\psi\rangle$ 给同一 $p$）——这正是"射线"的说法 ✅ |
 
@@ -106,7 +105,7 @@ $$
    \lvert\psi\rangle\;\longrightarrow\;\frac{E(B)\lvert\psi\rangle}{\sqrt{p(B)}}
    $$
 3. **连续谱时 $p$ 是"落在区间"的概率**，密度 $d p/d q$ 才可谈；单点概率为零。
-4. **纯态才用本卡**。混合态（热平衡、统计混合）要换成密度矩阵，见 [D23](D23-density-matrix.md)。
+4. **纯态才用本卡**。混合态（热平衡、统计混合）要换成混合态的描写（属下游）。
 
 ---
 
