@@ -47,6 +47,8 @@ $$
 
 三种对象要分清：$E(B)$ 是**算子**（谱定理给），$\langle\psi\lvert E(B)\lvert\psi\rangle$ 是**数**（Born 规则给），$d\langle\psi\lvert E(\lambda)\lvert\psi\rangle$ 是**测度**（夹取后的密度形式）。
 
+**三条的地位不同**：态是**定义**（射线 + 归一化），$p(B)$ 是**公理**，期望值 $\langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle$ 是**定理**（把 Born 代进期望值的定义、再用谱分解即得）。**本卡真正的输入只有一条。**
+
 $$
 p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle,
 \qquad

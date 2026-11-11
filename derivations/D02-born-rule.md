@@ -6,7 +6,7 @@
 
 ---
 
-## 0. 命题
+## 0. 定义、公理与推论
 
 **态**：单位射线 $\lvert\psi\rangle$，$\langle\psi\lvert\psi\rangle=1$。
 
@@ -21,6 +21,27 @@ $$
 $$
 \langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle=\int\lambda\;d\langle\psi\lvert E(\lambda)\lvert\psi\rangle
 $$
+
+**三条的地位不同**，不要当成并列的三条公理：
+
+| 表达式 | 地位 | 为什么 |
+|---|---|---|
+| 态 = 单位射线 | **定义 + 归一化约定** | 它不预言任何测量结果，只是把“态”这个词固定下来；$\langle\psi\lvert\psi\rangle=1$ 是挑代表元（§0.1） |
+| $p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$ | **公理**（本卡唯一） | 数学推不出“概率”，这一步只能选定 |
+| $\langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle$ | **定理** | 由 $\langle\hat A\rangle=\int\lambda\,dp(\lambda)$ 与谱定理 $\hat A=\int\lambda\,dE(\lambda)$ 直接得到 |
+
+**期望值为什么是定理**：把 Born 规则代进期望值的定义，再用谱分解：
+
+$$
+\langle\hat A\rangle
+=\int\lambda\,d\langle\psi\lvert E(\lambda)\lvert\psi\rangle
+=\Bigl\langle\psi\Bigl\lvert\int\lambda\,dE(\lambda)\Bigr\rvert\psi\Bigr\rangle
+=\langle\psi\lvert\hat A\lvert\psi\rangle
+$$
+
+**中间没有新假设。** 所以“期望值等于那个双线性形式”是**推出来的**。
+
+**所以本卡真正的输入只有一条：Born 规则。**
 
 **它在讲什么**：谱分解告诉你"$\hat A$ 是投影的组合"——那是**算子**，不含任何态的信息。Born 规则告诉你：**把投影夹在 $\langle\psi\lvert$ 与 $\lvert\psi\rangle$ 之间**，得到的数就是概率。
 
@@ -141,4 +162,5 @@ $$
 - [ ] 说明为什么 Born 规则不能从谱定理推出来
 - [ ] 用 $E(\mathbb{R})=\mathbb{1}$ 证明概率归一
 - [ ] 说明"本征态必得本征值"用到了哪一条
+- [ ] 分清三条的地位：哪条是定义、哪条是公理、哪条是定理
 - [ ] 指出本卡**不**包含哪一条（坍缩、测量问题）
