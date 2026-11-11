@@ -59,7 +59,7 @@ $$
 
 **三条直接后果**：
 
-- 若 $\lvert\psi\rangle$ 是 $\hat A$ 的本征态，则必得该本征值（概率 1）——**点谱**才成立（连续谱时 $E(\{q\})=0$）；
+- 若 $\lvert\psi\rangle$ 是 $\hat A$ 的本征态，则必得该本征值（概率 1）——**点谱**才成立（连续谱时 $E(\{q\})=0$）。矢量式与数值式等价：$E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle \iff \langle\psi\lvert E(\{a\})\lvert\psi\rangle=1$；
 - 概率归一：因为 $E(\mathbb{R})=\mathbb{1}$；
 - 期望值就是那个双线性形式。
 
