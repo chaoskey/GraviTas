@@ -35,6 +35,32 @@ $$
 
 **为什么这个区分要紧**：若 $E(B)$ 本身就是概率，Born 规则就是多余的。它之所以是公理，正因为"**把算子变成数**"这一步没有任何数学依据——同一个投影，可以用别的归一化双线性形式去夹，物理选了这一个。
 
+### 0.1 态是什么
+
+**态是射线，不是矢量。** $\lvert\psi\rangle$ 与 $c\lvert\psi\rangle$（$c\neq0$）描述**同一个态**：因为
+
+$$
+p(B)=\langle c\psi\lvert E(B)\lvert c\psi\rangle=\lvert c\rvert^{2}\langle\psi\lvert E(B)\lvert\psi\rangle
+$$
+
+乘 $c$ 只是把所有权重同时放大 $\lvert c\rvert^{2}$——**没有任何测量能察觉**。所以态是**等价类**
+
+$$
+[\psi]=\{c\lvert\psi\rangle:\ c\in\mathbb{C},\ c\neq0\}
+$$
+
+这就是“射线”：复平面上从原点出发的一条半直线。
+
+**那为什么还要写 $\langle\psi\lvert\psi\rangle=1$**：等价类里的元素长短不一，得挑一个**代表元**。挑单位长的那个不是装饰——它正是概率归一的来源：
+
+$$
+p(\mathbb{R})=\langle\psi\lvert\mathbb{1}\lvert\psi\rangle=\langle\psi\lvert\psi\rangle
+$$
+
+**要概率总和为 $1$，就必须 $\langle\psi\lvert\psi\rangle=1$。** §2 第 ② 条用的就是这个“$1$”。
+
+**一句话**：态是**射线**（乘非零复数不改变物理）；$\langle\psi\lvert\psi\rangle=1$ 是把这条射线的代表元挑成单位长。
+
 ---
 
 ## 1. 为什么必须当成公理

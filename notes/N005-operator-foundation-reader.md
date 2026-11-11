@@ -41,6 +41,8 @@ $$
 
 ### 1.2 态与测量：Born 规则（[D02](../derivations/D02-born-rule.md)）
 
+**先说什么叫“态”**：态是**射线**，不是矢量——$\lvert\psi\rangle$ 与 $c\lvert\psi\rangle$ 给同一组概率（乘 $c$ 只把权重放大 $\lvert c\rvert^{2}$，没有测量能察觉）。写 $\langle\psi\lvert\psi\rangle=1$ 只是**挑代表元**：等价类里的元素长短不一，挑单位长那个。这不是装饰——$p(\mathbb{R})=\langle\psi\lvert\psi\rangle$，**要概率总和为 $1$ 就必须归一**。
+
 **白话**：谱定理告诉你"$\hat A$ 是一堆投影拼起来的"——那是**算子**，不含态的信息；Born 规则告诉你：**把投影夹在 $\langle\psi\lvert$ 与 $\lvert\psi\rangle$ 之间**，得到的数才是概率。
 
 三种对象要分清：$E(B)$ 是**算子**（谱定理给），$\langle\psi\lvert E(B)\lvert\psi\rangle$ 是**数**（Born 规则给），$d\langle\psi\lvert E(\lambda)\lvert\psi\rangle$ 是**测度**（夹取后的密度形式）。
