@@ -11,13 +11,11 @@
 **态**：单位射线 $\lvert\psi\rangle$，$\langle\psi\lvert\psi\rangle=1$。
 
 **测量**：设可观测量 $\hat A=\int\lambda\,dE(\lambda)$（[D01](D01-spectral-theorem.md) 的谱分解）。对 Borel 集 $B$，测得结果落在 $B$ 内的概率是
-
 $$
 p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle
 $$
 
 **期望值**：
-
 $$
 \langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle=\int\lambda\;d\langle\psi\lvert E(\lambda)\lvert\psi\rangle
 $$
@@ -59,7 +57,6 @@ $$
 ### 0.1 态是什么
 
 **态是射线，不是矢量。** $\lvert\psi\rangle$ 与 $c\lvert\psi\rangle$（$c\neq0$）描述**同一个态**：因为
-
 $$
 p(B)=\langle c\psi\lvert E(B)\lvert c\psi\rangle=\lvert c\rvert^{2}\langle\psi\lvert E(B)\lvert\psi\rangle
 $$
@@ -118,7 +115,6 @@ $$
 **方差为零的概率测度只能是 $\delta_a$**，故 $\mu_\psi(\{a\})=1$。
 
 **反向也成立：数值为 $1$ ⇒ 矢量不变。** 这条不需要“识别”，只需要 $E(\{a\})$ 是投影：$\mathbb{1}-E$ 也是投影，且与 $E$ 正交，故
-
 $$
 \lVert\psi\rVert^{2}=\lVert E\psi\rVert^{2}+\lVert(\mathbb{1}-E)\psi\rVert^{2}
 $$
