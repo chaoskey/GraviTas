@@ -49,6 +49,8 @@ $$
 
 **三条的地位不同**：态是**定义**（射线 + 归一化），$p(B)$ 是**公理**，期望值 $\langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle$ 是**定理**（把 Born 代进期望值的定义、再用谱分解即得）。**本卡真正的输入只有一条。**
 
+**别把公理说成“$E(B)$ 的期望值”**：$E(B)$ 的期望由上面的公式算出，是**定理**；Born 规则真正加的是“**这个数就是概率**”。
+
 $$
 p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle,
 \qquad
