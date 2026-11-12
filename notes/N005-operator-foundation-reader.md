@@ -201,7 +201,7 @@ $$
 
 **两个定义为什么一致（这是定理，不是定义的复述）**：
 
-- **第一步**：多项式上逐项相等——由矩性质 $\int\lambda^{n}dE=\hat A^{n}$（乘方只落在权重上，来自投影的乘法律 $E(B)E(B')=E(B\cap B')$，见 [D01](../derivations/D01-spectral-theorem.md) §1.2；[D05](../derivations/D05-functional-calculus.md) §1.4 把它推广到一般函数）；
+- **第一步**：多项式上逐项相等——由矩性质 $\int\lambda^{n}dE=\hat A^{n}$（乘方只落在权重上，就是 [D01](../derivations/D01-spectral-theorem.md) §1.1 的 $f$ 公式取 $f(\lambda)=\lambda^{n}$；[D05](../derivations/D05-functional-calculus.md) §1.4 把它推广到一般函数）；
 - **第二步**：有界函数演算**保范** $\lVert\int g\,dE\rVert=\sup_{\sigma}\lvert g\rvert$，故"谱上一致收敛"传到"算子范数收敛"。
 
 **部分和恒等 + 两边都收敛 ⇒ 极限相同。** 缺"保范"传不过去，缺"逐项相等"起点就断。

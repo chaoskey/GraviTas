@@ -35,23 +35,23 @@
 设 $\hat A$ 是 Hilbert 空间 $\mathcal{H}$ 上的自伴算子（可以无界）。则存在**唯一**的投影值测度 $E$（定义在 $\mathbb{R}$ 的 Borel 集上，支撑在谱 $\sigma(\hat A)$ 上），使
 
 $$
-\hat A=\int_{\sigma(\hat A)}\lambda\;dE(\lambda),
-\qquad
-D(\hat A)=\Bigl\{\psi\;\Big|\;\int\lambda^{2}\,d\langle\psi\lvert E(\lambda)\lvert\psi\rangle<\infty\Bigr\}
+\hat A=\int_{\sigma(\hat A)}\lambda\;dE(\lambda)
 $$
 
-对**有界** Borel 函数 $f$：
+对**任意** Borel 函数 $f$（**不必有界**）：
 
 $$
 f(\hat A)=\int f(\lambda)\;dE(\lambda),
 \qquad
-\lVert f(\hat A)\rVert=\sup_{\lambda\in\sigma(\hat A)}\lvert f(\lambda)\rvert
+D\bigl(f(\hat A)\bigr)=\Bigl\{\psi\;\Big|\;\int\lvert f(\lambda)\rvert^{2}\,d\langle\psi\lvert E(\lambda)\lvert\psi\rangle<\infty\Bigr\}
 $$
+
+$f$ **有界**时它是有界算子，且 $\lVert f(\hat A)\rVert=\sup_{\lambda\in\sigma(\hat A)}\lvert f(\lambda)\rvert$。
 
 **怎么读这两行**：
 
-- 第一行说"$\hat A$ 是各族投影按 $\lambda$ 加权求和"；$D(\hat A)$ 那串条件只是说"太重的权重会让和发散，所以定义域要挑"——**不是新增的物理，是收敛性的记账**；
-- 第二行说"把 $\lambda$ 换成 $f(\lambda)$ 就行"，范数是 $f$ 在谱上的最大值——**算子多大，就是函数多大**。
+- 第一行说"$\hat A$ 是各族投影按 $\lambda$ 加权求和"；
+- 第二行说"把 $\lambda$ 换成 $f(\lambda)$ 就行"。定义域那串只是"太重的权重会让和发散，所以要挑函数"——**不是新增的物理，是收敛性的记账**。**取 $f(\lambda)=\lambda$ 就还回 $\hat A$ 自己的定义域**，不必另记一条。
 
 ### 1.2 它给什么（五条）
 
@@ -59,19 +59,13 @@ $$
 2. **resolution of identity**——$\mathbb{1}=\int dE(\lambda)$，取 $f=1$ 即得；
 3. **谱的信息**——$\sigma(\hat A)$ 是 $E$ 的支撑；$E(\{\lambda\})\neq0$ 的点就是点谱，且这时 $E(\{\lambda\})$ 正是**投影到该本征子空间**的投影；
 4. **一个"对角化"模型**——谱简单时 $\hat A$ 酉等价于"在 $L^{2}(\mathbb{R},d\mu)$ 上乘以 $\lambda$"。**"让 $\hat q$ 对角"这句话的严格含义就是这个。**
-5. **乘法律与多项式演算**——投影值测度的定义包含
+5. **乘法律**——投影值测度的定义包含
 
 $$
 E(B)\,E(B')=E(B\cap B')
 $$
 
-（不交时 $E(B)E(B')=0$）。由此，对任意多项式 $p$：
-
-$$
-\int p(\lambda)\,dE(\lambda)=p(\hat A)
-$$
-
-**注意**：这条**不需要**先定义 $f(\hat A)$——它只用到乘法律与 $\hat A=\int\lambda\,dE$。
+（不交时 $E(B)E(B')=0$）。**这是"投影之间能相乘"的全部内容**；下游谈 $f(\hat A)\,g(\hat A)$ 时用的就是它。
 
 ### 1.3 它不给什么（三条，最要紧）
 

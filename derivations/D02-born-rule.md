@@ -107,7 +107,7 @@ $$
 
 **中间那一步不是本征方程给的，要交代清楚**：本征方程只说"$\hat A$ 作用上去等于乘 $a$"，它**没有说** $E(\{a\})$ 会保留 $\lvert\psi\rangle$。这一步来自**谱定理**——$E(\{a\})$ 正是"投影到 $a$ 的本征子空间"的那个投影。
 
-**另一条不依赖这个识别的走法（方差论证）**：记 $\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$，它是概率测度。由 [D01](D01-spectral-theorem.md) §1.2 第 5 条的乘积律，$\int\lambda^{n}\,d\mu_\psi=\langle\psi\lvert\hat A^{n}\lvert\psi\rangle$；本征方程又给 $\langle\hat A\rangle=a$、$\langle\hat A^{2}\rangle=a^{2}$。于是
+**另一条不依赖这个识别的走法（方差论证）**：记 $\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$，它是概率测度。由 [D01](D01-spectral-theorem.md) §1.1 的 $f$ 公式（取 $f(\lambda)=\lambda^{n}$），$\int\lambda^{n}\,d\mu_\psi=\langle\psi\lvert\hat A^{n}\lvert\psi\rangle$；本征方程又给 $\langle\hat A\rangle=a$、$\langle\hat A^{2}\rangle=a^{2}$。于是
 $$
 \int(\lambda-a)^{2}\,d\mu_\psi=a^{2}-2a\cdot a+a^{2}=0
 $$
