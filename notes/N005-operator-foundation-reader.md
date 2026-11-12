@@ -88,6 +88,7 @@ $$
 - **函数演算**：$f(\hat A)=\int f(\lambda)\,dE(\lambda)$——把谱上的 $\lambda$ 换成 $f(\lambda)$；$f$ 无界时按定义域 $\int\lvert f\rvert^{2}d\langle\psi\lvert E\lvert\psi\rangle<\infty$ 理解；
 - **谱的位置**：$\sigma(\hat A)$ 是 $E$ 的**支撑**（每个邻域里 $E$ 都不为零）；$E(\{\lambda\})\neq0$ 的点是**点谱**；
 - **乘法律**：$E(B)E(B')=E(B\cap B')$。**它不是假设**——定义只要"可数可加 + 值是投影"，不交时两投影之和仍是投影，逼出正交，再由拆分得到交集律。
+- **对角化模型**：谱简单时 $\hat A$ 酉等价于"乘以 $\lambda$"——换一组基之后它**只做乘法**，各点互不混合；$f(\hat A)$ 就是乘以 $f(\lambda)$，$E(B)$ 就是乘以指示函数 $\mathbf{1}_B$。**"让 $\hat q$ 对角"的严格含义就是这个。**
 
 **它不给什么**（很重要）：
 
