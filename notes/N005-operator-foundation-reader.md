@@ -102,9 +102,25 @@ $$
 
 ### 2.2 核空间谱定理（[D01](../derivations/D01-spectral-theorem.md) §2）
 
-**白话**：谱定理给了"一族投影"，但我们要的是"一族**矢**"（$\lvert q\rangle$）。办法是把它们请出希尔伯特空间——搬到外面去住。
+**问题**：谱定理给"一族**投影**"，我们要"一族**矢**"。**矢不在 $\mathcal{H}$ 里**——连续谱时 $E(\{q\})=0$，得给 $\lvert q\rangle$ 另找一个住处。
 
-**条件**：$\hat A$ 自伴；$\Phi$ 是核空间、连续稠密地嵌进 $\mathcal{H}$；且 $\hat A$ **不把好函数弄坏**，即 $\hat A\Phi\subset\Phi$。
+**三层空间**：
+
+$$
+\Phi\;\subset\;\mathcal{H}\;\subset\;\Phi^{\times}
+$$
+
+| 层 | 是什么 | 角色 |
+|---|---|---|
+| $\Phi$ | 好函数（Schwartz 函数） | **测试探针**：好到"取值"有意义 |
+| $\mathcal{H}$ | 平方可积函数 | **态** |
+| $\Phi^{\times}$ | 连续线性泛函 | **广义对象**：$\lvert q\rangle$ 住这 |
+
+**为什么不能省中间层**：$\lvert q\rangle$ 干的是"在 $q$ 点取值"。对 $L^{2}$ 函数这没意义（改一个点，态不变）。
+
+**为什么不能省外层**：取值在 $\mathcal{H}$ 上**不连续**（函数可以一点很高、范数很小），所以它不是矢量，是泛函。
+
+**条件**：$\hat A$ 自伴；$\Phi$ 是核空间、连续稠密地嵌进 $\mathcal{H}$；且 $\hat A$ **连续地**把 $\Phi$ 映回 $\Phi$（不只是 $\subset$——要连续，$\hat A F_\lambda$ 才有意义）。
 
 **结论一：本征方程。** 存在一族广义本征矢 $F_\lambda\in\Phi^{\times}$，使
 
@@ -112,7 +128,7 @@ $$
 \hat A F_\lambda=\lambda F_\lambda
 $$
 
-**结论二：完备性。** 存在谱测度 $\mu$，使对任意 $\phi,\psi\in\Phi$，
+**结论二：完备性。** 存在谱测度 $\mu$，使对**任意 $\phi,\psi\in\Phi$**，
 
 $$
 \langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\;d\mu(\lambda)
@@ -120,26 +136,12 @@ $$
 \mathbb{1}=\int\lvert F_\lambda\rangle\langle F_\lambda\rvert\;d\mu(\lambda)
 $$
 
-**这两条就是全部结论，但有两点要看清**：
+**"任意"只限 $\Phi$**：对 $\mathcal{H}$ 中的一般态，这个积分不一定收敛——要延拓是另一回事。
+
+**两点要看清**：
 
 - $F_\lambda$ 住在 $\Phi^{\times}$，**不在 $\mathcal{H}$ 里**——这才是"广义"二字的全部含义；
 - $\mu$ 是**谱测度**，不一定是 Lebesgue。把它选成 $dq$ 是后来的约定（[D03](../derivations/D03-position-eigen-equation.md) §1.2）。
-
-**为什么需要三层结构**：定理里的 $F_\lambda$ 不在 $\mathcal{H}$ 里，得给它安排一个能住的地方。
-
-$$
-\Phi\;\subset\;\mathcal{H}\;\subset\;\Phi^{\times}
-$$
-
-| 层 | 是什么 | 在做什么 |
-|---|---|---|
-| $\Phi$ | 好函数（Schwartz 函数） | **测试探针** |
-| $\mathcal{H}$ | 平方可积函数 | **态** |
-| $\Phi^{\times}$ | 连续线性泛函 | **广义对象**：$\lvert q\rangle$ 住这 |
-
-**为什么不能省中间层**：$\lvert q\rangle$ 干的是"在 $q$ 点取值"。对 $L^{2}$ 函数这没意义（改一个点，态不变）。
-
-**为什么不能省外层**：取值在 $\mathcal{H}$ 上**不连续**（函数可以一点很高、范数很小），所以它不是矢量，是泛函。
 
 **一句话记住三层**：$\lvert q\rangle$ 是**"取值"这个动作的严格化身**。
 
