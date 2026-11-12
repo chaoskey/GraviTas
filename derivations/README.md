@@ -45,7 +45,7 @@
 
 | 编号 | 命题 | 输入 | 全文 | 状态 |
 |---|---|---|---|---|
-| D00 | **公理**：$[\hat q,\hat p]=i$（Weyl 形式） | — | [D00](D00-commutator-axiom.md) | ✓ |
+| D00 | **公理**：$[\hat q,\hat p]=i$ | — | [D00](D00-commutator-axiom.md) | ✓ |
 | D01 | 谱定理与 Gelfand–Maurin（引用卡） | 外部定理 | [D01](D01-spectral-theorem.md) | ✓ |
 | D02 | 态与测量：Born 规则 $p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$ | D00、D01 | [D02](D02-born-rule.md) | ✓ |
 | D03 | 位置本征方程 $\hat q\lvert q\rangle=q\lvert q\rangle$ 与谱分解（Gelfand–Maurin 的直接特化） | D01 | [D03](D03-position-eigen-equation.md) | ✓ |
