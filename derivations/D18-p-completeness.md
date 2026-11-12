@@ -18,7 +18,7 @@ $$
 
 | 式子 | 来源 | 性质 |
 |---|---|---|
-| $\int dq\,\lvert q\rangle\langle q\rvert=\mathbb{1}$ | [D01](D01-spectral-theorem.md) §1.2 的 resolution of identity | **定理**（谱定理直接给） |
+| $\int dq\,\lvert q\rangle\langle q\rvert=\mathbb{1}$ | [D01](D01-spectral-theorem.md) §1.1 的“投影拼回整个空间” | **定理**（谱定理直接给） |
 | $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | 上一行 + $\langle q\lvert p\rangle=e^{ipq}$ | **推论**（本卡证明） |
 
 **所以 $\frac{dp}{2\pi}$ 这个系数不必死记，它由"换基要保持恒等算子"唯一确定。**

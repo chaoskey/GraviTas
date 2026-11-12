@@ -107,7 +107,7 @@ $$
 
 **中间那一步不是本征方程给的，要交代清楚**：本征方程只说"$\hat A$ 作用上去等于乘 $a$"，它**没有说** $E(\{a\})$ 会保留 $\lvert\psi\rangle$。这一步来自**谱定理**——$E(\{a\})$ 正是"投影到 $a$ 的本征子空间"的那个投影。
 
-**另一条不依赖这个识别的走法（方差论证）**：记 $\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$，它是概率测度。由 [D01](D01-spectral-theorem.md) §1.1 的 $f$ 公式（取 $f(\lambda)=\lambda^{n}$），$\int\lambda^{n}\,d\mu_\psi=\langle\psi\lvert\hat A^{n}\lvert\psi\rangle$；本征方程又给 $\langle\hat A\rangle=a$、$\langle\hat A^{2}\rangle=a^{2}$。于是
+**另一条不依赖这个识别的走法（方差论证）**：记 $\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$，它是概率测度。由 [D01](D01-spectral-theorem.md) §1.2 第 1 条的 $f$ 公式（取 $f(\lambda)=\lambda^{n}$），$\int\lambda^{n}\,d\mu_\psi=\langle\psi\lvert\hat A^{n}\lvert\psi\rangle$；本征方程又给 $\langle\hat A\rangle=a$、$\langle\hat A^{2}\rangle=a^{2}$。于是
 $$
 \int(\lambda-a)^{2}\,d\mu_\psi=a^{2}-2a\cdot a+a^{2}=0
 $$
@@ -139,7 +139,7 @@ $$
 
 **边界**：本条只对**点谱**成立。连续谱时 $E(\{q\})=0$，而 $\lvert q\rangle$ 不可归一、概率无定义——所以"本征态"在这里默认指点谱本征态。
 
-**② 概率归一。** $E(\mathbb{R})=\mathbb{1}$（[D01](D01-spectral-theorem.md) §1.2 的 resolution of identity），故
+**② 概率归一。** $E(\mathbb{R})=\mathbb{1}$（[D01](D01-spectral-theorem.md) §1.1 的“投影拼回整个空间”），故
 $$
 p(\mathbb{R})=\langle\psi\lvert\mathbb{1}\lvert\psi\rangle=1
 $$
@@ -158,7 +158,7 @@ $$
 
 | 检验 | 结果 |
 |---|---|
-| 与 [D01](D01-spectral-theorem.md) §1.2 相容 | $E(\mathbb{R})=\mathbb{1}$ 给 $p=1$ ✅ |
+| 与 [D01](D01-spectral-theorem.md) §1.1 相容 | $E(\mathbb{R})=\mathbb{1}$ 给 $p=1$ ✅ |
 | 简并情形 | $E(\{a\})$ 是投影而非一维时，$p$ 仍是迹式，无需改定义 ✅ |
 | 与其他态的叠加 | $p$ 对 $\lvert\psi\rangle$ **非线性**（$\lvert c\psi\rangle$ 给同一 $p$）——这正是"射线"的说法 ✅ |
 

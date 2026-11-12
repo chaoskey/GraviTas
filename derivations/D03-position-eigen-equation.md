@@ -64,7 +64,7 @@ $$
 
 ### 1.3 第三步：与谱定理逐点对照，读出密度
 
-[D01](D01-spectral-theorem.md) §1.2 给另一条：
+[D01](D01-spectral-theorem.md) §1.1 给另一条：
 
 $$
 \mathbb{1}=\int dE(q)
