@@ -41,27 +41,31 @@ $$
 
 ### 1.2 态与测量：Born 规则（[D02](../derivations/D02-born-rule.md)）
 
-**先说什么叫“态”**：态是**射线**，不是矢量——$\lvert\psi\rangle$ 与 $c\lvert\psi\rangle$ 给同一组概率（乘 $c$ 只把权重放大 $\lvert c\rvert^{2}$，没有测量能察觉）。写 $\langle\psi\lvert\psi\rangle=1$ 只是**挑代表元**：等价类里的元素长短不一，挑单位长那个。这不是装饰——$p(\mathbb{R})=\langle\psi\lvert\psi\rangle$，**要概率总和为 $1$ 就必须归一**。
+**先把态写成一个矢量**：$\lvert\psi\rangle$，取单位长 $\langle\psi\lvert\psi\rangle=1$。**这不是最终答案**——本节末尾会说明，它只是"射线"挑出来的代表元。
 
-**白话**：谱定理告诉你"$\hat A$ 是一堆投影拼起来的"——那是**算子**，不含态的信息；Born 规则告诉你：**把投影夹在 $\langle\psi\lvert$ 与 $\lvert\psi\rangle$ 之间**，得到的数才是概率。
+**Born 规则【公理】**：谱定理告诉你 $\hat A$ 是一堆投影；Born 规则告诉你，**把投影夹在态中间**，得到的数就是概率：
 
-三种对象要分清：$E(B)$ 是**算子**（谱定理给），$\langle\psi\lvert E(B)\lvert\psi\rangle$ 是**数**（Born 规则给），$d\langle\psi\lvert E(\lambda)\lvert\psi\rangle$ 是**测度**（夹取后的密度形式）。
+$$
+p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle
+$$
 
-**三条的地位不同**：态是**定义**（射线 + 归一化），$p(B)$ 是**公理**，期望值 $\langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle$ 是**定理**（把 Born 代进期望值的定义、再用谱分解即得）。**本卡真正的输入只有一条。**
+三种对象要分清：$E(B)$ 是**算子**（谱定理给），$\langle\psi\lvert E(B)\lvert\psi\rangle$ 是**数**（Born 规则给），$d\langle\psi\lvert E(\lambda)\lvert\psi\rangle$ 是**测度**。
+
+**由 Born 推出态的结构**：
+
+- 乘 $c$：$p(B)\to\lvert c\rvert^{2}p(B)$——**没有测量能察觉**，所以态是**射线**（等价类）；
+- $p(\mathbb{R})=\langle\psi\lvert\psi\rangle$——**要概率总和为 $1$，就必须归一**。
+
+**所以**：态是**射线**；单位矢量是它的**代表元**。**这两条都是 Born 的后果，不是前提。**
+
+**三条的地位**：态是**定义**，$p(B)$ 是**公理**，期望值 $\langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle$ 是**定理**（把 Born 代进期望值的定义、再用谱分解即得）。**本卡真正的输入只有一条。**
 
 **别把公理说成“$E(B)$ 的期望值”**：$E(B)$ 的期望由上面的公式算出，是**定理**；Born 规则真正加的是“**这个数就是概率**”。
 
-$$
-p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle,
-\qquad
-\langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle
-$$
+**两条推论**：
 
-**三条直接后果**：
-
-- 若 $\lvert\psi\rangle$ 是 $\hat A$ 的本征态，则必得该本征值（概率 1）——**点谱**才成立（连续谱时 $E(\{q\})=0$）。矢量式与数值式等价：$E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle \iff \langle\psi\lvert E(\{a\})\lvert\psi\rangle=1$；
-- 概率归一：因为 $E(\mathbb{R})=\mathbb{1}$；
-- 期望值就是那个双线性形式。
+- **概率归一**：$E(\mathbb{R})=\mathbb{1}$，故 $p(\mathbb{R})=1$；
+- **本征态必得本征值**：$\hat A\lvert\psi\rangle=a\lvert\psi\rangle$ 时 $\langle\hat A\rangle=a$、$\langle\hat A^{2}\rangle=a^{2}$，方差为零，故 $p(\{a\})=1$——**点谱**才成立（连续谱时 $E(\{q\})=0$）。矢量式与数值式等价：$E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle \iff \langle\psi\lvert E(\{a\})\lvert\psi\rangle=1$。
 
 **它不管什么**：不管"为什么是概率"、不管坍缩。坍缩（测量后态变成 $E(B)\lvert\psi\rangle/\sqrt{p}$）是**额外**假设，不用它也能算期望值。
 
