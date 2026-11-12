@@ -135,7 +135,7 @@ $$
 | $a=0$ | 两边都是 $\lvert q\rangle$ ✅ |
 | 群律 | $e^{i(a+b)\hat p}=e^{ia\hat p}e^{ib\hat p}$：两次平移分别把 $q$ 移到 $q-a$、$q-a-b$，合起来是 $e^{i(a+b)\hat p}\lvert q\rangle=\lvert q-a-b\rangle$ ✅ |
 | 波函数形式 | $\langle q'\lvert e^{ia\hat p}\lvert q\rangle=\delta(q'-q+a)$；而 $\langle q'\lvert q-a\rangle=\delta(q'-q+a)$ ✅ |
-| 与 $e^{a\partial_q}$ 对照 | $\hat p=-i\partial_q$ 时 $e^{ia\hat p}=e^{a\partial_q}$，作用为 $\psi(q)\to\psi(q+a)$，与表中第三行一致 ✅ |
+| 波函数平移 | 由 [D07](D07-commutator-p-fq.md) 的 $\mathrm{ad}_{\hat p}=-i\partial_q$，平移对 $\psi$ 的作用是 $\psi(q)\to\psi(q+a)$ ✅ |
 | 谱不变 | 共轭保持谱，$\hat q$ 与 $\hat q+a$ 的谱都是 $\mathbb{R}$ ✅ |
 
 ---

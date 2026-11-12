@@ -2,7 +2,7 @@
 
 > 建档 2026-11-06 · 类型：**定义 + 性质**——定义 $f(\hat A)$，并列出下游要用的运算规则；
 > 其中**谱映射定理与范数公式是定理**，不是定义的复述
-> 上游：[D01](D01-spectral-theorem.md)
+> 上游：[D01](D01-spectral-theorem.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)（§1.3 的本征基需要 δ 归一化）
 > 下游：[D07](D07-commutator-p-fq.md)、[D10](D10-hadamard-lemma.md)、[D12](D12-commutator-phase.md)、[D13](D13-three-bch-forms.md)、[D14](D14-weyl-phase.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D20](D20-hamiltonian.md)、[D26](D26-energy-basis.md)
 > 原散见于 [N003 §4.1](../notes/N003-basis-and-operator-relations.md) 与各卡片的"条件"里，2026-11-06 汇总成卡。
 
@@ -99,7 +99,9 @@ $$
 
 #### 第一步：多项式上逐项相等
 
-这一步的全部内容是**矩性质**：
+**多项式情形上游已给**：[D01](D01-spectral-theorem.md) §1.2 第 5 条的乘积律直接给出 $\int p\,dE=p(\hat A)$。本节把它推广到**一般可积函数**——因为第 2 步与 §2.1 的「同态」都要用。
+
+推广的核心是**乘法性质** $\bigl(\int f\,dE\bigr)\bigl(\int g\,dE\bigr)=\int fg\,dE$；取 $f=g=\mathrm{id}$ 就得到**矩性质**：
 
 $$
 \int\lambda^{n}\,dE(\lambda)=\hat A^{n}
@@ -264,7 +266,7 @@ $$
 | $f(\lambda)=\lambda$ | 三个定义都给 $\hat A$ ✅ |
 | $f(\lambda)=\lambda^{n}$ | 都给 $\hat A^{n}$ ✅ |
 | $f(\lambda)=e^{i\lambda}$，$\hat A$ 自伴 | $\lvert e^{i\lambda}\rvert=1$，故 $e^{i\hat A}$ 酉 ✅ |
-| $f(\lambda)=e^{-\beta\lambda}$，$\hat A$ 有下界 | $f$ 有界，$\lVert e^{-\beta\hat A}\rVert\le1$ ✅ |
+| $f(\lambda)=e^{-\lambda}$，$\hat A$ 有下界 | $f$ 有界，$\lVert e^{-\hat A}\rVert\le1$ ✅ |
 
 ---
 

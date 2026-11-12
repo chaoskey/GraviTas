@@ -66,7 +66,7 @@ $$
 | 正定 | $\hat A\ge0\Rightarrow\mathrm{Tr}\hat A\ge0$（对角元非负） |
 | 相似不变 | $\mathrm{Tr}(U\hat AU^{\dagger})=\mathrm{Tr}\hat A$，所以基无关 |
 
-**循环性是下游“把两端焊起来”那一步的前提**：$e^{-\beta H}$ 的迹不依赖你把切点放在哪。
+**循环性是下游“把两端焊起来”那一步的前提**：$\mathrm{Tr}\,e^{-t\hat A}$ 不依赖你把切点放在哪。
 
 ---
 
@@ -84,14 +84,14 @@ $$
 \mathrm{Tr}\,f(\hat A)=\int f(\lambda)\,d\mu_A(\lambda)
 $$
 
-**$\mu_A(\mathbb{R})=\mathrm{Tr}\,\mathbb{1}$ 是"态空间的维数"**（连续谱时为发散，这也是为什么 $Z$ 必须靠 $e^{-\beta H}$ 收敛）。
+**$\mu_A(\mathbb{R})=\mathrm{Tr}\,\mathbb{1}$ 是"态空间的维数"**（连续谱时为发散，所以实际可迹的总是衰减足够快的算符）。
 
 ---
 
 ## 4. 边界
 
-1. **无界算子可能不可迹。** $\mathrm{Tr}\,\mathbb{1}$ 无穷；但 $e^{-\beta\hat H}$ 对 $\beta>0$ 通常可迹——这正是下游能把它写成可迹表达式的原因。
-2. **连续谱时"迹"是形式的。** $\int dq\langle q\lvert A\lvert q\rangle$ 对一般 $A$ 发散；只有衰减足够快的算符（如 $e^{-\beta H}$）给出有限值。
+1. **无界算子可能不可迹。** $\mathrm{Tr}\,\mathbb{1}$ 无穷；但 $\hat A\ge0$ 时 $e^{-t\hat A}$（$t>0$）通常可迹。
+2. **连续谱时"迹"是形式的。** $\int dq\langle q\lvert A\lvert q\rangle$ 对一般 $A$ 发散；只有衰减足够快的算符（如 $e^{-t\hat A}$）给出有限值。
 3. **它不依赖归一化约定的具体取值**，但依赖"完备性写成 $\int dq\lvert q\rangle\langle q\rvert$"这一形式（[D03](D03-position-eigen-equation.md)）。若换成带权重的写法，$\int dq$ 前要补同样的权重。
 
 ---

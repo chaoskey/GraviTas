@@ -2,7 +2,7 @@
 
 > 建档 2026-11-07 · 类型：**约定卡**——记下"哪些是被迫的、哪些是选的"
 > 上游：[D01](D01-spectral-theorem.md)（谱定理）、[D03](D03-position-eigen-equation.md)（$\delta$ 的**形式**是被迫的）
-> 下游：[D06](D06-trace.md)、[D08](D08-diagonal-criterion.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)
+> 下游：[D05](D05-functional-calculus.md)、[D06](D06-trace.md)、[D08](D08-diagonal-criterion.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)
 
 ---
 
@@ -25,7 +25,7 @@ $$
 
 ### 0.1 为什么形式是 $\delta$（不是别的函数）
 
-$E$ 是**投影值**测度，故对不交的 Borel 集 $B,B'$：
+$E$ 是**投影值**测度，由乘法律（[D01](D01-spectral-theorem.md) §1.2 第 5 条）对不交的 Borel 集 $B,B'$ 有：
 
 $$
 E(B)\,E(B')=0

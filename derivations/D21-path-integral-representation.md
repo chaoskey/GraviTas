@@ -109,7 +109,6 @@ $$
 | 自由粒子（$V=0$） | 核为 $(m/2\pi\beta)^{1/2}e^{-m(q_f-q_i)^{2}/2\beta}$，与直接解热方程一致 ✅ |
 | 合成律 | $\int dq'\,K(q_f,q';\beta_2)K(q',q_i;\beta_1)=K(q_f,q_i;\beta_1+\beta_2)$，正是切片构造的自洽性 ✅ |
 | $\beta\to0$ | 宽度 $\sqrt{\beta/m}\to0$，核趋于 $\delta(q_f-q_i)$ ✅ |
-| 与能级展开一致 | $K=\sum_n e^{-\beta E_n}\psi_n(q_f)\psi_n^{*}(q_i)$，取迹即得配分函数 ✅ |
 | 测度检查 | 保留 $\prod(m/\varepsilon)^{1/2}$ 才得到正确的 $\beta^{-1/2}$；丢弃则量纲都不对 ✅ |
 
 ---

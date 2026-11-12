@@ -50,7 +50,7 @@
 | D02 | 态与测量：Born 规则 $p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$ | D00、D01 | [D02](D02-born-rule.md) | ✓ |
 | D03 | 位置本征方程 $\hat q\lvert q\rangle=q\lvert q\rangle$ 与谱分解（Gelfand–Maurin 的直接特化） | D01 | [D03](D03-position-eigen-equation.md) | ✓ |
 | D04 | 归一化约定：$\langle q\lvert q'\rangle=\delta(q-q')$（形式被迫、系数自选） | D01、D03 | [D04](D04-normalization-convention.md) | ✓ |
-| D05 | 函数演算：$f(\hat A)$ 的两个定义（幂级数、谱分解）+ 本征基特化 | D01 | [D05](D05-functional-calculus.md) | ✓ |
+| D05 | 函数演算：$f(\hat A)$ 的两个定义（幂级数、谱分解）+ 本征基特化 | D01、D03、D04 | [D05](D05-functional-calculus.md) | ✓ |
 | D06 | 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$（基无关） | D01、D03、D04 | [D06](D06-trace.md) | ✓ |
 | D07 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（默认 D05；旁证 D01） | [D07](D07-commutator-p-fq.md) | ✓ |
 | D08 | 对角判据：$[\hat q,f(\hat q)]=0\Rightarrow$ 核 $\propto\delta$ | D00、D01、D03、D04 | [D08](D08-diagonal-criterion.md) | ✓ |

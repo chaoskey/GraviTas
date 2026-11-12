@@ -2,7 +2,7 @@
 
 > 建档 2026-11-08 · 上游：[D00](D00-commutator-axiom.md)、[D05](D05-functional-calculus.md)、[D08](D08-diagonal-criterion.md)
 > 下游：[D21](D21-path-integral-representation.md)、[D23](D23-density-matrix.md)、[D26](D26-energy-basis.md)
-> 本卡补的是"$\hat H$ 从哪来"——[D21](D21-path-integral-representation.md) 一上来就写 $e^{-\beta H}$，却从没交代过它。
+> 本卡补的是"$\hat H$ 从哪来"——下游会反复用到它，这里先把它定下来。
 
 ---
 
