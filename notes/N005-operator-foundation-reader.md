@@ -65,7 +65,7 @@ $$
 **两条推论**：
 
 - **概率归一**：$E(\mathbb{R})=\mathbb{1}$，故 $p(\mathbb{R})=1$；
-- **本征态必得本征值**：$\hat A\lvert\psi\rangle=a\lvert\psi\rangle$ 时 $\langle\hat A\rangle=a$、$\langle\hat A^{2}\rangle=a^{2}$，方差为零，故 $p(\{a\})=1$——**点谱**才成立（连续谱时 $E(\{q\})=0$）。矢量式与数值式等价：$E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle \iff \langle\psi\lvert E(\{a\})\lvert\psi\rangle=1$。
+- **本征态必得本征值**：$\hat A\lvert\psi\rangle=a\lvert\psi\rangle$ 时 $\langle\hat A\rangle=a$、$\langle\hat A^{2}\rangle=a^{2}$，方差为零，故 $p(\{a\})=1$（七步推导见 [D02](../derivations/D02-born-rule.md) §4）——**点谱**才成立（连续谱时 $E(\{q\})=0$）。矢量式与数值式等价：$E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle \iff \langle\psi\lvert E(\{a\})\lvert\psi\rangle=1$。
 
 **它不管什么**：不管"为什么是概率"、不管坍缩。坍缩（测量后态变成 $E(B)\lvert\psi\rangle/\sqrt{p}$）是**额外**假设，不用它也能算期望值。
 

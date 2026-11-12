@@ -9,7 +9,6 @@
 ## 0. 态：先写成一个矢量
 
 **先把态写成一个矢量** $\lvert\psi\rangle$，并取它为单位长：
-
 $$
 \langle\psi\lvert\psi\rangle=1
 $$
@@ -117,35 +116,106 @@ $$
 
 **要证**：若 $\hat A\lvert\psi\rangle=a\lvert\psi\rangle$，则 $p(\{a\})=1$。
 
-**第一步：算两个矩。** 由本征方程直接得
+下面每一步只用一个理由。
+
+**第 0 步：$\mu_\psi$ 是概率测度。**
+
+记 $\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$。
+
+- **非负**：$E(B)$ 是投影，$E(B)=E(B)^{2}=E(B)^{\dagger}$，故
+  $$
+  \mu_\psi(B)=\langle\psi\lvert E(B)^{2}\lvert\psi\rangle=\lVert E(B)\psi\rVert^{2}\ge0
+  $$
+- **归一**：$E(\mathbb{R})=\mathbb{1}$，故
+  $$
+  \mu_\psi(\mathbb{R})=\langle\psi\lvert\mathbb{1}\lvert\psi\rangle=\langle\psi\lvert\psi\rangle=1
+  $$
+
+**第 1 步：算两个矩。** 只用本征方程（不用谱定理）：
 
 $$
-\langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle=a,
-\qquad
-\langle\hat A^{2}\rangle=\langle\psi\lvert\hat A^{2}\lvert\psi\rangle=a^{2}
+\langle\hat A\rangle=\langle\psi\lvert\hat A\lvert\psi\rangle=a\langle\psi\lvert\psi\rangle=a
 $$
 
-**第二步：方差为零。** 记 $\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$。由 [D01](D01-spectral-theorem.md) §1.2 第 1 条的 $f$ 公式（取 $f(\lambda)=(\lambda-a)^{2}$），
+$$
+\hat A^{2}\lvert\psi\rangle=\hat A(a\lvert\psi\rangle)=a^{2}\lvert\psi\rangle
+\ \Longrightarrow\
+\langle\hat A^{2}\rangle=a^{2}
+$$
+
+**第 2 步：方差为零。**
+
+$$
+\langle(\hat A-a)^{2}\rangle=\langle\hat A^{2}\rangle-2a\langle\hat A\rangle+a^{2}=a^{2}-2a^{2}+a^{2}=0
+$$
+
+**第 3 步：把期望换成积分。** 由 [D01](D01-spectral-theorem.md) §1.2 第 1 条的 $f$ 公式（取 $f(\lambda)=(\lambda-a)^{2}$；$\psi$ 在定义域里，因为 $(\hat A-a)^{2}\psi=0$）：
 
 $$
 0=\langle(\hat A-a)^{2}\rangle=\int(\lambda-a)^{2}\,d\mu_\psi(\lambda)
 $$
 
-**方差为零的概率测度只能是 $\delta_a$**，故
+**这是唯一用到谱定理的一步**：把算子期望换成对测度的积分。
+
+**第 4 步：非负积分为零 ⇒ 该集合测度为零。**
+
+令 $A=\{\lambda:(\lambda-a)^{2}>0\}$。**反证**：若 $\mu_\psi(A)>0$，把 $A$ 拆成
+
+$$
+A=\bigcup_{n\ge1}A_n,
+\qquad
+A_n=\Bigl\{\lambda:(\lambda-a)^{2}>\frac{1}{n}\Bigr\}
+$$
+
+$A_n$ 递增，$\mu_\psi(A)=\lim_n\mu_\psi(A_n)$，故必有某个 $n$ 使 $\mu_\psi(A_n)>0$。于是
+
+$$
+\int(\lambda-a)^{2}\,d\mu_\psi\ \ge\ \int_{A_n}(\lambda-a)^{2}\,d\mu_\psi\ >\ \frac{1}{n}\mu_\psi(A_n)\ >\ 0
+$$
+
+**与积分为零矛盾。** 所以 $\mu_\psi(A)=0$。
+
+**第 5 步：$A$ 就是 $\mathbb{R}\setminus\{a\}$。** 因为 $(\lambda-a)^{2}>0\iff\lambda\neq a$，故
+
+$$
+\mu_\psi\bigl(\mathbb{R}\setminus\{a\}\bigr)=0
+$$
+
+**第 6 步：取补集。**
+
+$$
+\mu_\psi(\{a\})=\mu_\psi(\mathbb{R})-\mu_\psi(\mathbb{R}\setminus\{a\})=1-0=1
+$$
+
+**这一步用到第 0 步的归一**：没有 $\mu_\psi(\mathbb{R})=1$，只能得 $\mu_\psi(\{a\})=\mu_\psi(\mathbb{R})$。
+
+**第 7 步：回到 Born 规则。**
 
 $$
 p(\{a\})=\mu_\psi(\{a\})=1
 $$
 
-**第三步：等价地，矢量也不变。** $E(\{a\})$ 是投影，$\mathbb{1}-E$ 也是投影且与它正交，由勾股定理
+**证毕。**
+
+**一句话的链条**：
 
 $$
-\lVert\psi\rVert^{2}=\lVert E\psi\rVert^{2}+\lVert(\mathbb{1}-E)\psi\rVert^{2}
+\hat A\psi=a\psi
+\ \Rightarrow\
+\langle(\hat A-a)^{2}\rangle=0
+\ \overset{\text{谱定理}}{=}\
+\int(\lambda-a)^{2}d\mu_\psi=0
+\ \Rightarrow\
+\mu_\psi(\mathbb{R}\setminus\{a\})=0
+\ \Rightarrow\
+\mu_\psi(\{a\})=1
+\ \Rightarrow\
+p(\{a\})=1
 $$
 
-又 $E^{2}=E$ 给出 $\langle\psi\lvert E\lvert\psi\rangle=\lVert E\psi\rVert^{2}$。若它等于 $1=\lVert\psi\rVert^{2}$，则 $\lVert(\mathbb{1}-E)\psi\rVert^{2}=0$，即 $E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle$。
+### 4.1 等价地：矢量也不变
 
-**所以两件事等价**：
+上面的结论只用了**测度**。它还有一个**矢量**版本，两者等价：
 
 $$
 E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle
@@ -153,7 +223,27 @@ E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle
 \langle\psi\lvert E(\{a\})\lvert\psi\rangle=1
 $$
 
-**意义**：同一件事有两种说法——**矢量语言**（左边）与**数值语言**（右边）；两边互相推，且都**不需要知道 $E(\{a\})$ 具体是哪个投影**。
+**正向**：若 $E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle$，则
+
+$$
+\langle\psi\lvert E(\{a\})\lvert\psi\rangle=\langle\psi\lvert\psi\rangle=1
+$$
+
+**反向**：记 $E=E(\{a\})$。$E$ 是投影，故 $\mathbb{1}-E$ 也是投影，且两者正交。于是**勾股定理**给出
+
+$$
+\lVert\psi\rVert^{2}=\lVert E\psi\rVert^{2}+\lVert(\mathbb{1}-E)\psi\rVert^{2}
+$$
+
+又由 $E^{2}=E$：
+
+$$
+\langle\psi\lvert E\lvert\psi\rangle=\langle\psi\lvert E^{2}\lvert\psi\rangle=\lVert E\psi\rVert^{2}
+$$
+
+若它等于 $1=\lVert\psi\rVert^{2}$，则 $\lVert(\mathbb{1}-E)\psi\rVert^{2}=0$，即 $E\lvert\psi\rangle=\lvert\psi\rangle$。
+
+**意义**：同一件事有两种说法——**矢量语言**（左边）与**数值语言**（右边）；两边互相推，且**都不需要知道 $E(\{a\})$ 具体是哪个投影**。
 
 **边界**：本条只对**点谱**成立。连续谱时 $E(\{q\})=0$，此时"本征态"根本不存在（[D01](D01-spectral-theorem.md) §1.3），概率也就无从谈起。
 
