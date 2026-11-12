@@ -161,11 +161,15 @@ $$
 \hat q=\int q\,dq\,\lvert q\rangle\langle q\rvert
 $$
 
-**证明只有一步**：取 $\hat A=\hat q$、$F_\lambda=\lvert q\rangle$、$\lambda=q$。
+**证明三步**：
 
-**归属**：本征方程与**完备性**（中间那条）都在本卡（D03 §1.2）；第三件"正交归一的系数"属于 [D04](../derivations/D04-normalization-convention.md)。**完备性不在 D04，别去那里找。**
+1. 取 $\hat A=\hat q$、$F_\lambda=\lvert q\rangle$、$\lambda=q$——本征方程与完备性（带 $d\mu$）立刻落下（D03 §1.1）；
+2. **选择**密度形式 $dE(q)=dq\,\lvert q\rangle\langle q\rvert$——这一步同时把 $d\mu$ 定成 $dq$，等价于固定 $\lvert q\rangle$ 的尺度（D03 §1.2）；
+3. 代入谱定理 $\hat q=\int q\,dE(q)$，得算子式（D03 §1.3）。
 
-**唯一的选择**：定理给的测度是 $d\mu$，写成 $dq$ 是**我们选的**（等价于固定 $\lvert q\rangle$ 的尺度）。
+**归属**：本征方程在 §1.1；算子式在 §1.3；完备性在 §1.1（$d\mu$ 版）与 §1.4（$dq$ 版）。正交归一的系数属于 [D04](../derivations/D04-normalization-convention.md)。**完备性不在 D04，别去那里找。**
+
+**关键在于第 2 步是"选择"**：定理给的只是 $d\mu$，密度形式是我们挑的。
 
 ### 2.4 归一化（[D04](../derivations/D04-normalization-convention.md)）
 

@@ -31,7 +31,7 @@ $$
 E(B)\,E(B')=0
 $$
 
-由 [D03](D03-position-eigen-equation.md) §1.3 的密度形式 $E(B)=\int_B dq\,\lvert q\rangle\langle q\rvert$：
+由 [D03](D03-position-eigen-equation.md) §1.2 的密度形式 $E(B)=\int_B dq\,\lvert q\rangle\langle q\rvert$：
 
 $$
 0=\int_B\!\!\int_{B'}\langle q\lvert q'\rangle\,\lvert q\rangle\langle q'\rvert\,dq\,dq'
