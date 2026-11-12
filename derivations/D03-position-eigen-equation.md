@@ -1,7 +1,7 @@
 # D03 · 位置本征方程：$\hat q\lvert q\rangle=q\lvert q\rangle$
 
 > 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)
-> 下游：[D04](D04-normalization-convention.md)、[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D16](D16-translation.md)
+> 下游：[D04](D04-normalization-convention.md)、[D06](D06-trace.md)、[D08](D08-diagonal-criterion.md)、[D16](D16-translation.md)
 > 本卡只做"取 $\hat A=\hat q$"这一步，读出本征方程与谱分解；**归一化属于 [D04](D04-normalization-convention.md)**，本卡不预设也不推出它。
 
 ---

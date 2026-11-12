@@ -2,7 +2,7 @@
 
 > 建档 2026-11-06 · 类型：**引用卡**——陈述定理、说清用法与边界，**不复现证明**（证明属泛函分析，不在本仓库范围内）
 > 上游：外部数学定理（本仓库不证明）
-> 下游：[D02](D02-born-rule.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)、[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D08](D08-commutator-p-fq.md)、[D09](D09-diagonal-criterion.md)、[D10](D10-product-kernel.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)、[D19](D19-momentum-representation.md)、[D21](D21-path-integral-representation.md)、[D22](D22-trace-is-loop.md)、[D25](D25-uncertainty.md)
+> 下游：[D02](D02-born-rule.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)、[D05](D05-functional-calculus.md)、[D06](D06-trace.md)、[D07](D07-commutator-p-fq.md)、[D08](D08-diagonal-criterion.md)、[D09](D09-product-kernel.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)、[D19](D19-momentum-representation.md)、[D21](D21-path-integral-representation.md)、[D22](D22-trace-is-loop.md)、[D25](D25-uncertainty.md)
 
 ---
 

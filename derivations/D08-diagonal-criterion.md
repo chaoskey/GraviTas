@@ -1,4 +1,4 @@
-# D09 · 对角判据：$[\hat q,f(\hat q)]=0$ ⇒ 核正比于 $\delta$
+# D08 · 对角判据：$[\hat q,f(\hat q)]=0$ ⇒ 核正比于 $\delta$
 
 > 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)
 > 下游：[D20](D20-hamiltonian.md)
@@ -28,7 +28,7 @@ $$
 
 ### 1.1 路线一：谱分解
 
-由 [D06](D06-functional-calculus.md) 与 [D01](D01-spectral-theorem.md)：
+由 [D05](D05-functional-calculus.md) 与 [D01](D01-spectral-theorem.md)：
 
 $$
 f(\hat q)=\int dq\,f(q)\,\lvert q\rangle\langle q\rvert
@@ -88,7 +88,7 @@ $$
 |---|---|
 | $f=1$ | 核 $=\delta(q'-q'')$ ✅ |
 | $f=\hat q$ | 核 $=q'\delta(q'-q'')$ ✅ |
-| 与 [D08](D08-commutator-p-fq.md) 对照 | $[\hat p,f(\hat q)]\neq0$（等于 $-if'$），$[\hat q,f(\hat q)]=0$——**方向不同，结论相反** ✅ |
+| 与 [D07](D07-commutator-p-fq.md) 对照 | $[\hat p,f(\hat q)]\neq0$（等于 $-if'$），$[\hat q,f(\hat q)]=0$——**方向不同，结论相反** ✅ |
 | 不解析的 $f$（如阶跃） | 路线二仍成立，路线一需谱分解 ✅ |
 
 ---

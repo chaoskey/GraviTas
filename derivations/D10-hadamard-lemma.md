@@ -1,7 +1,7 @@
-# D11 · Hadamard 引理：$e^{A}Be^{-A}$ 的对易子展开
+# D10 · Hadamard 引理：$e^{A}Be^{-A}$ 的对易子展开
 
-> 建档 2026-11-06 · 上游：无；默认：D06
-> 下游：[D12](D12-two-term-truncation.md)、[D14](D14-three-bch-forms.md)、[D16](D16-translation.md)
+> 建档 2026-11-06 · 上游：无；默认：D05
+> 下游：[D11](D11-two-term-truncation.md)、[D13](D13-three-bch-forms.md)、[D16](D16-translation.md)
 > 原为 [N004 §2](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格以便引用。
 
 ---
@@ -29,7 +29,7 @@ $$
 
 **适用条件**：
 
-1. $e^{\pm A}$ 有定义——$A$ 有界时处处成立；$A$ 无界时在解析向量子空间上成立（函数演算的定义见 [D06](D06-functional-calculus.md)）；
+1. $e^{\pm A}$ 有定义——$A$ 有界时处处成立；$A$ 无界时在解析向量子空间上成立（函数演算的定义见 [D05](D05-functional-calculus.md)）；
 2. 级数收敛——有界 $A$ 时对任意 $B$ 收敛；无界时逐例讨论；
 3. 这是**恒等式**，不是近似：等号处处成立，没有截断误差。
 

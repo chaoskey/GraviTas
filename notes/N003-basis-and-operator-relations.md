@@ -284,7 +284,7 @@ $$
 \langle q'|\hat A\hat B|q''\rangle=\int dq\;\langle q'|\hat A|q\rangle\langle q|\hat B|q''\rangle
 $$
 
-一行证明：插 $\mathbb{1}=\int dq|q\rangle\langle q|$。**完整版与推广（$N$ 重乘积）见 [D10](../derivations/D10-product-kernel.md)。**
+一行证明：插 $\mathbb{1}=\int dq|q\rangle\langle q|$。**完整版与推广（$N$ 重乘积）见 [D09](../derivations/D09-product-kernel.md)。**
 
 ### 3.4 波函数与其傅里叶变换
 
@@ -328,7 +328,7 @@ $$
 \text{核}\propto\delta(q'-q'')
 $$
 
-**对易子为零，核必然对角。** 这条判据不需要 $f$ 解析、不需要展开。**证明与用途见 [D09](../derivations/D09-diagonal-criterion.md)。**
+**对易子为零，核必然对角。** 这条判据不需要 $f$ 解析、不需要展开。**证明与用途见 [D08](../derivations/D08-diagonal-criterion.md)。**
 
 ### 4.3 平移算子
 
@@ -378,7 +378,7 @@ $$
 [\hat p,g(\hat q)]=-i\,g'(\hat q)
 $$
 
-不确定关系的证明（Cauchy–Schwarz + 对易子）见 [D25](../derivations/D25-uncertainty.md)；对易子公式的镜像来源见 [D08](../derivations/D08-commutator-p-fq.md)。
+不确定关系的证明（Cauchy–Schwarz + 对易子）见 [D25](../derivations/D25-uncertainty.md)；对易子公式的镜像来源见 [D07](../derivations/D07-commutator-p-fq.md)。
 
 ### 5.2 迹（基无关）
 

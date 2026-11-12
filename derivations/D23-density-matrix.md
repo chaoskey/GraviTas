@@ -1,6 +1,6 @@
 # D23 · 密度矩阵与配分函数
 
-> 建档 2026-11-08 · 上游：[D07](D07-trace.md)（迹）、[D20](D20-hamiltonian.md)（$\hat H$）、[D22](D22-trace-is-loop.md)（迹即闭合路径）
+> 建档 2026-11-08 · 上游：[D06](D06-trace.md)（迹）、[D20](D20-hamiltonian.md)（$\hat H$）、[D22](D22-trace-is-loop.md)（迹即闭合路径）
 > 下游：[D24](D24-temperature-period.md)、[D26](D26-energy-basis.md)
 > 本卡补的是"纯态之外"的那一半：热平衡与混合态。
 

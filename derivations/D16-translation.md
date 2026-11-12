@@ -1,6 +1,6 @@
 # D16 · 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)、[D12](D12-two-term-truncation.md)；默认：D06；旁证：D08、D11
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)、[D11](D11-two-term-truncation.md)；默认：D05；旁证：D07、D10
 > 下游：[D17](D17-qp-overlap.md)
 > 原为 [N004 §6.1](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
@@ -41,7 +41,7 @@ $$
 [A,B]=ia[\hat p,\hat q]=ia\cdot(-i)=a
 $$
 
-$a$ 是数，于是由 [D12](D12-two-term-truncation.md)（两项截断）：
+$a$ 是数，于是由 [D11](D11-two-term-truncation.md)（两项截断）：
 
 $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+[A,B]=\hat q+a
@@ -103,9 +103,9 @@ $$
 
 ### 1.4 顺带：用平移验证 $[\hat p,f(\hat q)]=-if'$
 
-本卡只用到更早的卡（[D08](D08-commutator-p-fq.md)、[D11](D11-hadamard-lemma.md)），所以这条验证放在这里，不放回 D08。
+本卡只用到更早的卡（[D07](D07-commutator-p-fq.md)、[D10](D10-hadamard-lemma.md)），所以这条验证放在这里，不放回 D07。
 
-由平移公式与 [D11](D11-hadamard-lemma.md)（Hadamard 引理）：
+由平移公式与 [D10](D10-hadamard-lemma.md)（Hadamard 引理）：
 
 $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+a

@@ -1,7 +1,7 @@
-# D13 · $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数）
+# D12 · $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数）
 
-> 建档 2026-11-06 · 上游：[D12](D12-two-term-truncation.md)；默认：D06
-> 下游：[D14](D14-three-bch-forms.md)、[D15](D15-weyl-phase.md)
+> 建档 2026-11-06 · 上游：[D11](D11-two-term-truncation.md)；默认：D05
+> 下游：[D13](D13-three-bch-forms.md)、[D14](D14-weyl-phase.md)
 > 原为 [N004 §5](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---
@@ -44,7 +44,7 @@ $$
 
 ### 1.2 第二步：用两项截断
 
-由 [D12](D12-two-term-truncation.md)，$[A,B]=c$ 是数时有
+由 [D11](D11-two-term-truncation.md)，$[A,B]=c$ 是数时有
 
 $$
 e^{A}B\,e^{-A}=B+c
@@ -78,7 +78,7 @@ $$
 | 检验 | 结果 |
 |---|---|
 | $c=0$（即 $[A,B]=0$） | 两边都是 $e^{A}e^{B}=e^{B}e^{A}$ ✅ |
-| 与 [D12](D12-two-term-truncation.md) 相容 | D12 是 $f(B)$ 取恒等函数的情形；本式取 $f=e^{B}$，是它的推广 |
+| 与 [D11](D11-two-term-truncation.md) 相容 | D11 是 $f(B)$ 取恒等函数的情形；本式取 $f=e^{B}$，是它的推广 |
 | 代回 $\hat q,\hat p$ | $A=ia\hat p$、$B=ib\hat q$，$[A,B]=iab$，得各向异性相位 ✅ |
 | 反例检查 | 若 $c$ 是算子，$\exp(B+c)\neq e^{B}e^{c}$，第三步失效 |
 
@@ -88,7 +88,7 @@ $$
 
 1. **只定比值，不定绝对值。** 见 §0 的 $\lambda$ 参数族。想定 $\lambda=1/2$，必须另加"对 $t$ 的连续依赖"——属下游。
 2. **$c$ 必须是数。** 第三步要把 $e^{c}$ 从指数里提出来，用的正是"$c$ 与 $B$ 对易"。$c$ 若是算子，整条链断在这里。
-3. **函数演算那一步不是显然的**（[D06](D06-functional-calculus.md)）。 $e^{A}f(B)e^{-A}=f(e^{A}Be^{-A})$ 对多项式显然，对一般 $f$ 需要级数收敛（或用谱定理）。这里 $f=e^{B}$ 是整函数，安全。
+3. **函数演算那一步不是显然的**（[D05](D05-functional-calculus.md)）。 $e^{A}f(B)e^{-A}=f(e^{A}Be^{-A})$ 对多项式显然，对一般 $f$ 需要级数收敛（或用谱定理）。这里 $f=e^{B}$ 是整函数，安全。
 4. **相位不是"凑出来的"。** 去掉 $e^{c}$，等式等于宣称 $[\hat q,\hat p]=0$——量子力学当场退化成经典力学。
 
 ---

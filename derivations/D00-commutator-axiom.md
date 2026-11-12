@@ -2,7 +2,7 @@
 
 > 建档 2026-11-07 · 类型：**公理卡**——整个网格的输入，不是推导
 > 上游：无
-> 下游：[D02](D02-born-rule.md)、[D08](D08-commutator-p-fq.md)、[D09](D09-diagonal-criterion.md)、[D15](D15-weyl-phase.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D19](D19-momentum-representation.md)、[D20](D20-hamiltonian.md)、[D21](D21-path-integral-representation.md)、[D25](D25-uncertainty.md)
+> 下游：[D02](D02-born-rule.md)、[D07](D07-commutator-p-fq.md)、[D08](D08-diagonal-criterion.md)、[D14](D14-weyl-phase.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D19](D19-momentum-representation.md)、[D20](D20-hamiltonian.md)、[D21](D21-path-integral-representation.md)、[D25](D25-uncertainty.md)
 > 编号规则见 [derivations/README](README.md)：D00 保留给公理，D01 起按拓扑序。
 
 ---

@@ -1,6 +1,6 @@
 # D21 · 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D17](D17-qp-overlap.md)、[D20](D20-hamiltonian.md)、[D10](D10-product-kernel.md)、[D18](D18-p-completeness.md)；默认：D01
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D17](D17-qp-overlap.md)、[D20](D20-hamiltonian.md)、[D09](D09-product-kernel.md)、[D18](D18-p-completeness.md)；默认：D01
 > 下游：[D22](D22-trace-is-loop.md)、[D24](D24-temperature-period.md)
 > 原为 [N002 §2.1–2.3](../notes/N002-finite-temperature-path-integral.md)，2026-11-06 移入网格。
 

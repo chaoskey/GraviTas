@@ -1,6 +1,6 @@
 # D19 · $\hat p$ 在 $q$ 表象下是 $-i\partial_q$
 
-> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)；默认：D01；旁证：D08
+> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)；默认：D01；旁证：D07
 > 下游：无卡片依赖
 > 原为 [N003 §3.1–3.2](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 
@@ -65,7 +65,7 @@ $$
 
 ## 2.5 顺带：用表象验证 $[\hat p,f(\hat q)]=-if'$
 
-本卡只用到更早的卡，所以这条验证放在这里，不放回 [D08](D08-commutator-p-fq.md)。
+本卡只用到更早的卡，所以这条验证放在这里，不放回 [D07](D07-commutator-p-fq.md)。
 
 在 $q$ 表象中 $\hat p=-i\partial_q$、$\hat q$ 乘以 $q$。取任意可微 $\psi$：
 
@@ -79,7 +79,7 @@ $$
 
 第二项用乘积法则，再与 $+if\psi'$ 相消。
 
-**这条路的价值**：它说明 [D08](D08-commutator-p-fq.md) 那条公式在表象里就是"乘积法则"——**求导算子与乘法算子之差**。
+**这条路的价值**：它说明 [D07](D07-commutator-p-fq.md) 那条公式在表象里就是"乘积法则"——**求导算子与乘法算子之差**。
 
 ---
 
@@ -90,7 +90,7 @@ $$
 | 平面波 | $-i\partial_q e^{ipq}=p\,e^{ipq}$，正是 $\hat p$ 的本征函数 ✅ |
 | 平移 | $e^{ia\hat p}=e^{a\partial_q}$，作用为 $\psi(q)\to\psi(q+a)$，与 [D16](D16-translation.md) 一致 ✅ |
 | 对易子 | $[\hat p,\hat q]=-i\partial_q(q\psi)-q(-i\partial_q\psi)=-i$ ✅ |
-| 与 [D08](D08-commutator-p-fq.md) 一致 | $-i\partial_q(f\psi)-f(-i\partial_q\psi)=-if'\psi$，正是 D08 的结论 ✅ |
+| 与 [D07](D07-commutator-p-fq.md) 一致 | $-i\partial_q(f\psi)-f(-i\partial_q\psi)=-if'\psi$，正是 D07 的结论 ✅ |
 | $p$ 表象对称形式 | $\langle p\lvert\hat q\lvert\psi\rangle=i\partial_p\tilde\psi(p)$，符号相反（互换 $q\leftrightarrow p$ 所致）✅ |
 
 ---

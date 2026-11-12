@@ -1,4 +1,4 @@
-# D07 · 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$
+# D06 · 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$
 
 > 建档 2026-11-08 · 上游：[D01](D01-spectral-theorem.md)（完备性）、[D03](D03-position-eigen-equation.md)（位置基）、[D04](D04-normalization-convention.md)
 > 下游：[D22](D22-trace-is-loop.md)、[D23](D23-density-matrix.md)、[D26](D26-energy-basis.md)

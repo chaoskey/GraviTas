@@ -1,9 +1,9 @@
-# D06 · 函数演算：$f(\hat A)$ 到底是什么意思
+# D05 · 函数演算：$f(\hat A)$ 到底是什么意思
 
 > 建档 2026-11-06 · 类型：**定义 + 性质**——定义 $f(\hat A)$，并列出下游要用的运算规则；
 > 其中**谱映射定理与范数公式是定理**，不是定义的复述
 > 上游：[D01](D01-spectral-theorem.md)
-> 下游：[D08](D08-commutator-p-fq.md)、[D11](D11-hadamard-lemma.md)、[D13](D13-commutator-phase.md)、[D14](D14-three-bch-forms.md)、[D15](D15-weyl-phase.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D20](D20-hamiltonian.md)、[D26](D26-energy-basis.md)
+> 下游：[D07](D07-commutator-p-fq.md)、[D10](D10-hadamard-lemma.md)、[D12](D12-commutator-phase.md)、[D13](D13-three-bch-forms.md)、[D14](D14-weyl-phase.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D20](D20-hamiltonian.md)、[D26](D26-energy-basis.md)
 > 原散见于 [N003 §4.1](../notes/N003-basis-and-operator-relations.md) 与各卡片的"条件"里，2026-11-06 汇总成卡。
 
 ---

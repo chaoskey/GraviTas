@@ -1,6 +1,6 @@
 # D17 · $\langle q\lvert p\rangle=e^{ipq}$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D04](D04-normalization-convention.md)、[D16](D16-translation.md)、[D15](D15-weyl-phase.md)、[D05](D05-stone-von-neumann.md)；默认：D06、D01
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D04](D04-normalization-convention.md)、[D14](D14-weyl-phase.md)、[D15](D15-stone-von-neumann.md)、[D16](D16-translation.md)；默认：D05、D01
 > 下游：[D18](D18-p-completeness.md)、[D19](D19-momentum-representation.md)、[D21](D21-path-integral-representation.md)
 > 原为 [N003 §0.5](../notes/N003-basis-and-operator-relations.md) 的三步概括，2026-11-06 补全并移入网格。
 
@@ -15,7 +15,7 @@ $$
 **适用条件**（缺一不可，这是本条最要紧的部分）：
 
 1. $\hat q$ 的谱**简单**（重数为 $1$）、纯绝对连续、等于 $\mathbb{R}$——于是有 $\delta$ 归一化的 $\lvert q\rangle$；
-2. 位置与动量满足 Weyl 关系（[D15](D15-weyl-phase.md)）；
+2. 位置与动量满足 Weyl 关系（[D14](D14-weyl-phase.md)）；
 3. 归一化方案：$\langle q\lvert q'\rangle=\delta(q-q')$、$\langle p\lvert p'\rangle=2\pi\delta(p-p')$；
 4. 相位约定：本征矢的相位取到使 $\langle 0\lvert p\rangle=1$（见 §1 第五步）。
 
@@ -36,7 +36,7 @@ $$
 
 ### 1.1 第一步：$e^{ia\hat p}$ 在谱上是平移
 
-由 [D12](D12-two-term-truncation.md)（取 $A=ia\hat p$、$B=\hat q$）：
+由 [D11](D11-two-term-truncation.md)（取 $A=ia\hat p$、$B=\hat q$）：
 
 $$
 [A,B]=ia[\hat p,\hat q]=ia\cdot(-i)=a
