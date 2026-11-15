@@ -177,12 +177,13 @@ $$
 \langle q\lvert q'\rangle=\delta(q-q')
 $$
 
-**完备性那一半在 §2.3**（属于 D03），本节不重复。这里**证明**正交归一的系数，并说明它与 D03 的权重配对：
+**完备性那一半在 §2.3**（属于 D03），本节不重复。这里只把核写出来：**$\langle q\lvert q'\rangle$ 就是恒等算子的核**。
 
-| 成分 | 地位 |
-|---|---|
-| 为什么是 $\delta$（不是别的函数） | **被迫**：投影性（不交集合给正交投影）+ 正性（排除 $\delta'$ 等导数项） |
-| $\delta$ 前系数为什么是 1 | **配定**：由 $w\,c=1$ 与 D03 的 $w=1$ 逼出，**不是另一次约定** |
+**核的定义**：$A$ 的核 $K_A$ 由 $\langle\phi\lvert A\lvert\psi\rangle=\iint\overline{\phi(q)}K_A(q,q')\psi(q')dq\,dq'$ 给出。三个例子：$K_{\mathbb{1}}=\delta$、$K_{\hat q}=q\delta$、$K_{E(B)}=\mathbf{1}_B\delta$。
+
+**由完备性（$w=1$）得 $K_{\mathbb{1}}=\delta$**：完备性给 $\langle\phi\lvert\psi\rangle=\int\overline{\phi}\psi\,dq$，与核的定义式对所有 $\phi,\psi$ 比较，核被唯一确定。
+
+**唯一的自由度是尺度**：$\lvert q\rangle\to\lambda\lvert q\rangle$ 时 $\langle q\lvert q'\rangle\to\lvert\lambda\rvert^{2}\delta$，同时权重 $w\to w/\lvert\lambda\rvert^{2}$；两者一起换，物理不变。**D03 已取 $w=1$，所以本卡没有自由度。**
 
 **所以 D04 是定理卡，不是约定卡**：唯一的那次约定（尺度）在 [D03](../derivations/D03-position-eigen-equation.md) §1.2。
 
