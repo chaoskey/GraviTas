@@ -22,7 +22,6 @@
 ### 1.1 陈述
 
 **一句话**：自伴算子可以被拆成一族**互相垂直的投影**，权重是它的**谱** $\sigma(\hat A)$。
-
 $$
 \hat A=\int_{\sigma(\hat A)}\lambda\;dE(\lambda)
 $$
@@ -53,7 +52,9 @@ $$
 
 $f$ 是**任意** Borel 函数（不必有界）。无界时用上面那个定义域——它只是"权重太大会发散，所以要挑函数"，**不是新增的物理，是收敛性的记账**。**取 $f(\lambda)=\lambda$ 就还回 $\hat A$ 自己的定义域**，不必另记一条。$f$ 有界时它是有界算子，且 $\lVert f(\hat A)\rVert=\sup_{\lambda\in\sigma(\hat A)}\lvert f(\lambda)\rvert$。
 
-2. **谱的位置**——$\sigma(\hat A)$ 是 $E$ 的**支撑**（每个邻域里 $E$ 都不为零）；$E(\{\lambda\})\neq0$ 的点就是**点谱**，且这时 $E(\{\lambda\})$ 正是**投影到该本征子空间**的投影。
+2. **谱的位置**——两条，**都能证**（证明在 §1.2.1、§1.2.2）：
+   - $\sigma(\hat A)$ 是 $E$ 的**支撑**：每个邻域里 $E$ 都不为零；
+   - $E(\{\lambda\})\neq0$ 的点就是**点谱**，且这时 $E(\{\lambda\})$ 正是**投影到该本征子空间**的投影。
 
 3. **乘法律**——投影值测度的定义只要求"可数可加、且值都是投影"，而
 
@@ -110,6 +111,95 @@ $$
 是等距的（$\lVert f(\hat A)\psi\rVert^{2}=\int\lvert f\rvert^{2}d\mu_\psi$），稠密加等距即延拓成酉算子。**谱若有重数**（如自旋让能级翻倍），一次换基不够，要直和几份拷贝——那时是"乘以 $\lambda$ 再乘单位矩阵"。
 
 **为什么这条有用**：在这个模型里，D01 的其余结论都变成"函数上的显然事"——$f(\hat A)$ 是乘以 $f(\lambda)$，$E(B)$ 是乘以指示函数 $\mathbf{1}_B$，$\int dE=\mathbb{1}$ 是"乘以 $1$ 是恒等"。**"让 $\hat q$ 对角"这句话的严格含义，就是这个。**
+
+### 1.2.1 为什么"谱 = 支撑"
+
+**先把"支撑"说清**：
+
+$$
+\lambda\in\operatorname{supp}E
+\iff
+\text{对 }\lambda\text{ 的每个邻域 }U,\ E(U)\neq0
+$$
+
+**"$E(U)\neq0$"是算子意义的零**——$E(U)$ 不是零投影，即它的值域非平凡。
+
+**要证两个方向。**
+
+**（1）不在支撑里 ⇒ 不在谱里。** 若 $\lambda_0$ 有邻域 $U$ 使 $E(U)=0$，则测度全落在 $U^{c}$ 上；而 $\lambda_0\notin U^{c}$（$U$ 开），故存在 $\delta>0$ 使
+
+$$
+\lvert\lambda-\lambda_0\rvert\ge\delta
+\qquad(\lambda\in U^{c})
+$$
+
+由 §1.2 第 1 条的 $f$ 公式（取 $f(\lambda)=\lambda-\lambda_0$）：
+
+$$
+\lVert(\hat A-\lambda_0)\psi\rVert^{2}
+=\int\lvert\lambda-\lambda_0\rvert^{2}\,d\langle\psi\lvert E(\lambda)\lvert\psi\rangle
+\ \ge\ \delta^{2}\lVert\psi\rVert^{2}
+$$
+
+**有下界 $\delta$ ⇒ 可逆、且逆有界**（逆是 $\int\frac{1}{\lambda-\lambda_0}dE$，范数 $\le1/\delta$）。所以 $\lambda_0\notin\sigma(\hat A)$。
+
+**（2）在支撑里 ⇒ 在谱里。** 取 $B_n=(\lambda_0-\frac{1}{n},\lambda_0+\frac{1}{n})$，则 $E(B_n)\neq0$；取单位向量 $\psi_n\in E(B_n)\mathcal{H}$。对 $\psi_n$，测度全落在 $B_n$ 上，故
+
+$$
+\lVert(\hat A-\lambda_0)\psi_n\rVert^{2}
+=\int_{B_n}\lvert\lambda-\lambda_0\rvert^{2}\,d\langle\psi_n\lvert E\lvert\psi_n\rangle
+\ \le\ \frac{1}{n^{2}}
+$$
+
+**于是 $(\hat A-\lambda_0)\psi_n\to0$ 而 $\lVert\psi_n\rVert=1$。** 若存在有界逆 $R$，则
+
+$$
+1=\lVert\psi_n\rVert\le\lVert R\rVert\,\lVert(\hat A-\lambda_0)\psi_n\rVert\le\frac{\lVert R\rVert}{n}\to0
+$$
+
+矛盾。所以 $\lambda_0\in\sigma(\hat A)$。
+
+**合起来**：$\sigma(\hat A)=\operatorname{supp}E$。
+
+**一句话**：**算子在哪儿"坏"，测度就在哪儿有质量。**
+
+### 1.2.2 为什么"原子 = 本征值"
+
+**要证的其实是等式**
+
+$$
+\operatorname{ran}E(\{\lambda\})=\ker(\hat A-\lambda)
+$$
+
+**左边是投影的值域，右边是本征子空间。** 两个方向各一条。
+
+**方向一：$P\equiv E(\{\lambda\})\neq0$ ⇒ $\lambda$ 是本征值。** 取 $\psi\in\operatorname{ran}P$，$\psi\neq0$。对 $\psi$，测度全落在 $\{\lambda\}$ 上（因为 $(𝟙-P)\psi=0$），故
+
+$$
+\hat A\psi=\int\lambda'\,dE(\lambda')\psi=\lambda\psi
+$$
+
+**值域里的非零向量全是本征向量。**
+
+**方向二：本征向量必被 $P$ 保留。** 若 $\hat A\psi=\lambda\psi$，则 $(\hat A-\lambda)\psi=0$。用 $f$ 公式（取 $f(\lambda')=\lambda'-\lambda$）：
+
+$$
+0=\lVert(\hat A-\lambda)\psi\rVert^{2}
+=\int(\lambda'-\lambda)^{2}\,d\langle\psi\lvert E\lvert\psi\rangle
+$$
+
+**被积函数非负、积分零，故测度只落在 $\{\lambda\}$ 上**：$\langle\psi\lvert E(\{\lambda\})\lvert\psi\rangle=\lVert\psi\rVert^{2}$。由勾股（$E$ 与 $𝟙-E$ 正交）：
+
+$$
+\lVert(\mathbb{1}-E(\{\lambda\}))\psi\rVert^{2}
+=\lVert\psi\rVert^{2}-\lVert E(\{\lambda\})\psi\rVert^{2}=0
+$$
+
+所以 $E(\{\lambda\})\psi=\psi$。
+
+**两个方向合起来**：$\operatorname{ran}E(\{\lambda\})=\ker(\hat A-\lambda)$。而 $E(\{\lambda\})$ 是**正交**投影，故它就是**投影到该本征子空间**的投影。
+
+**一句话**：**测度在某一点上的整块质量，就是一个本征子空间。**
 
 ### 1.3 它不给什么（三条，最要紧）
 
