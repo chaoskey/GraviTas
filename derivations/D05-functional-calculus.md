@@ -4,7 +4,6 @@
 > 其中**谱映射定理与范数公式是定理**，不是定义的复述
 > 上游：[D01](D01-spectral-theorem.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)（§2 给 $\langle a\lvert a'\rangle=\delta(a-a')$，本卡 §1.3 要用）
 > 下游：[D07](D07-commutator-p-fq.md)、[D10](D10-hadamard-lemma.md)、[D12](D12-commutator-phase.md)、[D13](D13-three-bch-forms.md)、[D14](D14-weyl-phase.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D20](D20-hamiltonian.md)、[D26](D26-energy-basis.md)
-> 原散见于 [N003 §4.1](../notes/N003-basis-and-operator-relations.md) 与各卡片的"条件"里，2026-11-06 汇总成卡。
 
 ---
 
