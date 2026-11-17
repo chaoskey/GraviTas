@@ -59,7 +59,6 @@ $$
 $$
 
 **两者由 $E(\mathbb{R}\setminus\sigma(\hat A))=0$（谱即支撑，§1.2.1）连起来**：
-
 $$
 E(\sigma(\hat A))=E(\mathbb{R})-E(\mathbb{R}\setminus\sigma(\hat A))=\mathbb{1}-0=\mathbb{1}
 $$
@@ -167,7 +166,13 @@ $$
 
 ### 1.2.1 为什么"谱 = 支撑"
 
-**先把"支撑"说清**：
+**先把"支撑"说清**。它的**原始定义**是
+
+$$
+\operatorname{supp}E\equiv\mathbb{R}\setminus\bigcup\bigl\{U\ \text{开}:\ E(U)=0\bigr\}
+$$
+
+即"所有测度为零的开集的并"的补集。**等价刻画**是我们实际要用的：
 
 $$
 \lambda\in\operatorname{supp}E
@@ -175,7 +180,9 @@ $$
 \text{对 }\lambda\text{ 的每个邻域 }U,\ E(U)\neq0
 $$
 
-**这里的 $0$ 指零算子，不是数 $0$**：$E(U)\neq0$ 的意思是 $E(U)$ 不是零投影，即它的值域非平凡。
+**这里的 $0$ 指零算子，不是数 $0$**：$E(U)\neq0$ 的意思是 $E(U)$ 不是零投影，即它的值域非平凡。**邻域可换成 $(\lambda-\varepsilon,\lambda+\varepsilon)$**，验算时更方便。
+
+**为什么这个并是良好定义的**：$\mathbb{R}$ 是第二可数的，任一开集都是**有理端点开区间**的可数并。所以上面那个并只需取可数个基元素，**由可数可加仍是零测集**，其补集是闭集。
 
 **要证两个方向。**
 
