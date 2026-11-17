@@ -21,7 +21,7 @@
 
 ### 1.1 陈述
 
-**一句话**：自伴算子可以被拆成一族**互相垂直的投影**，权重是它的**谱** $\sigma(\hat A)$。
+**一句话**：自伴算子可以写成——**把一族互相垂直、合起来是恒等的投影，按取自谱的权重加起来**。
 $$
 \hat A=\int_{\sigma(\hat A)}\lambda\;dE(\lambda)
 $$
@@ -29,7 +29,19 @@ $$
 **先把 $E$ 说清楚。** $E$ 是**投影值测度**：把每个 **Borel 集**（从开区间出发，反复做"可数次并、交、补"能得到的所有集合）$B$ 映成一个**投影** $E(B)$，并且
 
 - **$E(\mathbb{R})=\mathbb{1}$**（全集对应整个空间）；
-- **可数可加**（不交的集合，其投影相加）。
+- **可数可加**：两两不交的 $B_1,B_2,\dots$ 满足 $E\bigl(\bigcup_nB_n\bigr)=\sum_nE(B_n)$。
+
+**"可数可加"里的"相加"要说明**：右边的和**不是按范数收敛**，而是**强收敛**——部分和
+
+$$
+S_N=\sum_{n\le N}E(B_n)=E\Bigl(\bigcup_{n\le N}B_n\Bigr)
+$$
+
+**本身是投影**，且 $S_1\le S_2\le\cdots\le\mathbb{1}$；对每个 $\psi$，$\lVert S_N\psi\rVert^{2}=\langle\psi\lvert S_N\lvert\psi\rangle$ 单调有界，故 $\{S_N\psi\}$ 收敛。**极限就是右边。**
+
+**（"测度"的公理只有两条：空集为零、可数可加；非负写在取值里。投影值测度把取值从"非负数"换成"投影"，于是多出一条归一化 $E(\mathbb{R})=\mathbb{1}$。）**
+
+**为什么取值必须是投影**：谱定理本质是一个映射 $f\mapsto f(\hat A)=\int f\,dE$，它保持乘法与共轭；而 $E(B)$ 正是 $\mathbf{1}_B$ 的像。于是 $\mathbf{1}_B^{2}=\mathbf{1}_B$ 逼出 $E(B)^{2}=E(B)$（**幂等**），$\mathbf{1}_B$ 实值逼出 $E(B)$ 自伴（**对称**）——**幂等 + 自伴就是正交投影**。正交还保证勾股：$\lVert\psi\rVert^{2}=\lVert E(B)\psi\rVert^{2}+\lVert E(B^{c})\psi\rVert^{2}$，即 $p(B)+p(B^{c})=1$。**换成一般正算子或斜投影，概率就会超过 $1$ 或漏掉。**
 
 给定 $\hat A$，这样的 $E$ 是**唯一**的。
 
@@ -37,6 +49,22 @@ $$
 
 1. **投影拼回整个空间**：$\int dE(\lambda)=E(\mathbb{R})=\mathbb{1}$——互相垂直，合起来不漏；
 2. **算子按权重把投影加起来**：$\hat A=\int\lambda\,dE(\lambda)$——$\lambda$ 是权重，$dE(\lambda)$ 是那一份投影。
+
+**"拼回整个空间"有两个式子，含义不同**：
+
+$$
+\underbrace{E(\mathbb{R})=\mathbb{1}}_{\text{定义：测度归一}}
+\qquad
+\underbrace{E(\sigma(\hat A))=\mathbb{1}}_{\text{定理：谱之外没有分量}}
+$$
+
+**两者由 $E(\mathbb{R}\setminus\sigma(\hat A))=0$（谱即支撑，§1.2.1）连起来**：
+
+$$
+E(\sigma(\hat A))=E(\mathbb{R})-E(\mathbb{R}\setminus\sigma(\hat A))=\mathbb{1}-0=\mathbb{1}
+$$
+
+**所以两个写法都对**；但讲"合起来是整个空间"时，**后者更有信息量**——它说了谱在哪儿。
 
 **它在解决什么问题**：算子本身是抽象对象，"$\hat A$ 是什么"很难直接回答；谱分解把它换成两样具体的东西——**一堆数**（谱上的 $\lambda$）加**一堆投影**。之后函数演算、完备性、对角化，都变成在这两样东西上做算术。
 
@@ -51,6 +79,7 @@ D\bigl(f(\hat A)\bigr)=\Bigl\{\psi\;\Big|\;\int\lvert f(\lambda)\rvert^{2}\,d\la
 $$
 
 $f$ 是**任意** Borel 函数（不必有界）。无界时用上面那个定义域——它只是"权重太大会发散，所以要挑函数"，**不是新增的物理，是收敛性的记账**。**取 $f(\lambda)=\lambda$ 就还回 $\hat A$ 自己的定义域**，不必另记一条。$f$ 有界时它是有界算子，且 $\lVert f(\hat A)\rVert=\sup_{\lambda\in\sigma(\hat A)}\lvert f(\lambda)\rvert$。
+
 
 2. **谱的位置**——两条，**都能证**（证明在 §1.2.1、§1.2.2）：
    - $\sigma(\hat A)$ 是 $E$ 的**支撑**：每个邻域里 $E$ 都不为零；
@@ -91,6 +120,30 @@ $$
 **所以这条不需要假设**；谱定理保证这样的 $E$ 存在且唯一。
 
 **它说的其实是**：**集合取交，对应算子复合**——指示函数的 $\mathbf{1}_B\cdot\mathbf{1}_{B'}=\mathbf{1}_{B\cap B'}$ 的算子版。
+
+**由乘法律得到范数形式**（§1.2.1、§1.2.2 都要用它）：对 Borel 函数 $g$ 与 $\psi\in D(g(\hat A))$，
+
+$$
+\lVert g(\hat A)\psi\rVert^{2}
+=\int\lvert g(\lambda)\rvert^{2}\,d\langle\psi\lvert E(\lambda)\lvert\psi\rangle
+\qquad(\ast)
+$$
+
+**$g$ 有界时它是定理**，四步：
+
+$$
+\lVert g(\hat A)\psi\rVert^{2}
+=\langle g(\hat A)\psi\lvert g(\hat A)\psi\rangle
+=\langle\psi\lvert g(\hat A)^{\dagger}g(\hat A)\lvert\psi\rangle
+=\langle\psi\lvert(\lvert g\rvert^{2})(\hat A)\lvert\psi\rangle
+=\int\lvert g\rvert^{2}\,d\mu_\psi
+$$
+
+（依次用：内积定义；伴随的定义 $g(\hat A)^{\dagger}=\overline{g}(\hat A)$；上面这条乘法律；§1.2 第 1 条的二次型形式。）
+
+**$g$ 无界时按截断取极限**：取 $g_n=g\,\mathbf{1}_{\{\lvert g\rvert\le n\}}$（有界），则 $g_n(\hat A)\psi\to g(\hat A)\psi$，而 $\lvert g_n\rvert^{2}\nearrow\lvert g\rvert^{2}$，由单调收敛右边趋于 $\int\lvert g\rvert^{2}d\mu_\psi$。
+
+**这顺便解释了定义域**：$\psi\in D(g(\hat A))$ 当且仅当 $(\ast)$ 的右边有限——**不是额外限制，而是"作用完仍留在 $\mathcal{H}$ 里"的等价说法**。
 
 4. **一个"对角化"模型**——谱简单时，$\hat A$ **酉等价于"乘以 $\lambda$"**：
 
@@ -133,7 +186,7 @@ $$
 \qquad(\lambda\in U^{c})
 $$
 
-由 §1.2 第 1 条的 $f$ 公式（取 $f(\lambda)=\lambda-\lambda_0$）：
+由 §1.2 的 **$(\ast)$ 式**（取 $g(\lambda)=\lambda-\lambda_0$；$\psi\in D(\hat A)$ 正是它的定义域）：
 
 $$
 \lVert(\hat A-\lambda_0)\psi\rVert^{2}
@@ -166,7 +219,6 @@ $$
 ### 1.2.2 为什么"原子 = 本征值"
 
 **要证的其实是等式**
-
 $$
 \operatorname{ran}E(\{\lambda\})=\ker(\hat A-\lambda)
 $$
@@ -181,7 +233,7 @@ $$
 
 **值域里的非零向量全是本征向量。**
 
-**方向二：本征向量必被 $P$ 保留。** 若 $\hat A\psi=\lambda\psi$，则 $(\hat A-\lambda)\psi=0$。用 $f$ 公式（取 $f(\lambda')=\lambda'-\lambda$）：
+**方向二：本征向量必被 $P$ 保留。** 若 $\hat A\psi=\lambda\psi$，则 $(\hat A-\lambda)\psi=0$。用 §1.2 的 **$(\ast)$ 式**（取 $g(\lambda')=\lambda'-\lambda$）：
 
 $$
 0=\lVert(\hat A-\lambda)\psi\rVert^{2}
