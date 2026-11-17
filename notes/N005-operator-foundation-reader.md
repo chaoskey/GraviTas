@@ -96,7 +96,7 @@ $$
 - **函数演算**：$f(\hat A)=\int f(\lambda)\,dE(\lambda)$——把谱上的 $\lambda$ 换成 $f(\lambda)$；$f$ 无界时按定义域 $\int\lvert f\rvert^{2}d\langle\psi\lvert E\lvert\psi\rangle<\infty$ 理解；
 - **谱的位置**：$\sigma(\hat A)$ 是 $E$ 的**支撑**（每个邻域里 $E\neq0$，这里的 $0$ 是**零算子**）；$E(\{\lambda\})\neq0$ 的点是**点谱**。两条都能证，证明见 [D01](../derivations/D01-spectral-theorem.md) §1.2.1、§1.2.2；
 - **乘法律**：$E(B)E(B')=E(B\cap B')$。**它不是假设**——定义只要"可数可加 + 值是投影"，不交时两投影之和仍是投影，逼出正交，再由拆分得到交集律。**由它还得范数形式** $\lVert g(\hat A)\psi\rVert^{2}=\int\lvert g\rvert^{2}d\mu_\psi$（有界四步、无界截断），§1.2.1 与 §1.2.2 的证明都靠它；
-- **对角化模型**：谱简单时 $\hat A$ 酉等价于"乘以 $\lambda$"——换一组基之后它**只做乘法**，各点互不混合；$f(\hat A)$ 就是乘以 $f(\lambda)$，$E(B)$ 就是乘以指示函数 $\mathbf{1}_B$。**"让 $\hat q$ 对角"的严格含义就是这个。**
+- **对角化模型**：谱简单时 $\hat A$ 酉等价于"乘以 $\lambda$"——换一组基之后它**只做乘法**，各点互不混合；$f(\hat A)$ 就是乘以 $f(\lambda)$，$E(B)$ 就是乘以指示函数 $\mathbf{1}_B$。**"让 $\hat q$ 对角"的严格含义就是这个。** 构造与验证（等距 + 交换性）见 [D01](../derivations/D01-spectral-theorem.md) §1.2 第 4 条；**它是推论，但需要"存在循环矢量"这个前提**——没有它，结论退成直和形式。
 
 **它不给什么**（很重要）：
 

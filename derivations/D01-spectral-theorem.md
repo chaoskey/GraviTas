@@ -19,6 +19,10 @@
 
 ## 1. 谱定理
 
+**记号**：$\mathcal{H}$ 是复希尔伯特空间（后面称"态空间"）；$\psi,\phi\in\mathcal{H}$ 是它的矢量，$\lVert\psi\rVert$ 是范数；$E(B)$ 是 $\mathcal{H}$ 上的正交投影；$D(\hat A)$ 记 $\hat A$ 的定义域；$\mathbb{1}$ 是恒等算子。
+
+**本卡里的 $\psi$ 只是"任意矢量"**，用来定义标量测度 $\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$；**"态"是下游的概念，本卡不预设。**
+
 ### 1.1 陈述
 
 **一句话**：自伴算子可以写成——**把一族互相垂直、合起来是恒等的投影，按取自谱的权重加起来**。
@@ -144,30 +148,59 @@ $$
 
 **这顺便解释了定义域**：$\psi\in D(g(\hat A))$ 当且仅当 $(\ast)$ 的右边有限——**不是额外限制，而是"作用完仍留在 $\mathcal{H}$ 里"的等价说法**。
 
-4. **一个"对角化"模型**——谱简单时，$\hat A$ **酉等价于"乘以 $\lambda$"**：
+4. **一个"对角化"模型**——谱简单时，$\hat A$ **酉等价于"乘以 $\lambda$"**。这是**构造 + 验证**，共五步。
 
-$$
-\bigl(U\hat A\psi\bigr)(\lambda)=\lambda\,(U\psi)(\lambda)
-$$
-
-**换成一句话**：换一组基之后，$\hat A$ 只做**乘法**——输入函数在 $\lambda$ 处的值，只决定输出在 $\lambda$ 处的值，**各点互不混合**。这就是"对角"的含义。
-
-**与有限维对照**：$\hat A=U\,\mathrm{diag}(a_1,\dots,a_n)\,U^{\dagger}$ 里的 $\mathrm{diag}$ 就是"在 $n$ 个点上乘以 $a_i$"；无限维把"$n$ 个点"换成"带测度的谱集"，把对角阵换成"乘以 $\lambda$"。
-
-**"谱简单"是什么意思**：存在**循环矢量** $\psi$，使 $\{f(\hat A)\psi\}$ 稠密；于是
+**① 构造。** 取**循环矢量** $\psi$（使 $\{f(\hat A)\psi\}$ 稠密，$f$ 取有界 Borel 函数），在稠密集上定义
 
 $$
 U\bigl(f(\hat A)\psi\bigr)=f
 $$
 
-是等距的（$\lVert f(\hat A)\psi\rVert^{2}=\int\lvert f\rvert^{2}d\mu_\psi$），稠密加等距即延拓成酉算子。**谱若有重数**（如自旋让能级翻倍），一次换基不够，要直和几份拷贝——那时是"乘以 $\lambda$ 再乘单位矩阵"。
+**② 良定义。** 若 $f(\hat A)\psi=0$，由下面的等距式得 $\lVert f\rVert^{2}_{L^{2}(\mu_\psi)}=0$，故 $f=0$ 几乎处处——**同一个矢量不会对应两个不同的函数**。
+
+**③ 等距。** 由 $(\ast)$ 式（取 $g=f$）：
+
+$$
+\lVert f(\hat A)\psi\rVert^{2}=\int\lvert f(\lambda)\rvert^{2}\,d\mu_\psi(\lambda)
+$$
+
+**稠密 + 等距 ⇒ $U$ 延拓成酉算子** $\mathcal{H}\to L^{2}\bigl(\sigma(\hat A),d\mu_\psi\bigr)$。
+
+**④ 交换性——这一步才是"酉等价"。** 取 $g(\hat A)\psi$（$g$ 有界），由乘法律 $\hat A\,g(\hat A)=(\lambda g)(\hat A)$：
+
+$$
+U\bigl(\hat A\,g(\hat A)\psi\bigr)
+=U\bigl((\lambda g)(\hat A)\psi\bigr)
+=\lambda\,g(\lambda)
+=M_\lambda\bigl(U(g(\hat A)\psi)\bigr)
+$$
+
+**在稠密集上成立；$M_\lambda$ 是闭算子，故 $U\hat A U^{-1}=M_\lambda$ 在整个定义域上成立。**
+
+**⑤ 定义域也跟着换。** 由 $(\ast)$ 式取 $g(\lambda)=\lambda$：
+
+$$
+D(\hat A)\ \longleftrightarrow\ \Bigl\{f:\ \int\lambda^{2}\lvert f(\lambda)\rvert^{2}\,d\mu_\psi(\lambda)<\infty\Bigr\}
+$$
+
+**这就是"对角化"的严格内容**：换一组基之后，$\hat A$ 只做**乘法**——输入函数在 $\lambda$ 处的值，只决定输出在 $\lambda$ 处的值，**各点互不混合**。
+
+**与有限维对照**：$\hat A=U\,\mathrm{diag}(a_1,\dots,a_n)\,U^{\dagger}$ 里的 $\mathrm{diag}$ 就是"在 $n$ 个点上乘以 $a_i$"；无限维把"$n$ 个点"换成"带测度的谱集"，把对角阵换成"乘以 $\lambda$"。
+
+**地位：它是谱定理的推论，但多一个前提。** 前提是**存在循环矢量**（谱简单）。**没有这个前提**，结论退成直和形式：
+
+$$
+\hat A\ \cong\ \bigoplus_iM_\lambda
+\qquad\text{在}\quad\bigoplus_iL^{2}\bigl(\sigma(\hat A),\mu_i\bigr)\ \text{上}
+$$
+
+**直和版不需要循环矢量**，仍是纯推论；**"一次换基就够"才是简单谱带来的细化**。
 
 **为什么这条有用**：在这个模型里，D01 的其余结论都变成"函数上的显然事"——$f(\hat A)$ 是乘以 $f(\lambda)$，$E(B)$ 是乘以指示函数 $\mathbf{1}_B$，$\int dE=\mathbb{1}$ 是"乘以 $1$ 是恒等"。**"让 $\hat q$ 对角"这句话的严格含义，就是这个。**
 
 ### 1.2.1 为什么"谱 = 支撑"
 
 **先把"支撑"说清**。它的**原始定义**是
-
 $$
 \operatorname{supp}E\equiv\mathbb{R}\setminus\bigcup\bigl\{U\ \text{开}:\ E(U)=0\bigr\}
 $$
