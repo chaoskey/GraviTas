@@ -151,7 +151,6 @@ $$
 4. **一个"对角化"模型**——谱简单时，$\hat A$ **酉等价于"乘以 $\lambda$"**。这是**构造 + 验证**，共五步。
 
 **① 构造。** 取**循环矢量** $\psi$（使 $\{f(\hat A)\psi\}$ 稠密，$f$ 取有界 Borel 函数），在稠密集上定义
-
 $$
 U\bigl(f(\hat A)\psi\bigr)=f
 $$
@@ -166,7 +165,7 @@ $$
 
 **稠密 + 等距 ⇒ $U$ 延拓成酉算子** $\mathcal{H}\to L^{2}\bigl(\sigma(\hat A),d\mu_\psi\bigr)$。
 
-**④ 交换性——这一步才是"酉等价"。** 取 $g(\hat A)\psi$（$g$ 有界），由乘法律 $\hat A\,g(\hat A)=(\lambda g)(\hat A)$：
+**④ 交换性——这一步才是"酉等价"。** 取 $g(\hat A)\psi$，其中 $g$ 有界**且 $\lambda g$ 有界**（这样 $\hat A\,g(\hat A)\psi$ 才有定义）。由乘法律 $\hat A\,g(\hat A)=(\lambda g)(\hat A)$：
 
 $$
 U\bigl(\hat A\,g(\hat A)\psi\bigr)
@@ -175,13 +174,21 @@ U\bigl(\hat A\,g(\hat A)\psi\bigr)
 =M_\lambda\bigl(U(g(\hat A)\psi)\bigr)
 $$
 
-**在稠密集上成立；$M_\lambda$ 是闭算子，故 $U\hat A U^{-1}=M_\lambda$ 在整个定义域上成立。**
-
 **⑤ 定义域也跟着换。** 由 $(\ast)$ 式取 $g(\lambda)=\lambda$：
 
 $$
 D(\hat A)\ \longleftrightarrow\ \Bigl\{f:\ \int\lambda^{2}\lvert f(\lambda)\rvert^{2}\,d\mu_\psi(\lambda)<\infty\Bigr\}
 $$
+
+**结论（把 ④ 与 ⑤ 合起来）：酉等价。** 对 $\psi\in D(\hat A)$，
+
+$$
+\bigl(U\hat A\psi\bigr)(\lambda)=\lambda\,(U\psi)(\lambda)
+\qquad\text{即}\qquad
+U\hat A\,U^{-1}=M_\lambda
+$$
+
+**怎样从 ④ 得到它**：④ 已在稠密集（$\lambda g$ 有界的那些 $g$）上成立；该集合是 $M_\lambda$ 的**核心**，而 $M_\lambda$ 与 $U\hat A U^{-1}$ **都是自伴算子**——两个自伴算子在一个核心上相等，就**处处相等**。
 
 **这就是"对角化"的严格内容**：换一组基之后，$\hat A$ 只做**乘法**——输入函数在 $\lambda$ 处的值，只决定输出在 $\lambda$ 处的值，**各点互不混合**。
 
