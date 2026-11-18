@@ -79,9 +79,19 @@ $$
 \langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\,d\mu(\lambda)
 $$
 
-**这里的 $\mu$ 是标量测度（权重），不是 D01 的投影值测度 $E$。** 二者由**同一条式子**相连——取 $g=\mathbf{1}_B$。
+**这里的 $\mu$ 是标量测度（权重），不是 D01 的投影值测度 $E$。** 二者由**同一条式子**相连——取**指示函数** $g=\mathbf{1}_B$。所谓指示函数，是
 
-**先把左边的身份说清**：由 [D01](D01-spectral-theorem.md) §1 的函数演算定义 $f(\hat A)=\int f\,dE$，取 $f=\mathbf{1}_B$ 即得
+$$
+\mathbf{1}_B(\lambda)=
+\begin{cases}
+1, & \lambda\in B\\
+0, & \lambda\notin B
+\end{cases}
+$$
+
+**它只取 $0$、$1$ 两个值，所以有界**——函数演算对它有定义，不需要额外的定义域条件。
+
+**再把左边算出来**：由 [D01](D01-spectral-theorem.md) §1 的函数演算定义 $f(\hat A)=\int f\,dE$，取 $f=\mathbf{1}_B$ 即得
 
 $$
 \mathbf{1}_B(\hat A)=\int\mathbf{1}_B(\lambda)\,dE(\lambda)=E(B)
