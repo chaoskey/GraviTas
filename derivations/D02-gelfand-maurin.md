@@ -61,21 +61,31 @@ $$
 
 （$\hat A$ 在 $\Phi^{\times}$ 上按对偶作用：$\langle\hat A F_\lambda,\phi\rangle=\langle F_\lambda,\hat A\phi\rangle$——**这正是要求 $\hat A$ 把 $\Phi$ 映进 $\Phi$ 的原因**。）
 
-**结论二：完备性。** 存在谱测度 $\mu$，使对**任意 $\phi,\psi\in\Phi$**，
+**结论二：谱分解。** 存在**标量测度** $\mu$ 与那族 $F_\lambda$，使对**任意有界 Borel 函数 $g$**，
 
 $$
-\langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\;d\mu(\lambda)
-\qquad\Longleftrightarrow\qquad
-\mathbb{1}=\int\lvert F_\lambda\rangle\langle F_\lambda\rvert\;d\mu(\lambda)
+g(\hat A)=\int g(\lambda)\,\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)
 $$
 
-**这里的 $\mu$ 是标量测度（权重），不是 D01 的投影值测度 $E$。** 两者的关系是
+**取 $g\equiv1$ 就是完备性**：
+
+$$
+\mathbb{1}=\int\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)
+$$
+
+**它的二次型写法**（对任意 $\phi,\psi\in\Phi$）：
+
+$$
+\langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\,d\mu(\lambda)
+$$
+
+**这里的 $\mu$ 是标量测度（权重），不是 D01 的投影值测度 $E$。** 二者由**同一条式子**相连——取 $g=\mathbf{1}_B$：
 
 $$
 E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)
 $$
 
-也就是说：**$\mu$ 是把 $E$ 的"密度"写成 $\lvert F_\lambda\rangle\langle F_\lambda\rvert$ 的那个权重**。给定 $\hat A$，$E$ 唯一；$\mu$ 与 $\lvert F_\lambda\rangle$ 的尺度可以一起换（见边界第 3 条）。
+**所以完备性、$E(B)$ 与一般的 $g(\hat A)$ 是同一个定理在三个 $g$ 上的取值**（$g\equiv1$、$g=\mathbf{1}_B$、一般 $g$），**地位相同，不是谁推谁**。给定 $\hat A$，$E$ 唯一；$\mu$ 与 $\lvert F_\lambda\rangle$ 的尺度可以一起换（见边界第 3 条）。
 
 **括号 $\langle\phi\lvert F_\lambda\rangle$ 是配对，不是内积**：$\phi\in\Phi$、$F_\lambda\in\Phi^{\times}$，它表示 $\lvert F_\lambda\rangle$ 作用在 $\phi$ 上，**不是 $\mathcal{H}$ 的内积**。
 
@@ -109,4 +119,4 @@ $$
 - [ ] 解释为什么连续谱时"Hilbert 空间里没有本征矢"
 - [ ] 用"求值泛函"说明 $\lvert q\rangle$ 为什么不在 $\mathcal{H}$ 里
 - [ ] 说明核空间条件为什么不可省
-- [ ] 说明两条结论分别给"存在性"与"完备性"，以及为什么完备性只对 $\Phi$ 成立
+- [ ] 说明两条结论分别给"存在性"与"谱分解"，并说清完备性、$E(B)$、一般 $g(\hat A)$ 是同一个公式的三个特例

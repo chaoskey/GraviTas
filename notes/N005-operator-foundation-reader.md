@@ -136,7 +136,7 @@ $$
 \hat A F_\lambda=\lambda F_\lambda
 $$
 
-**结论二：完备性。** 存在谱测度 $\mu$，使对**任意 $\phi,\psi\in\Phi$**，
+**结论二：谱分解。** 存在标量测度 $\mu$ 与那族 $F_\lambda$，使对任意有界 Borel $g$：$g(\hat A)=\int g(\lambda)\lvert F_\lambda\rangle\langle F_\lambda\rvert d\mu$。**取 $g\equiv1$ 得完备性**，取 $g=\mathbf{1}_B$ 得 $E(B)$——**三个 $g$ 是同一个公式，不是谁推谁。** 完备性的二次型写法（对**任意 $\phi,\psi\in\Phi$**）：
 
 $$
 \langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\;d\mu(\lambda)
