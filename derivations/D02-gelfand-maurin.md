@@ -15,6 +15,8 @@
 
 **但 $\lvert q\rangle$ 不是错，是它住在别处。** 要给它一个合法的住处，就得把空间扩大。
 
+**为什么不能从 D01 直接推出。** D01 给的是**抽象**的投影值测度 $E$；它不保证 $E$ 有密度 $\lvert F_\lambda\rangle\langle F_\lambda\rvert$，更不保证有本征矢——连续谱时 $\mathcal{H}$ 里根本没有。**这两样都要另外的定理，不是换积分符号能换出来的。**
+
 ---
 
 ## 1. 需要什么：三层空间
@@ -61,22 +63,26 @@ $$
 
 （$\hat A$ 在 $\Phi^{\times}$ 上按对偶作用：$\langle\hat A F_\lambda,\phi\rangle=\langle F_\lambda,\hat A\phi\rangle$——**这正是要求 $\hat A$ 把 $\Phi$ 映进 $\Phi$ 的原因**。）
 
-**结论二：谱分解。** 存在**标量测度** $\mu$ 与那族 $F_\lambda$，使对**任意有界 Borel 函数 $g$**，
+**结论二：谱分解。** 存在**标量测度** $\mu$ 与一族 $F_{\lambda,i}\in\Phi^{\times}$（下标 $i$ 跑遍该点的重数），使对**任意有界 Borel 函数 $g$**，
 
 $$
-g(\hat A)=\int g(\lambda)\,\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)
+g(\hat A)=\int g(\lambda)\,P(\lambda)\,d\mu(\lambda),
+\qquad
+P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert
 $$
+
+**谱简单时只有一项**：$P(\lambda)=\lvert F_\lambda\rangle\langle F_\lambda\rvert$。**本卡其余部分都按这个简单情形写**，重数情形见边界第 4 条。
 
 **取 $g\equiv1$ 就是完备性**：
 
 $$
-\mathbb{1}=\int\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)
+\mathbb{1}=\int P(\lambda)\,d\mu(\lambda)
 $$
 
 **它的二次型写法**（对任意 $\phi,\psi\in\Phi$）：
 
 $$
-\langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\,d\mu(\lambda)
+\langle\phi\lvert\psi\rangle=\int\sum_i\langle\phi\lvert F_{\lambda,i}\rangle\,\langle F_{\lambda,i}\lvert\psi\rangle\,d\mu(\lambda)
 $$
 
 **这里的 $\mu$ 是标量测度（权重），不是 D01 的投影值测度 $E$。** 二者由**同一条式子**相连——取**指示函数** $g=\mathbf{1}_B$。所谓指示函数，是
@@ -102,8 +108,10 @@ $$
 于是取 $g=\mathbf{1}_B$ 得
 
 $$
-E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)
+E(B)=\int_B P(\lambda)\,d\mu(\lambda)
 $$
+
+**谱简单时就是** $E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)$。
 
 **所以完备性、$E(B)$ 与一般的 $g(\hat A)$ 是同一个定理在三个 $g$ 上的取值**（$g\equiv1$、$g=\mathbf{1}_B$、一般 $g$），**地位相同，不是谁推谁**。给定 $\hat A$，$E$ 唯一；$\mu$ 与 $\lvert F_\lambda\rangle$ 的尺度可以一起换（见边界第 3 条）。
 
@@ -128,7 +136,7 @@ $$
 1. **非自伴算子全都没有。** 谱定理要求自伴；非自伴只有"谱"这个较弱的对象，没有投影值测度，也没有广义本征矢系。这是整套量子力学要求可观测量自伴的**数学**理由，而不只是习惯。
 2. **核性不可省。** 换成一般的稠密子空间，Gelfand–Maurin 可能失效。所以"随便找个稠密子空间就能定义 $\lvert q\rangle$"是错的。
 3. **归一化依赖谱测度密度。** 若 $d\mu=\rho(q)\,dq$，则 $\langle q\lvert q'\rangle=\delta(q-q')/\rho(q)$。平直空间 $\rho=1$，弯曲空间 $\rho=\sqrt{g}$——**这是弯曲空间里测度因子的数学出处**。
-4. **重数大于 1 时要加标签。** 本征矢写成 $F_{\lambda,i}$，完备性多一个 $\sum_i$，归一化变成 $\delta_{ij}$。物理上就是自旋、味道、超选扇区。
+4. **重数大于 1 时要加标签。** 主陈述里的 $P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert$ 就是为此准备的：一个 $F_\lambda$ 覆盖不了重数，必须按本征子空间逐项相加，归一化变成 $\delta_{ij}$。物理上就是自旋、味道、超选扇区。
 5. **这张卡不做证明。** 本仓库不重推泛函分析；能推的是"给定这些定理，物理结论如何落地"。**引用与证明的界限要一直守住**。
 
 ---
@@ -140,3 +148,4 @@ $$
 - [ ] 用"求值泛函"说明 $\lvert q\rangle$ 为什么不在 $\mathcal{H}$ 里
 - [ ] 说明核空间条件为什么不可省
 - [ ] 说明两条结论分别给"存在性"与"谱分解"，并说清完备性、$E(B)$、一般 $g(\hat A)$ 是同一个公式的三个特例
+- [ ] 说出为什么 D02 不能由 D01 推出，以及 $P(\lambda)$ 里的 $\sum_i$ 是为哪种情形准备的

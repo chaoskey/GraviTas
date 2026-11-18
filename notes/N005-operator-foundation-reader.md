@@ -110,7 +110,7 @@ $$
 
 ### 2.2 核空间谱定理（[D02](../derivations/D02-gelfand-maurin.md)）
 
-**问题**：谱定理给"一族**投影**"，我们要"一族**矢**"。**矢不在 $\mathcal{H}$ 里**——连续谱时 $E(\{q\})=0$，得给 $\lvert q\rangle$ 另找一个住处。
+**问题**：谱定理给"一族**投影**"，我们要"一族**矢**"——**这不是换记号能得到的**：抽象 $E$ 不保证有密度 $\lvert F_\lambda\rangle\langle F_\lambda\rvert$，更不保证有本征矢，必须换空间并引用另一条定理。**矢不在 $\mathcal{H}$ 里**——连续谱时 $E(\{q\})=0$，得给 $\lvert q\rangle$ 另找一个住处。
 
 **三层空间**：
 
@@ -136,7 +136,7 @@ $$
 \hat A F_\lambda=\lambda F_\lambda
 $$
 
-**结论二：谱分解。** 存在标量测度 $\mu$ 与那族 $F_\lambda$，使对任意有界 Borel $g$：$g(\hat A)=\int g(\lambda)\lvert F_\lambda\rangle\langle F_\lambda\rvert d\mu$。**取 $g\equiv1$ 得完备性**，取 $g=\mathbf{1}_B$ 得 $E(B)$——**三个 $g$ 是同一个公式，不是谁推谁。** 完备性的二次型写法（对**任意 $\phi,\psi\in\Phi$**）：
+**结论二：谱分解。** 存在标量测度 $\mu$ 与那族 $F_\lambda$，使对任意有界 Borel $g$：$g(\hat A)=\int g(\lambda)\lvert F_\lambda\rangle\langle F_\lambda\rvert d\mu$。**取 $g\equiv1$ 得完备性**，取 $g=\mathbf{1}_B$ 得 $E(B)$——**三个 $g$ 是同一个公式，不是谁推谁**；有重数时 $P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert$ 代替单个 $\lvert F_\lambda\rangle\langle F_\lambda\rvert$。 完备性的二次型写法（对**任意 $\phi,\psi\in\Phi$**）：
 
 $$
 \langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\;d\mu(\lambda)
