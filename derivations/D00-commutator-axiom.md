@@ -2,7 +2,7 @@
 
 > 建档 2026-11-07 · 类型：**公理卡**——整个网格的输入，不是推导
 > 上游：无（只用定义与标准谱论事实，不依赖网格中任何卡片）
-> 下游：[D02](D02-born-rule.md)、[D07](D07-commutator-p-fq.md)、[D08](D08-diagonal-criterion.md)、[D14](D14-weyl-phase.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D19](D19-momentum-representation.md)、[D20](D20-hamiltonian.md)、[D21](D21-path-integral-representation.md)、[D25](D25-uncertainty.md)
+> 下游：[D01](D01-spectral-theorem.md)、[D02](D02-gelfand-maurin.md)、[D03](D03-born-rule.md)、[D08](D08-commutator-p-fq.md)、[D09](D09-diagonal-criterion.md)、[D15](D15-weyl-phase.md)、[D17](D17-translation.md)、[D18](D18-qp-overlap.md)、[D20](D20-momentum-representation.md)、[D21](D21-hamiltonian.md)、[D22](D22-path-integral-representation.md)、[D26](D26-uncertainty.md)
 > 编号规则见 [derivations/README](README.md)：D00 保留给公理，D01 起按拓扑序。
 
 ---
@@ -48,11 +48,11 @@ $$
 
 ## 1. 接口约定：可观测量对应自伴算子
 
-**物理要求测量读数是实数。数学上，自伴算子保证两件事：谱落在实轴（读数是实数），且存在谱分解（每个事件对应一个投影）——后者才是概率能定义的前提。** 于是本网格接受一条**接口约定**：
+**物理要求测量读数是实数。数学上，自伴算子保证两件事：谱落在实轴（读数是实数），且存在谱分解（每个事件对应一个投影）。** 于是本网格接受一条**接口约定**：
 
 > **可观测量 $\leftrightarrow$ 自伴算子。**
 
-这不是本卡推出的，也不是任何卡能推出的——它是量子力学与数学之间的**接口**。**本网格把它当定义接受，不再追问。**
+这不是本卡推出的，也不是任何卡能推出的——它是量子力学与数学之间的**接口**：数学那边，自伴算子保证**谱为实数**，并进一步提供**谱分解**（投影值测度）与**酉演化**（Stone 定理），后两点属下游；物理这边，要求测量读数均为实数。**本网格把它当定义接受，不再追问。**
 
 ---
 

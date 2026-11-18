@@ -1,8 +1,8 @@
-# D04 · 归一化：$\langle q\lvert q'\rangle=\delta(q-q')$
+# D05 · 归一化：$\langle q\lvert q'\rangle=\delta(q-q')$
 
 > 建档 2026-11-07 · 类型：**定理卡**——$\langle q\lvert q'\rangle$ 就是"恒等算子的核"，本卡把它写出来
-> 上游：[D01](D01-spectral-theorem.md)（谱定理、求值泛函 $\langle q\lvert\psi\rangle=\psi(q)$）、[D03](D03-position-eigen-equation.md)（密度形式，权重 $w=1$）
-> 下游：[D05](D05-functional-calculus.md)、[D06](D06-trace.md)、[D08](D08-diagonal-criterion.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)
+> 上游：[D01](D01-spectral-theorem.md)（谱定理、求值泛函 $\langle q\lvert\psi\rangle=\psi(q)$）、[D04](D04-position-eigen-equation.md)（密度形式，权重 $w=1$）
+> 下游：[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D17](D17-translation.md)、[D18](D18-qp-overlap.md)、[D19](D19-p-completeness.md)
 
 ---
 
@@ -18,9 +18,9 @@ $$
 |---|---|---|
 | 核 $K_A$ 的定义 | **定义** | §1 |
 | $K_{\mathbb{1}}=\delta$ | 由完备性（$w=1$）唯一确定 | §2 |
-| $\lvert q\rangle$ 的尺度 | **约定** | [D03](D03-position-eigen-equation.md) §1.2 |
+| $\lvert q\rangle$ 的尺度 | **约定** | [D04](D04-position-eigen-equation.md) §1.2 |
 
-**唯一的一次约定在 D03**：取密度形式，等价于完备性的权重 $w=1$。**本卡承接它，不另立约定。**
+**唯一的一次约定在 D04**：取密度形式，等价于完备性的权重 $w=1$。**本卡承接它，不另立约定。**
 
 ---
 
@@ -51,7 +51,7 @@ $$
 
 ## 2. 由完备性定出 $K_{\mathbb{1}}=\delta$
 
-**第一步：完备性给内积。** [D03](D03-position-eigen-equation.md) §1.4 已取定权重 $w=1$：
+**第一步：完备性给内积。** [D04](D04-position-eigen-equation.md) §1.4 已取定权重 $w=1$：
 
 $$
 \int dq\,\lvert q\rangle\langle q\rvert=\mathbb{1}
@@ -102,7 +102,7 @@ $$
 
 **两者一起换，物理不变**：只改中间步骤的系数，不改任何可观测的预言。
 
-**[D03](D03-position-eigen-equation.md) §1.2 已经把密度形式取定**（相当于 $w=1$），所以本卡不再有自由度：只剩 $\lvert\lambda\rvert=1$ 的相位，$\delta$ 不变。
+**[D04](D04-position-eigen-equation.md) §1.2 已经把密度形式取定**（相当于 $w=1$），所以本卡不再有自由度：只剩 $\lvert\lambda\rvert=1$ 的相位，$\delta$ 不变。
 
 ---
 
@@ -112,7 +112,7 @@ $$
 |---|---|
 | $E$ 是投影值测度 | $K_{E(B)}=\mathbf{1}_B K_{\mathbb{1}}$，故不交的 $B,B'$ 给 $K=\mathbf{1}_B\mathbf{1}_{B'}\delta=0$ ✅ |
 | $\hat q$ 的本征方程 | $K_{\hat q}=qK_{\mathbb{1}}$，即"乘以 $q$"，正是 $\hat q\lvert q\rangle=q\lvert q\rangle$ ✅ |
-| 与 D03 的完备性 | $K_{\mathbb{1}}=\delta$ 与 $\int\lvert q\rangle\langle q\rvert dq=\mathbb{1}$ 是同一句话的两种写法 ✅ |
+| 与 D04 的完备性 | $K_{\mathbb{1}}=\delta$ 与 $\int\lvert q\rangle\langle q\rvert dq=\mathbb{1}$ 是同一句话的两种写法 ✅ |
 
 ---
 

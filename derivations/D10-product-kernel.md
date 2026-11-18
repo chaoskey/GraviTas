@@ -1,7 +1,7 @@
-# D09 · 乘积的核：插入完备性
+# D10 · 乘积的核：插入完备性
 
 > 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)
-> 下游：[D21](D21-path-integral-representation.md)
+> 下游：[D22](D22-path-integral-representation.md)
 > 原为 [N003 §3.3](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 
 ---

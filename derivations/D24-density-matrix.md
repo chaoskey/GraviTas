@@ -1,7 +1,7 @@
-# D23 · 密度矩阵与配分函数
+# D24 · 密度矩阵与配分函数
 
-> 建档 2026-11-08 · 上游：[D06](D06-trace.md)（迹）、[D20](D20-hamiltonian.md)（$\hat H$）、[D22](D22-trace-is-loop.md)（迹即闭合路径）
-> 下游：[D24](D24-temperature-period.md)、[D26](D26-energy-basis.md)
+> 建档 2026-11-08 · 上游：[D07](D07-trace.md)（迹）、[D21](D21-hamiltonian.md)（$\hat H$）、[D23](D23-trace-is-loop.md)（迹即闭合路径）
+> 下游：[D25](D25-temperature-period.md)、[D27](D27-energy-basis.md)
 > 本卡补的是"纯态之外"的那一半：热平衡与混合态。
 
 ---
@@ -49,7 +49,7 @@ $$
 |---|---|
 | 正定 | $\rho\ge0$、$\mathrm{Tr}\rho=1$ |
 | 纯态判据 | 纯 $\iff$ $\mathrm{Tr}\rho^{2}=1$；混合则 $<1$ |
-| 期望值 | $\langle\hat A\rangle=\mathrm{Tr}(\rho\hat A)$——与 [D02](D02-born-rule.md) 的公式在纯态时一致 |
+| 期望值 | $\langle\hat A\rangle=\mathrm{Tr}(\rho\hat A)$——与 [D03](D03-born-rule.md) 的公式在纯态时一致 |
 | 演化 | $\rho(t)=U(t)\rho(0)U(t)^{\dagger}$ |
 
 **第三条是关键**：它把 Born 规则推广到混合态，形式从"$\langle\psi\lvert\hat A\lvert\psi\rangle$"变成"$\mathrm{Tr}(\rho\hat A)$"——**同一个东西的两种写法**（纯态时 $\rho$ 是一维投影）。
@@ -72,7 +72,7 @@ $Z$ 是所有热力学量的母函数：
 
 ## 4. 与路径积分的接口
 
-由 [D22](D22-trace-is-loop.md)：
+由 [D23](D23-trace-is-loop.md)：
 
 $$
 Z=\mathrm{Tr}\,e^{-\beta\hat H}=\oint_{q(0)=q(\beta)}\mathcal{D}q\;e^{-S_E[q]}

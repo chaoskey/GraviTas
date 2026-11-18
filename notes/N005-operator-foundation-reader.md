@@ -1,6 +1,6 @@
 # N005 · 单粒子量子力学的算子地基
 
-> 写于 2026-11-08 · 关联：全部 27 张推导卡片（[D00](../derivations/D00-commutator-axiom.md)–[D26](../derivations/D26-energy-basis.md)），网格见 [derivations/README](../derivations/README.md)
+> 写于 2026-11-08 · 关联：全部 27 张推导卡片（[D00](../derivations/D00-commutator-axiom.md)–[D27](../derivations/D27-energy-basis.md)），网格见 [derivations/README](../derivations/README.md)
 > 目标：把网格里的**所有结论**用白话讲一遍。**不证**——证明在卡片里，这里只讲"它在说什么""它用在哪""坑在哪"。
 > 用途：读完这一页，应当能独立复述每一条结论，并知道去哪找它的证明。
 > 约定：$\hbar=1$、$k_{\mathrm{B}}=1$；$[\hat q,\hat p]=i$；$q$ 既是坐标也是本征值，需要第二个位置标签时用 $q'$。
@@ -13,11 +13,11 @@
 
 **四层结构**：
 
-- **公理**：D00 对易关系（附：谱与自伴的定义、接口约定）；D02 态与 Born 规则。
-- **地基**：D01 谱定理 → D03 位置本征方程 → D04 归一化；另有 D02 Born 规则、D05 函数演算、D06 迹、D15 唯一性。
-- **代数**：D07 对易子 → D10 Hadamard → D11 两项截断 → D12 交换相位 → D13 三条 BCH；另有 D08 对角判据、D09 乘积的核、D25 不确定关系。
-- **表象**：D14 Weyl 相位 → D16 平移 → D17 平面波 → D18 动量完备性 → D19 动量表象。
-- **统计**：D20 Hamiltonian → D21 路径积分 → D22 迹即闭合路径 → D23 密度矩阵与配分函数 → D26 能级展开 → D24 温度即周期倒数。
+- **公理**：D00 对易关系（附：谱与自伴的定义、接口约定）；D03 态与 Born 规则。
+- **地基**：D01 谱定理 → D02 核空间谱定理 → D04 位置本征方程 → D05 归一化；另有 D03 Born 规则、D06 函数演算、D07 迹、D16 唯一性。
+- **代数**：D08 对易子 → D11 Hadamard → D12 两项截断 → D13 交换相位 → D14 三条 BCH；另有 D09 对角判据、D10 乘积的核、D26 不确定关系。
+- **表象**：D15 Weyl 相位 → D17 平移 → D18 平面波 → D19 动量完备性 → D20 动量表象。
+- **统计**：D21 Hamiltonian → D22 路径积分 → D23 迹即闭合路径 → D24 密度矩阵与配分函数 → D27 能级展开 → D25 温度即周期倒数。
 
 **读法**：每一节先给一句白话，再给式子，再给"卡片出处"。**卡片的编号即拓扑序**——任何一张的输入都比它自己小。
 
@@ -39,7 +39,7 @@ $$
 
 **它有严格版本**，叫 Weyl 关系（见 §4.1）：指数化之后两边都是有界算子，避开无界算子的定义域麻烦。**两个方向不对称**：Weyl 能推出对易子，反过来不行（除非再补"自伴 + 公共不变域 + 强连续"）。
 
-### 1.2 态与测量：Born 规则（[D02](../derivations/D02-born-rule.md)）
+### 1.2 态与测量：Born 规则（[D03](../derivations/D03-born-rule.md)）
 
 **先把态写成一个矢量**：$\lvert\psi\rangle$，取单位长 $\langle\psi\lvert\psi\rangle=1$。**这不是最终答案**——本节末尾会说明，它只是"射线"挑出来的代表元。
 
@@ -65,7 +65,7 @@ $$
 **两条推论**：
 
 - **概率归一**：$E(\mathbb{R})=\mathbb{1}$，故 $p(\mathbb{R})=1$；
-- **本征态必得本征值**：$\hat A\lvert\psi\rangle=a\lvert\psi\rangle$ 时 $\langle\hat A\rangle=a$、$\langle\hat A^{2}\rangle=a^{2}$，方差为零，故 $p(\{a\})=1$（七步推导见 [D02](../derivations/D02-born-rule.md) §4）——**点谱**才成立（连续谱时 $E(\{q\})=0$）。矢量式与数值式等价：$E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle \iff \langle\psi\lvert E(\{a\})\lvert\psi\rangle=1$。
+- **本征态必得本征值**：$\hat A\lvert\psi\rangle=a\lvert\psi\rangle$ 时 $\langle\hat A\rangle=a$、$\langle\hat A^{2}\rangle=a^{2}$，方差为零，故 $p(\{a\})=1$（七步推导见 [D03](../derivations/D03-born-rule.md) §4）——**点谱**才成立（连续谱时 $E(\{q\})=0$）。矢量式与数值式等价：$E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle \iff \langle\psi\lvert E(\{a\})\lvert\psi\rangle=1$。
 
 **它不管什么**：不管"为什么是概率"、不管坍缩。坍缩（测量后态变成 $E(B)\lvert\psi\rangle/\sqrt{p}$）是**额外**假设，不用它也能算期望值。
 
@@ -73,7 +73,7 @@ $$
 
 ## 2. 地基：让算子"可算"
 
-### 2.1 谱定理（[D01](../derivations/D01-spectral-theorem.md) §1）
+### 2.1 谱定理（[D01](../derivations/D01-spectral-theorem.md)）
 
 **白话**：任何一个自伴算子，都能拆成一族**互相垂直的投影**，权重是它的谱。
 
@@ -94,9 +94,9 @@ $$
 **它还给四样东西**（下游天天用）：
 
 - **函数演算**：$f(\hat A)=\int f(\lambda)\,dE(\lambda)$——把谱上的 $\lambda$ 换成 $f(\lambda)$；$f$ 无界时按定义域 $\int\lvert f\rvert^{2}d\langle\psi\lvert E\lvert\psi\rangle<\infty$ 理解；
-- **谱的位置**：$\sigma(\hat A)$ 是 $E$ 的**支撑**（每个邻域里 $E\neq0$，这里的 $0$ 是**零算子**）；$E(\{\lambda\})\neq0$ 的点是**点谱**。两条都能证，证明见 [D01](../derivations/D01-spectral-theorem.md) §1.2.1、§1.2.2；
-- **乘法律**：$E(B)E(B')=E(B\cap B')$。**它不是假设**——定义只要"可数可加 + 值是投影"，不交时两投影之和仍是投影，逼出正交，再由拆分得到交集律。**由它还得范数形式** $\lVert g(\hat A)\psi\rVert^{2}=\int\lvert g\rvert^{2}d\mu_\psi$（有界四步、无界截断），§1.2.1 与 §1.2.2 的证明都靠它；
-- **对角化模型**：谱简单时 $\hat A$ 酉等价于"乘以 $\lambda$"——换一组基之后它**只做乘法**，各点互不混合；$f(\hat A)$ 就是乘以 $f(\lambda)$，$E(B)$ 就是乘以指示函数 $\mathbf{1}_B$。**"让 $\hat q$ 对角"的严格含义就是这个。** 构造与验证（等距 + 交换性 + 定义域）见 [D01](../derivations/D01-spectral-theorem.md) §1.2 第 4 条，结论就是 $(U\hat A\psi)(\lambda)=\lambda(U\psi)(\lambda)$；**它是推论，但需要"存在循环矢量"这个前提**——没有它，结论退成直和形式。
+- **谱的位置**：$\sigma(\hat A)$ 是 $E$ 的**支撑**（每个邻域里 $E\neq0$，这里的 $0$ 是**零算子**）；$E(\{\lambda\})\neq0$ 的点是**点谱**。两条都能证，证明见 [D01](../derivations/D01-spectral-theorem.md) §2、§3；
+- **乘法律**：$E(B)E(B')=E(B\cap B')$。**它不是假设**——定义只要"可数可加 + 值是投影"，不交时两投影之和仍是投影，逼出正交，再由拆分得到交集律。**由它还得范数形式** $\lVert g(\hat A)\psi\rVert^{2}=\int\lvert g\rvert^{2}d\mu_\psi$（有界四步、无界截断），[D01](../derivations/D01-spectral-theorem.md) §2 与 §3 的证明都靠它；
+- **对角化模型**：谱简单时 $\hat A$ 酉等价于"乘以 $\lambda$"——换一组基之后它**只做乘法**，各点互不混合；$f(\hat A)$ 就是乘以 $f(\lambda)$，$E(B)$ 就是乘以指示函数 $\mathbf{1}_B$。**"让 $\hat q$ 对角"的严格含义就是这个。** 构造与验证（构造 $U_0$、等距、连续延拓、验证乘法）见 [D01](../derivations/D01-spectral-theorem.md) §5，结论就是 $(U\hat A\psi)(\lambda)=\lambda(U\psi)(\lambda)$；**它是推论，但需要"存在循环矢量"这个前提**——没有它，结论退成直和形式。
 
 **它不给什么**（很重要）：
 
@@ -108,7 +108,7 @@ $$
 
 **顺手一句**：定义域那串条件不是物理，只是"权重太大会发散，定义域要挑"——**收敛性的记账**。
 
-### 2.2 核空间谱定理（[D01](../derivations/D01-spectral-theorem.md) §2）
+### 2.2 核空间谱定理（[D02](../derivations/D02-gelfand-maurin.md)）
 
 **问题**：谱定理给"一族**投影**"，我们要"一族**矢**"。**矢不在 $\mathcal{H}$ 里**——连续谱时 $E(\{q\})=0$，得给 $\lvert q\rangle$ 另找一个住处。
 
@@ -149,11 +149,11 @@ $$
 **两点要看清**：
 
 - $F_\lambda$ 住在 $\Phi^{\times}$，**不在 $\mathcal{H}$ 里**——这才是"广义"二字的全部含义；
-- $\mu$ 是**谱测度**，不一定是 Lebesgue。把它选成 $dq$ 是后来的约定（[D03](../derivations/D03-position-eigen-equation.md) §1.2）。
+- $\mu$ 是**谱测度**，不一定是 Lebesgue。把它选成 $dq$ 是后来的约定（[D04](../derivations/D04-position-eigen-equation.md) §1.2）。
 
 **一句话记住三层**：$\lvert q\rangle$ 是**"取值"这个动作的严格化身**。
 
-### 2.3 位置本征方程（[D03](../derivations/D03-position-eigen-equation.md)）
+### 2.3 位置本征方程（[D04](../derivations/D04-position-eigen-equation.md)）
 
 **白话**：把 2.2 的定理取 $\hat q$，就得到位置基。**位置基的"三件套"里有两条出在本卡**：
 
@@ -167,29 +167,29 @@ $$
 
 **证明三步**：
 
-1. 取 $\hat A=\hat q$、$F_\lambda=\lvert q\rangle$、$\lambda=q$——本征方程与完备性（带 $d\mu$）立刻落下（D03 §1.1）；
-2. **选择**密度形式 $dE(q)=dq\,\lvert q\rangle\langle q\rvert$——这一步同时把 $d\mu$ 定成 $dq$，等价于固定 $\lvert q\rangle$ 的尺度（D03 §1.2）；
-3. 代入谱定理 $\hat q=\int q\,dE(q)$，得算子式（D03 §1.3）。
+1. 取 $\hat A=\hat q$、$F_\lambda=\lvert q\rangle$、$\lambda=q$——本征方程与完备性（带 $d\mu$）立刻落下（D04 §1.1）；
+2. **选择**密度形式 $dE(q)=dq\,\lvert q\rangle\langle q\rvert$——这一步同时把 $d\mu$ 定成 $dq$，等价于固定 $\lvert q\rangle$ 的尺度（D04 §1.2）；
+3. 代入谱定理 $\hat q=\int q\,dE(q)$，得算子式（D04 §1.3）。
 
-**归属**：本征方程在 §1.1；算子式在 §1.3；完备性在 §1.1（$d\mu$ 版）与 §1.4（$dq$ 版）。正交归一的系数属于 [D04](../derivations/D04-normalization-convention.md)。**完备性不在 D04，别去那里找。**
+**归属**：本征方程在 §1.1；算子式在 §1.3；完备性在 §1.1（$d\mu$ 版）与 §1.4（$dq$ 版）。正交归一的系数属于 [D05](../derivations/D05-normalization-convention.md)。**完备性不在 D05，别去那里找。**
 
 **关键在于第 2 步是"选择"**：定理给的只是 $d\mu$，密度形式是我们挑的。
 
-### 2.4 归一化（[D04](../derivations/D04-normalization-convention.md)）
+### 2.4 归一化（[D05](../derivations/D05-normalization-convention.md)）
 
 $$
 \langle q\lvert q'\rangle=\delta(q-q')
 $$
 
-**完备性那一半在 §2.3**（属于 D03），本节不重复。这里只把核写出来：**$\langle q\lvert q'\rangle$ 就是恒等算子的核**。
+**完备性那一半在 §2.3**（属于 D04），本节不重复。这里只把核写出来：**$\langle q\lvert q'\rangle$ 就是恒等算子的核**。
 
 **核的定义**：$A$ 的核 $K_A$ 由 $\langle\phi\lvert A\lvert\psi\rangle=\iint\overline{\phi(q)}K_A(q,q')\psi(q')dq\,dq'$ 给出。三个例子：$K_{\mathbb{1}}=\delta$、$K_{\hat q}=q\delta$、$K_{E(B)}=\mathbf{1}_B\delta$。
 
 **由完备性（$w=1$）得 $K_{\mathbb{1}}=\delta$**：完备性给 $\langle\phi\lvert\psi\rangle=\int\overline{\phi}\psi\,dq$，与核的定义式对所有 $\phi,\psi$ 比较，核被唯一确定。
 
-**唯一的自由度是尺度**：$\lvert q\rangle\to\lambda\lvert q\rangle$ 时 $\langle q\lvert q'\rangle\to\lvert\lambda\rvert^{2}\delta$，同时权重 $w\to w/\lvert\lambda\rvert^{2}$；两者一起换，物理不变。**D03 已取 $w=1$，所以本卡没有自由度。**
+**唯一的自由度是尺度**：$\lvert q\rangle\to\lambda\lvert q\rangle$ 时 $\langle q\lvert q'\rangle\to\lvert\lambda\rvert^{2}\delta$，同时权重 $w\to w/\lvert\lambda\rvert^{2}$；两者一起换，物理不变。**D04 已取 $w=1$，所以本卡没有自由度。**
 
-**所以 D04 是定理卡，不是约定卡**：唯一的那次约定（尺度）在 [D03](../derivations/D03-position-eigen-equation.md) §1.2。
+**所以 D05 是定理卡，不是约定卡**：唯一的那次约定（尺度）在 [D04](../derivations/D04-position-eigen-equation.md) §1.2。
 
 **系数与权重必须一起改**（否则 $w\,c=1$ 不成立）。两套常用方案：
 
@@ -200,7 +200,7 @@ $$
 
 **混用必错**，且错得不显眼（只差 $\sqrt{2\pi}$ 的因子）。
 
-### 2.5 函数演算（[D05](../derivations/D05-functional-calculus.md)）
+### 2.5 函数演算（[D06](../derivations/D06-functional-calculus.md)）
 
 **白话**：把函数作用在算子上，就是"**把谱上的 $\lambda$ 换成 $f(\lambda)$**"。
 $$
@@ -231,7 +231,7 @@ $$
 
 **两个定义为什么一致（这是定理，不是定义的复述）**：
 
-- **第一步**：多项式上逐项相等——由矩性质 $\int\lambda^{n}dE=\hat A^{n}$（乘方只落在权重上，就是 [D01](../derivations/D01-spectral-theorem.md) §1.2 第 1 条的 $f$ 公式取 $f(\lambda)=\lambda^{n}$；[D05](../derivations/D05-functional-calculus.md) §1.4 把它推广到一般函数）；
+- **第一步**：多项式上逐项相等——由矩性质 $\int\lambda^{n}dE=\hat A^{n}$（乘方只落在权重上，就是 [D01](../derivations/D01-spectral-theorem.md) §1 的 $f$ 公式取 $f(\lambda)=\lambda^{n}$；[D06](../derivations/D06-functional-calculus.md) §1.4 把它推广到一般函数）；
 - **第二步**：有界函数演算**保范** $\lVert\int g\,dE\rVert=\sup_{\sigma}\lvert g\rvert$，故"谱上一致收敛"传到"算子范数收敛"。
 
 **部分和恒等 + 两边都收敛 ⇒ 极限相同。** 缺"保范"传不过去，缺"逐项相等"起点就断。
@@ -246,7 +246,7 @@ $$
 
 **前提是 $\hat A$ 自伴**。非自伴没有谱定理，只有 Dunford 演算——**这就是量子力学要求可观测量自伴的数学理由**。
 
-### 2.6 迹（[D06](../derivations/D06-trace.md)）
+### 2.6 迹（[D07](../derivations/D07-trace.md)）
 
 **白话**：迹就是"对角元之和"，而且**跟选哪组基无关**。
 
@@ -264,7 +264,7 @@ $$
 
 ---
 
-### 2.7 表示唯一性（[D15](../derivations/D15-stone-von-neumann.md)）
+### 2.7 表示唯一性（[D16](../derivations/D16-stone-von-neumann.md)）
 
 **白话**：给定 $[\hat q,\hat p]=i$，有限自由度下"位置与动量算子"**只有一套**——差一个换基。
 
@@ -274,13 +274,13 @@ $$
 - **不可约**：不能拆开（可约 = 几份拷贝堆在一起）；
 - **酉等价**：差一个保长度的换基，物理一样。
 
-**它意味着**：$\hat q\to q$、$\hat p\to-i\partial_q$ 不是"挑了个方便的"，是**唯一**的选择（差等价）。所以 D17 的平面波是**定理**不是约定。
+**它意味着**：$\hat q\to q$、$\hat p\to-i\partial_q$ 不是"挑了个方便的"，是**唯一**的选择（差等价）。所以 D18 的平面波是**定理**不是约定。
 
 **它何时失效**：无穷自由度（量子场论）——表示不唯一，Fock 只是一个选择，真空/热态/$\theta$ 真空互不等价。
 
 ## 3. 算子代数：算子的"四则运算"
 
-### 3.1 对易子公式（[D07](../derivations/D07-commutator-p-fq.md)）
+### 3.1 对易子公式（[D08](../derivations/D08-commutator-p-fq.md)）
 
 $$
 \bigl[\hat p,f(\hat q)\bigr]=-i\,f'(\hat q)
@@ -298,7 +298,7 @@ $$
 
 所有推导都默认它在用；$\mathrm{ad}_A$ 能当"求导"使，靠的就是这一条。
 
-### 3.2 对角判据（[D08](../derivations/D08-diagonal-criterion.md)）
+### 3.2 对角判据（[D09](../derivations/D09-diagonal-criterion.md)）
 
 $$
 \bigl[\hat q,f(\hat q)\bigr]=0
@@ -314,7 +314,7 @@ $$
 
 **用途**：$V(\hat q)$ 在 $q$ 基对角，所以路径积分里位能那块可以直接提出来。
 
-### 3.3 乘积的核（[D09](../derivations/D09-product-kernel.md)）
+### 3.3 乘积的核（[D10](../derivations/D10-product-kernel.md)）
 
 $$
 \langle q'\lvert\hat A\hat B\lvert q''\rangle
@@ -325,9 +325,9 @@ $$
 
 **为什么它是路径积分的引擎**：连乘 $N$ 次就有 $N-1$ 个中途位置，取极限就是一条路径。
 
-### 3.4 Hadamard 引理与 BCH（[D10](../derivations/D10-hadamard-lemma.md)–[D13](../derivations/D13-three-bch-forms.md)）
+### 3.4 Hadamard 引理与 BCH（[D11](../derivations/D11-hadamard-lemma.md)–[D14](../derivations/D14-three-bch-forms.md)）
 
-**D10 · 级数展开**：
+**D11 · 级数展开**：
 
 $$
 e^{A}Be^{-A}=\sum_{n=0}^{\infty}\frac{1}{n!}\,\mathrm{ad}_A^{\,n}B,
@@ -337,7 +337,7 @@ $$
 
 **白话**：共轭的生成元是对易子；这是**恒等式**，不是近似。
 
-**D11 · 两项截断**（$[A,B]=c$ 是数）：
+**D12 · 两项截断**（$[A,B]=c$ 是数）：
 
 $$
 e^{A}Be^{-A}=B+c
@@ -345,7 +345,7 @@ $$
 
 **白话**：级数"停"在第二项——因为 $\mathrm{ad}_A$ 对常数失效。
 
-**D12 · 交换相位**：
+**D13 · 交换相位**：
 
 $$
 e^{A}e^{B}=e^{c}\,e^{B}e^{A}
@@ -353,7 +353,7 @@ $$
 
 **只定比值**：$e^{A}e^{B}$ 与 $e^{B}e^{A}$ 相差 $e^{c}$。
 
-**D13 · 三条 BCH 闭式**：
+**D14 · 三条 BCH 闭式**：
 
 $$
 e^{A}e^{B}=e^{c/2}e^{A+B},
@@ -363,11 +363,11 @@ e^{B}e^{A}=e^{-c/2}e^{A+B},
 e^{A/2}e^{B}e^{A/2}=e^{A+B}
 $$
 
-**定绝对分配**：$c/2$ 分在两边。**D12 给不出来**——它只知道差值，不知道分法。
+**定绝对分配**：$c/2$ 分在两边。**D13 给不出来**——它只知道差值，不知道分法。
 
-**这一组的分工要记牢**：D12 定**比例**，D13 定**位置**。
+**这一组的分工要记牢**：D13 定**比例**，D14 定**位置**。
 
-### 3.5 不确定关系（[D25](../derivations/D25-uncertainty.md)）
+### 3.5 不确定关系（[D26](../derivations/D26-uncertainty.md)）
 
 $$
 \Delta q\,\Delta p\ge\frac{1}{2}
@@ -383,7 +383,7 @@ $$
 
 ## 4. 表象：同一件事的两种画法
 
-### 4.1 Weyl 相位（[D14](../derivations/D14-weyl-phase.md)）
+### 4.1 Weyl 相位（[D15](../derivations/D15-weyl-phase.md)）
 
 $$
 e^{ia\hat p}\,e^{ib\hat q}=e^{iab}\,e^{ib\hat q}\,e^{ia\hat p}
@@ -393,7 +393,7 @@ $$
 
 **为什么用指数形式**：$\hat q,\hat p$ 无界，"乘积相减"要交代定义域；指数化后两边都是有界酉算子，处处有定义。
 
-### 4.2 平移（[D16](../derivations/D16-translation.md)）
+### 4.2 平移（[D17](../derivations/D17-translation.md)）
 
 $$
 e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle
@@ -403,7 +403,7 @@ $$
 
 **方向陷阱**：**态标签往下移**（$q\to q-a$），**波函数自变量往上移**（$\psi(q)\to\psi(q+a)$）。两者不矛盾，差一个负号。
 
-### 4.3 平面波（[D17](../derivations/D17-qp-overlap.md)）
+### 4.3 平面波（[D18](../derivations/D18-qp-overlap.md)）
 
 $$
 \langle q\lvert p\rangle=e^{ipq}
@@ -411,7 +411,7 @@ $$
 
 **白话**：动量本征态在位置表象里就是平面波。
 
-**它是定理不是约定**：整体相位的模由归一化逼出为 1（§1.5），相位约定取 $c=1$（§1.6）。而"存在且唯一"来自 [D15](../derivations/D15-stone-von-neumann.md)。
+**它是定理不是约定**：整体相位的模由归一化逼出为 1（§1.5），相位约定取 $c=1$（§1.6）。而"存在且唯一"来自 [D16](../derivations/D16-stone-von-neumann.md)。
 
 **顺带**：波函数与其傅里叶变换互为坐标—
 
@@ -421,7 +421,7 @@ $$
 \psi(q)=\int\frac{dp}{2\pi}\,e^{ipq}\tilde\psi(p)
 $$
 
-### 4.4 动量基的完备性（[D18](../derivations/D18-p-completeness.md)）
+### 4.4 动量基的完备性（[D19](../derivations/D19-p-completeness.md)）
 
 $$
 \int\frac{dp}{2\pi}\,\lvert p\rangle\langle p\rvert=\mathbb{1}
@@ -433,7 +433,7 @@ $$
 
 **为什么 $2\pi$ 必须在那**：换成 $\int dp$ 会得到 $2\pi\mathbb{1}$，换成 $\frac{dp}{\sqrt{2\pi}}$ 差因子。**只有 $\frac{dp}{2\pi}$ 给恒等。**
 
-### 4.5 动量表象（[D19](../derivations/D19-momentum-representation.md)）
+### 4.5 动量表象（[D20](../derivations/D20-momentum-representation.md)）
 
 $$
 \langle q\lvert\hat p\lvert\psi\rangle=-i\frac{d}{dq}\psi(q),
@@ -449,7 +449,7 @@ $$
 
 ## 5. 统计形式：从算子到温度
 
-### 5.1 Hamiltonian 与演化（[D20](../derivations/D20-hamiltonian.md)）
+### 5.1 Hamiltonian 与演化（[D21](../derivations/D21-hamiltonian.md)）
 
 $$
 \hat H=\frac{\hat p^{2}}{2m}+V(\hat q),
@@ -463,7 +463,7 @@ $$
 
 **欧氏化**：$\beta=it$ 把"振荡" $e^{-iHt}$ 换成"衰减" $e^{-\beta H}$——这是下面全部内容的起点。
 
-### 5.2 路径积分（[D21](../derivations/D21-path-integral-representation.md)）
+### 5.2 路径积分（[D22](../derivations/D22-path-integral-representation.md)）
 
 $$
 \langle q_f\lvert e^{-\beta\hat H}\lvert q_i\rangle
@@ -478,7 +478,7 @@ $$
 
 **记住**：测度自带归一化 $\prod(m/2\pi\varepsilon)^{1/2}$，丢了就错；端点不是零，是 $q_i,q_f$。
 
-### 5.3 迹即闭合路径（[D22](../derivations/D22-trace-is-loop.md)）
+### 5.3 迹即闭合路径（[D23](../derivations/D23-trace-is-loop.md)）
 
 $$
 Z=\mathrm{Tr}\,e^{-\beta\hat H}
@@ -487,9 +487,9 @@ $$
 
 **白话**：取迹就是把路径的两端**焊起来**——于是路径变成闭合的环。
 
-**为什么能焊**：因为迹与基无关（[D06](../derivations/D06-trace.md)），可以放心在 $q$ 基下取。
+**为什么能焊**：因为迹与基无关（[D07](../derivations/D07-trace.md)），可以放心在 $q$ 基下取。
 
-### 5.4 密度矩阵与配分函数（[D23](../derivations/D23-density-matrix.md)）
+### 5.4 密度矩阵与配分函数（[D24](../derivations/D24-density-matrix.md)）
 
 $$
 \rho=\frac{e^{-\beta\hat H}}{Z},
@@ -507,7 +507,7 @@ $$
 
 **$Z$ 是母函数**：$F=-\frac1\beta\ln Z$、$E=-\partial_\beta\ln Z$、$S=\beta(E-F)$。
 
-### 5.5 能级展开（[D26](../derivations/D26-energy-basis.md)）
+### 5.5 能级展开（[D27](../derivations/D27-energy-basis.md)）
 
 $$
 Z=\sum_n e^{-\beta E_n},
@@ -523,7 +523,7 @@ $$
 
 **低温**：$Z\simeq e^{-\beta E_0}$（基态主导）。**高温**：$Z\to$ 态空间维数。
 
-### 5.6 温度 = 周期的倒数（[D24](../derivations/D24-temperature-period.md)）
+### 5.6 温度 = 周期的倒数（[D25](../derivations/D25-temperature-period.md)）
 
 $$
 q(\tau+\beta)=q(\tau),
@@ -549,7 +549,7 @@ $$
 | 4 | 把 $\langle q\lvert q'\rangle=\delta$ 整体当约定 | 形式被迫、系数自选 |
 | 5 | 两套归一化混用 | 差 $\sqrt{2\pi}$，量纲上看不出 |
 | 6 | 记错 $[\hat q,g(\hat p)]$ 的符号 | 与 $[\hat p,f(\hat q)]$ 相反 |
-| 7 | 以为 D12 能给出 $c/2$ 的分配 | 它只给比值，绝对分配在 D13 |
+| 7 | 以为 D13 能给出 $c/2$ 的分配 | 它只给比值，绝对分配在 D14 |
 | 8 | 说"不确定关系是测量扰动" | 推导里没有测量；是同一波函数上的弥散 |
 | 9 | 把 $\hat p=-i\partial_q$ 当定义 | 它是**表示**，定义是对易子 |
 | 10 | 路径积分里漏掉测度归一化 | 每片带 $(m/2\pi\varepsilon)^{1/2}$ |
@@ -578,7 +578,7 @@ $$
 - [ ] 说出 S–vN 的三个前提，以及它在什么情形失效
 - [ ] 默写函数演算的三种定义，并说明哪一种才是真正的定义
 - [ ] 写出迹的定义，并说明它为什么与基无关
-- [ ] 说出 D12 与 D13 的分工（比值 vs 绝对分配）
+- [ ] 说出 D13 与 D14 的分工（比值 vs 绝对分配）
 - [ ] 解释平移的两个方向为什么不矛盾
 - [ ] 说清 $\frac{dp}{2\pi}$ 的 $2\pi$ 从哪来
 - [ ] 从 $\hat H$ 出发，一步步走到 $Z=\sum_n e^{-\beta E_n}$，中间经过哪几张卡

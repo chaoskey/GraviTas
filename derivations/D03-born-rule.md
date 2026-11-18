@@ -1,7 +1,7 @@
-# D02 · 态与测量：Born 规则
+# D03 · 态与测量：Born 规则
 
 > 建档 2026-11-08 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)
-> 下游：[D25](D25-uncertainty.md)
+> 下游：[D26](D26-uncertainty.md)
 > 本卡补的是"数学怎么变成预言"的那一步。没有它，整个网格算不出一个可检验的数。
 
 ---

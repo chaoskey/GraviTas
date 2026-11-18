@@ -1,9 +1,9 @@
-# D05 · 函数演算：$f(\hat A)$ 到底是什么意思
+# D06 · 函数演算：$f(\hat A)$ 到底是什么意思
 
 > 建档 2026-11-06 · 类型：**定义 + 性质**——定义 $f(\hat A)$，并列出下游要用的运算规则；
 > 其中**谱映射定理与范数公式是定理**，不是定义的复述
-> 上游：[D01](D01-spectral-theorem.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md)（§2 给 $\langle a\lvert a'\rangle=\delta(a-a')$，本卡 §1.3 要用）
-> 下游：[D07](D07-commutator-p-fq.md)、[D10](D10-hadamard-lemma.md)、[D12](D12-commutator-phase.md)、[D13](D13-three-bch-forms.md)、[D14](D14-weyl-phase.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D20](D20-hamiltonian.md)、[D26](D26-energy-basis.md)
+> 上游：[D01](D01-spectral-theorem.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)（§2 给 $\langle a\lvert a'\rangle=\delta(a-a')$，本卡 §1.3 要用）
+> 下游：[D08](D08-commutator-p-fq.md)、[D11](D11-hadamard-lemma.md)、[D13](D13-commutator-phase.md)、[D14](D14-three-bch-forms.md)、[D15](D15-weyl-phase.md)、[D17](D17-translation.md)、[D18](D18-qp-overlap.md)、[D21](D21-hamiltonian.md)、[D27](D27-energy-basis.md)
 
 ---
 
@@ -30,7 +30,7 @@
 |---|---|---|---|
 | 1.1 幂级数 | **定义**（独立） | 只要算子的乘与加 | 解析函数 |
 | 1.2 谱分解 | **定义（典范）** | [D01](D01-spectral-theorem.md) 谱定理 | Borel 函数 |
-| 1.3 本征基展开 | **特化**，不是独立定义 | [D01](D01-spectral-theorem.md)、[D03](D03-position-eigen-equation.md)、[D04](D04-normalization-convention.md) | 简单谱 + 密度为 $1$ |
+| 1.3 本征基展开 | **特化**，不是独立定义 | [D01](D01-spectral-theorem.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md) | 简单谱 + 密度为 $1$ |
 | 1.4 两者一致 | **定理** | 1.1、1.2 | 交集（解析函数） |
 
 **为什么 1.1 是"独立的定义"**：它只用 $\hat A$ 的乘法和加法，**完全不提谱测度**。所以它先于谱定理就成立——这是它与 1.2 并列的唯一理由。

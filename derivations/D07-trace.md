@@ -1,8 +1,8 @@
-# D06 · 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$
+# D07 · 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$
 
-> 建档 2026-11-08 · 上游：[D01](D01-spectral-theorem.md)（完备性）、[D03](D03-position-eigen-equation.md)（位置基）、[D04](D04-normalization-convention.md)
-> 下游：[D22](D22-trace-is-loop.md)、[D23](D23-density-matrix.md)、[D26](D26-energy-basis.md)
-> 本卡补的是"迹"这个对象的定义与基无关性——[D22](D22-trace-is-loop.md) 一直在用它，却没人交代过。
+> 建档 2026-11-08 · 上游：[D01](D01-spectral-theorem.md)（完备性）、[D04](D04-position-eigen-equation.md)（位置基）、[D05](D05-normalization-convention.md)
+> 下游：[D23](D23-trace-is-loop.md)、[D24](D24-density-matrix.md)、[D27](D27-energy-basis.md)
+> 本卡补的是"迹"这个对象的定义与基无关性——[D23](D23-trace-is-loop.md) 一直在用它，却没人交代过。
 
 ---
 
@@ -53,7 +53,7 @@ $$
 \mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle
 $$
 
-这一步用到 [D03](D03-position-eigen-equation.md) 的本征基与 [D04](D04-normalization-convention.md) 的归一化，但它**不影响基无关性本身**——那是 §1 已经证过的。
+这一步用到 [D04](D04-position-eigen-equation.md) 的本征基与 [D05](D05-normalization-convention.md) 的归一化，但它**不影响基无关性本身**——那是 §1 已经证过的。
 
 ---
 
@@ -92,7 +92,7 @@ $$
 
 1. **无界算子可能不可迹。** $\mathrm{Tr}\,\mathbb{1}$ 无穷；但 $\hat A\ge0$ 时 $e^{-t\hat A}$（$t>0$）通常可迹。
 2. **连续谱时"迹"是形式的。** $\int dq\langle q\lvert A\lvert q\rangle$ 对一般 $A$ 发散；只有衰减足够快的算符（如 $e^{-t\hat A}$）给出有限值。
-3. **它不依赖归一化约定的具体取值**，但依赖"完备性写成 $\int dq\lvert q\rangle\langle q\rvert$"这一形式（[D03](D03-position-eigen-equation.md)）。若换成带权重的写法，$\int dq$ 前要补同样的权重。
+3. **它不依赖归一化约定的具体取值**，但依赖"完备性写成 $\int dq\lvert q\rangle\langle q\rvert$"这一形式（[D04](D04-position-eigen-equation.md)）。若换成带权重的写法，$\int dq$ 前要补同样的权重。
 
 ---
 
