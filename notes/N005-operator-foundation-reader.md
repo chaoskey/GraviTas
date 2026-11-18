@@ -144,7 +144,7 @@ $$
 \mathbb{1}=\int\lvert F_\lambda\rangle\langle F_\lambda\rvert\;d\mu(\lambda)
 $$
 
-**$\mu$ 与 D01 的 $E$ 的关系**：$\mu$ 是**标量**权重，$E$ 是**投影值**测度，二者由 $E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)$ 相连；$\langle\phi\lvert F_\lambda\rangle$ 是**配对**，不是内积。
+**$\mu$ 与 D01 的 $E$、$\mu_\psi$ 的关系**：$\mu$ 是**标量**主权重，$E$ 是**投影值**测度，二者由 $E(B)=\int_B P(\lambda)\,d\mu(\lambda)$ 相连；而 D01 的 $\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$ 满足 $\mu_\psi\ll\mu$、密度为 $\langle\psi\lvert P(\lambda)\lvert\psi\rangle$——无简并且取循环矢量时二者可取成同一个；$\langle\phi\lvert F_\lambda\rangle$ 是**配对**，不是内积。
 
 **"任意"只限 $\Phi$**：对 $\mathcal{H}$ 中的一般态，这个积分不一定收敛——要延拓是另一回事。
 

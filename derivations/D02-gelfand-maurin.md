@@ -115,6 +115,18 @@ $$
 
 **所以完备性、$E(B)$ 与一般的 $g(\hat A)$ 是同一个定理在三个 $g$ 上的取值**（$g\equiv1$、$g=\mathbf{1}_B$、一般 $g$），**地位相同，不是谁推谁**。给定 $\hat A$，$E$ 唯一；$\mu$ 与 $\lvert F_\lambda\rangle$ 的尺度可以一起换（见边界第 3 条）。
 
+**与 D01 的标量测度 $\mu_\psi$ 的关系**：对 $E(B)=\int_B P(\lambda)\,d\mu(\lambda)$ 两边取 $\psi$ 的期望，
+
+$$
+\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle=\int_B\langle\psi\lvert P(\lambda)\lvert\psi\rangle\,d\mu(\lambda)
+$$
+
+所以 $\mu_\psi\ll\mu$，**密度就是 $\langle\psi\lvert P(\lambda)\lvert\psi\rangle$**。反过来，取一组正交基 $\{\psi_n\}$ 并令 $\mu=\sum_n2^{-n}\mu_{\psi_n}$，它就能"罩住"所有 $\mu_\psi$。
+
+**$\mu$ 不唯一**：$\mu\to\rho\,\mu$、同时 $P\to P/\rho$（$\rho>0$），$E$ 不变。**而 $\mu_\psi$ 由 $E$ 与 $\psi$ 唯一决定**，没有这个自由度。
+
+**无简并且取循环矢量 $\psi_0$ 时，可令 $\mu=\mu_{\psi_0}$**——这正是 [D01](D01-spectral-theorem.md) §5 里 $U:\mathcal{H}\to L^{2}(\sigma,d\mu_{\psi_0})$ 用的那个测度。
+
 **括号 $\langle\phi\lvert F_\lambda\rangle$ 是配对，不是内积**：$\phi\in\Phi$、$F_\lambda\in\Phi^{\times}$，它表示 $\lvert F_\lambda\rangle$ 作用在 $\phi$ 上，**不是 $\mathcal{H}$ 的内积**。
 
 **"任意"的范围要说清**：上式只对 $\Phi$ 里的元素成立。**对 $\mathcal{H}$ 中的一般态，这个积分不一定收敛**——要延拓是另一回事。**这就是为什么 $\Phi$ 必须"好"。**
