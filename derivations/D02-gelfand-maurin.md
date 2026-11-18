@@ -1,8 +1,8 @@
 # D02 · 核空间谱定理（Gelfand–Maurin）
 
-> 建档 2026-11-18 · 类型：**引用卡**——Gelfand–Maurin 是外部数学，本卡只引用、不证明
+> 建档 2026-11-18 · 类型：**引用卡**——Gelfand–Maurin 是外部数学，本卡只引用、不证明；由它推出四条推论
 > 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)
-> 下游：[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)、[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D10](D10-product-kernel.md)、[D17](D17-translation.md)、[D18](D18-qp-overlap.md)、[D19](D19-p-completeness.md)、[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)、[D23](D23-trace-is-loop.md)、[D27](D27-energy-basis.md)
+> 下游：（由网格反查生成）
 > 它补的是谱定理缺的那一半：**给"一族投影"，不给"一族矢"**。
 
 ---
@@ -13,13 +13,13 @@
 
 **它不在 $\mathcal{H}$ 里**：连续谱时 $E(\{q\})=\mathbb{0}$（[D01](D01-spectral-theorem.md) §3），所以**没有**平方可积的 $\psi$ 满足 $\hat q\psi=q\psi$。
 
-**但 $\lvert q\rangle$ 不是错，是它住在别处。** 要给它一个合法的住处，就得把空间扩大。
-
 **为什么不能从 D01 直接推出。** D01 给的是**抽象**的投影值测度 $E$；它不保证 $E$ 有密度 $\lvert F_\lambda\rangle\langle F_\lambda\rvert$，更不保证有本征矢——连续谱时 $\mathcal{H}$ 里根本没有。**这两样都要另外的定理，不是换积分符号能换出来的。**
+
+**出路**：把空间扩大，让"矢"住在更大的空间里。
 
 ---
 
-## 1. 需要什么：三层空间
+## 1. 三层空间
 
 $$
 \Phi\;\subset\;\mathcal{H}\;\subset\;\Phi^{\times}
@@ -43,7 +43,7 @@ $$
 
 ---
 
-## 2. 陈述
+## 2. 定理（核空间谱定理）
 
 **条件**（三条）：
 
@@ -53,39 +53,49 @@ $$
 | $\Phi$ 是核空间，连续稠密地嵌进 $\mathcal{H}$ | 让"展开"真能做成，不是形式上的 |
 | $\hat A$ **连续地**映 $\Phi$ 到 $\Phi$ | 让"本征方程"有意义：作用完还留在能谈的范围内 |
 
-**一句话**：只要算子不太野、且把好函数**连续地**映回好函数，就存在一族广义本征矢——它们①是本征矢，②够用（**$\Phi$ 里的元素都能展开**）。
+**结论**（两条）：
 
-**结论一：本征方程。** 存在族 $F_\lambda\in\Phi^{\times}$，使
-
-$$
-\hat A F_\lambda=\lambda F_\lambda
-$$
-
-（$\hat A$ 在 $\Phi^{\times}$ 上按对偶作用：$\langle\hat A F_\lambda,\phi\rangle=\langle F_\lambda,\hat A\phi\rangle$——**这正是要求 $\hat A$ 把 $\Phi$ 映进 $\Phi$ 的原因**。）
-
-**结论二：谱分解。** 存在**标量测度** $\mu$ 与一族 $F_{\lambda,i}\in\Phi^{\times}$（下标 $i$ 跑遍该点的重数），使对**任意有界 Borel 函数 $g$**，
+**（i）本征方程。** 存在一族 $F_{\lambda,i}\in\Phi^{\times}$，使
 
 $$
-g(\hat A)=\int g(\lambda)\,P(\lambda)\,d\mu(\lambda),
+\hat A F_{\lambda,i}=\lambda F_{\lambda,i}
+$$
+
+（$\hat A$ 在 $\Phi^{\times}$ 上按对偶作用：$\langle\hat A F_{\lambda,i},\phi\rangle=\langle F_{\lambda,i},\hat A\phi\rangle$——**这正是要求 $\hat A$ 把 $\Phi$ 映进 $\Phi$ 的原因**。）
+
+**（ii）谱分解。** 存在**标量测度** $\mu$，使对**任意有界 Borel 函数 $g$**，
+
+$$
+g(\hat A)=\int g(\lambda)\,P(\lambda)\;d\mu(\lambda),
 \qquad
 P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert
 $$
 
-**每个本征值都只有一重（无简并）时**，$P(\lambda)$ 只剩一项：$P(\lambda)=\lvert F_\lambda\rangle\langle F_\lambda\rvert$。**本卡其余部分都按这个无简并情形写**，有重数时见边界第 4 条。
+**定理的全部内容就是这两条**：一支矢（本征方程），一把尺（谱分解）。
 
-**取 $g\equiv1$ 就是完备性**：
+---
+
+## 3. 推论
+
+**四条推论都只取定理的 (ii)，各取一个 $g$；边界感在于：换 $g$ 就换结论，不混用。**
+
+### 3.1 推论一：完备性（取 $g\equiv1$）
 
 $$
-\mathbb{1}=\int P(\lambda)\,d\mu(\lambda)
+\mathbb{1}=\int P(\lambda)\;d\mu(\lambda)
 $$
 
-**它的二次型写法**（对任意 $\phi,\psi\in\Phi$）：
+**"对谁成立"要说清**：上式是 $\Phi$ 上的二次型——对**任意 $\phi,\psi\in\Phi$**，
 
 $$
-\langle\phi\lvert\psi\rangle=\int\sum_i\langle\phi\lvert F_{\lambda,i}\rangle\,\langle F_{\lambda,i}\lvert\psi\rangle\,d\mu(\lambda)
+\langle\phi\lvert\psi\rangle=\int\sum_i\langle\phi\lvert F_{\lambda,i}\rangle\,\langle F_{\lambda,i}\lvert\psi\rangle\;d\mu(\lambda)
 $$
 
-**这里的 $\mu$ 是标量测度（权重），不是 D01 的投影值测度 $E$。** 二者由**同一条式子**相连——取**指示函数** $g=\mathbf{1}_B$。所谓指示函数，是
+**对 $\mathcal{H}$ 中的一般态，这个积分不一定收敛**——要延拓是另一回事。**这就是为什么 $\Phi$ 必须"好"。**
+
+### 3.2 推论二：谱测度有密度（取 $g=\mathbf{1}_B$）
+
+$\mathbf{1}_B$ 是 Borel 集 $B$ 的**指示函数**：
 
 $$
 \mathbf{1}_B(\lambda)=
@@ -95,45 +105,43 @@ $$
 \end{cases}
 $$
 
-**它只取 $0$、$1$ 两个值，所以有界**——函数演算对它有定义，不需要额外的定义域条件。
+**它只取 $0$、$1$ 两个值，所以有界**——(ii) 对它有定义，不需要额外的定义域条件。
 
-**再把左边算出来**：由 [D01](D01-spectral-theorem.md) §1 的函数演算定义 $f(\hat A)=\int f\,dE$，取 $f=\mathbf{1}_B$ 即得
-
-$$
-\mathbf{1}_B(\hat A)=\int\mathbf{1}_B(\lambda)\,dE(\lambda)=E(B)
-$$
-
-**所以 $g(\hat A)$ 在 $g=\mathbf{1}_B$ 时就是 $E(B)$**——这是定义的直接结果，不是新定理；后面凡写 $\mathbf{1}_B(\hat A)$ 的地方都可以换成 $E(B)$。
-
-于是取 $g=\mathbf{1}_B$ 得
+**左边**：由 [D01](D01-spectral-theorem.md) §1，$\mathbf{1}_B(\hat A)=E(B)$。于是
 
 $$
-E(B)=\int_B P(\lambda)\,d\mu(\lambda)
+E(B)=\int_B P(\lambda)\;d\mu(\lambda)
 $$
 
-**无简并时就是** $E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)$。
+**这就是 D01 的抽象投影 $E$ 与 D02 的密度 $P\,d\mu$ 的接头**。
 
-**所以完备性、$E(B)$ 与一般的 $g(\hat A)$ 是同一个定理在三个 $g$ 上的取值**（$g\equiv1$、$g=\mathbf{1}_B$、一般 $g$），**地位相同，不是谁推谁**。给定 $\hat A$，$E$ 唯一；$\mu$ 与 $\lvert F_\lambda\rangle$ 的尺度可以一起换（见边界第 3 条）。
-
-**与 D01 的标量测度 $\mu_\psi$ 的关系**：对 $E(B)=\int_B P(\lambda)\,d\mu(\lambda)$ 两边取 $\psi$ 的期望，
+### 3.3 推论三：与 D01 的标量测度 $\mu_\psi$ 的关系（对 3.2 取期望）
 
 $$
 \mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle=\int_B\langle\psi\lvert P(\lambda)\lvert\psi\rangle\,d\mu(\lambda)
 $$
 
-所以 $\mu_\psi\ll\mu$，**密度就是 $\langle\psi\lvert P(\lambda)\lvert\psi\rangle$**。反过来，取一组正交基 $\{\psi_n\}$ 并令 $\mu=\sum_n2^{-n}\mu_{\psi_n}$，它就能"罩住"所有 $\mu_\psi$。
+**所以** $\mu_\psi\ll\mu$，**密度就是 $\langle\psi\lvert P(\lambda)\lvert\psi\rangle$**。反过来，取一组正交基 $\{\psi_n\}$ 并令 $\mu=\sum_n2^{-n}\mu_{\psi_n}$，它就能"罩住"所有 $\mu_\psi$。
 
 **$\mu$ 不唯一**：$\mu\to\rho\,\mu$、同时 $P\to P/\rho$（$\rho>0$），$E$ 不变。**而 $\mu_\psi$ 由 $E$ 与 $\psi$ 唯一决定**，没有这个自由度。
 
-**无简并且取循环矢量 $\psi_0$ 时，可令 $\mu=\mu_{\psi_0}$**——这正是 [D01](D01-spectral-theorem.md) §5 里 $U:\mathcal{H}\to L^{2}(\sigma,d\mu_{\psi_0})$ 用的那个测度。
+### 3.4 推论四：无简并时回到单矢形式（对 3.2 取 $i$ 只有一项）
 
-**括号 $\langle\phi\lvert F_\lambda\rangle$ 是配对，不是内积**：$\phi\in\Phi$、$F_\lambda\in\Phi^{\times}$，它表示 $\lvert F_\lambda\rangle$ 作用在 $\phi$ 上，**不是 $\mathcal{H}$ 的内积**。
+**若每个本征值都只有一重**（无简并），则 $P(\lambda)$ 只剩一项：
 
-**"任意"的范围要说清**：上式只对 $\Phi$ 里的元素成立。**对 $\mathcal{H}$ 中的一般态，这个积分不一定收敛**——要延拓是另一回事。**这就是为什么 $\Phi$ 必须"好"。**
+$$
+P(\lambda)=\lvert F_\lambda\rangle\langle F_\lambda\rvert
+\qquad\Longrightarrow\qquad
+E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\;d\mu(\lambda)
+$$
+
+**并且这时可以取 $\mu=\mu_{\psi_0}$**（$\psi_0$ 为循环矢量）——这正是 [D01](D01-spectral-theorem.md) §5 里 $U:\mathcal{H}\to L^{2}(\sigma,d\mu_{\psi_0})$ 用的那个测度。
+
+**所以"无简并"是把 D02 接回 D01 对角化模型的条件**；有重数时只能保留 $P(\lambda)$ 的求和形式。
 
 ---
 
-## 3. 它给什么
+## 4. 它给什么
 
 - $\lvert q\rangle$ **本身**：$[\hat q,f(\hat q)]$ 与 $\hat q$ 的谱分解都能写出来，靠的就是它；
 - **本征矢族的存在性**——本卡只负责"存在"这一步；它如何特化成具体算子的本征方程、归一化如何定，都是下游的事；
@@ -143,21 +151,21 @@ $$
 
 ---
 
-## 4. 边界
+## 5. 边界
 
 1. **非自伴算子全都没有。** 谱定理要求自伴；非自伴只有"谱"这个较弱的对象，没有投影值测度，也没有广义本征矢系。这是整套量子力学要求可观测量自伴的**数学**理由，而不只是习惯。
 2. **核性不可省。** 换成一般的稠密子空间，Gelfand–Maurin 可能失效。所以"随便找个稠密子空间就能定义 $\lvert q\rangle$"是错的。
 3. **归一化依赖谱测度密度。** 若 $d\mu=\rho(q)\,dq$，则 $\langle q\lvert q'\rangle=\delta(q-q')/\rho(q)$。平直空间 $\rho=1$，弯曲空间 $\rho=\sqrt{g}$——**这是弯曲空间里测度因子的数学出处**。
-4. **重数大于 1 时要加标签。** 主陈述里的 $P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert$ 就是为此准备的：一个 $F_\lambda$ 覆盖不了重数，必须按本征子空间逐项相加，归一化变成 $\delta_{ij}$。物理上就是自旋、味道、超选扇区。
+4. **重数大于 1 时要加标签。** 定理里的 $P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert$ 就是为此准备的：一个 $F_\lambda$ 覆盖不了重数，必须按本征子空间逐项相加，归一化变成 $\delta_{ij}$。物理上就是自旋、味道、超选扇区。
 5. **这张卡不做证明。** 本仓库不重推泛函分析；能推的是"给定这些定理，物理结论如何落地"。**引用与证明的界限要一直守住**。
 
 ---
 
-## 5. 自检
+## 6. 自检
 
 - [ ] 用一句话说清谱定理与 Gelfand–Maurin 各负责什么
+- [ ] 说出定理的两条结论，以及每条各管什么
 - [ ] 解释为什么连续谱时"Hilbert 空间里没有本征矢"
 - [ ] 用"求值泛函"说明 $\lvert q\rangle$ 为什么不在 $\mathcal{H}$ 里
 - [ ] 说明核空间条件为什么不可省
-- [ ] 说明两条结论分别给"存在性"与"谱分解"，并说清完备性、$E(B)$、一般 $g(\hat A)$ 是同一个公式的三个特例
-- [ ] 说出为什么 D02 不能由 D01 推出，以及 $P(\lambda)$ 里的 $\sum_i$ 是为哪种情形准备的
+- [ ] 从 (ii) 推出 3.1、3.2、3.3、3.4 四条，并说清每一步用了 (i) 还是 (ii)

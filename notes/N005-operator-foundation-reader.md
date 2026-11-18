@@ -130,23 +130,22 @@ $$
 
 **条件**：$\hat A$ 自伴；$\Phi$ 是核空间、连续稠密地嵌进 $\mathcal{H}$；且 $\hat A$ **连续地**把 $\Phi$ 映回 $\Phi$（不只是 $\subset$——要连续，$\hat A F_\lambda$ 才有意义）。
 
-**结论一：本征方程。** 存在一族广义本征矢 $F_\lambda\in\Phi^{\times}$，使
+**定理两条（全部内容）**：
 
-$$
-\hat A F_\lambda=\lambda F_\lambda
-$$
+- **(i) 本征方程**：存在 $F_{\lambda,i}\in\Phi^{\times}$，使 $\hat A F_{\lambda,i}=\lambda F_{\lambda,i}$；
+- **(ii) 谱分解**：存在标量测度 $\mu$，使对任意有界 Borel $g$：
+  $g(\hat A)=\int g(\lambda)\,P(\lambda)\,d\mu(\lambda)$，其中 $P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert$。
 
-**结论二：谱分解。** 存在标量测度 $\mu$ 与那族 $F_\lambda$，使对任意有界 Borel $g$：$g(\hat A)=\int g(\lambda)\lvert F_\lambda\rangle\langle F_\lambda\rvert d\mu$。**取 $g\equiv1$ 得完备性**，取 $g=\mathbf{1}_B$ 得 $E(B)$——**三个 $g$ 是同一个公式，不是谁推谁**；每个本征值只有一重（无简并）时 $P$ 只剩单项；有重数时 $P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert$。 完备性的二次型写法（对**任意 $\phi,\psi\in\Phi$**）：
+**四条推论（各取一个 $g$，换 $g$ 就换结论）**：
 
-$$
-\langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\;d\mu(\lambda)
-\qquad\Longleftrightarrow\qquad
-\mathbb{1}=\int\lvert F_\lambda\rangle\langle F_\lambda\rvert\;d\mu(\lambda)
-$$
+| 取 | 得 |
+|---|---|
+| $g\equiv1$ | 完备性 $\mathbb{1}=\int P\,d\mu$——**只对 $\phi,\psi\in\Phi$ 成立** |
+| $g=\mathbf{1}_B$ | $E(B)=\int_B P\,d\mu$：D01 的抽象 $E$ 在这里有了密度 |
+| 对上一行取期望 | $\mu_\psi\ll\mu$，密度为 $\langle\psi\lvert P(\lambda)\lvert\psi\rangle$ |
+| $i$ 只剩一项（无简并） | $E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu$，且可取 $\mu=\mu_{\psi_0}$ |
 
-**$\mu$ 与 D01 的 $E$、$\mu_\psi$ 的关系**：$\mu$ 是**标量**主权重，$E$ 是**投影值**测度，二者由 $E(B)=\int_B P(\lambda)\,d\mu(\lambda)$ 相连；而 D01 的 $\mu_\psi(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$ 满足 $\mu_\psi\ll\mu$、密度为 $\langle\psi\lvert P(\lambda)\lvert\psi\rangle$——无简并且取循环矢量时二者可取成同一个；$\langle\phi\lvert F_\lambda\rangle$ 是**配对**，不是内积。
-
-**"任意"只限 $\Phi$**：对 $\mathcal{H}$ 中的一般态，这个积分不一定收敛——要延拓是另一回事。
+**$\langle\phi\lvert F_\lambda\rangle$ 是配对，不是内积**；**对 $\mathcal{H}$ 中的一般态，完备性的积分不一定收敛**——要延拓是另一回事。
 
 **两点要看清**：
 
