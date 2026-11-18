@@ -71,7 +71,7 @@ g(\hat A)=\int g(\lambda)\,P(\lambda)\,d\mu(\lambda),
 P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert
 $$
 
-**谱简单时只有一项**：$P(\lambda)=\lvert F_\lambda\rangle\langle F_\lambda\rvert$。**本卡其余部分都按这个简单情形写**，重数情形见边界第 4 条。
+**每个本征值都只有一重（无简并）时**，$P(\lambda)$ 只剩一项：$P(\lambda)=\lvert F_\lambda\rangle\langle F_\lambda\rvert$。**本卡其余部分都按这个无简并情形写**，有重数时见边界第 4 条。
 
 **取 $g\equiv1$ 就是完备性**：
 
@@ -111,7 +111,7 @@ $$
 E(B)=\int_B P(\lambda)\,d\mu(\lambda)
 $$
 
-**谱简单时就是** $E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)$。
+**无简并时就是** $E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)$。
 
 **所以完备性、$E(B)$ 与一般的 $g(\hat A)$ 是同一个定理在三个 $g$ 上的取值**（$g\equiv1$、$g=\mathbf{1}_B$、一般 $g$），**地位相同，不是谁推谁**。给定 $\hat A$，$E$ 唯一；$\mu$ 与 $\lvert F_\lambda\rangle$ 的尺度可以一起换（见边界第 3 条）。
 

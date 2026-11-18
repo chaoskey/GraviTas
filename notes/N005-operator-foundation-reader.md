@@ -136,7 +136,7 @@ $$
 \hat A F_\lambda=\lambda F_\lambda
 $$
 
-**结论二：谱分解。** 存在标量测度 $\mu$ 与那族 $F_\lambda$，使对任意有界 Borel $g$：$g(\hat A)=\int g(\lambda)\lvert F_\lambda\rangle\langle F_\lambda\rvert d\mu$。**取 $g\equiv1$ 得完备性**，取 $g=\mathbf{1}_B$ 得 $E(B)$——**三个 $g$ 是同一个公式，不是谁推谁**；有重数时 $P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert$ 代替单个 $\lvert F_\lambda\rangle\langle F_\lambda\rvert$。 完备性的二次型写法（对**任意 $\phi,\psi\in\Phi$**）：
+**结论二：谱分解。** 存在标量测度 $\mu$ 与那族 $F_\lambda$，使对任意有界 Borel $g$：$g(\hat A)=\int g(\lambda)\lvert F_\lambda\rangle\langle F_\lambda\rvert d\mu$。**取 $g\equiv1$ 得完备性**，取 $g=\mathbf{1}_B$ 得 $E(B)$——**三个 $g$ 是同一个公式，不是谁推谁**；每个本征值只有一重（无简并）时 $P$ 只剩单项；有重数时 $P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert$。 完备性的二次型写法（对**任意 $\phi,\psi\in\Phi$**）：
 
 $$
 \langle\phi\lvert\psi\rangle=\int\langle\phi\lvert F_\lambda\rangle\,\langle F_\lambda\lvert\psi\rangle\;d\mu(\lambda)
