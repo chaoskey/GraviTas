@@ -61,7 +61,6 @@ $$
 $$
 
 **由此立刻得到范数形式**（§2、§3 都要用）：对 Borel 函数 $g$ 与 $\psi\in D(g(\hat A))$，
-
 $$
 \lVert g(\hat A)\psi\rVert^{2}
 =\int\lvert g(\lambda)\rvert^{2}\,d\mu_\psi(\lambda)

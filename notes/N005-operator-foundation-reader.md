@@ -144,6 +144,8 @@ $$
 \mathbb{1}=\int\lvert F_\lambda\rangle\langle F_\lambda\rvert\;d\mu(\lambda)
 $$
 
+**$\mu$ 与 D01 的 $E$ 的关系**：$\mu$ 是**标量**权重，$E$ 是**投影值**测度，二者由 $E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)$ 相连；$\langle\phi\lvert F_\lambda\rangle$ 是**配对**，不是内积。
+
 **"任意"只限 $\Phi$**：对 $\mathcal{H}$ 中的一般态，这个积分不一定收敛——要延拓是另一回事。
 
 **两点要看清**：

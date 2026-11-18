@@ -33,7 +33,9 @@ $$
 
 **为什么最外层不能省**：取值这个操作在 $\mathcal{H}$ 上**不连续**——函数可以在一点很高、范数却很小。所以它不是 $\mathcal{H}$ 里的矢量，而是 $\Phi$ 上的泛函。
 
-**两层嵌入都连续且稠密。** "核"这个条件是关键：它保证谱测度能被"数出来"、本征矢系能被"积出来"。**一般 Fréchet 空间不够**——这条定理对 $\Phi$ 的选择是敏感的。
+**"核空间"是外部概念**，本卡不定义它，只用它两条性质：（i）能**连续稠密**地嵌进 $\mathcal{H}$；（ii）使谱测度**可数化**——所以本征矢系能被"积出来"。**一般 Fréchet 空间不够**：这条定理对 $\Phi$ 的选择是敏感的。
+
+**两层嵌入怎么嵌**：$\Phi\subset\mathcal{H}$ 是包含；$\mathcal{H}\subset\Phi^{\times}$ 是"用内积造泛函"——$\psi\mapsto\langle\psi\lvert\cdot\rangle$。
 
 **一句话记住三层**：$\lvert q\rangle$ 不是"存在但奇怪"，而是**"取值"这个动作的严格化身**。
 
@@ -66,6 +68,16 @@ $$
 \qquad\Longleftrightarrow\qquad
 \mathbb{1}=\int\lvert F_\lambda\rangle\langle F_\lambda\rvert\;d\mu(\lambda)
 $$
+
+**这里的 $\mu$ 是标量测度（权重），不是 D01 的投影值测度 $E$。** 两者的关系是
+
+$$
+E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu(\lambda)
+$$
+
+也就是说：**$\mu$ 是把 $E$ 的"密度"写成 $\lvert F_\lambda\rangle\langle F_\lambda\rvert$ 的那个权重**。给定 $\hat A$，$E$ 唯一；$\mu$ 与 $\lvert F_\lambda\rangle$ 的尺度可以一起换（见边界第 3 条）。
+
+**括号 $\langle\phi\lvert F_\lambda\rangle$ 是配对，不是内积**：$\phi\in\Phi$、$F_\lambda\in\Phi^{\times}$，它表示 $\lvert F_\lambda\rangle$ 作用在 $\phi$ 上，**不是 $\mathcal{H}$ 的内积**。
 
 **"任意"的范围要说清**：上式只对 $\Phi$ 里的元素成立。**对 $\mathcal{H}$ 中的一般态，这个积分不一定收敛**——要延拓是另一回事。**这就是为什么 $\Phi$ 必须"好"。**
 
