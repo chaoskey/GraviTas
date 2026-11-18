@@ -60,14 +60,6 @@ $$
 \lVert f(\hat A)\rVert=\sup_{\lambda\in\sigma(\hat A)}\lvert f(\lambda)\rvert
 $$
 
-**取 $f=\mathbf{1}_B$ 就得到 $E(B)$ 本身**：
-
-$$
-\mathbf{1}_B(\hat A)=\int\mathbf{1}_B(\lambda)\,dE(\lambda)=E(B)
-$$
-
-**这是函数演算与谱测度的接头处**——后面凡是写 $\mathbf{1}_B(\hat A)$ 的地方，都可以直接换成 $E(B)$；**它是定义的直接结果，不是新定理**。
-
 **由此立刻得到范数形式**（§2、§3 都要用）：对 Borel 函数 $g$ 与 $\psi\in D(g(\hat A))$，
 $$
 \lVert g(\hat A)\psi\rVert^{2}
