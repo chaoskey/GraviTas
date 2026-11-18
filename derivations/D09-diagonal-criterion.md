@@ -1,6 +1,6 @@
 # D09 · 对角判据：$[\hat q,f(\hat q)]=0$ ⇒ 核正比于 $\delta$
 
-> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)
+> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)
 > 下游：[D21](D21-hamiltonian.md)
 > 原为 [N003 §4.2](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 
@@ -95,7 +95,7 @@ $$
 
 ## 4. 边界
 
-1. **需要 $\lvert q\rangle$ 存在**（[D01](D01-spectral-theorem.md) 的 Gelfand–Maurin）。
+1. **需要 $\lvert q\rangle$ 存在**（[D02](D02-gelfand-maurin.md)）。
 2. **对 $f$ 无需解析**，只需 Borel 可测（走路线一）；路线二连可测都不需要，只需"是 $\hat q$ 的函数"。
 3. **不能反过来用**：核对角不意味着算子是 $\hat q$ 的函数（可能有相同核的不同算子？——在同一表象下不会，但换表象时要注意）。
 

@@ -1,7 +1,7 @@
 # D05 · 归一化：$\langle q\lvert q'\rangle=\delta(q-q')$
 
 > 建档 2026-11-07 · 类型：**定理卡**——$\langle q\lvert q'\rangle$ 就是"恒等算子的核"，本卡把它写出来
-> 上游：[D01](D01-spectral-theorem.md)（谱定理、求值泛函 $\langle q\lvert\psi\rangle=\psi(q)$）、[D04](D04-position-eigen-equation.md)（密度形式，权重 $w=1$）
+> 上游：[D01](D01-spectral-theorem.md)（谱定理、求值泛函 $\langle q\lvert\psi\rangle=\psi(q)$）、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)（密度形式，权重 $w=1$）
 > 下游：[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D17](D17-translation.md)、[D18](D18-qp-overlap.md)、[D19](D19-p-completeness.md)
 
 ---

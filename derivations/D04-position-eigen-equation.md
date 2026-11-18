@@ -1,6 +1,6 @@
 # D04 · 位置本征方程：$\hat q\lvert q\rangle=q\lvert q\rangle$
 
-> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)
+> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)、[D02](D02-gelfand-maurin.md)
 > 下游：[D05](D05-normalization-convention.md)、[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D17](D17-translation.md)
 > 本卡只做"取 $\hat A=\hat q$"这一步，读出本征方程与谱分解；**本卡会取定一个密度形式**（§1.2，那是选择不是推论），**正交归一的系数属下游**。
 
@@ -121,7 +121,7 @@ $$
 1. **"简单谱"是前提。** 重数大于 1 时 $dE$ 的密度不是 $\lvert q\rangle\langle q\rvert$，而要写成 $\sum_i\lvert q,i\rangle\langle q,i\rvert$，本征方程要加指标。
 2. **绝对连续是前提。** 纯点谱时没有密度，$\delta$ 要换成 $\delta_{qq'}$，求和代替积分（[D01](D01-spectral-theorem.md) §5 的离散特例）。
 3. **$\lvert q\rangle$ 不在 $\mathcal{H}$ 内。** 本征方程是 $\Phi^{\times}$ 意义下的等式（[D01](D01-spectral-theorem.md) §2.1）。
-4. **不能拿本卡去"证明"Gelfand–Maurin。** 本卡的起点就是那条定理；循环的方向是 D01 → 本卡，不是反过来。
+4. **不能拿本卡去"证明"Gelfand–Maurin。** 本卡的起点就是那条定理；循环的方向是 D02 → 本卡，不是反过来。
 5. **本卡只取密度形式。** 正交归一的**系数**不在本卡——它由"投影"这一条逼出，属下游。
 
 ---

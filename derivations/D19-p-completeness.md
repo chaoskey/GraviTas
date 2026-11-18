@@ -1,6 +1,6 @@
 # D19 · 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$
 
-> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)（位置基的完备性）、[D05](D05-normalization-convention.md)（归一化）、[D18](D18-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）
+> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)（位置基的完备性）、[D02](D02-gelfand-maurin.md)、[D05](D05-normalization-convention.md)（归一化）、[D18](D18-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）
 > 下游：[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)
 > 本卡补的是"换基"这一步：它**不是新假设**，是从位置基推出来的。
 
@@ -89,7 +89,7 @@ $$
 
 ## 4. 边界
 
-1. **需要 $\lvert p\rangle$ 存在。** 与 $\lvert q\rangle$ 同理，来自 [D01](D01-spectral-theorem.md) 的 Gelfand–Maurin，不在 $\mathcal{H}$ 内。
+1. **需要 $\lvert p\rangle$ 存在。** 与 $\lvert q\rangle$ 同理，来自 [D02](D02-gelfand-maurin.md)，不在 $\mathcal{H}$ 内。
 2. **$2\pi$ 的位置是约定，但"总要有系数"不是。** 若改用对称归一 $\langle q\lvert p\rangle=e^{ipq}/\sqrt{2\pi}$，则 $\langle p\lvert p'\rangle=\delta(p-p')$、完备性变成 $\int dp\lvert p\rangle\langle p\rvert=\mathbb{1}$——$2\pi$ 搬家了，但 $wc=1$ 不变。
 3. **多自由度时按维数乘。** $n$ 维时权重是 $\frac{d^{n}p}{(2\pi)^{n}}$；这是傅里叶变换约定在每维各带一个 $2\pi$ 的直接结果，不是新规则。
 4. **这不是"另一条公设"。** 换基只是用不同基底展开同一个恒等算子，不存在"两套完备性"需要各自假设。

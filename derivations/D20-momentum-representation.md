@@ -1,6 +1,6 @@
 # D20 · $\hat p$ 在 $q$ 表象下是 $-i\partial_q$
 
-> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D18](D18-qp-overlap.md)、[D19](D19-p-completeness.md)；默认：D01；旁证：D08
+> 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D18](D18-qp-overlap.md)、[D19](D19-p-completeness.md)；默认：D01；旁证：D08
 > 下游：无卡片依赖
 > 原为 [N003 §3.1–3.2](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 

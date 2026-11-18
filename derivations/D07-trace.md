@@ -1,6 +1,6 @@
 # D07 · 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$
 
-> 建档 2026-11-08 · 上游：[D01](D01-spectral-theorem.md)（完备性）、[D04](D04-position-eigen-equation.md)（位置基）、[D05](D05-normalization-convention.md)
+> 建档 2026-11-08 · 上游：[D01](D01-spectral-theorem.md)（完备性）、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)（位置基）、[D05](D05-normalization-convention.md)
 > 下游：[D23](D23-trace-is-loop.md)、[D24](D24-density-matrix.md)、[D27](D27-energy-basis.md)
 > 本卡补的是"迹"这个对象的定义与基无关性——[D23](D23-trace-is-loop.md) 一直在用它，却没人交代过。
 

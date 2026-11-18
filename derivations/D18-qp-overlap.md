@@ -1,6 +1,6 @@
 # D18 · $\langle q\lvert p\rangle=e^{ipq}$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D05](D05-normalization-convention.md)、[D15](D15-weyl-phase.md)、[D16](D16-stone-von-neumann.md)、[D17](D17-translation.md)；默认：D06、D01
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D05](D05-normalization-convention.md)、[D15](D15-weyl-phase.md)、[D16](D16-stone-von-neumann.md)、[D17](D17-translation.md)；默认：D06、D01
 > 下游：[D19](D19-p-completeness.md)、[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)
 > 原为 [N003 §0.5](../notes/N003-basis-and-operator-relations.md) 的三步概括，2026-11-06 补全并移入网格。
 

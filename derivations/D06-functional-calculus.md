@@ -2,7 +2,7 @@
 
 > 建档 2026-11-06 · 类型：**定义 + 性质**——定义 $f(\hat A)$，并列出下游要用的运算规则；
 > 其中**谱映射定理与范数公式是定理**，不是定义的复述
-> 上游：[D01](D01-spectral-theorem.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)（§2 给 $\langle a\lvert a'\rangle=\delta(a-a')$，本卡 §1.3 要用）
+> 上游：[D01](D01-spectral-theorem.md)、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)（§2 给 $\langle a\lvert a'\rangle=\delta(a-a')$，本卡 §1.3 要用）
 > 下游：[D08](D08-commutator-p-fq.md)、[D11](D11-hadamard-lemma.md)、[D13](D13-commutator-phase.md)、[D14](D14-three-bch-forms.md)、[D15](D15-weyl-phase.md)、[D17](D17-translation.md)、[D18](D18-qp-overlap.md)、[D21](D21-hamiltonian.md)、[D27](D27-energy-basis.md)
 
 ---
