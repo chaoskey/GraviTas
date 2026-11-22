@@ -2,7 +2,7 @@
 
 > 建档 2026-11-18 · 类型：**引用卡**——Gelfand–Maurin 是外部数学，本卡只引用、不证明；本卡的任务是把它翻译进 Dirac 记号，并与 [D01](D01-spectral-theorem.md) 的投影值测度接上头
 > 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)
-> 下游：[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)、[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D10](D10-product-kernel.md)、[D17](D17-translation.md)、[D18](D18-qp-overlap.md)、[D19](D19-p-completeness.md)、[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)、[D23](D23-trace-is-loop.md)、[D27](D27-energy-basis.md)
+> 下游：[D03](D03-born-rule.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)、[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D10](D10-product-kernel.md)、[D17](D17-translation.md)、[D18](D18-qp-overlap.md)、[D19](D19-p-completeness.md)、[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)、[D23](D23-trace-is-loop.md)、[D27](D27-energy-basis.md)
 > 它补的是谱定理缺的那一半：**给"一族投影"，不给"一族矢"**。
 
 ---
@@ -194,14 +194,16 @@ $$
 
 $$
 \langle g(\hat A)\psi\lvert\lambda,k\rangle=g(\lambda)\,\langle\psi\lvert\lambda,k\rangle,
-\qquad \forall\psi\in\Phi,\ \ g\in C_c^{\infty}(\mathbb{R})\tag{8}
+\qquad \forall\psi\in\Phi,\ \ g\in C_c^{\infty}(\mathbb{R};\mathbb{R})\tag{8}
 $$
 
-**（8）是对 $(\Phi,\hat A)$ 的额外要求，不由（3）推出。** （3）只对**多项式** $p(\hat A)$ 归纳给出同样的式子；对一般光滑 $g$ 要另作验证。**对 $\hat A=\hat q,\hat p$ 配 $\Phi=\mathcal{S}(\mathbb{R})$ 可以直接验算**：$g(\hat q)$ 是乘以 $g(q)$，$g(\hat p)$ 是卷积，两者都保 $\mathcal{S}$，（8）逐点成立。
+**（8）是光滑函数演算与广义本征态的相容性条件。** （3）只对**多项式** $p(\hat A)$ 归纳给出同样的式子；推广到一般光滑 $g$ 要另作声明。**它对 $\hat A=\hat q,\hat p$ 配 $\Phi=\mathcal{S}(\mathbb{R})$ 可以直接验算**：$g(\hat q)$ 是乘以 $g(q)$，$g(\hat p)$ 是卷积，两者都保 $\mathcal{S}$，（8）逐点成立。**一般 $\hat A$ 上没有这条**，所以 §4.4 的推导**以（8）单独成立为前提**——这是本卡在定理条件之外唯一多要的东西。
 
 ### 4.4 推导：用一列好函数逼近
 
-取 $g_n\in C_c^{\infty}(\mathbb{R})$，$0\le g_n\le1$、$g_n\to\mathbf{1}_B$ 逐点。由（8），$g_n(\hat A)\phi$、$g_n(\hat A)\psi$ 都留在 $\Phi$ 里，于是（4）可以作用在 $(g_m(\hat A)\phi,\,g_n(\hat A)\psi)$ 上：
+**先对区间 $B$ 取逼近列**：此时必存在实值 $g_n\in C_c^{\infty}(\mathbb{R})$，满足 $0\le g_n\le1$ 且 $g_n\to\mathbf{1}_B$ 逐点（指示函数只有两个跳变点，用光滑截断平滑即可）。**一般 Borel 集不必另造逼近列**：右端的 $\Lambda_B$ 与左端的 $B\mapsto\langle\phi\lvert E(B)\psi\rangle$ 都是有限测度，两者在所有区间上相等，就由测度唯一性自动推广到所有 Borel 集。
+
+对区间 $B$：由（8），$g_n(\hat A)\phi$、$g_n(\hat A)\psi$ 都留在 $\Phi$ 里，于是（4）可以作用在 $(g_m(\hat A)\phi,\,g_n(\hat A)\psi)$ 上：
 
 $$
 \begin{align}

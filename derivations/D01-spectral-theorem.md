@@ -54,11 +54,13 @@ f(\hat A)=\int f(\lambda)\;dE(\lambda),
 D\bigl(f(\hat A)\bigr)=\Bigl\{\psi\;\Big|\;\int\lvert f(\lambda)\rvert^{2}\,d\mu_\psi(\lambda)<\infty\Bigr\}
 $$
 
-$f$ 是**任意** Borel 函数（不必有界）。无界时用上面那个定义域——它只是"权重太大会发散，所以要挑函数"，**不是新增的物理，是收敛性的记账**。**取 $f(\lambda)=\lambda$ 就还回 $\hat A$ 自己的定义域**。$f$ 有界时它是有界算子，且
+$f$ 是**任意** Borel 函数（不必有界）。无界时用上面那个定义域——它只是"权重太大会发散，所以要挑函数"，**不是新增的物理，是收敛性的记账**。**取 $f(\lambda)=\lambda$ 就还回 $\hat A$ 自己的定义域**。$f$ 有界时它是有界算子；**$f$ 在谱上连续**时
 
 $$
 \lVert f(\hat A)\rVert=\sup_{\lambda\in\sigma(\hat A)}\lvert f(\lambda)\rvert
 $$
+
+**一般的有界 Borel $f$ 要把 $\sup$ 换成 $E$ 的本质上确界**：$\lVert f(\hat A)\rVert=\inf\{c\ge0:E(\{\lvert f\rvert>c\})=\mathbb{0}\}$——否则会把零测集上的值也算进范数（如 $f=\mathbf{1}_{\{0\}}$、$E(\{0\})=\mathbb{0}$ 时范数为 $0$，而谱上的点态上确界是 $1$）。
 
 **由此立刻得到范数形式**（§2、§3 都要用）：对 Borel 函数 $g$ 与 $\psi\in D(g(\hat A))$，
 $$
@@ -302,7 +304,7 @@ $$
 
 的**酉算子**。
 
-**第四步：验证算子变乘法。** 对 $\psi=f(\hat A)\psi_0\in D(\hat A)$，用"$\lambda f(\lambda)$ 对应 $\hat A f(\hat A)$"这条规则（$\operatorname{id}(\lambda)=\lambda$）：
+**第四步：验证算子变乘法。** **先取紧支撑的有界 Borel 函数 $f$**——此时 $\lambda f(\lambda)$ 也有界，$\psi=f(\hat A)\psi_0$ 与 $\hat A\psi$ 都落在 $\mathcal{D}_0$ 里，可以用"$\lambda f(\lambda)$ 对应 $\hat A f(\hat A)$"这条规则（$\operatorname{id}(\lambda)=\lambda$）：
 
 $$
 \hat A\psi=\hat A f(\hat A)\psi_0=(\operatorname{id}\cdot f)(\hat A)\psi_0
@@ -317,7 +319,15 @@ $$
 =\lambda\,(U\psi)(\lambda)
 $$
 
-即 $U\hat A\,U^{\dagger}=M_\lambda$（乘以 $\lambda$ 的乘法算子）。对投影 $E(B)$ 同理：
+**再由闭性延拓到全定义域。** 这类紧支撑态在 $D(\hat A)$ 中按图范数稠密（用谱截断逼近），而 $\hat A$ 与 $M_\lambda$ 都是闭算子，故
+
+$$
+U\hat A\,U^{\dagger}=M_\lambda
+\qquad
+D(M_\lambda)=\bigl\{h\in L^{2}(d\mu_{\psi_0}):\ \lambda h\in L^{2}(d\mu_{\psi_0})\bigr\}
+$$
+
+（乘以 $\lambda$ 的乘法算子，定义域如右）。对投影 $E(B)$ 同理：
 
 $$
 \bigl(UE(B)\psi\bigr)(\lambda)=\mathbf{1}_B(\lambda)\,(U\psi)(\lambda)

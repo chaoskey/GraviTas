@@ -14,7 +14,7 @@
 **四层结构**：
 
 - **公理**：D00 对易关系（附：谱与自伴的定义、接口约定）；D03 态与 Born 规则。
-- **地基**：D01 谱定理 → D02 核空间谱定理 → D04 位置本征方程 → D05 归一化；另有 D03 Born 规则、D06 函数演算、D07 迹、D16 唯一性。
+- **地基**：D01 谱定理 → D02 核空间谱定理 → D04 位置本征方程 → D05 归一化；另有 D03 Born 规则（用到 D02 的广义本征态密度）、D06 函数演算、D07 迹、D16 唯一性。
 - **代数**：D08 对易子 → D11 Hadamard → D12 两项截断 → D13 交换相位 → D14 三条 BCH；另有 D09 对角判据、D10 乘积的核、D26 不确定关系。
 - **表象**：D15 Weyl 相位 → D17 平移 → D18 平面波 → D19 动量完备性 → D20 动量表象。
 - **统计**：D21 Hamiltonian → D22 路径积分 → D23 迹即闭合路径 → D24 密度矩阵与配分函数 → D27 能级展开 → D25 温度即周期倒数。
@@ -66,6 +66,14 @@ $$
 
 - **概率归一**：$E(\mathbb{R})=\mathbb{1}$，故 $p(\mathbb{R})=1$；
 - **本征态必得本征值**：$\hat A\lvert\psi\rangle=a\lvert\psi\rangle$ 时 $\langle\hat A\rangle=a$、$\langle\hat A^{2}\rangle=a^{2}$，方差为零，故 $p(\{a\})=1$（七步推导见 [D03](../derivations/D03-born-rule.md) §4）——**点谱**才成立（连续谱时 $E(\{q\})=0$）。矢量式与数值式等价：$E(\{a\})\lvert\psi\rangle=\lvert\psi\rangle \iff \langle\psi\lvert E(\{a\})\lvert\psi\rangle=1$。
+
+**它与 D02 的接头（本卡的第三个角色）**：把 Born 规则代进 D02 §4 的（9）式 $E(B)=\int_B\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\,d\mu$，得
+
+$$
+p(B)=\int_B\sum_k\bigl\lvert\langle\lambda,k\lvert\psi\rangle\bigr\rvert^{2}\,d\mu(\lambda)
+$$
+
+即 $dp=\sum_k\lvert\langle\lambda,k\lvert\psi\rangle\rvert^{2}d\mu$——**"波函数模方等于概率密度"就在这里落地**。无简并、取 $d\mu=dq$ 时退成 $dp=\lvert\psi(q)\rvert^{2}dq$；连续谱单点测度为零，所以 $p(\{q\})=0$ 而密度 $\lvert\psi(q)\rvert^{2}$ 可以不零。**它继承 D02 的相容性条件（8），不是无条件的。**
 
 **它不管什么**：不管"为什么是概率"、不管坍缩。坍缩（测量后态变成 $E(B)\lvert\psi\rangle/\sqrt{p}$）是**额外**假设，不用它也能算期望值。
 
