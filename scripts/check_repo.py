@@ -30,7 +30,7 @@ VALID_STATUS = {"open", "candidate", "contested", "settled"}
 VALID_CLUSTERS = {"信息与全息", "紫外完备", "时空的量子性质", "宇宙学", "检验"}
 
 # 这些目录里的链接不参与检查（模板里是占位符）
-SKIP_LINK_DIRS = {"templates", "scripts", ".git", "node_modules"}
+SKIP_LINK_DIRS = {"templates", "scripts", ".git", "node_modules", "tmp"}
 
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 FM_RE = re.compile(r"\A---\n(.*?)\n---\n", re.S)
