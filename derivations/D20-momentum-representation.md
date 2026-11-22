@@ -24,7 +24,7 @@ $$
 
 ## 1. 证明
 
-由 [D18](D18-qp-overlap.md)，$\langle q\lvert p\rangle=e^{ipq}$；由 [D01](D01-spectral-theorem.md)，$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$。于是
+由 [D18](D18-qp-overlap.md)，$\langle q\lvert p\rangle=e^{ipq}$；由 [D19](D19-p-completeness.md)，$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$。于是
 
 $$
 \langle q\lvert\hat p\lvert\psi\rangle
@@ -98,7 +98,7 @@ $$
 ## 4. 边界
 
 1. **它是"表示"，不是"定义"。** 换成 $p$ 表象，$\hat p$ 就是"乘以 $p$"；换到相空间，又是另一个样子。定义只有 [D00](D00-commutator-axiom.md)。
-2. **依赖两个前提**：$\langle q\lvert p\rangle=e^{ipq}$（[D18](D18-qp-overlap.md)，需 S–vN 与谱定理）与完备性（[D01](D01-spectral-theorem.md)）。缺一个，推导不成立。
+2. **依赖两个前提**：$\langle q\lvert p\rangle=e^{ipq}$（[D18](D18-qp-overlap.md)，需 S–vN 与谱定理）与完备性（[D19](D19-p-completeness.md)）。缺一个，推导不成立。
 3. **无界性**：$\hat p$ 无界，求导只在稠密定义域（绝对连续且导数平方可积的函数）上有意义。
 4. **符号约定**：若取 $\hat p=+i\partial_q$（即 $[\hat q,\hat p]=-i$），符号全反。判据仍是 [D17](D17-translation.md) 的平移方向。
 

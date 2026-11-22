@@ -149,7 +149,7 @@ $$
 \langle(\hat A-a)^{2}\rangle=\langle\hat A^{2}\rangle-2a\langle\hat A\rangle+a^{2}=a^{2}-2a^{2}+a^{2}=0
 $$
 
-**第 3 步：把期望换成积分。** 由 [D01](D01-spectral-theorem.md) §1.2 第 1 条的 $f$ 公式（取 $f(\lambda)=(\lambda-a)^{2}$；$\psi$ 在定义域里，因为 $(\hat A-a)^{2}\psi=0$）：
+**第 3 步：把期望换成积分。** 由 [D01](D01-spectral-theorem.md) §1 的函数演算（取 $f(\lambda)=(\lambda-a)^{2}$；$\psi$ 在定义域里，因为 $(\hat A-a)^{2}\psi=0$）：
 
 $$
 0=\langle(\hat A-a)^{2}\rangle=\int(\lambda-a)^{2}\,d\mu_\psi(\lambda)
@@ -245,7 +245,7 @@ $$
 
 **意义**：同一件事有两种说法——**矢量语言**（左边）与**数值语言**（右边）；两边互相推，且**都不需要知道 $E(\{a\})$ 具体是哪个投影**。
 
-**边界**：本条只对**点谱**成立。连续谱时 $E(\{q\})=0$，此时"本征态"根本不存在（[D01](D01-spectral-theorem.md) §1.3），概率也就无从谈起。
+**边界**：本条只对**点谱**成立。连续谱时 $E(\{q\})=0$，此时"本征态"根本不存在（[D01](D01-spectral-theorem.md) §3），概率也就无从谈起。
 
 ---
 

@@ -2,7 +2,7 @@
 
 > 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)、[D02](D02-gelfand-maurin.md)
 > 下游：[D05](D05-normalization-convention.md)、[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D17](D17-translation.md)
-> 本卡只做"取 $\hat A=\hat q$"这一步，读出本征方程与谱分解；**本卡会取定一个密度形式**（§1.2，那是选择不是推论），**正交归一的系数属下游**。
+> 本卡只做"取 $\hat A=\hat q$"这一步，读出本征方程与谱分解；**本卡会取定谱测度**（§1.2，那是选择不是推论），**正交归一的系数属下游**。
 
 ---
 
@@ -26,7 +26,7 @@ $$
 
 ### 1.1 第一步：Gelfand–Maurin 直接给本征方程与完备性
 
-[D01](D01-spectral-theorem.md) §2.3：存在谱测度 $\mu$ 与广义本征矢 $F_\lambda\in\Phi^{\times}$，使
+[D02](D02-gelfand-maurin.md) §2 的本征方程与 §3 的完备性（5）：存在**标量谱测度** $\mu$ 与广义本征矢 $F_\lambda\in\Phi^{\times}$，使
 
 $$
 \hat A F_\lambda=\lambda F_\lambda,
@@ -44,34 +44,36 @@ $$
 
 **本征方程在这里是一行**——它不是推出来的，是定理的直接特化。**存在性的全部来源就是这一步。**
 
-### 1.2 第二步：定密度形式（本卡的**选择**）
+**两个等式的效力范围**：完整性与 $\int dE=\mathbb{1}$ 一样，是**弱等式**——取二次型、夹在 $\langle\phi\lvert\,\cdot\,\lvert\psi\rangle$ 里才是数（[D02](D02-gelfand-maurin.md) §3.3）。本卡后面照物理惯例把它当算子等式用，**底层依据仍是这一条**。
 
-定理只给 $d\mu$。要写出"$\hat q$ 按 $\lvert q\rangle$ 展开"的具体样子，还要**选定谱测度的密度**。本卡取
+### 1.2 第二步：定测度（本卡的**选择**）
+
+[D02](D02-gelfand-maurin.md) §4 的（8）已经给出密度的**形状**：
 
 $$
-E(B)=\int_B dq\,\lvert q\rangle\langle q\rvert
-\qquad\bigl(\text{即 } dE(q)=dq\,\lvert q\rangle\langle q\rvert\bigr)
+dE(q)=d\mu(q)\,\lvert q\rangle\langle q\rvert
 $$
 
-**这是一次选择，不是定理的推论。** 它等价于固定 $\lvert q\rangle$ 的尺度：把 $\lvert q\rangle$ 乘常数、把 $dq$ 除以同一因子，整条式子不变。
-
-**这一步同时把 $\mu$ 定成了 Lebesgue**：同一个 $\mathbb{1}$ 分解成同一种密度，两边的权重只能重合。所以
+**本卡要选的是 $\mu$ 本身**，取
 
 $$
 d\mu(q)=dq
+\qquad\bigl(\text{即 } dE(q)=dq\,\lvert q\rangle\langle q\rvert\bigr)
 $$
+
+**这是一次选择，不是定理的推论。** 它等价于固定 $\lvert q\rangle$ 的尺度：把 $\lvert q\rangle$ 乘常数、把 $d\mu$ 除以同一因子，（8）不变——所以"取 $\mu$ 为 Lebesgue"与"取 $\lvert q\rangle$ 的归一化尺度"是**同一件事**。
 
 **至于 $\langle q\lvert q'\rangle$ 的系数**——那是"投影"这一条要求的，属下游（归一化那一卡）；本卡只用"每一点的分量是 $\lvert q\rangle\langle q\rvert$"。
 
 ### 1.3 第三步：代入谱定理
 
-[D01](D01-spectral-theorem.md) §1.1 的谱定理给
+[D01](D01-spectral-theorem.md) §0 的谱定理给
 
 $$
 \hat q=\int q\,dE(q)
 $$
 
-把 §1.2 的密度形式代进 $dE$ 的位置：
+把 §1.2 取定的 $d\mu=dq$ 代进 $dE$ 的位置：
 
 $$
 \hat q=\int q\,dE(q)=\int q\,dq\,\lvert q\rangle\langle q\rvert
@@ -81,7 +83,7 @@ $$
 
 ### 1.4 第四步：完备性的同一个写法
 
-由 §1.2 的密度形式与 $\int dE=\mathbb{1}$（[D01](D01-spectral-theorem.md) §1.1）：
+由 §1.2 的密度形式与 $\int dE=\mathbb{1}$（[D01](D01-spectral-theorem.md) §0）：
 
 $$
 \mathbb{1}=\int\lvert q\rangle\langle q\rvert\,dq
@@ -110,8 +112,8 @@ $$
 
 | 检验 | 结果 |
 |---|---|
-| 谱为实数 | $\hat q$ 自伴 $\Rightarrow$ 本征值 $q\in\mathbb{R}$，与 [D01](D01-spectral-theorem.md) §1.1 一致 ✅ |
-| 与 [D01](D01-spectral-theorem.md) §2.2 相容 | 本卡就是 $\hat A F_\lambda=\lambda F_\lambda$ 取 $\hat A=\hat q$ ✅ |
+| 谱为实数 | $\hat q$ 自伴 $\Rightarrow$ 本征值 $q\in\mathbb{R}$，与 [D01](D01-spectral-theorem.md) §0 一致 ✅ |
+| 与 [D02](D02-gelfand-maurin.md) §2 相容 | 本卡就是 $\hat A F_\lambda=\lambda F_\lambda$ 取 $\hat A=\hat q$ ✅ |
 | 自洽 | §1.2 的密度形式同时给出 §1.3 的算子式与 §1.4 的完备性 ✅ |
 
 ---
@@ -120,7 +122,7 @@ $$
 
 1. **"简单谱"是前提。** 重数大于 1 时 $dE$ 的密度不是 $\lvert q\rangle\langle q\rvert$，而要写成 $\sum_i\lvert q,i\rangle\langle q,i\rvert$，本征方程要加指标。
 2. **绝对连续是前提。** 纯点谱时没有密度，$\delta$ 要换成 $\delta_{qq'}$，求和代替积分（[D01](D01-spectral-theorem.md) §5 的离散特例）。
-3. **$\lvert q\rangle$ 不在 $\mathcal{H}$ 内。** 本征方程是 $\Phi^{\times}$ 意义下的等式（[D01](D01-spectral-theorem.md) §2.1）。
+3. **$\lvert q\rangle$ 不在 $\mathcal{H}$ 内。** 本征方程是 $\Phi^{\times}$ 意义下的等式（[D02](D02-gelfand-maurin.md) §2）。
 4. **不能拿本卡去"证明"Gelfand–Maurin。** 本卡的起点就是那条定理；循环的方向是 D02 → 本卡，不是反过来。
 5. **本卡只取密度形式。** 正交归一的**系数**不在本卡——它由"投影"这一条逼出，属下游。
 

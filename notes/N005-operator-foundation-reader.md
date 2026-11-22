@@ -126,24 +126,27 @@ $$
 
 **三层各管一件事**：$\Phi$ 让"取值"**连续**（对 $L^{2}$ 函数，改一个点值不变，取值无意义）；$\Phi^{\times}$ 给"取值"一个**住处**（取值只是 $\Phi$ 上的连续泛函，不是 $\Phi$ 的元素）；$\mathcal{H}$ 让"**概率、自伴、谱**"有定义（$\Phi$ 按 $L^{2}$ 范数不完备，$\Phi^{\times}$ 没有内积；$\mathcal{H}\subset\Phi^{\times}$ 的嵌入靠 Riesz 表示）。
 
-**条件**：$\hat A$ 自伴；$\Phi$ 是核空间、连续稠密地嵌进 $\mathcal{H}$；且 $\hat A$ **连续地**把 $\Phi$ 映回 $\Phi$（不只是 $\subset$——要连续，$\hat A F_\lambda$ 才有意义）。
+**条件**（五条，实则三句）：$\mathcal{H}$ 可分；$\Phi$ 是核空间、连续稠密地嵌进 $\mathcal{H}$；$\hat A$ 自伴，且**连续地**把 $\Phi$ 映回 $\Phi$（不只是 $\subset$——要连续，$\hat A F_{\lambda,k}$ 才有意义）。
 
-**定理两条（全部内容）**：
+**定理两条**（外加完备性的 $g$ 版）：
 
-- **(i) 本征方程**：存在 $F_{\lambda,i}\in\Phi^{\times}$，使 $\hat A F_{\lambda,i}=\lambda F_{\lambda,i}$；
-- **(ii) 谱分解**：存在标量测度 $\mu$，使对任意有界 Borel $g$：
-  $g(\hat A)=\int g(\lambda)\,P(\lambda)\,d\mu(\lambda)$，其中 $P(\lambda)=\sum_i\lvert F_{\lambda,i}\rangle\langle F_{\lambda,i}\rvert$。
+- **本征方程**：存在 $F_{\lambda,k}\in\Phi^{\times}$（$k$ 跑重数），使 $\hat A F_{\lambda,k}=\lambda F_{\lambda,k}$——**这是对偶空间里的等式**，等价写法是 $\Phi$ 上的数 $F_{\lambda,k}(\hat A\phi)=\lambda\,F_{\lambda,k}(\phi)$；
+- **完备性（内积表示）**：$\langle\phi\lvert\psi\rangle=\int_{\sigma(\hat A)}\sum_k F_{\lambda,k}(\phi)\,\overline{F_{\lambda,k}(\psi)}\,d\mu(\lambda)$——**只对 $\phi,\psi\in\Phi$ 成立**；
+- **它的 $g$ 版**：左边换成 $\langle\phi\lvert g(\hat A)\psi\rangle$、被积函数乘 $g(\lambda)$，对任意有界 Borel $g$ 成立。**这不是新定理，是同一句话。**
 
-**四条推论（各取一个 $g$，换 $g$ 就换结论）**：
+**Dirac 翻译**：$F_{\lambda,k}\equiv\lvert\lambda,k\rangle$，$F_{\lambda,k}(\phi)\equiv\langle\phi\lvert\lambda,k\rangle$。**$\lvert\lambda,k\rangle$ 与 $\langle\lambda,k\rvert$ 是同一个元素的两副身份**（$\Phi^{\times}$ 本就是"泛函"空间，元素既是矢量又是泛函），唯一的翻译公式是 $\langle\lambda,k\lvert\psi\rangle=\overline{\langle\psi\lvert\lambda,k\rangle}$——**（4）里那个共轭就是它**。而 $\langle\lambda,k\lvert\lambda',k'\rangle$ 严格说没有定义，只是 $\delta_{kk'}\delta(\lambda-\lambda')$ 的简写。
 
-| 取 | 得 |
-|---|---|
-| $g\equiv1$ | 完备性 $\mathbb{1}=\int P\,d\mu$——**只对 $\phi,\psi\in\Phi$ 成立** |
-| $g=\mathbf{1}_B$ | $E(B)=\int_B P\,d\mu$：D01 的抽象 $E$ 在这里有了密度 |
-| 对上一行取期望 | $\mu_\psi\ll\mu$，密度为 $\langle\psi\lvert P(\lambda)\lvert\psi\rangle$ |
-| $i$ 只剩一项（无简并） | $E(B)=\int_B\lvert F_\lambda\rangle\langle F_\lambda\rvert\,d\mu$，且可取 $\mu=\mu_{\psi_0}$ |
+**与 D01 的接头（全卡的重点）**：取 $g=\mathbf{1}_B$，得
 
-**$\langle\phi\lvert F_\lambda\rangle$ 是配对，不是内积**；**对 $\mathcal{H}$ 中的一般态，完备性的积分不一定收敛**——要延拓是另一回事。
+$$
+E(B)=\int_B\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\,d\mu(\lambda),
+\qquad
+dE(\lambda)=\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\,d\mu(\lambda)
+$$
+
+**左边是 D01 的投影，右边是 D02 的外积积分**——D01 的抽象 $E$ 在这里有了密度。**它是弱等式**：两边都要夹在 $\langle\phi\lvert\,\cdot\,\lvert\psi\rangle$ 里才是数。
+
+**无简并时**（$k$ 只剩一项）退成 $dE=\lvert\lambda\rangle\langle\lambda\rvert\,d\mu$，且可取 $\mu=\mu_{\psi_0}$（$\psi_0$ 为循环矢量，[D01](../derivations/D01-spectral-theorem.md) §5）——**这就是 D01 的对角化模型**。
 
 **两点要看清**：
 

@@ -1,6 +1,6 @@
 # D19 · 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$
 
-> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)（位置基的完备性）、[D02](D02-gelfand-maurin.md)、[D05](D05-normalization-convention.md)（归一化）、[D18](D18-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）
+> 建档 2026-11-07 · 上游：[D02](D02-gelfand-maurin.md)（位置基的完备性，§3 的（5））、[D05](D05-normalization-convention.md)（归一化）、[D18](D18-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）
 > 下游：[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)
 > 本卡补的是"换基"这一步：它**不是新假设**，是从位置基推出来的。
 
@@ -18,7 +18,7 @@ $$
 
 | 式子 | 来源 | 性质 |
 |---|---|---|
-| $\int dq\,\lvert q\rangle\langle q\rvert=\mathbb{1}$ | [D01](D01-spectral-theorem.md) §1.1 的“投影拼回整个空间” | **定理**（谱定理直接给） |
+| $\int dq\,\lvert q\rangle\langle q\rvert=\mathbb{1}$ | [D02](D02-gelfand-maurin.md) §3 的（5） | **定理**（核空间谱定理直接给） |
 | $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | 上一行 + $\langle q\lvert p\rangle=e^{ipq}$ | **推论**（本卡证明） |
 
 **所以 $\frac{dp}{2\pi}$ 这个系数不必死记，它由"换基要保持恒等算子"唯一确定。**
@@ -29,7 +29,7 @@ $$
 
 ### 1.1 第一步：把待证对象化成核
 
-由 [D01](D01-spectral-theorem.md) 的 $\{\lvert q\rangle\}$ 完备，算子由它的核唯一确定。对任意 $q',q''$：
+由 [D02](D02-gelfand-maurin.md) §3 的（5），$\{\lvert q\rangle\}$ 完备，算子由它的核唯一确定。对任意 $q',q''$：
 
 $$
 \Bigl\langle q'\bigr\lvert\Bigl(\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert\Bigr)\bigr\lvert q''\Bigr\rangle

@@ -2,7 +2,7 @@
 
 > 建档 2026-11-07 · 类型：**引用卡**——谱定理是外部数学，本卡只引用、不证明；本卡的任务是由它**推出五条推论**
 > 上游：[D00](D00-commutator-axiom.md)
-> 下游：[D02](D02-gelfand-maurin.md)、[D03](D03-born-rule.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)、[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D08](D08-commutator-p-fq.md)、[D09](D09-diagonal-criterion.md)、[D10](D10-product-kernel.md)、[D18](D18-qp-overlap.md)、[D19](D19-p-completeness.md)、[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)、[D23](D23-trace-is-loop.md)、[D26](D26-uncertainty.md)
+> 下游：[D02](D02-gelfand-maurin.md)、[D03](D03-born-rule.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)、[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D08](D08-commutator-p-fq.md)、[D09](D09-diagonal-criterion.md)、[D10](D10-product-kernel.md)、[D18](D18-qp-overlap.md)、[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)、[D23](D23-trace-is-loop.md)、[D26](D26-uncertainty.md)
 > 五条推论：**函数演算**、**谱即支撑**、**投影非零的独点即点谱**、**乘法规则**、**算子对角化**。
 
 ---
@@ -169,7 +169,7 @@ $$
 
 **左边是投影的值域，右边是本征子空间。** 两个方向各一条。
 
-**方向一：$P\equiv E(\{\lambda\})\neq0$ ⇒ $\lambda$ 是本征值。** 取 $\psi\in\operatorname{ran}P$，$\psi\neq0$。对 $\psi$，测度全落在 $\{\lambda\}$ 上（因为 $(𝟙-P)\psi=0$），故
+**方向一：$P\equiv E(\{\lambda\})\neq0$ ⇒ $\lambda$ 是本征值。** 取 $\psi\in\operatorname{ran}P$，$\psi\neq0$。对 $\psi$，测度全落在 $\{\lambda\}$ 上（因为 $(\mathbb{1}-P)\psi=0$），故
 
 $$
 \hat A\psi=\int_{\sigma(\hat A)}\lambda'\,dE(\lambda')\psi
@@ -186,7 +186,7 @@ $$
 =\int(\lambda'-\lambda)^{2}\,d\langle\psi\lvert E\lvert\psi\rangle
 $$
 
-**被积函数非负、积分零，故测度只落在 $\{\lambda\}$ 上**：$\langle\psi\lvert E(\{\lambda\})\lvert\psi\rangle=\lVert\psi\rVert^{2}$。由勾股（$E$ 与 $𝟙-E$ 正交）：
+**被积函数非负、积分零，故测度只落在 $\{\lambda\}$ 上**：$\langle\psi\lvert E(\{\lambda\})\lvert\psi\rangle=\lVert\psi\rVert^{2}$。由勾股（$E$ 与 $\mathbb{1}-E$ 正交）：
 
 $$
 \lVert(\mathbb{1}-E(\{\lambda\}))\psi\rVert^{2}

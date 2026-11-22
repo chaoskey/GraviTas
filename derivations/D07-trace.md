@@ -45,7 +45,7 @@ $$
 
 **两边相等。** 因为 $\{\lvert n\rangle\}$ 与 $\{\lvert m\rangle\}$ 是任意选的，所以迹与基无关。**证毕。**
 
-（只用到两件事：两组完备性 $\sum\lvert\cdot\rangle\langle\cdot\rvert=\mathbb{1}$，来自 [D01](D01-spectral-theorem.md)；以及求和的绝对收敛，见 §4。）
+（只用到两件事：两组完备性 $\sum\lvert\cdot\rangle\langle\cdot\rvert=\mathbb{1}$，即 [D02](D02-gelfand-maurin.md) §3 的（5）；以及求和的绝对收敛，见 §4。）
 
 **取位置基**就是把 $\{\lvert n\rangle\}$ 换成 $\{\lvert q\rangle\}$、求和换成积分：
 

@@ -48,7 +48,7 @@
 |---|---|---|---|---|
 | D00 | **公理**：$[\hat q,\hat p]=i$ | — | [D00](D00-commutator-axiom.md) | ✓ |
 | D01 | 谱定理：自伴算子的谱分解（引用卡）+ 五条推论（函数演算、谱即支撑、点谱、乘法律、对角化） | D00 | [D01](D01-spectral-theorem.md) | ✓ |
-| D02 | 核空间谱定理（Gelfand–Maurin，引用卡）：给出 $\lvert q\rangle$ 与完备性 | D00、D01 | [D02](D02-gelfand-maurin.md) | ✓ |
+| D02 | 核空间谱定理（Gelfand–Maurin，引用卡）：给出广义本征矢、完备性（5），并把 D01 的 $E$ 写成外积密度（8） | D00、D01 | [D02](D02-gelfand-maurin.md) | ✓ |
 | D03 | 态与测量：Born 规则 $p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$ | D00、D01 | [D03](D03-born-rule.md) | ✓ |
 | D04 | 位置本征方程 $\hat q\lvert q\rangle=q\lvert q\rangle$ 与谱分解（Gelfand–Maurin 的直接特化） | D01、D02 | [D04](D04-position-eigen-equation.md) | ✓ |
 | D05 | 归一化：$\langle q\lvert q'\rangle=\delta(q-q')$（即 $\langle q\lvert q'\rangle$ 是恒等算子的核；尺度约定在 D04） | D01、D02、D04 | [D05](D05-normalization-convention.md) | ✓ |
@@ -65,7 +65,7 @@
 | D16 | Stone–von Neumann（引用卡） | D15、外部定理 | [D16](D16-stone-von-neumann.md) | ✓ |
 | D17 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D02、D04、D05、D12（默认：D06；旁证：D08、D11） | [D17](D17-translation.md) | ✓ |
 | D18 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D02、D05、D15、D16、D17（默认：D06、D01） | [D18](D18-qp-overlap.md) | ✓ |
-| D19 | 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | D01、D02、D05、D18 | [D19](D19-p-completeness.md) | ✓ |
+| D19 | 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | D02、D05、D18 | [D19](D19-p-completeness.md) | ✓ |
 | D20 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D02、D18、D19（默认：D01；旁证：D08） | [D20](D20-momentum-representation.md) | ✓ |
 | D21 | Hamiltonian 与时间演化：$\hat H=\frac{\hat p^{2}}{2m}+V(\hat q)$ | D00、D06、D09 | [D21](D21-hamiltonian.md) | ✓ |
 | D22 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D02、D10、D18、D19、D21（默认：D01） | [D22](D22-path-integral-representation.md) | ✓ |
@@ -100,7 +100,7 @@
 | 9 | D14 三条 BCH、D15 Weyl 相位 | D00、D06、D11、D12、D13 |
 | 10 | D16 Stone–von Neumann | D15 |
 | 11 | D18 平面波 | D00、D01、D02、D05、D06、D15、D16、D17 |
-| 12 | D19 动量完备性 | D01、D02、D05、D18 |
+| 12 | D19 动量完备性 | D02、D05、D18 |
 | 13 | D20 动量表示、D22 路径积分 | D00、D01、D02、D08、D10、D18、D19、D21 |
 | 14 | D23 迹即闭合路径 | D01、D02、D07、D22 |
 | 15 | D24 密度矩阵 | D07、D21、D23 |

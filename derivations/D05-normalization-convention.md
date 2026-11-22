@@ -1,7 +1,7 @@
 # D05 · 归一化：$\langle q\lvert q'\rangle=\delta(q-q')$
 
 > 建档 2026-11-07 · 类型：**定理卡**——$\langle q\lvert q'\rangle$ 就是"恒等算子的核"，本卡把它写出来
-> 上游：[D01](D01-spectral-theorem.md)（谱定理、求值泛函 $\langle q\lvert\psi\rangle=\psi(q)$）、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)（密度形式，权重 $w=1$）
+> 上游：[D01](D01-spectral-theorem.md)（谱定理）、[D02](D02-gelfand-maurin.md)（广义本征矢、求值泛函 $\langle q\lvert\psi\rangle=\psi(q)$）、[D04](D04-position-eigen-equation.md)（密度形式，权重 $w=1$）
 > 下游：[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D17](D17-translation.md)、[D18](D18-qp-overlap.md)、[D19](D19-p-completeness.md)
 
 ---
@@ -118,7 +118,7 @@ $$
 
 ## 5. 边界
 
-1. **弯曲空间**：测度带 $\rho=\sqrt{g}$，核相应变成 $\delta(q-q')/\rho(q)$——这是同一个尺度关系的写法（[D01](D01-spectral-theorem.md) §5 第 3 条）。
+1. **弯曲空间**：测度带 $\rho=\sqrt{g}$，核相应变成 $\delta(q-q')/\rho(q)$——这是同一个尺度关系的写法（[D02](D02-gelfand-maurin.md) §7 第 3 条）。
 2. **离散谱**：$\delta(q-q')\to\delta_{nm}$，积分变求和。
 3. **多分量**：本征矢要加内部指标，$\langle q,i\lvert q',j\rangle=\delta_{ij}\delta(q-q')$。
 4. **它不是"物理内容"**：核只影响中间步骤的系数，所有可观测量的期望值都与尺度方案无关。
