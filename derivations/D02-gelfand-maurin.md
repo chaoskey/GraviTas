@@ -101,14 +101,15 @@ $$
 
 **"任意"的范围要说清**：上式只对 $\Phi$ 里的元素成立。**对 $\mathcal{H}$ 中的一般态，这个积分不一定收敛**——要延拓是另一回事。**这就是为什么 $\Phi$ 必须"好"。**
 
-**它的 $g$ 版**（§4 要用）：对**任意有界 Borel 函数 $g$**、任意 $\phi,\psi\in\Phi$，
+**（4）是压缩写法。** 定理的完备性对**每个 Borel 集** $B$ 都成立（定理原文是对连续紧支撑函数说的，取 $f=\mathbf{1}_B$、由单调类延拓即得）：
 
 $$
-\langle\phi\lvert g(\hat A)\psi\rangle
-=\int_{\sigma(\hat A)}g(\lambda)\sum_k F_{\lambda,k}(\phi)\,\overline{F_{\lambda,k}(\psi)}\;d\mu(\lambda)
+\langle\phi\lvert E(B)\psi\rangle
+=\int_{\sigma(\hat A)}\mathbf{1}_B(\lambda)\sum_k F_{\lambda,k}(\phi)\,\overline{F_{\lambda,k}(\psi)}\;d\mu(\lambda)
+\tag{4'}
 $$
 
-**取 $g\equiv1$ 就还回（4）**。**它同属定理的完备性部分**——本卡不证，只拿它来用；**两者是同一句话，不是两条定理**。
+**取 $B=\sigma(\hat A)$（此时 $E(B)=\mathbb{1}$、$\mathbf{1}_B\equiv1$）就还回（4）**——**两者是同一句话，不是两条定理**。**§4 用的就是 $B$ 那一次**：只写（4）那一次不够，它只给出"总质量" $\langle\phi\lvert\psi\rangle$，**含不下"局部"的信息**，而那正是 $E(B)$ 要的东西。
 
 ---
 
@@ -170,14 +171,14 @@ $$
 
 **"完备性"这个名称是准确的**：$\mathbb{1}$ 被拆成一族外积的积分，说明这族矢量"铺满"了空间——**但（5）只在 $\Phi$ 上取二次型时是有数的等式**，理由同在（4）后面。
 
-**$g$ 版写成 Dirac 记号**就是
+**（4′）写成 Dirac 记号**就是
 
 $$
-\langle\phi\lvert g(\hat A)\psi\rangle
-=\int_{\sigma(\hat A)}g(\lambda)\sum_k\langle\phi\lvert\lambda,k\rangle\langle\lambda,k\lvert\psi\rangle\;d\mu(\lambda)
+\langle\phi\lvert E(B)\psi\rangle
+=\int_{\sigma(\hat A)}\mathbf{1}_B(\lambda)\sum_k\langle\phi\lvert\lambda,k\rangle\langle\lambda,k\lvert\psi\rangle\;d\mu(\lambda)
 $$
 
-**§4 只用它取 $g=\mathbf{1}_B$ 的那一次。**
+**§4 就从它出发。**
 
 ---
 
@@ -210,9 +211,7 @@ $$
 
 **这是后面每一步的入口**：$E(B)$ 就是 $\mathbf{1}_B$ 这个函数在 $\hat A$ 上的取值。
 
-### 4.2 第二步：把 $g$ 取成 $\mathbf{1}_B$
-
-代进 §3.3 末尾那条 $g$ 版：
+### 4.2 第二步：代进（4′）
 
 $$
 \langle\phi\lvert E(B)\psi\rangle
@@ -290,5 +289,5 @@ $$
 - [ ] 用"求值泛函"说明 $\lvert q\rangle$ 为什么不在 $\mathcal{H}$ 里
 - [ ] 说明（4）为什么只对 $\Phi$ 成立
 - [ ] 说清 $\lvert\lambda,k\rangle$ 与 $\langle\lambda,k\rvert$ 是同一个元素，以及唯一的翻译公式
-- [ ] 从（4）的 $g$ 版推出（8），并说清"剥离"为什么需要 $\Phi$ 稠密
+- [ ] 从（4）的 $B$ 版推出（8），并说清"剥离"为什么需要 $\Phi$ 稠密
 - [ ] 说明核空间条件为什么不可省

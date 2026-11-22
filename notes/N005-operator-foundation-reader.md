@@ -128,15 +128,15 @@ $$
 
 **条件**（五条，实则三句）：$\mathcal{H}$ 可分；$\Phi$ 是核空间、连续稠密地嵌进 $\mathcal{H}$；$\hat A$ 自伴，且**连续地**把 $\Phi$ 映回 $\Phi$（不只是 $\subset$——要连续，$\hat A F_{\lambda,k}$ 才有意义）。
 
-**定理两条**（外加完备性的 $g$ 版）：
+**定理两条**（外加完备性的 $B$ 版）：
 
 - **本征方程**：存在 $F_{\lambda,k}\in\Phi^{\times}$（$k$ 跑重数），使 $\hat A F_{\lambda,k}=\lambda F_{\lambda,k}$——**这是对偶空间里的等式**，等价写法是 $\Phi$ 上的数 $F_{\lambda,k}(\hat A\phi)=\lambda\,F_{\lambda,k}(\phi)$；
 - **完备性（内积表示）**：$\langle\phi\lvert\psi\rangle=\int_{\sigma(\hat A)}\sum_k F_{\lambda,k}(\phi)\,\overline{F_{\lambda,k}(\psi)}\,d\mu(\lambda)$——**只对 $\phi,\psi\in\Phi$ 成立**；
-- **它的 $g$ 版**：左边换成 $\langle\phi\lvert g(\hat A)\psi\rangle$、被积函数乘 $g(\lambda)$，对任意有界 Borel $g$ 成立。**这不是新定理，是同一句话。**
+- **它的 $B$ 版**：左边换成 $\langle\phi\lvert E(B)\psi\rangle$、被积函数乘 $\mathbf{1}_B(\lambda)$，对每个 Borel 集 $B$ 成立。**这不是新定理，是同一句话**（（4）只是 $B=\sigma(\hat A)$ 那一次；只写那一次推不出（8），它只给总质量）。
 
 **Dirac 翻译**：$F_{\lambda,k}\equiv\lvert\lambda,k\rangle$，$F_{\lambda,k}(\phi)\equiv\langle\phi\lvert\lambda,k\rangle$。**$\lvert\lambda,k\rangle$ 与 $\langle\lambda,k\rvert$ 是同一个元素的两副身份**（$\Phi^{\times}$ 本就是"泛函"空间，元素既是矢量又是泛函），唯一的翻译公式是 $\langle\lambda,k\lvert\psi\rangle=\overline{\langle\psi\lvert\lambda,k\rangle}$——**（4）里那个共轭就是它**。而 $\langle\lambda,k\lvert\lambda',k'\rangle$ 严格说没有定义，只是 $\delta_{kk'}\delta(\lambda-\lambda')$ 的简写。
 
-**与 D01 的接头（全卡的重点）**：取 $g=\mathbf{1}_B$，得
+**与 D01 的接头（全卡的重点）**：取 $B$ 那一次，得
 
 $$
 E(B)=\int_B\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\,d\mu(\lambda),
