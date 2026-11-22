@@ -118,7 +118,7 @@ $$
 
 ## 5. 边界
 
-1. **弯曲空间**：测度带 $\rho=\sqrt{g}$，核相应变成 $\delta(q-q')/\rho(q)$——这是同一个尺度关系的写法（[D02](D02-gelfand-maurin.md) §7 第 3 条）。
+1. **弯曲空间**：测度带 $\rho=\sqrt{g}$，核相应变成 $\delta(q-q')/\rho(q)$——这是同一个尺度关系的写法（[D02](D02-gelfand-maurin.md) §6 第 3 条）。
 2. **离散谱**：$\delta(q-q')\to\delta_{nm}$，积分变求和。
 3. **多分量**：本征矢要加内部指标，$\langle q,i\lvert q',j\rangle=\delta_{ij}\delta(q-q')$。
 4. **它不是"物理内容"**：核只影响中间步骤的系数，所有可观测量的期望值都与尺度方案无关。

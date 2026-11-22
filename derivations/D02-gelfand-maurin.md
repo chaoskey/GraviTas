@@ -7,34 +7,34 @@
 
 ---
 
-**记号**：$\Phi\subset\mathcal{H}\subset\Phi^{\times}$ 是 Gelfand 三重空间（§1）；$F_{\lambda,k}\in\Phi^{\times}$ 是广义本征矢，$k$ 跑重数指标；$\mu$ 是谱上的**标量谱测度**；$E$、$dE$ 沿用 [D01](D01-spectral-theorem.md) 的投影值测度。$\langle F,\phi\rangle$ 记 $\Phi^{\times}\times\Phi$ 上的对偶括号：**对 $F$ 反线性、对 $\phi$ 线性**。
+**记号**：$\Phi\subset\mathcal{H}\subset\Phi^{\times}$ 是 Gelfand 三重空间（§1）；$F_{\lambda,k}\in\Phi^{\times}$ 是广义本征矢，$k$ 跑重数指标；$\mu$ 是谱上的**标量谱测度**；$E$、$dE$ 沿用 [D01](D01-spectral-theorem.md) 的投影值测度。对偶括号 $\langle F,\phi\rangle$ 对 $F$ 反线性；Dirac 记号里 $\langle\lambda,k\lvert\psi\rangle:=\overline{\langle\psi\lvert\lambda,k\rangle}$——同一泛函的两副身份，不是两个对象。
 
 ---
 
 ## 0. 问题：我们要"矢"，谱定理只给"投影"
 
-谱定理说得清楚：自伴算子给一族**投影** $E(B)$。但物理上天天写的是 $\lvert q\rangle$——一个**矢**。
+谱定理说得清楚：自伴算子给一族**投影** $E(B)$。这在标准 Hilbert 空间 $\mathcal{H}$ 里是完备的（冯·诺依曼谱测度理论）。
 
-**它不在 $\mathcal{H}$ 里**：连续谱时 $E(\{q\})=\mathbb{0}$（[D01](D01-spectral-theorem.md) §3），所以**没有**平方可积的 $\psi$ 满足 $\hat q\psi=q\psi$。
+但物理上天天写的 $\lvert q\rangle$——一个**矢**——**不在 $\mathcal{H}$ 里**：连续谱时 $E(\{q\})=\mathbb{0}$（[D01](D01-spectral-theorem.md) §3），所以**没有**平方可积的 $\psi$ 满足 $\hat q\psi=q\psi$。
 
 **为什么不能从 D01 直接推出。** D01 给的是**抽象**的投影值测度 $E$；它不保证 $E$ 有密度 $\lvert F_\lambda\rangle\langle F_\lambda\rvert$，更不保证有本征矢——连续谱时 $\mathcal{H}$ 里根本没有。**这两样都要另外的定理，不是换积分符号能换出来的。**
 
-**$\lvert q\rangle$ 不算错，只是它住在别处。** 出路是把空间扩大，让它有个合法的住处——这就是下面这一层。
+**$\lvert q\rangle$ 不算错，只是它住在别处。** 出路是把空间扩大，让它有个合法的住处。
 
 ---
 
 ## 1. Gelfand 三重空间（装备希尔伯特空间）
 
 $$
-\Phi\;\subset\;\mathcal{H}\;\subset\;\Phi^{\times}
+\Phi\;\subset\;\mathcal{H}\;\subset\;\Phi^{\times}\tag{1}
 $$
 
-也叫**装备希尔伯特空间**（rigged Hilbert space），或**Gelfand 三重空间**。
+也叫**装备希尔伯特空间**（rigged Hilbert space），或 **Gelfand 三重空间**。
 
 | 层 | 是什么 | 角色 |
 |---|---|---|
 | $\Phi$ | 核空间（典型：Schwartz 函数 $\mathcal{S}(\mathbb{R})$） | **测试探针**：好到"取值"有意义 |
-| $\mathcal{H}$ | 真正的 Hilbert 空间 | **态**：平方可积 |
+| $\mathcal{H}$ | 可分复 Hilbert 空间 | **态**：平方可积 |
 | $\Phi^{\times}$ | $\Phi$ 的**共轭对偶**：$\Phi$ 上全体连续反线性泛函（典型：缓增分布 $\mathcal{S}^{\times}$） | **广义对象**：$\lvert q\rangle$ 住这 |
 
 两层嵌入都是**连续且稠密**的：$\Phi$ 稠密嵌进 $\mathcal{H}$，$\mathcal{H}$ 又稠密嵌进 $\Phi^{\times}$。
@@ -73,13 +73,11 @@ $$
 
 ### 2.1 结论一：本征方程
 
-存在一族**非零**的 $F_{\lambda,k}\in\Phi^{\times}$（$k$ 跑重数指标），使每个 $\lambda\in\sigma(\hat A)$（$\mu$-**几乎处处**）都满足
+对 $\sigma(\hat A)$ 上的**几乎所有** $\lambda$，存在**非零**的广义本征矢 $F_{\lambda,k}\in\Phi^{\times}$（$k$ 跑重数指标），使
 
 $$
-\hat A F_{\lambda,k}=\lambda F_{\lambda,k}\tag{2}
+\hat AF_{\lambda,k}=\lambda F_{\lambda,k}\tag{2}
 $$
-
-**"几乎处处"是对 $\mu$ 说的**：$\mu$ 就是下面结论二里那个标量谱测度。**测度为零的那些点上定理不作承诺**——而下面每一个积分都在零测集上取值为零，所以承诺的范围与用到的范围正好一样。
 
 **（2）是对偶空间里的等式**：$\hat A$ 在 $\Phi^{\times}$ 上的作用是"转置"，$\langle\hat AF,\phi\rangle=\langle F,\hat A\phi\rangle$。它在 $\Phi$ 上的等价写法是
 
@@ -101,16 +99,6 @@ $$
 
 **"任意"的范围要说清**：上式只对 $\Phi$ 里的元素成立。**对 $\mathcal{H}$ 中的一般态，这个积分不一定收敛**——要延拓是另一回事。**这就是为什么 $\Phi$ 必须"好"。**
 
-**（4）是压缩写法。** 定理的完备性对**每个 Borel 集** $B$ 都成立（定理原文是对连续紧支撑函数说的，取 $f=\mathbf{1}_B$、由单调类延拓即得）：
-
-$$
-\langle\phi\lvert E(B)\psi\rangle
-=\int_{\sigma(\hat A)}\mathbf{1}_B(\lambda)\sum_k F_{\lambda,k}(\phi)\,\overline{F_{\lambda,k}(\psi)}\;d\mu(\lambda)
-\tag{4'}
-$$
-
-**取 $B=\sigma(\hat A)$（此时 $E(B)=\mathbb{1}$、$\mathbf{1}_B\equiv1$）就还回（4）**——**两者是同一句话，不是两条定理**。**§4 用的就是 $B$ 那一次**：只写（4）那一次不够，它只给出"总质量" $\langle\phi\lvert\psi\rangle$，**含不下"局部"的信息**，而那正是 $E(B)$ 要的东西。
-
 ---
 
 ## 3. 翻译成 Dirac 记号
@@ -123,24 +111,10 @@ F_{\lambda,k}\equiv\lvert\lambda,k\rangle,
 F_{\lambda,k}(\phi)\equiv\langle\phi\lvert\lambda,k\rangle
 $$
 
-### 3.1 $\lvert\lambda,k\rangle$ 与 $\langle\lambda,k\rvert$ 是同一个元素
-
-$\Phi^{\times}$ 是按"$\Phi$ 上的连续反线性泛函"**定义**出来的，所以它的元素**既是矢量**（可加、可被 $\hat A$ 转置作用），**又是泛函**（可在 $\phi\in\Phi$ 上取值）。$\lvert\lambda,k\rangle$ 是把它当矢量写，$\langle\lambda,k\rvert$ 是把它当泛函写——**不是两个空间里的两个矢**。
-
-**两副身份之间只有一条翻译公式**：
+于是（2）（3）（4）分别写成
 
 $$
-\langle\lambda,k\lvert\psi\rangle=\overline{\langle\psi\lvert\lambda,k\rangle}
-=\overline{F_{\lambda,k}(\psi)},\qquad \psi\in\Phi
-$$
-
-**（4）里的共轭就是这条**：$F(\phi)\,\overline{F(\psi)}$ 换成 Dirac 记号，正好是 $\langle\phi\lvert\lambda,k\rangle\langle\lambda,k\lvert\psi\rangle$。
-
-**$\langle\lambda,k\rvert$ 只能吃 $\Phi$ 里的东西**，不能吃 $\Phi^{\times}$ 里的——所以 $\langle\lambda,k\lvert\lambda',k'\rangle$ 严格说**没有定义**，它只是 $\delta_{kk'}\delta(\lambda-\lambda')$ 的简写（见 §7 第 3 条）。
-
-### 3.2 三个式子的 Dirac 形式
-
-$$
+\exists\,\lvert\lambda,k\rangle\in\Phi^{\times}:\quad
 \hat A\lvert\lambda,k\rangle=\lambda\lvert\lambda,k\rangle\tag{2*}
 $$
 
@@ -155,38 +129,31 @@ $$
 \tag{4*}
 $$
 
-### 3.3 两个等价形式
+**$\lvert\lambda,k\rangle$ 与 $\langle\lambda,k\rvert$ 是同一个元素**：$\Phi^{\times}$ 按"$\Phi$ 上的连续反线性泛函"定义，所以它的元素**既是矢量**（可加、可被 $\hat A$ 转置作用），**又是泛函**（可在 $\phi\in\Phi$ 上取值）。两副身份之间只有一条翻译公式，就是记号栏里那条——**（4\*）里没有共轭，是因为共轭已经吃进 $\langle\lambda,k\lvert\psi\rangle$ 的定义里了**。
 
-在弱拓扑意义下，（4）还可写成"态展开"与"完备性"两种样子：
+**$\langle\lambda,k\rvert$ 只能吃 $\Phi$ 里的东西**，不能吃 $\Phi^{\times}$ 里的——所以 $\langle\lambda,k\lvert\lambda',k'\rangle$ 严格说**没有定义**，它只是 $\delta_{kk'}\delta(\lambda-\lambda')$ 的简写（见 §6 第 3 条）。
+
+**两个等价形式**（弱拓扑意义下）：
 
 $$
 \begin{aligned}
-& \lvert\psi\rangle=\int_{\sigma(\hat A)}\sum_k\lvert\lambda,k\rangle\langle\lambda,k\lvert\psi\rangle\;d\mu(\lambda)
+&\lvert\psi\rangle=\int_{\sigma(\hat A)}\sum_k\lvert\lambda,k\rangle\langle\lambda,k\lvert\psi\rangle\;d\mu(\lambda)
 &&\text{态展开}\\
 \Longleftrightarrow\quad
-& \mathbb{1}=\int_{\sigma(\hat A)}\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\;d\mu(\lambda)
+&\mathbb{1}=\int_{\sigma(\hat A)}\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\;d\mu(\lambda)
 &&\text{完备性}
 \end{aligned}\tag{5}
 $$
 
 **"完备性"这个名称是准确的**：$\mathbb{1}$ 被拆成一族外积的积分，说明这族矢量"铺满"了空间——**但（5）只在 $\Phi$ 上取二次型时是有数的等式**，理由同在（4）后面。
 
-**（4′）写成 Dirac 记号**就是
-
-$$
-\langle\phi\lvert E(B)\psi\rangle
-=\int_{\sigma(\hat A)}\mathbf{1}_B(\lambda)\sum_k\langle\phi\lvert\lambda,k\rangle\langle\lambda,k\lvert\psi\rangle\;d\mu(\lambda)
-$$
-
-**§4 就从它出发。**
-
 ---
 
 ## 4. 接头：$E(B)$ 与 $dE$ 的密度
 
-D01 给的是**算子级**的 $E$，D02 给的是**标量级**的 $\mu$。两者怎么对上，是这一节要回答的。
+D01 给的是**算子级**的 $E$，本卡给的是**标量级**的 $\mu$。两者怎么对上，是这一节要回答的。
 
-### 4.1 第一步：$\mathbf{1}_B(\hat A)=E(B)$
+### 4.1 指示函数：$\mathbf{1}_B(\hat A)=E(B)$
 
 取指示函数 $\mathbf{1}_B$（只取 $0$、$1$，有界）：
 
@@ -195,7 +162,7 @@ $$
 \begin{cases}
 1, & \lambda\in B\\
 0, & \lambda\notin B
-\end{cases}
+\end{cases}\tag{6}
 $$
 
 由 [D01](D01-spectral-theorem.md) §1 的函数演算、§2 的 $E(\sigma(\hat A))=E(\mathbb{R})$、§4 的乘法规则：
@@ -206,62 +173,81 @@ $$
 =E\bigl(\sigma(\hat A)\cap B\bigr)
 =E(\sigma(\hat A))\,E(B)
 =\mathbb{1}\,E(B)
-=E(B)
+=E(B)\tag{7}
 $$
 
-**这是后面每一步的入口**：$E(B)$ 就是 $\mathbf{1}_B$ 这个函数在 $\hat A$ 上的取值。
+### 4.2 为什么不能写成算子等式
 
-### 4.2 第二步：代进（4′）的 Dirac 形式
+若把 $E(B)$ 作用到广义本征矢上、写 $E(B)\lvert\lambda,k\rangle=\mathbf{1}_B(\lambda)\lvert\lambda,k\rangle$，就需要 $E(B)$ 把 $\Phi$ 映进 $\Phi$。
+
+**这一般不成立。** 取 $\hat A=\hat q$、$\Phi=\mathcal{S}(\mathbb{R})$，则 $E(B)$ 就是乘以 $\mathbf{1}_B$：
 
 $$
+\bigl(E(B)\phi\bigr)(q)=\mathbf{1}_B(q)\,\phi(q)
+$$
+
+它在 $\partial B$ 上跳变，已经不是 Schwartz 函数。**"保 $\Phi$"这条性质对函数演算不封闭**：$\hat A$ 保 $\Phi$，多项式 $p(\hat A)$ 保 $\Phi$，但跳变函数 $\mathbf{1}_B$ 不保。所以 $E(B)$ 在 $\Phi^{\times}$ 上没有作用，下面只能走弱形式。
+
+### 4.3 关键一步：把 $E(B)\phi$ 换成 $\Phi$ 里的元素
+
+（3）只交代 $\hat A$ 自己对 $F_{\lambda,k}$ 的作用。要把函数演算搬过来，需要它的一条光滑版：
+
+$$
+\langle g(\hat A)\psi\lvert\lambda,k\rangle=g(\lambda)\,\langle\psi\lvert\lambda,k\rangle,
+\qquad \forall\psi\in\Phi,\ \ g\in C_c^{\infty}(\mathbb{R})\tag{8}
+$$
+
+**（8）是对 $(\Phi,\hat A)$ 的额外要求，不由（3）推出。** （3）只对**多项式** $p(\hat A)$ 归纳给出同样的式子；对一般光滑 $g$ 要另作验证。**对 $\hat A=\hat q,\hat p$ 配 $\Phi=\mathcal{S}(\mathbb{R})$ 可以直接验算**：$g(\hat q)$ 是乘以 $g(q)$，$g(\hat p)$ 是卷积，两者都保 $\mathcal{S}$，（8）逐点成立。
+
+### 4.4 推导：用一列好函数逼近
+
+取 $g_n\in C_c^{\infty}(\mathbb{R})$，$0\le g_n\le1$、$g_n\to\mathbf{1}_B$ 逐点。由（8），$g_n(\hat A)\phi$、$g_n(\hat A)\psi$ 都留在 $\Phi$ 里，于是（4）可以作用在 $(g_m(\hat A)\phi,\,g_n(\hat A)\psi)$ 上：
+
+$$
+\begin{align}
 \langle\phi\lvert E(B)\psi\rangle
-=\int_{B}\sum_k\langle\phi\lvert\lambda,k\rangle\langle\lambda,k\lvert\psi\rangle\;d\mu(\lambda)
+&=\langle E(B)\phi\lvert E(B)\psi\rangle
+&&\text{投影的等幂与自伴}\\
+&=\lim_{m,n\to\infty}\langle g_m(\hat A)\phi\lvert g_n(\hat A)\psi\rangle
+&& g_n(\hat A)\to E(B)\ \text{强收敛}\\
+&=\lim_{m,n\to\infty}\int_{\sigma(\hat A)}g_m(\lambda)\,g_n(\lambda)\sum_k\langle\phi\lvert\lambda,k\rangle\langle\lambda,k\lvert\psi\rangle\;d\mu(\lambda)
+&&\text{由（4）与（8）}\\
+&=\int_B\sum_k\langle\phi\lvert\lambda,k\rangle\langle\lambda,k\lvert\psi\rangle\;d\mu(\lambda)
+&&\text{控制收敛：}g_mg_n\to\mathbf{1}_B,\ \lvert g_mg_n\rvert\le1
+\end{align}
 $$
 
-**右边的积分只在 $B$ 上**，因为 $\mathbf{1}_B$ 在 $B$ 外为零。
+**这一步的要害**：不是把（4）直接用在 $E(B)\phi$ 上（那要 $E(B)\Phi\subseteq\Phi$），而是先把 $E(B)\phi$ 换成 $\Phi$ 里的 $g_m(\hat A)\phi$，用完（4）再取极限。
 
-### 4.3 第三步：剥离测试探针
+### 4.5 剥离测试探针，得密度
 
-右边对每个固定的 $B$ 是 $\phi,\psi$ 上的**有界**二次型（因为 $\lvert\mathbf{1}_B\rvert\le1$，其模不超过 $\lVert\phi\rVert\lVert\psi\rVert$）。于是：
-
-- 由 Riesz 表示，存在**有界算子** $T_B$，使 $\langle\phi\lvert T_B\psi\rangle$ 等于右边；
-- $T_B$ 与 $E(B)$ 在 $\Phi\times\Phi$ 上一致，而 $\Phi$ 在 $\mathcal{H}$ 中稠密——**两个有界算子在一个稠密子集上相等，就相等**。
+上式对**任意** $\phi,\psi\in\Phi$ 成立，所以先只拿到弱等式。记右端为 $\Lambda_B(\phi,\psi)$：它在 $k$ 上用柯西–施瓦茨、再用（4）（分别取 $\phi$、$\psi$ 自身），满足
 
 $$
-\boxed{\;E(B)=\int_{B}\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\;d\mu(\lambda)\;}
+\lvert\Lambda_B(\phi,\psi)\rvert
+\le\int\sum_k\lvert\langle\phi\lvert\lambda,k\rangle\rvert\,\lvert\langle\lambda,k\lvert\psi\rangle\rvert\;d\mu
+\le\lVert\phi\rVert\,\lVert\psi\rVert
 $$
 
-### 4.4 第四步：写成密度
-
-对 $B$ 取微元，得**算子值测度对 $\mu$ 的密度**：
+于是由 Riesz 表示，存在**有界算子** $T_B$（$\lVert T_B\rVert\le1$）使 $\langle\phi\lvert T_B\psi\rangle=\Lambda_B(\phi,\psi)$。它与 $E(B)$ 在 $\Phi\times\Phi$ 上相同，而 $\Phi$ 在 $\mathcal{H}$ 中稠密——**两个有界算子在一个稠密子集上相等，就相等**：
 
 $$
-dE(\lambda)=\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\,d\mu(\lambda)\tag{8}
+E(B)=\int_B\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\;d\mu(\lambda)\tag{9}
 $$
 
-**（8）是弱等式，不是算子等式**：两边都要夹在 $\langle\phi\lvert\,\cdot\,\lvert\psi\rangle$ 里才是数。等价地说，对每个 $\phi,\psi\in\Phi$，测度 $\langle\phi\lvert E(\cdot)\lvert\psi\rangle$ 关于 $\mu$ **绝对连续**，Radon–Nikodym 导数正是 $\sum_k\langle\phi\lvert\lambda,k\rangle\langle\lambda,k\lvert\psi\rangle$。
+对 $B$ 取微元，得**算子值测度对 $\mu$ 的密度**（Radon–Nikodym）：
+
+$$
+dE(\lambda)=\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\,d\mu(\lambda)\tag{10}
+$$
+
+**（9）（10）都是弱等式**：两边要夹在 $\langle\phi\lvert\,\cdot\,\lvert\psi\rangle$ 里才是数。
+
+**无简并时**（$k$ 只剩一项）退成 $dE=\lvert\lambda\rangle\langle\lambda\rvert\,d\mu$；再用 $\mu\to\rho\mu$、$\lvert\lambda\rangle\to\lvert\lambda\rangle/\sqrt{\rho}$ 的自由度把 $\mu$ 吸收成 $\mu_{\psi_0}$（$\psi_0$ 是循环矢量，即 [D01](D01-spectral-theorem.md) §5 的"谱简单"），就得到 D01 的对角化模型。**"无简并 + 谱简单"是把本卡接回 D01 的条件**；有重数时只能保留（10）的求和形式。
 
 ---
 
-## 5. 无简并时回到单矢形式
-
-**若每个本征值都只有一重**（无简并），$k$ 只剩一项，（8）变成
-
-$$
-dE(\lambda)=\lvert\lambda\rangle\langle\lambda\rvert\,d\mu(\lambda),
-\qquad
-E(B)=\int_{B}\lvert\lambda\rangle\langle\lambda\rvert\;d\mu(\lambda)
-$$
-
-**这就是 D01 §5 对角化模型里的那个 $\hat A$**：在那里 $\mathcal{H}\cong L^{2}\bigl(\sigma(\hat A),d\mu_{\psi_0}\bigr)$，$E(B)$ 是乘以 $\mathbf{1}_B$，$\lvert\lambda\rangle$ 是"$\lambda$ 点"的 $\delta$-归一化基。
-
-**$\mu$ 可以取成 $\mu_{\psi_0}$**（$\psi_0$ 是循环矢量，即 D01 §5 的"谱简单"）：$\mu$ 本身不唯一——$\mu\to\rho\,\mu$、同时 $\lvert\lambda\rangle\to\lvert\lambda\rangle/\sqrt{\rho}$（$\rho>0$），（8）不变；用这个自由度把密度 $\lvert\langle\lambda\lvert\psi_0\rangle\rvert^{2}$ 吸收掉，就得到 $\mu=\mu_{\psi_0}$。
-
-**所以"无简并 + 谱简单"是把 D02 接回 D01 的条件**；有重数时只能保留（8）的求和形式。
-
----
-
-## 6. 它给什么
+## 5. 它给什么
 
 - $\lvert q\rangle$ **本身**：$[\hat q,f(\hat q)]$ 与 $\hat q$ 的谱分解都能写出来，靠的就是它；
 - **本征矢族的存在性**——本卡只负责"存在"这一步；它如何特化成具体算子的本征方程、归一化如何定，都是下游的事；
@@ -271,23 +257,24 @@ $$
 
 ---
 
-## 7. 边界
+## 6. 边界
 
 1. **非自伴算子全都没有。** 谱定理要求自伴；非自伴只有"谱"这个较弱的对象，没有投影值测度，也没有广义本征矢系。这是整套量子力学要求可观测量自伴的**数学**理由，而不只是习惯。
 2. **核性不可省。** 换成一般的稠密子空间，Gelfand–Maurin 可能失效。所以"随便找个稠密子空间就能定义 $\lvert q\rangle$"是错的。
-3. **归一化依赖谱测度密度。** 若 $d\mu=\rho(q)\,dq$，则 $\langle q\lvert q'\rangle=\delta(q-q')/\rho(q)$。平直空间 $\rho=1$，弯曲空间 $\rho=\sqrt{g}$——**这是弯曲空间里测度因子的数学出处**。
-4. **重数大于 1 时要加标签。** （8）里的 $\sum_k$ 就是为此准备的：一个 $F_\lambda$ 覆盖不了重数，必须按本征子空间逐项相加，归一化变成 $\delta_{kk'}$。物理上就是自旋、味道、超选扇区。
+3. **归一化依赖谱测度的密度。** 若 $d\mu=\rho(q)\,dq$，则 $\langle q\lvert q'\rangle=\delta(q-q')/\rho(q)$。平直空间 $\rho=1$，弯曲空间 $\rho=\sqrt{g}$——**这是弯曲空间里测度因子的数学出处**。
+4. **重数大于 1 时要加标签。** （10）里的 $\sum_k$ 就是为此准备的：一个 $F_\lambda$ 覆盖不了重数，必须按本征子空间逐项相加，归一化变成 $\delta_{kk'}$。物理上就是自旋、味道、超选扇区。
 5. **这张卡不做证明。** 本仓库不重推泛函分析；能推的是"给定这些定理，物理结论如何落地"。**引用与证明的界限要一直守住**。
 
 ---
 
-## 8. 自检
+## 7. 自检
 
 - [ ] 用一句话说清谱定理与 Gelfand–Maurin 各负责什么
-- [ ] 说出定理的两条结论（本征方程、完备性），以及每条各管什么；再说清 $g$ 版为什么不是第三条
+- [ ] 说出定理的两条结论（本征方程、完备性），以及每条各管什么
 - [ ] 解释为什么连续谱时"Hilbert 空间里没有本征矢"
 - [ ] 用"求值泛函"说明 $\lvert q\rangle$ 为什么不在 $\mathcal{H}$ 里
 - [ ] 说明（4）为什么只对 $\Phi$ 成立
-- [ ] 说清 $\lvert\lambda,k\rangle$ 与 $\langle\lambda,k\rvert$ 是同一个元素，以及唯一的翻译公式
-- [ ] 从（4）的 $B$ 版推出（8），并说清"剥离"为什么需要 $\Phi$ 稠密
-- [ ] 说明核空间条件为什么不可省
+- [ ] 说明为什么 $E(B)\Phi\subseteq\Phi$ 不成立，并给出 $\hat q$ 的反例
+- [ ] 说明（8）为什么不能由（3）推出（只对多项式成立）
+- [ ] 用 $g_n(\hat A)$ 逼近把（9）的每一步推一遍，并说出"剥离"为什么需要 $\Phi$ 稠密
+- [ ] 说明核空间条件为什么不可省，以及 $\mu$ 为什么不必是 Lebesgue

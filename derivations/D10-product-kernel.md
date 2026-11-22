@@ -47,7 +47,7 @@ $$
 |---|---|
 | $\hat A=\hat B=\mathbb{1}$ | 右边 $\int dq\,\delta(q'-q)\delta(q-q'')=\delta(q'-q'')$ ✅ |
 | $\hat A=\lvert q_1\rangle\langle q_1\rvert$ | 右边塌缩为 $\langle q'\lvert q_1\rangle\langle q_1\lvert\hat B\lvert q''\rangle$，与直接计算一致 ✅ |
-| 与 [D02](D02-gelfand-maurin.md) §4 的（8）一致 | 完备性 $\int dq\lvert q\rangle\langle q\rvert=\mathbb{1}$ 就是 $dE=dq\lvert q\rangle\langle q\rvert$ 积分后的样子 ✅ |
+| 与 [D02](D02-gelfand-maurin.md) §4 的（9）一致 | 完备性 $\int dq\lvert q\rangle\langle q\rvert=\mathbb{1}$ 就是 $dE=dq\lvert q\rangle\langle q\rvert$ 积分后的样子 ✅ |
 
 ---
 

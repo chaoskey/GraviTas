@@ -48,7 +48,7 @@
 |---|---|---|---|---|
 | D00 | **公理**：$[\hat q,\hat p]=i$ | — | [D00](D00-commutator-axiom.md) | ✓ |
 | D01 | 谱定理：自伴算子的谱分解（引用卡）+ 五条推论（函数演算、谱即支撑、点谱、乘法律、对角化） | D00 | [D01](D01-spectral-theorem.md) | ✓ |
-| D02 | 核空间谱定理（Gelfand–Maurin，引用卡）：给出广义本征矢、完备性（5），并把 D01 的 $E$ 写成外积密度（8） | D00、D01 | [D02](D02-gelfand-maurin.md) | ✓ |
+| D02 | 核空间谱定理（Gelfand–Maurin，引用卡）：给出广义本征矢、完备性（5），并把 D01 的 $E$ 写成外积密度（9）（10） | D00、D01 | [D02](D02-gelfand-maurin.md) | ✓ |
 | D03 | 态与测量：Born 规则 $p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$ | D00、D01 | [D03](D03-born-rule.md) | ✓ |
 | D04 | 位置本征方程 $\hat q\lvert q\rangle=q\lvert q\rangle$ 与谱分解（Gelfand–Maurin 的直接特化） | D01、D02 | [D04](D04-position-eigen-equation.md) | ✓ |
 | D05 | 归一化：$\langle q\lvert q'\rangle=\delta(q-q')$（即 $\langle q\lvert q'\rangle$ 是恒等算子的核；尺度约定在 D04） | D01、D02、D04 | [D05](D05-normalization-convention.md) | ✓ |
