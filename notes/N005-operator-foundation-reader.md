@@ -230,21 +230,16 @@ f(\hat A)=\int f(\lambda)\,dE(\lambda),
 f(\hat q)=\int dq\,f(q)\,\lvert q\rangle\langle q\rvert
 $$
 
-**两种定义 + 一种特化**——**幂级数与谱分解是并列的两个定义**（前者不需要谱定理），本征基展开只是后者的特化：
+**两种定义 + 一种特化**——**幂级数与谱分解是并列的两个定义**（前者不需要谱定理），本征基展开只是后者的特化。**谱分解那条的定义域与范数形式在 [D01](../derivations/D01-spectral-theorem.md) §1，这里不再抄**：
 
 1. **幂级数**（**定义**，不需要谱定理）：只对解析函数、收敛半径内有效；
    $$
    f(\hat A)\equiv\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}\,\hat A^{n}
    $$
    
-2. **谱分解**（**定义**，需谱定理，最一般）：
-   $$
-   \hat A=\int_{\sigma(\hat A)}\lambda\;dE(\lambda),
-   \qquad
-   f(\hat A)\equiv\int_{\sigma(\hat A)}f(\lambda)\;dE(\lambda)
-   $$
+2. **谱分解**（**定义**，需谱定理，最一般）：$f(\hat A)\equiv\int f(\lambda)\,dE(\lambda)$——定义域、范数、$E$ 的来历全见 [D01](../derivations/D01-spectral-theorem.md) §1。
    
-3. **本征基展开**（**不是独立定义**，是第 2 条的"简单谱"特化）：谱简单时的显式形式，实际计算用这个。
+3. **本征基展开**（**不是独立定义**，是第 2 条的"简单谱"特化，也就是 [D04](../derivations/D04-position-eigen-equation.md) §3 的（9）写成一般谱）：实际计算用这个。
    $$
    f(\hat A)=\int da\;f(a)\,\lvert a\rangle\langle a\rvert
    $$
@@ -252,7 +247,7 @@ $$
 
 **两个定义为什么一致（这是定理，不是定义的复述）**：
 
-- **第一步**：多项式上逐项相等——由矩性质 $\int\lambda^{n}dE=\hat A^{n}$（乘方只落在权重上，就是 [D01](../derivations/D01-spectral-theorem.md) §1 的 $f$ 公式取 $f(\lambda)=\lambda^{n}$；[D05](../derivations/D05-functional-calculus.md) §1.4 把它推广到一般函数）；
+- **第一步**：矩性质 $\int\lambda^{n}dE=\hat A^{n}$ 给出多项式逐项相等；矩性质靠**函数版乘法律**，分三层（指示函数用 [D01](../derivations/D01-spectral-theorem.md) §4 的乘法律，简单函数用线性，一般函数用逼近 + 保范）；
 - **第二步**：有界函数演算**保范** $\lVert\int g\,dE\rVert=\sup_{\sigma}\lvert g\rvert$，故"谱上一致收敛"传到"算子范数收敛"。
 
 **部分和恒等 + 两边都收敛 ⇒ 极限相同。** 缺"保范"传不过去，缺"逐项相等"起点就断。
@@ -261,9 +256,11 @@ $$
 
 | 组 | 内容 |
 |---|---|
-| 定义直接给（两条） | 同态 $(fg)(\hat A)=f(\hat A)g(\hat A)$；$[f(\hat A),\hat A]=0$ |
+| 已证（一条） | 同态 $(fg)(\hat A)=f(\hat A)g(\hat A)$——就是函数版乘法律 |
+| 定义直接给（一条） | $[f(\hat A),\hat A]=0$ |
 | 由谱映射读出（两条） | $f(\hat A)$ 自伴 $\iff$ $f$ 实值；$f(\hat A)$ 酉 $\iff$ $\lvert f\rvert=1$ |
-| 要证（两条） | 谱映射 $\sigma(f(\hat A))=f(\sigma(\hat A))$；范数 $\lVert f(\hat A)\rVert=\sup\lvert f\rvert$ |
+| 本卡要证（一条） | 谱映射 $\sigma(f(\hat A))=f(\sigma(\hat A))$ |
+| 引用 [D01](../derivations/D01-spectral-theorem.md)（一条） | 范数 $\lVert f(\hat A)\rVert=\sup\lvert f\rvert$ |
 
 **前提是 $\hat A$ 自伴**。非自伴没有谱定理，只有 Dunford 演算——**这就是量子力学要求可观测量自伴的数学理由**。
 
@@ -587,7 +584,7 @@ $$
 
 4. **以为本征方程能一步"证明"**。$\hat q\lvert q\rangle=q\lvert q\rangle$ 看着像定义，其实是 Gelfand–Maurin 取 $\hat A=\hat q$ 的一行特化——**存在性**才是那条定理给的。
 
-5. **以为"函数演算"只是一个定义。** 实际它定义对象之后，还要给出"这个对象必须满足什么"——谱映射与范数公式是**定理**，不是定义的复述。
+5. **以为"函数演算"只是一个定义。** 定义之后还要交代"这个对象必须满足什么"：谱映射是**定理**，范数形式来自谱定理本身（[D01](../derivations/D01-spectral-theorem.md) §1），不是定义的复述。
 
 ---
 
