@@ -43,7 +43,7 @@ $$
 
 **为什么需要最里层 $\Phi$**：对一般的 $L^{2}$ 函数，"在 $q$ 点取值"**不连续**（改掉一个点的值，态不变）。必须挑一个好函数空间 $\Phi$，在它上面取值才有意义。
 
-**为什么需要最外层 $\Phi^{\times}$**：即便有了 $\Phi$，取值 $\phi\mapsto\phi(q)$ 也只是 $\Phi$ 上的**连续线性泛函**，**不是 $\Phi$ 里的元素**——它没有对应的"函数"，只对应一个"泛函"。所以 $\lvert q\rangle$ 住在 $\Phi^{\times}$，不在 $\Phi$ 里，更不在 $\mathcal{H}$ 里。
+**为什么需要最外层 $\Phi^{\times}$**：即便有了 $\Phi$，取值 $\phi\mapsto\overline{\phi(q)}$（或 $\phi(q)$）也只是 $\Phi$ 上的**连续泛函**，**不是 $\Phi$ 里的元素**——它没有对应的"函数"，只对应一个"泛函"。所以 $\lvert q\rangle$ 住在 $\Phi^{\times}$，不在 $\Phi$ 里，更不在 $\mathcal{H}$ 里。
 
 **为什么需要中间层 $\mathcal{H}$**：因为**三件事只在 Hilbert 空间里有定义**：
 
@@ -131,7 +131,7 @@ $$
 
 **$\lvert\lambda,k\rangle$ 与 $\langle\lambda,k\rvert$ 是同一个元素**：$\Phi^{\times}$ 按"$\Phi$ 上的连续反线性泛函"定义，所以它的元素**既是矢量**（可加、可被 $\hat A$ 转置作用），**又是泛函**（可在 $\phi\in\Phi$ 上取值）。两副身份之间只有一条翻译公式，就是记号栏里那条——**（4\*）里没有共轭，是因为共轭已经吃进 $\langle\lambda,k\lvert\psi\rangle$ 的定义里了**。
 
-**$\langle\lambda,k\rvert$ 只能吃 $\Phi$ 里的东西**，不能吃 $\Phi^{\times}$ 里的——所以 $\langle\lambda,k\lvert\lambda',k'\rangle$ 严格说**没有定义**，它只是 $\delta_{kk'}\delta(\lambda-\lambda')$ 的简写（见 §6 第 3 条）。
+**$\langle\lambda,k\rvert$ 只能吃 $\Phi$ 里的东西**，不能吃 $\Phi^{\times}$ 里的——所以 $\langle\lambda,k\lvert\lambda',k'\rangle$ 严格说**没有定义**，它只是 $\delta_{kk'}\delta(\lambda-\lambda')$ 的简写（见 §7 第 3 条）。
 
 **两个等价形式**（弱拓扑意义下）：
 
@@ -141,7 +141,7 @@ $$
 &&\text{态展开}\\
 \Longleftrightarrow\quad
 &\mathbb{1}=\int_{\sigma(\hat A)}\sum_k\lvert\lambda,k\rangle\langle\lambda,k\rvert\;d\mu(\lambda)
-&&\text{完备性}
+&&\text{完备性，谱表示的酉性}
 \end{aligned}\tag{5}
 $$
 
@@ -259,7 +259,19 @@ $$
 
 ---
 
-## 6. 边界
+## 6. 总结：从 Hilbert 空间投影到 Dirac 广义矢量
+
+本卡为量子力学中天天使用的 **Dirac 符号体系（$\lvert q\rangle$、$\lvert p\rangle$）与完备性展开**赋予数学合法性。
+
+三步递进：
+
+1. **痛点与突破（§0～§1）**：$\mathcal{H}$ 只有算子级的 $E(B)$，连续谱下 $E(\{q\})=\mathbb{0}$，平方可积空间里没有"本征矢"。引入 Gelfand 三重空间后，$\lvert q\rangle$ 在 $\Phi^{\times}$ 里有了住处，而 $\mathcal{H}$ 的 Riesz 嵌入保住了内积与概率幅。
+2. **定理与物理翻译（§2～§3）**：Gelfand–Maurin 给出住在 $\Phi^{\times}$ 里的 $F_{\lambda,k}$；翻译成 $\langle\phi\lvert\lambda,k\rangle$ 后，完备性就是那条积分。
+3. **密度与闭环（§4）**：由 $\mathbf{1}_B(\hat A)=E(B)$ 与一列光滑函数的逼近，得到 $E$ 与 $\mu$ 的 Radon–Nikodym 密度——D01 的宏观投影被解构成"外积 $\times$ 标量谱测度微元"。
+
+---
+
+## 7. 边界
 
 1. **非自伴算子全都没有。** 谱定理要求自伴；非自伴只有"谱"这个较弱的对象，没有投影值测度，也没有广义本征矢系。这是整套量子力学要求可观测量自伴的**数学**理由，而不只是习惯。
 2. **核性不可省。** 换成一般的稠密子空间，Gelfand–Maurin 可能失效。所以"随便找个稠密子空间就能定义 $\lvert q\rangle$"是错的。
@@ -269,7 +281,7 @@ $$
 
 ---
 
-## 7. 自检
+## 8. 自检
 
 - [ ] 用一句话说清谱定理与 Gelfand–Maurin 各负责什么
 - [ ] 说出定理的两条结论（本征方程、完备性），以及每条各管什么

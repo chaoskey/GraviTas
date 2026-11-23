@@ -216,7 +216,19 @@ $$
 
 ---
 
-## 6. 边界
+## 6. 总结：从抽象广义本征态到位置表象
+
+本卡把前四张卡建立的通用框架**第一次特化到具体算子 $\hat q$**，确立位置基与位置表象。
+
+1. **一步定理特化（§1）**：取 $\hat A=\hat q$，不借任何微分方程，一行读出 $\hat q\lvert q\rangle=q\lvert q\rangle$、带抽象谱测度的弱完备性 $\mathbb{1}=\int\lvert q\rangle\langle q\rvert d\mu(q)$ 与算子值测度微元 $dE(q)=\lvert q\rangle\langle q\rvert d\mu(q)$。
+2. **一次尺度选择（§2～§4）**：指明"测度权重与本征矢模长"的同步缩放自由度，据此选定 $d\mu(q)=dq$，代入 [D01](D01-spectral-theorem.md) 锁定谱分解 $\hat q=\int q\lvert q\rangle\langle q\rvert dq$、完备性 $\mathbb{1}=\int\lvert q\rangle\langle q\rvert dq$ 与 $\delta$ 归一 $\langle q\lvert q'\rangle=\delta(q-q')$。
+3. **一套位置表象（§5）**：把完备性与谱分解代进 [D03](D03-born-rule.md) 的 Born 规则与期望值定理，得波函数 $\psi(q)=\langle q\lvert\psi\rangle$、Parseval 内积、坐标乘法作用 $(\hat q\psi)(q)=q\psi(q)$、概率密度 $\rho(q)=\lvert\psi(q)\rvert^{2}$。
+
+**一句话**：位置基不是"假设出来的"，是"特化 + 一次选尺度"得到的；$\delta$ 不是公理，是那次选择的对偶表现。
+
+---
+
+## 7. 边界
 
 1. **"无简并"是写成单矢外积的前提。** 一维无自旋粒子的位置本征值重数为 $1$；三维或带自旋时重数 $>1$，$dE$ 的密度要写成 [D02](D02-gelfand-maurin.md) 的 $\sum_k\lvert q,k\rangle\langle q,k\rvert$。
 2. **"连续谱、绝对连续"是写成 $dq$ 积分的前提。** 纯点谱（如晶格、谐振子）时积分退成求和，$\delta(q-q')$ 退成 $\delta_{nn'}$。
@@ -227,7 +239,7 @@ $$
 
 ---
 
-## 7. 自检
+## 8. 自检
 
 - [ ] 说出"四件套"里哪一条是定理特化、哪一条是尺度选择、哪两条是代入推论
 - [ ] 说明本征方程为什么"只有一行"，$\lvert q\rangle$ 的存在性来自哪条定理

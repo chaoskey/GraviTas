@@ -280,7 +280,19 @@ $$
 
 ---
 
-## 6. 边界
+## 6. 总结：从纯数学到物理预言
+
+本卡在整张地图上完成的是一次**从算子到实验预言**的转换：
+
+1. **一条唯一公理（§1）**：$p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$ 把 [D01](D01-spectral-theorem.md) 的抽象投影 $E(B)$ 变成实验读数的概率——这是本卡唯一的物理输入。
+2. **三大严格推论（§2～§4）**：由概率的缩放不变性与归一性逼出**态的射线结构与单位代表元**；由概率期望的定义与谱积分推出**期望值夹取定理**；由方差为零推出**点谱本征态必测得本征值**（并与 [D01](D01-spectral-theorem.md) §3 的 $\operatorname{ran}E(\{a\})=\ker(\hat A-a\mathbb{1})$ 闭环）。
+3. **与 D02 合龙（§5）**：把 [D02](D02-gelfand-maurin.md) §4 的外积密度代进 Born 规则，得 $dp(\lambda)=\sum_k\lvert\langle\lambda,k\lvert\psi\rangle\rvert^{2}d\mu(\lambda)$——连续谱下的"波函数模方是概率密度"就是这样落地的。
+
+**一句话**：数学给的是投影，物理要的是概率；中间那一步就是 (3)，它不能被推出来，只能被选定。
+
+---
+
+## 7. 边界
 
 1. **它只说"概率是多少"，不说"为什么是概率"。** 测量问题（波函数何时坍缩、谁在测量）不在本卡范围内，物理上仍是开放的（[P11](../problems/P11-problem-of-time.md) 相关）。
 2. **坍缩（投影假设）是额外的一条。** 只算一次测量的 $p(B)$ 或 $\langle\hat A\rangle$ 不需要它；要算"测得 $B$ 后再测"才需要：
@@ -293,7 +305,7 @@ $$
 
 ---
 
-## 7. 自检
+## 8. 自检
 
 - [ ] 说出本卡唯一的公理是什么，为什么它不能由谱定理推出
 - [ ] 分清四个对象：$E(B)$、$\langle\psi\lvert E(B)\lvert\psi\rangle$、$dE(\lambda)$、$d\langle\psi\lvert E(\lambda)\lvert\psi\rangle$

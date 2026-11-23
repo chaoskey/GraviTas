@@ -136,7 +136,7 @@ $$
 2. **对 $f$ 无需解析**，只需 Borel 可测（走路线一）；路线二连可测都不需要，只需"是 $\hat q$ 的函数"。
 3. **不能反过来用**：核对角不意味着算子是 $\hat q$ 的函数（同一表象下不会，但换表象时要注意）。
 4. **核依赖基矢的尺度**：$\lvert q\rangle\to\lambda\lvert q\rangle$ 时核乘 $\lvert\lambda\rvert^{2}$，同时权重按 [D04](D04-position-eigen-equation.md) §2 反向改——**它是中间系数，不是物理内容**。
-5. **弯曲空间核带 $1/\rho$**：若 $d\mu=\rho(q)\,dq$，则 $K_{\mathbb{1}}=\delta(q-q')/\rho(q)$，其余例子同乘该因子（[D04](D04-position-eigen-equation.md) §6 第 3 条）。
+5. **弯曲空间核带 $1/\rho$**：若 $d\mu=\rho(q)\,dq$，则 $K_{\mathbb{1}}=\delta(q-q')/\rho(q)$，其余例子同乘该因子（[D04](D04-position-eigen-equation.md) §7 第 3 条）。
 6. **离散谱与多分量**：纯点谱时 $\delta(q-q')\to\delta_{nn'}$、积分变求和；有内部自由度时 $\langle q,i\lvert q',j\rangle=\delta_{ij}\delta(q-q')$。
 7. **动量基那一侧**：核的定义对任何连续基都成立，但换到 $p$ 基要用 $\langle q\lvert p\rangle=e^{ipq}$，属下游。
 
