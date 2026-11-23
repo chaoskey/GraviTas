@@ -14,7 +14,7 @@
 **四层结构**：
 
 - **公理**：D00 对易关系（附：谱与自伴的定义、接口约定）；D03 态与 Born 规则。
-- **地基**：D01 谱定理 → D02 核空间谱定理 → D04 位置本征方程 → D05 归一化；另有 D03 Born 规则（用到 D02 的广义本征态密度）、D06 函数演算、D07 迹、D16 唯一性。
+- **地基**：D01 谱定理 → D02 核空间谱定理 → D04 位置算子与位置表象 → D06 函数演算；另有 D03 Born 规则（用到 D02 的广义本征态密度）、D07 迹、D16 唯一性。**编号 D05 已退役**（其内容在 D04 §4 与 D09 §1）。
 - **代数**：D08 对易子 → D11 Hadamard → D12 两项截断 → D13 交换相位 → D14 三条 BCH；另有 D09 对角判据、D10 乘积的核、D26 不确定关系。
 - **表象**：D15 Weyl 相位 → D17 平移 → D18 平面波 → D19 动量完备性 → D20 动量表象。
 - **统计**：D21 Hamiltonian → D22 路径积分 → D23 迹即闭合路径 → D24 密度矩阵与配分函数 → D27 能级展开 → D25 温度即周期倒数。
@@ -164,49 +164,55 @@ $$
 **两点要看清**：
 
 - $F_\lambda$ 住在 $\Phi^{\times}$，**不在 $\mathcal{H}$ 里**——这才是"广义"二字的全部含义；
-- $\mu$ 是**谱测度**，不一定是 Lebesgue。把它选成 $dq$ 是后来的约定（[D04](../derivations/D04-position-eigen-equation.md) §1.2）。
+- $\mu$ 是**谱测度**，不一定是 Lebesgue。把它选成 $dq$ 是后来的约定（[D04](../derivations/D04-position-eigen-equation.md) §2）。
 
 **一句话记住三层**：$\lvert q\rangle$ 是**"取值"这个动作的严格化身**。
 
-### 2.3 位置本征方程（[D04](../derivations/D04-position-eigen-equation.md)）
+### 2.3 位置算子与位置表象（[D04](../derivations/D04-position-eigen-equation.md)）
 
-**白话**：把 2.2 的定理取 $\hat q$，就得到位置基。**位置基的"三件套"里有两条出在本卡**：
+**白话**：把 2.2 的定理取 $\hat q$，就得到位置基。**位置基的"四件套"里两条是定理特化、一条是选择、一条是代入**：
 
 $$
 \hat q\lvert q\rangle=q\lvert q\rangle,
 \qquad
 \mathbb{1}=\int\lvert q\rangle\langle q\rvert\,dq,
 \qquad
-\hat q=\int q\,dq\,\lvert q\rangle\langle q\rvert
+\hat q=\int q\,dq\,\lvert q\rangle\langle q\rvert,
+\qquad
+\langle q\lvert q'\rangle=\delta(q-q')
 $$
 
-**证明三步**：
+**五步**：
 
-1. 取 $\hat A=\hat q$、$F_\lambda=\lvert q\rangle$、$\lambda=q$——本征方程与完备性（带 $d\mu$）立刻落下（D04 §1.1）；
-2. **选择**密度形式 $dE(q)=dq\,\lvert q\rangle\langle q\rvert$——这一步同时把 $d\mu$ 定成 $dq$，等价于固定 $\lvert q\rangle$ 的尺度（D04 §1.2）；
-3. 代入谱定理 $\hat q=\int q\,dE(q)$，得算子式（D04 §1.3）。
+1. 取 $\hat A=\hat q$、$F_\lambda=\lvert q\rangle$、$\lambda=q$——本征方程与带 $d\mu$ 的完备性立刻落下（D04 §1）；
+2. **选择** $d\mu(q)=dq$：用 $\rho(q)$ 的同步缩放说明它等价于固定 $\lvert q\rangle$ 的尺度（D04 §2）；
+3. 代入谱定理 $\hat q=\int q\,dE(q)$，得算子式与 $f(\hat q)$ 的展开（D04 §3）；
+4. 代入 $\int dE=\mathbb{1}$，得 $dq$ 版完备性（D04 §3）；
+5. 用 $\delta$ 的核定义读出 $\langle q\lvert q'\rangle=\delta$（D04 §4）。
 
-**归属**：本征方程在 §1.1；算子式在 §1.3；完备性在 §1.1（$d\mu$ 版）与 §1.4（$dq$ 版）。正交归一的系数属于 [D05](../derivations/D05-normalization-convention.md)。**完备性不在 D05，别去那里找。**
+**归属**：本征方程在 D04 §1；$d\mu$ 版完备性在 §1；尺度选择在 §2；算子式与 $dq$ 版完备性在 §3；**$\delta$ 归一化在 §4**。
 
 **关键在于第 2 步是"选择"**：定理给的只是 $d\mu$，密度形式是我们挑的。
 
-### 2.4 归一化（[D05](../derivations/D05-normalization-convention.md)）
+### 2.4 $\delta$ 归一化（已并入 [D04](../derivations/D04-position-eigen-equation.md) §4）
 
 $$
 \langle q\lvert q'\rangle=\delta(q-q')
 $$
 
-**完备性那一半在 §2.3**（属于 D04），本节不重复。这里只把核写出来：**$\langle q\lvert q'\rangle$ 就是恒等算子的核**。
+**它不是 $\mathcal{H}$ 的内积**——$\lvert q\rangle$ 不在 $\mathcal{H}$ 里，这是对偶配对下的分布：对任意 $\phi\in\Phi$，
 
-**核的定义**：$A$ 的核 $K_A$ 由 $\langle\phi\lvert A\lvert\psi\rangle=\iint\overline{\phi(q)}K_A(q,q')\psi(q')dq\,dq'$ 给出。三个例子：$K_{\mathbb{1}}=\delta$、$K_{\hat q}=q\delta$、$K_{E(B)}=\mathbf{1}_B\delta$。
+$$
+\phi(q')=\int\langle q'\lvert q\rangle\,\phi(q)\,dq
+$$
 
-**由完备性（$w=1$）得 $K_{\mathbb{1}}=\delta$**：完备性给 $\langle\phi\lvert\psi\rangle=\int\overline{\phi}\psi\,dq$，与核的定义式对所有 $\phi,\psi$ 比较，核被唯一确定。
+而 $\delta$ 的定义式正是 $\phi(q')=\int\phi(q)\delta(q'-q)dq$；两式对所有 $\phi$ 相同，故 $\langle q\lvert q'\rangle=\delta$。
 
-**唯一的自由度是尺度**：$\lvert q\rangle\to\lambda\lvert q\rangle$ 时 $\langle q\lvert q'\rangle\to\lvert\lambda\rvert^{2}\delta$，同时权重 $w\to w/\lvert\lambda\rvert^{2}$；两者一起换，物理不变。**D04 已取 $w=1$，所以本卡没有自由度。**
+**它不是新公理**：选定 $d\mu(q)=dq$（D04 §2）之后，它就是完备性 $\mathbb{1}=\int\lvert q\rangle\langle q\rvert dq$ 在对偶意义下的表现。换个权重 $\rho$，它变成 $\delta/\rho$。
 
-**所以 D05 是定理卡，不是约定卡**：唯一的那次约定（尺度）在 [D04](../derivations/D04-position-eigen-equation.md) §1.2。
+**它不需要"再证一遍"**：$\langle q\lvert q'\rangle$ 是**恒等算子的核** $K_{\mathbb{1}}$，而恒等算子的核就是 $\delta$——这是 $\delta$ 的定义本身。核的一般定义与三个例子（$K_{\mathbb{1}}=\delta$、$K_{\hat q}=q\delta$、$K_{E(B)}=\mathbf{1}_B\delta$）现在放在 [D09](../derivations/D09-diagonal-criterion.md) §1。
 
-**系数与权重必须一起改**（否则 $w\,c=1$ 不成立）。两套常用方案：
+**系数与权重必须一起改**（$w\,c=1$）。两套常用方案：
 
 | 方案 | $\langle q\lvert q'\rangle$ | $\langle p\lvert p'\rangle$ | $\langle q\lvert p\rangle$ |
 |---|---|---|---|

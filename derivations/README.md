@@ -39,6 +39,7 @@
 - 2026-11-07：从旧的"登记顺序"整体重排为拓扑序（D01–D25 全部换号，文件同时改名）。
 - 2026-11-12：把 Stone–von Neumann 从 D05 移到 **D15**——它的前提是 Weyl 关系（D14），原位置在前提之前。D06–D15 顺移一位（D06→D05 … D15→D14），D16 起不变。
 - 2026-11-18：把原来的 D01 拆成 **D01 谱定理**（含五条推论）与 **D02 核空间谱定理**（Gelfand–Maurin）。原 D02–D26 顺移一位（D02→D03 … D26→D27），文件同时改名。
+- 2026-11-23：**D05 退役**。它的 $\delta$ 归一化 $\langle q\lvert q'\rangle=\delta(q-q')$ 并入 **D04**（§4），"核"的语言（$K_A$ 的定义、三个基本例子、尺度与弯曲空间）并入 **D09**（§1）。**编号 D05 从此不再使用**，D06 起编号不变。
 
 ---
 
@@ -50,12 +51,11 @@
 | D01 | 谱定理：自伴算子的谱分解（引用卡）+ 五条推论（函数演算、谱即支撑、点谱、乘法律、对角化） | D00 | [D01](D01-spectral-theorem.md) | ✓ |
 | D02 | 核空间谱定理（Gelfand–Maurin，引用卡）：给出广义本征矢、完备性（5），并把 D01 的 $E$ 写成外积密度（9）（10） | D00、D01 | [D02](D02-gelfand-maurin.md) | ✓ |
 | D03 | 态与测量：Born 规则 $p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$（含射线结构、期望值、本征态、连续谱密度） | D00、D01、D02 | [D03](D03-born-rule.md) | ✓ |
-| D04 | 位置本征方程 $\hat q\lvert q\rangle=q\lvert q\rangle$ 与谱分解（Gelfand–Maurin 的直接特化） | D01、D02 | [D04](D04-position-eigen-equation.md) | ✓ |
-| D05 | 归一化：$\langle q\lvert q'\rangle=\delta(q-q')$（即 $\langle q\lvert q'\rangle$ 是恒等算子的核；尺度约定在 D04） | D01、D02、D04 | [D05](D05-normalization-convention.md) | ✓ |
-| D06 | 函数演算：$f(\hat A)$ 的两个定义（幂级数、谱分解）+ 本征基特化 | D01、D02、D04、D05 | [D06](D06-functional-calculus.md) | ✓ |
-| D07 | 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$（基无关） | D01、D02、D04、D05 | [D07](D07-trace.md) | ✓ |
+| D04 | 位置算子与位置表象：四件套（本征方程、完备性、谱分解、$\delta$ 归一）+ 一次尺度选择 + 波函数与概率密度 | D00、D01、D02、D03 | [D04](D04-position-eigen-equation.md) | ✓ |
+| D06 | 函数演算：$f(\hat A)$ 的两个定义（幂级数、谱分解）+ 本征基特化 | D01、D02、D04 | [D06](D06-functional-calculus.md) | ✓ |
+| D07 | 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$（基无关） | D01、D02、D04 | [D07](D07-trace.md) | ✓ |
 | D08 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（默认 D06；旁证 D01） | [D08](D08-commutator-p-fq.md) | ✓ |
-| D09 | 对角判据：$[\hat q,f(\hat q)]=0\Rightarrow$ 核 $\propto\delta$ | D00、D01、D02、D04、D05 | [D09](D09-diagonal-criterion.md) | ✓ |
+| D09 | 核的定义与三个例子 + 对角判据：$[\hat q,f(\hat q)]=0\Rightarrow$ 核 $\propto\delta$ | D00、D01、D02、D04 | [D09](D09-diagonal-criterion.md) | ✓ |
 | D10 | 乘积的核：$\langle q'\lvert\hat A\hat B\lvert q''\rangle=\int dq\cdots$ | D01、D02 | [D10](D10-product-kernel.md) | ✓ |
 | D11 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | —（默认：D06） | [D11](D11-hadamard-lemma.md) | ✓ |
 | D12 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D11 | [D12](D12-two-term-truncation.md) | ✓ |
@@ -63,9 +63,9 @@
 | D14 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D11、D12、D13（默认：D06） | [D14](D14-three-bch-forms.md) | ✓ |
 | D15 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D13（默认：D06） | [D15](D15-weyl-phase.md) | ✓ |
 | D16 | Stone–von Neumann（引用卡） | D15、外部定理 | [D16](D16-stone-von-neumann.md) | ✓ |
-| D17 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D02、D04、D05、D12（默认：D06；旁证：D08、D11） | [D17](D17-translation.md) | ✓ |
-| D18 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D02、D05、D15、D16、D17（默认：D06、D01） | [D18](D18-qp-overlap.md) | ✓ |
-| D19 | 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | D02、D05、D18 | [D19](D19-p-completeness.md) | ✓ |
+| D17 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D02、D04、D12（默认：D06；旁证：D08、D11） | [D17](D17-translation.md) | ✓ |
+| D18 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D02、D04、D15、D16、D17（默认：D06、D01） | [D18](D18-qp-overlap.md) | ✓ |
+| D19 | 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | D02、D04、D18 | [D19](D19-p-completeness.md) | ✓ |
 | D20 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D02、D18、D19（默认：D01；旁证：D08） | [D20](D20-momentum-representation.md) | ✓ |
 | D21 | Hamiltonian 与时间演化：$\hat H=\frac{\hat p^{2}}{2m}+V(\hat q)$ | D00、D06、D09 | [D21](D21-hamiltonian.md) | ✓ |
 | D22 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D02、D10、D18、D19、D21（默认：D01） | [D22](D22-path-integral-representation.md) | ✓ |
@@ -91,16 +91,16 @@
 | 0 | D00 公理 | — |
 | 1 | D01 谱定理 | D00 |
 | 2 | D02 核空间谱定理 | D00、D01 |
-| 3 | D03 Born 规则、D04 位置本征方程、D10 乘积的核、D26 不确定关系 | D00、D01、D02 |
-| 4 | D05 归一化 | D01、D02、D04 |
-| 5 | D06 函数演算、D07 迹、D09 对角判据 | D00、D01、D02、D04、D05 |
+| 3 | D03 Born 规则、D10 乘积的核、D26 不确定关系 | D00、D01、D02 |
+| 4 | D04 位置算子与位置表象 | D00、D01、D02、D03 |
+| 5 | D06 函数演算、D07 迹、D09 核与对角判据 | D00、D01、D02、D04 |
 | 6 | D08 对易子公式、D11 Hadamard、D21 Hamiltonian | D00、D01、D06、D09 |
 | 7 | D12 两项截断 | D11 |
-| 8 | D13 交换相位、D17 平移 | D00、D02、D04、D05、D06、D08、D11、D12 |
+| 8 | D13 交换相位、D17 平移 | D00、D02、D04、D06、D08、D11、D12 |
 | 9 | D14 三条 BCH、D15 Weyl 相位 | D00、D06、D11、D12、D13 |
 | 10 | D16 Stone–von Neumann | D15 |
-| 11 | D18 平面波 | D00、D01、D02、D05、D06、D15、D16、D17 |
-| 12 | D19 动量完备性 | D02、D05、D18 |
+| 11 | D18 平面波 | D00、D01、D02、D04、D06、D15、D16、D17 |
+| 12 | D19 动量完备性 | D02、D04、D18 |
 | 13 | D20 动量表示、D22 路径积分 | D00、D01、D02、D08、D10、D18、D19、D21 |
 | 14 | D23 迹即闭合路径 | D01、D02、D07、D22 |
 | 15 | D24 密度矩阵 | D07、D21、D23 |

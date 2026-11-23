@@ -2,7 +2,7 @@
 
 > 建档 2026-11-07 · 类型：**引用卡**——谱定理是外部数学，本卡只引用、不证明；本卡的任务是由它**推出五条推论**
 > 上游：[D00](D00-commutator-axiom.md)
-> 下游：[D02](D02-gelfand-maurin.md)、[D03](D03-born-rule.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)、[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D08](D08-commutator-p-fq.md)、[D09](D09-diagonal-criterion.md)、[D10](D10-product-kernel.md)、[D18](D18-qp-overlap.md)、[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)、[D23](D23-trace-is-loop.md)、[D26](D26-uncertainty.md)
+> 下游：[D02](D02-gelfand-maurin.md)、[D03](D03-born-rule.md)、[D04](D04-position-eigen-equation.md)、[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D08](D08-commutator-p-fq.md)、[D09](D09-diagonal-criterion.md)、[D10](D10-product-kernel.md)、[D18](D18-qp-overlap.md)、[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)、[D23](D23-trace-is-loop.md)、[D26](D26-uncertainty.md)
 > 五条推论：**函数演算**、**谱即支撑**、**投影非零的独点即点谱**、**乘法规则**、**算子对角化**。
 
 ---

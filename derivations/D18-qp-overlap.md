@@ -1,6 +1,6 @@
 # D18 · $\langle q\lvert p\rangle=e^{ipq}$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D05](D05-normalization-convention.md)、[D15](D15-weyl-phase.md)、[D16](D16-stone-von-neumann.md)、[D17](D17-translation.md)；默认：D06、D01
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)、[D15](D15-weyl-phase.md)、[D16](D16-stone-von-neumann.md)、[D17](D17-translation.md)；默认：D06、D01
 > 下游：[D19](D19-p-completeness.md)、[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)
 > 原为 [N003 §0.5](../notes/N003-basis-and-operator-relations.md) 的三步概括，2026-11-06 补全并移入网格。
 
@@ -161,7 +161,7 @@ $$
 \psi(q)=\int\frac{dp}{2\pi}\,e^{ipq}\,\tilde\psi(p)
 $$
 
-**这两个式子是同一个 $\lvert\psi\rangle$ 的两副面孔**，读数方式不同而已。注意 $dp$ 前有 $2\pi$、$dq$ 前没有——这是 [D05](D05-normalization-convention.md) 的约定在起作用。
+**这两个式子是同一个 $\lvert\psi\rangle$ 的两副面孔**，读数方式不同而已。注意 $dp$ 前有 $2\pi$、$dq$ 前没有——这是 [D04](D04-position-eigen-equation.md) §2 的尺度约定在起作用。
 
 **下游怎么用它**（见 §3）：把 $\hat p$ 写成 $-i\partial_q$、证明迹与基无关，用的都是这一对。
 

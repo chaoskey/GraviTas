@@ -1,6 +1,6 @@
 # D17 · 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-normalization-convention.md)、[D12](D12-two-term-truncation.md)；默认：D06；旁证：D08、D11
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)、[D12](D12-two-term-truncation.md)；默认：D06；旁证：D08、D11
 > 下游：[D18](D18-qp-overlap.md)
 > 原为 [N004 §6.1](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
