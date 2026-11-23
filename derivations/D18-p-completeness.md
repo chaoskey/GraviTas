@@ -1,7 +1,7 @@
-# D19 · 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$
+# D18 · 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$
 
-> 建档 2026-11-07 · 上游：[D02](D02-gelfand-maurin.md)（位置基的完备性，§3 的（5））、[D04](D04-position-eigen-equation.md)（$\langle q\lvert q'\rangle=\delta$、尺度 $w=1$）、[D18](D18-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）
-> 下游：[D20](D20-momentum-representation.md)、[D22](D22-path-integral-representation.md)
+> 建档 2026-11-07 · 上游：[D02](D02-gelfand-maurin.md)（位置基的完备性，§3 的（5））、[D04](D04-position-eigen-equation.md)（$\langle q\lvert q'\rangle=\delta$、尺度 $w=1$）、[D17](D17-qp-overlap.md)（$\langle q\lvert p\rangle=e^{ipq}$）
+> 下游：[D19](D19-momentum-representation.md)、[D21](D21-path-integral-representation.md)
 > 本卡补的是"换基"这一步：它**不是新假设**，是从位置基推出来的。
 
 ---
@@ -38,7 +38,7 @@ $$
 
 ### 1.2 第二步：代入重叠
 
-由 [D18](D18-qp-overlap.md)，$\langle q\lvert p\rangle=e^{ipq}$，故 $\langle p\lvert q''\rangle=\overline{e^{ipq''}}=e^{-ipq''}$：
+由 [D17](D17-qp-overlap.md)，$\langle q\lvert p\rangle=e^{ipq}$，故 $\langle p\lvert q''\rangle=\overline{e^{ipq''}}=e^{-ipq''}$：
 
 $$
 =\int\frac{dp}{2\pi}\,e^{ip(q'-q'')}
@@ -83,7 +83,7 @@ $$
 | 检验 | 结果 |
 |---|---|
 | 作用在平面波上 | $\int\frac{dp'}{2\pi}\lvert p'\rangle\langle p'\lvert p\rangle=\lvert p\rangle$，与 $\int\frac{dp'}{2\pi}2\pi\delta(p'-p)=1$ 一致 ✅ |
-| 与 [D18](D18-qp-overlap.md) §1.5 相容 | 那里由 $\int dq\lvert q\rangle\langle q\rvert$ 反推 $\lvert c(p)\rvert=1$；本卡是同一恒等式的另一侧 ✅ |
+| 与 [D17](D17-qp-overlap.md) §1.5 相容 | 那里由 $\int dq\lvert q\rangle\langle q\rvert$ 反推 $\lvert c(p)\rvert=1$；本卡是同一恒等式的另一侧 ✅ |
 
 ---
 

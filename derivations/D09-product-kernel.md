@@ -1,7 +1,7 @@
-# D10 · 乘积的核：插入完备性
+# D09 · 乘积的核：插入完备性
 
-> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)、[D02](D02-gelfand-maurin.md)、[D09](D09-diagonal-criterion.md)（核的定义）
-> 下游：[D22](D22-path-integral-representation.md)
+> 建档 2026-11-07 · 上游：[D01](D01-spectral-theorem.md)、[D02](D02-gelfand-maurin.md)、[D08](D08-diagonal-criterion.md)（核的定义）
+> 下游：[D21](D21-path-integral-representation.md)
 > 原为 [N003 §3.3](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 
 ---
@@ -13,7 +13,7 @@ $$
 =\int dq\;\langle q'\lvert\hat A\lvert q\rangle\,\langle q\lvert\hat B\lvert q''\rangle
 $$
 
-**它在讲什么**：两个算子相乘的核（$K_A$ 的定义见 [D09](D09-diagonal-criterion.md) §1），等于"中间插一个完备集再积分"。物理语言就是**在中间放一张快照**。
+**它在讲什么**：两个算子相乘的核（$K_A$ 的定义见 [D08](D08-diagonal-criterion.md) §1），等于"中间插一个完备集再积分"。物理语言就是**在中间放一张快照**。
 
 ---
 

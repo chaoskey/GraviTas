@@ -1,7 +1,7 @@
-# D09 · 对角判据：$[\hat q,f(\hat q)]=0$ ⇒ 核正比于 $\delta$
+# D08 · 对角判据：$[\hat q,f(\hat q)]=0$ ⇒ 核正比于 $\delta$
 
 > 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)（$\langle q\lvert q'\rangle=\delta$、$f(\hat q)$ 的展开）
-> 下游：[D10](D10-product-kernel.md)、[D21](D21-hamiltonian.md)
+> 下游：[D09](D09-product-kernel.md)、[D20](D20-hamiltonian.md)
 > 原为 [N003 §4.2](../notes/N003-basis-and-operator-relations.md)，2026-11-07 移入网格。
 > 本卡同时是"**核**"这个语言在网格里的落脚处：$\S1$ 给出核的定义与三个基本例子，$\S2$ 用它陈述并证明判据。
 
@@ -125,7 +125,7 @@ $$
 |---|---|
 | $f=1$ | 核 $=K_{\mathbb{1}}=\delta(q'-q'')$，与 §1.2 第一行一致 ✅ |
 | $f=\hat q$ | 核 $=q'\delta(q'-q'')$，与 §1.2 第二行一致 ✅ |
-| 与 [D08](D08-commutator-p-fq.md) 对照 | $[\hat p,f(\hat q)]\neq0$（等于 $-if'$），$[\hat q,f(\hat q)]=0$——**方向不同，结论相反** ✅ |
+| 与 [D07](D07-commutator-p-fq.md) 对照 | $[\hat p,f(\hat q)]\neq0$（等于 $-if'$），$[\hat q,f(\hat q)]=0$——**方向不同，结论相反** ✅ |
 | 不解析的 $f$（如阶跃） | 路线二仍成立，路线一需谱分解 ✅ |
 
 ---

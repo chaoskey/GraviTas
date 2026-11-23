@@ -2,7 +2,7 @@
 
 > 建档 2026-11-07 · 类型：推导卡（含**一次尺度选择**）
 > 上游：[D00](D00-commutator-axiom.md)（接口约定、自伴）、[D01](D01-spectral-theorem.md)（谱定理、函数演算）、[D02](D02-gelfand-maurin.md)（广义本征矢、$E(B)$ 的密度）、[D03](D03-born-rule.md)（Born 规则、期望值定理）
-> 下游：[D06](D06-functional-calculus.md)、[D07](D07-trace.md)、[D09](D09-diagonal-criterion.md)、[D17](D17-translation.md)、[D18](D18-qp-overlap.md)、[D19](D19-p-completeness.md)
+> 下游：[D05](D05-functional-calculus.md)、[D06](D06-trace.md)、[D08](D08-diagonal-criterion.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)
 > 本卡把通用框架**第一次特化到具体算子 $\hat q$**：读出位置基"四件套"，并明确其中**哪一步是定理特化、哪一步是尺度选择**。
 
 ---
