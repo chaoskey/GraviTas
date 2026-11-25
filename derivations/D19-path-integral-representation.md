@@ -1,7 +1,7 @@
-# D21 · 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$
+# D19 · 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D17](D17-qp-overlap.md)、[D20](D20-hamiltonian.md)、[D09](D09-product-kernel.md)、[D18](D18-p-completeness.md)；默认：D01
-> 下游：[D22](D22-trace-is-loop.md)、[D24](D24-temperature-period.md)
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D05](D05-functional-calculus-and-kernel.md)、[D15](D15-qp-overlap.md)、[D16](D16-p-completeness.md)、[D18](D18-hamiltonian.md)；默认：D01
+> 下游：[D20](D20-trace-is-loop.md)、[D22](D22-temperature-period.md)
 > 原为 [N002 §2.1–2.3](../notes/N002-finite-temperature-path-integral.md)，2026-11-06 移入网格。
 
 ---
@@ -40,7 +40,7 @@ e^{-\beta H}=\left(e^{-\varepsilon H}\right)^{N},
 \varepsilon=\frac{\beta}{N}
 $$
 
-在每两片之间插入位置完备性 $\int dq_k\lvert q_k\rangle\langle q_k\rvert=\mathbb{1}$ 共 $N-1$ 次：
+在每两片之间插入位置完备性 $\int dq_k\lvert q_k\rangle\langle q_k\rvert=\mathbb{1}$ 共 $N-1$ 次——这正是 [D05](D05-functional-calculus-and-kernel.md) §5.2 的（13），本卡只是把 $\hat A_k$ 取成 $e^{-\varepsilon H}$：
 
 $$
 \langle q_f\lvert e^{-\beta H}\lvert q_i\rangle
@@ -57,7 +57,7 @@ $$
 e^{-\varepsilon H}=e^{-\varepsilon V(\hat q)}\,e^{-\varepsilon\hat p^{2}/2m}\left(1+\mathcal{O}(\varepsilon^{2})\right)
 $$
 
-$e^{-\varepsilon V}$ 在 $q$ 基下对角，给出 $e^{-\varepsilon V(q')}\delta(q'-q'')$。动能部分插入动量完备性 $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$，并用 [D17](D17-qp-overlap.md) 的 $\langle q\lvert p\rangle=e^{ipq}$：
+$e^{-\varepsilon V}$ 在 $q$ 基下对角，给出 $e^{-\varepsilon V(q')}\delta(q'-q'')$。动能部分插入动量完备性 $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$，并用 [D15](D15-qp-overlap.md) 的 $\langle q\lvert p\rangle=e^{ipq}$：
 
 $$
 \langle q'\lvert e^{-\varepsilon H}\lvert q\rangle

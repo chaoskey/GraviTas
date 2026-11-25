@@ -1,7 +1,7 @@
 # D07 · 对易子 $[\hat p,f(\hat q)]=-i f'(\hat q)$
 
 > 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)；默认：D05；旁证：[D01](D01-spectral-theorem.md)
-> 下游：[D16](D16-translation.md)、[D19](D19-momentum-representation.md)
+> 下游：[D14](D14-translation.md)、[D17](D17-momentum-representation.md)
 > 网格登记见 [derivations/README](README.md)
 
 ---
@@ -55,13 +55,7 @@ $$
 
 ### 1.2 延拓到幂级数
 
-设
-
-$$
-f(\hat q)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}\,\hat q^{n}
-$$
-
-**注意 $n=0$ 项为零**：$[\hat p,\mathbb{1}]=0$，所以求和可以改写为从 $n=1$ 开始：
+把 [D05](D05-functional-calculus-and-kernel.md) §1.1 的幂级数定义 (1) 代进来。**注意 $n=0$ 项为零**：$[\hat p,\mathbb{1}]=0$，所以求和可以改写为从 $n=1$ 开始：
 
 $$
 \begin{aligned}
@@ -122,7 +116,7 @@ $$
 
 ## 4. 备注与边界
 
-1. **$f$ 的条件不能省。** 右侧出现 $f'$，所以 $f$ 至少要可微。对不可微的 $f$（例如阶跃 $\theta(q)$），$f'=\delta$，等式仍成立，但要在分布意义下读，且 $f(\hat q)$ 的幂级数定义随之失效，需改用谱分解定义 $f(\hat q)$（见 [D05](D05-functional-calculus.md)）。
+1. **$f$ 的条件不能省。** 右侧出现 $f'$，所以 $f$ 至少要可微。对不可微的 $f$（例如阶跃 $\theta(q)$），$f'=\delta$，等式仍成立，但要在分布意义下读，且 $f(\hat q)$ 的幂级数定义随之失效，需改用谱分解定义 $f(\hat q)$（见 [D05](D05-functional-calculus-and-kernel.md)）。
 2. **无穷求和的交换是形式的。** 对多项式，求和是有限的，一步不多；对解析函数，交换 $[\hat p,\cdot]$ 与 $\sum$ 需要收敛性，严格做法是先对部分和证明、再取极限（或只在解析向量上操作）。
 3. **$\dfrac{d}{d\hat q}$ 是形式导数。** 它不是"对算子求导"这种可疑操作，而是"对多项式逐项降次"的简写。等价写法是换元：
 

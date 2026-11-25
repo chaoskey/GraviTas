@@ -2,7 +2,7 @@
 
 > 建档 2026-11-18 · 类型：**引用卡**——Gelfand–Maurin 是外部数学，本卡只引用、不证明；本卡的任务是把它翻译进 Dirac 记号，并与 [D01](D01-spectral-theorem.md) 的投影值测度接上头
 > 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)
-> 下游：[D03](D03-born-rule.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-functional-calculus.md)、[D06](D06-trace.md)、[D08](D08-diagonal-criterion.md)、[D09](D09-product-kernel.md)、[D16](D16-translation.md)、[D17](D17-qp-overlap.md)、[D18](D18-p-completeness.md)、[D19](D19-momentum-representation.md)、[D21](D21-path-integral-representation.md)、[D22](D22-trace-is-loop.md)、[D26](D26-energy-basis.md)
+> 下游：[D03](D03-born-rule.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-functional-calculus-and-kernel.md)、[D06](D06-trace.md)、[D14](D14-translation.md)、[D15](D15-qp-overlap.md)、[D16](D16-p-completeness.md)、[D17](D17-momentum-representation.md)、[D19](D19-path-integral-representation.md)、[D20](D20-trace-is-loop.md)、[D24](D24-energy-basis.md)
 > 它补的是谱定理缺的那一半：**给"一族投影"，不给"一族矢"**。
 
 ---

@@ -1,8 +1,8 @@
 # D06 · 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$
 
 > 建档 2026-11-08 · 上游：[D01](D01-spectral-theorem.md)（完备性）、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)（位置基、$\delta$ 归一化）
-> 下游：[D22](D22-trace-is-loop.md)、[D23](D23-density-matrix.md)、[D26](D26-energy-basis.md)
-> 本卡补的是"迹"这个对象的定义与基无关性——[D22](D22-trace-is-loop.md) 一直在用它，却没人交代过。
+> 下游：[D20](D20-trace-is-loop.md)、[D21](D21-density-matrix.md)、[D24](D24-energy-basis.md)
+> 本卡补的是"迹"这个对象的定义与基无关性——[D20](D20-trace-is-loop.md) 一直在用它，却没人交代过。
 
 ---
 

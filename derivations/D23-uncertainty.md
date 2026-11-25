@@ -1,4 +1,4 @@
-# D25 · 不确定关系：$\Delta q\,\Delta p\ge\frac{1}{2}$
+# D23 · 不确定关系：$\Delta q\,\Delta p\ge\frac{1}{2}$
 
 > 建档 2026-11-07 · 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)、[D03](D03-born-rule.md)
 > 下游：无卡片依赖

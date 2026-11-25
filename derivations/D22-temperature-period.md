@@ -1,6 +1,6 @@
-# D24 · 温度 = 周期的倒数：$\beta=1/T$
+# D22 · 温度 = 周期的倒数：$\beta=1/T$
 
-> 建档 2026-11-08 · 上游：[D21](D21-path-integral-representation.md)（路径积分）、[D22](D22-trace-is-loop.md)（迹即闭合路径）、[D23](D23-density-matrix.md)（配分函数）
+> 建档 2026-11-08 · 上游：[D19](D19-path-integral-representation.md)（路径积分）、[D20](D20-trace-is-loop.md)（迹即闭合路径）、[D21](D21-density-matrix.md)（配分函数）
 > 下游：无卡片依赖
 > 本卡是整个网格通向物理的出口：**它把"温度"翻译成"一个几何长度"**。
 
@@ -34,8 +34,8 @@ $$
 
 | 来源 | 内容 |
 |---|---|
-| [D23](D23-density-matrix.md) | $Z=\mathrm{Tr}\,e^{-\beta\hat H}$，$\beta$ 在这里是**逆温度**（$E$ 的权重） |
-| [D22](D22-trace-is-loop.md) | $\mathrm{Tr}\,e^{-\beta\hat H}=\oint_{q(0)=q(\beta)}\mathcal{D}q\,e^{-S_E}$，$\beta$ 在这里是**路径的长度** |
+| [D21](D21-density-matrix.md) | $Z=\mathrm{Tr}\,e^{-\beta\hat H}$，$\beta$ 在这里是**逆温度**（$E$ 的权重） |
+| [D20](D20-trace-is-loop.md) | $\mathrm{Tr}\,e^{-\beta\hat H}=\oint_{q(0)=q(\beta)}\mathcal{D}q\,e^{-S_E}$，$\beta$ 在这里是**路径的长度** |
 
 **同一个 $\beta$，两种身份。** 所以温度与"虚时间方向上的周长"是同一件事的两种说法。
 
@@ -72,8 +72,8 @@ $$
 |---|---|
 | 高温极限 $\beta\to0$ | 周期趋零，$Z\to$ 态空间维数；量子效应消失，回到经典配分函数 ✅ |
 | 低温极限 $\beta\to\infty$ | 只剩基态贡献 $Z\to e^{-\beta E_0}$ ✅ |
-| 与 [D20](D20-hamiltonian.md) 相容 | $\beta=it$ 的欧氏化正是把振荡变成衰减 ✅ |
-| 与 [D22](D22-trace-is-loop.md) 相容 | 闭合条件 $q(0)=q(\beta)$ 就是"周期为 $\beta$" ✅ |
+| 与 [D18](D18-hamiltonian.md) 相容 | $\beta=it$ 的欧氏化正是把振荡变成衰减 ✅ |
+| 与 [D20](D20-trace-is-loop.md) 相容 | 闭合条件 $q(0)=q(\beta)$ 就是"周期为 $\beta$" ✅ |
 
 ---
 
@@ -82,7 +82,7 @@ $$
 1. **单位约定**：本卡取 $\hbar=k_{\mathrm{B}}=1$；恢复时 $\beta=\hbar/(k_{\mathrm{B}}T)$。
 2. **有限体积**：热力学极限要另取，周长固定时 $Z$ 是有限系统的配分函数。
 3. **有化学势**：换成巨配分函数 $\mathcal{Z}=\mathrm{Tr}\,e^{-\beta(\hat H-\mu\hat N)}$，$\beta$ 的地位不变。
-4. **它不证明"为什么温度是周期的倒数"**——它只是**把两条已证结论对起来**。真正的问题是：为什么物理系统会有这种几何描述？那要等 [D21](D21-path-integral-representation.md) 的路径积分成立，而那又依赖 [D15](D15-stone-von-neumann.md) 的有限自由度。
+4. **它不证明"为什么温度是周期的倒数"**——它只是**把两条已证结论对起来**。真正的问题是：为什么物理系统会有这种几何描述？那要等 [D19](D19-path-integral-representation.md) 的路径积分成立，而那又依赖 [D13](D13-stone-von-neumann.md) 的有限自由度。
 
 ---
 
