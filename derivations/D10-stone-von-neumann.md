@@ -1,8 +1,8 @@
-# D13 · Stone–von Neumann：量子力学只有一种画法
+# D10 · Stone–von Neumann：量子力学只有一种画法
 
 > 建档 2026-11-06 · 类型：**引用卡**——定理是外部数学（von Neumann, 1931），但**前提（Weyl 关系）是物理输入**；本卡不复现证明，只给骨架
-> 上游：[D12](D12-weyl-phase.md)（Weyl 关系）、外部数学定理（本仓库不证明）
-> 下游：[D15](D15-qp-overlap.md)
+> 上游：[D09](D09-weyl-phase.md)（Weyl 关系）、外部数学定理（本仓库不证明）
+> 下游：[D12](D12-qp-overlap.md)
 
 ---
 
@@ -25,7 +25,7 @@ U(a)\,V(b)=e^{iab}\,V(b)\,U(a),
 \qquad a,b\in\mathbb{R}
 $$
 
-（这条关系的来历见 [D12](D12-weyl-phase.md)，本卡把它整个当**输入**。）且表示**不可约**。
+（这条关系的来历见 [D09](D09-weyl-phase.md)，本卡把它整个当**输入**。）且表示**不可约**。
 
 **则**：存在酉算子 $\Omega$，使
 

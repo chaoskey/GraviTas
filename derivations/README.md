@@ -12,7 +12,7 @@
 - `notes/N###` 是**叙事**：一个主题、一条线、可以很长，可以有"我一开始错在哪"。
 - `derivations/D##` 是**卡片**：一个命题、一个证明、一组检验，通常一页以内。
 
-两者的关系：笔记里需要某个中间结论时，不再重推一遍，而是引用编号（例：见 D08）。卡片里需要长篇背景时，指向笔记（例：见 [N004](../notes/N004-hadamard-lemma.md)）。
+两者的关系：笔记里需要某个中间结论时，不再重推一遍，而是引用编号（例：见 D06）。卡片里需要长篇背景时，指向笔记（例：见 [N004](../notes/N004-hadamard-lemma.md)）。
 
 **这意味着什么**：以后你在任何地方写下一个"因为 $X$，所以 $Y$"，先查网格里有没有编号。有就引用，没有就新建一张卡片。重复推导是漂移的开始。
 
@@ -22,7 +22,7 @@
 
 | 规则 | 内容 |
 |---|---|
-| 格式 | `D` 加两位数字：**`D00` 保留给公理**；`D01`–`D99` 为推导 |
+| 格式 | `D` 加两位数字：**`D00` 保留给公理**；`D01`–`D96` 为推导 |
 | 唯一性 | 全局唯一，**永不复用** |
 | **顺序** | **输入编号必须小于自身编号**（拓扑序）。新增卡片必须排在它**所有输入之后** |
 | 稳定性 | 编号一旦满足次序就不再改动；改命题就新建编号（见"废弃"） |
@@ -32,7 +32,7 @@
 
 **为什么强制"输入在前"**：任何卡片的上游只出现在**更小编号**里，顺着编号读就是一条合法的推导顺序，依赖图不会"往回跳"。这比"按登记顺序"更严；代价是**新增一条基础结论时要重排后面所有编号**——所以能放末尾就放末尾。
 
-**“独立”这一条比“输入在前”更严**：输入在前只要求**依赖**不往回跳；独立还要求**正文不出现**高编号卡片——一处“与 D19 相容”的对照表也不行，因为读者会以为那张卡已经在用。要把对照留在下游那一侧（由高编号卡片自己去检验与上游是否相容）。这条由 `check_repo.py` 逐卡检查。
+**“独立”这一条比“输入在前”更严**：输入在前只要求**依赖**不往回跳；独立还要求**正文不出现**高编号卡片——一处“与 D16 相容”的对照表也不行，因为读者会以为那张卡已经在用。要把对照留在下游那一侧（由高编号卡片自己去检验与上游是否相容）。这条由 `check_repo.py` 逐卡检查。
 
 **重排记录**：
 
@@ -40,7 +40,8 @@
 - 2026-11-12：把 Stone–von Neumann 移到 Weyl 关系那条之后——它的前提在前提之前，原位置不合法。
 - 2026-11-18：把原来的第一张卡拆成 **D01 谱定理**（含五条推论）与 **D02 核空间谱定理**（Gelfand–Maurin），其后整体顺移一位。
 - 2026-11-23：**旧 D05 退役并闭号**。它的 $\delta$ 归一化 $\langle q\lvert q'\rangle=\delta(q-q')$ 并入 **D04**（§4），"核"的语言（$K_A$ 的定义、三个基本例子、尺度与弯曲空间）并入当时的核与对角判据那张卡（现并入 D05 §3）；其余卡片整体前移一位，编号连续、没有缺口。
-- 2026-11-25：**D05 扩容、原 D08/D09 闭号**。原 D05（函数演算）、原 D08（核与对角判据）、原 D09（乘积的核）合并为现在的 **D05 函数演算与位置表象下的积分核**（[全文](D05-functional-calculus-and-kernel.md)）；原 D08、D09 随之闭号，其后所有卡片前移两位。合并的理由：三者共用同一套符号（同一个 $E$、同一条完备性），拆成三卡后每一卡都要重述前一卡的记号，而它们在使用上又总是一起被引用。
+- 2026-11-25：**函数演算那张卡扩容，核与对角判据、乘积核两张卡闭号**。三张卡合并为现在的 **D05 函数演算与位置表象下的积分核**（[全文](D05-functional-calculus-and-kernel.md)）；被并掉的两张随之闭号，其后所有卡片前移两位。合并的理由：三者共用同一套符号（同一个 $E$、同一条完备性），拆成三卡后每一卡都要重述前一卡的记号，而它们在使用上又总是一起被引用。
+- 2026-11-26：**指数映射与 BCH 一张新卡扩容，Hadamard 引理、两项截断、交换相位、三条 BCH 四张卡闭号**。四张卡合并为 **D06 指数映射与 BCH 三条闭式**（[全文](D06-exponential-map-and-bch.md)），并补入单参数指数族与共轭穿透律（原先只散见于下游卡的引用里）；被并掉的四张随之闭号，其后所有卡片后移或前移一次，编号仍连续。合并的理由：四张卡共用同一套符号（同一个 $\mathrm{ad}_A$、同一个 $c\mathbb{1}$），且每一张的证明都要先引用前一张的结论，而它们在使用上也总是一起被引用。
 
 > 上面各条只记"做过什么"，不列当时的编号——当前编号一律以本节上方的网格表为准。
 
@@ -56,25 +57,22 @@
 | D03 | 态与测量：Born 规则 $p(B)=\langle\psi\lvert E(B)\lvert\psi\rangle$（含射线结构、期望值、本征态、连续谱密度） | D00、D01、D02 | [D03](D03-born-rule.md) | ✓ |
 | D04 | 位置算子与位置表象：四件套（本征方程、完备性、谱分解、$\delta$ 归一）+ 一次尺度选择 + 波函数与概率密度 | D00、D01、D02、D03 | [D04](D04-position-eigen-equation.md) | ✓ |
 | D05 | 函数演算与位置表象下的积分核：$f(\hat A)$ 的两种定义 + 一致性定理 + 谱映射定理；核 $K_A$ 的定义与三个基本例 + 对角判据 + 乘积核（含 $N$ 重） | D00、D01、D02、D04 | [D05](D05-functional-calculus-and-kernel.md) | ✓ |
-| D06 | 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$（基无关） | D01、D02、D04 | [D06](D06-trace.md) | ✓ |
-| D07 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（默认 D05；旁证 D01） | [D07](D07-commutator-p-fq.md) | ✓ |
-| D08 | Hadamard 引理：$e^{A}Be^{-A}=\sum_{n}\frac{1}{n!}\mathrm{ad}_A^{\,n}B$ | —（默认：D05） | [D08](D08-hadamard-lemma.md) | ✓ |
-| D09 | 两项截断：$[A,B]=c$ 是数时 $e^{A}Be^{-A}=B+c$ | D08 | [D09](D09-two-term-truncation.md) | ✓ |
-| D10 | $e^{A}e^{B}=e^{c}e^{B}e^{A}$（$[A,B]=c$ 是数） | D09（默认：D05） | [D10](D10-commutator-phase.md) | ✓ |
-| D11 | 三条 BCH 闭式：$e^{A}e^{B}=e^{c/2}e^{A+B}$ 等 | D08、D09、D10（默认：D05） | [D11](D11-three-bch-forms.md) | ✓ |
-| D12 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D10（默认：D05） | [D12](D12-weyl-phase.md) | ✓ |
-| D13 | Stone–von Neumann（引用卡） | D12、外部定理 | [D13](D13-stone-von-neumann.md) | ✓ |
-| D14 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D02、D04、D09（默认：D05；旁证：D07、D08） | [D14](D14-translation.md) | ✓ |
-| D15 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D02、D04、D12、D13、D14（默认：D05、D01） | [D15](D15-qp-overlap.md) | ✓ |
-| D16 | 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | D02、D04、D15 | [D16](D16-p-completeness.md) | ✓ |
-| D17 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D02、D15、D16（默认：D01；旁证：D07） | [D17](D17-momentum-representation.md) | ✓ |
-| D18 | Hamiltonian 与时间演化：$\hat H=\frac{\hat p^{2}}{2m}+V(\hat q)$ | D00、D05 | [D18](D18-hamiltonian.md) | ✓ |
-| D19 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D02、D05、D15、D16、D18（默认：D01） | [D19](D19-path-integral-representation.md) | ✓ |
-| D20 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D02、D06、D19（默认：D01） | [D20](D20-trace-is-loop.md) | ✓ |
-| D21 | 密度矩阵与配分函数：$\rho=e^{-\beta H}/Z$、$Z=\mathrm{Tr}\,e^{-\beta H}$ | D06、D18、D20 | [D21](D21-density-matrix.md) | ✓ |
-| D22 | 温度 = 周期的倒数：$\beta=1/T$（虚时间圆周长） | D19、D20、D21 | [D22](D22-temperature-period.md) | ✓ |
-| D23 | 不确定关系 $\Delta q\,\Delta p\ge\frac{1}{2}$ | D00、D01、D03 | [D23](D23-uncertainty.md) | ✓ |
-| D24 | 能量表象与能级展开：$Z=\sum_n e^{-\beta E_n}$，热核 $\sum_n e^{-\beta E_n}\psi_n(q_f)\psi_n^{*}(q_i)$ | D02、D05、D06、D18、D21 | [D24](D24-energy-basis.md) | ✓ |
+| D06 | 指数映射与 BCH 三条闭式：$e^{tA}$ 的四条运算律 + 共轭穿透律；伴随作用 $\mathrm{ad}_A$ 与 Hadamard 引理；$[A,B]=c\mathbb{1}$ 下的两项截断、交换相位 $e^{A}e^{B}=e^{c}e^{B}e^{A}$ 与三条 BCH 闭式 | D05 | [D06](D06-exponential-map-and-bch.md) | ✓ |
+| D07 | 迹：$\mathrm{Tr}\,\hat A=\int dq\,\langle q\lvert\hat A\lvert q\rangle$（基无关） | D01、D02、D04 | [D07](D07-trace.md) | ✓ |
+| D08 | $[\hat q,\hat p]=i$ 推出 $[\hat p,f(\hat q)]=-i f'(\hat q)$ | D00（默认 D05；旁证 D01） | [D08](D08-commutator-p-fq.md) | ✓ |
+| D09 | Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$ | D00、D06（默认 D05） | [D09](D09-weyl-phase.md) | ✓ |
+| D10 | Stone–von Neumann（引用卡） | D09、外部定理 | [D10](D10-stone-von-neumann.md) | ✓ |
+| D11 | 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$ | D00、D02、D04、D06（默认 D05；旁证 D08） | [D11](D11-translation.md) | ✓ |
+| D12 | $\langle q\lvert p\rangle=e^{ipq}$ | D00、D02、D04、D09、D10、D11（默认 D05、D01） | [D12](D12-qp-overlap.md) | ✓ |
+| D13 | 动量基的完备性：$\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$ | D02、D04、D12 | [D13](D13-p-completeness.md) | ✓ |
+| D14 | $\hat p$ 在 $q$ 表象下是 $-i\partial_q$ | D00、D02、D12、D13（默认 D01；旁证 D08） | [D14](D14-momentum-representation.md) | ✓ |
+| D15 | Hamiltonian 与时间演化：$\hat H=\frac{\hat p^{2}}{2m}+V(\hat q)$ | D00、D05 | [D15](D15-hamiltonian.md) | ✓ |
+| D16 | 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$ | D00、D02、D05、D12、D13、D15（默认 D01） | [D16](D16-path-integral-representation.md) | ✓ |
+| D17 | 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$ | D02、D07、D16（默认 D01） | [D17](D17-trace-is-loop.md) | ✓ |
+| D18 | 密度矩阵与配分函数：$\rho=e^{-\beta H}/Z$、$Z=\mathrm{Tr}\,e^{-\beta H}$ | D07、D15、D17 | [D18](D18-density-matrix.md) | ✓ |
+| D19 | 温度 = 周期的倒数：$\beta=1/T$（虚时间圆周长） | D16、D17、D18 | [D19](D19-temperature-period.md) | ✓ |
+| D20 | 不确定关系 $\Delta q\,\Delta p\ge\frac{1}{2}$ | D00、D01、D03 | [D20](D20-uncertainty.md) | ✓ |
+| D21 | 能量表象与能级展开：$Z=\sum_n e^{-\beta E_n}$，热核 $\sum_n e^{-\beta E_n}\psi_n(q_f)\psi_n^{*}(q_i)$ | D02、D05、D07、D15、D18 | [D21](D21-energy-basis.md) | ✓ |
 
 **状态含义**：✓ 已逐行核对；○ 草稿；✗ 已废弃（并在"全文"列写明去哪找）。
 
@@ -93,29 +91,26 @@
 | 1 | D01 谱定理 | D00 |
 | 2 | D02 核空间谱定理 | D00、D01 |
 | 3 | D03 Born 规则 | D00、D01、D02 |
-| 4 | D04 位置算子与位置表象、D23 不确定关系 | D00、D01、D02、D03 |
-| 5 | D05 函数演算与积分核、D06 迹 | D00、D01、D02、D04 |
-| 6 | D07 对易子公式、D08 Hadamard、D18 Hamiltonian | D00、D05 |
-| 7 | D09 两项截断 | D08 |
-| 8 | D10 交换相位、D14 平移 | D00、D02、D04、D05、D09 |
-| 9 | D11 三条 BCH、D12 Weyl 相位 | D00、D05、D08、D09、D10 |
-| 10 | D13 Stone–von Neumann | D12 |
-| 11 | D15 平面波 | D00、D01、D02、D04、D05、D12、D13、D14 |
-| 12 | D16 动量完备性 | D02、D04、D15 |
-| 13 | D17 动量表示、D19 路径积分 | D00、D01、D02、D05、D15、D16、D18 |
-| 14 | D20 迹即闭合路径 | D01、D02、D06、D19 |
-| 15 | D21 密度矩阵 | D06、D18、D20 |
-| 16 | D22 温度即周期、D24 能量表象 | D02、D05、D06、D18、D19、D20、D21 |
+| 4 | D04 位置算子与位置表象、D20 不确定关系 | D00、D01、D02、D03 |
+| 5 | D05 函数演算与积分核、D07 迹 | D00、D01、D02、D04 |
+| 6 | D06 指数映射与 BCH、D08 对易子公式、D15 Hamiltonian | D00、D05 |
+| 7 | D09 Weyl 相位、D11 平移 | D00、D02、D04、D06 |
+| 8 | D10 Stone–von Neumann、D12 平面波 | D00、D02、D04、D09、D11 |
+| 9 | D13 动量完备性 | D02、D04、D12 |
+| 10 | D14 动量表示、D16 路径积分 | D00、D01、D02、D05、D12、D13、D15 |
+| 11 | D17 迹即闭合路径 | D01、D02、D07、D16 |
+| 12 | D18 密度矩阵 | D07、D15、D17 |
+| 13 | D19 温度即周期、D21 能量表象 | D02、D05、D07、D15、D16、D17、D18 |
 
 **这张表的用法**：只要每一行的"输入"列里出现的编号都**小于**本行编号，全表就自洽。**加卡片之前先查这一列**，否则就要重排。
 
 **三条主干**：
 
-- **代数主干**：D08 → D09 → D10 → D11 / D12（从 Hadamard 到 BCH 与 Weyl 相位）；
-- **表象主干**：D14 → D15 → D17（从平移到平面波到 $\hat p=-i\partial_q$）；
-- **统计主干**：D05、D15 → D19 → D20（从乘积核与平面波到路径积分到取迹）。
+- **代数主干**：D06 → D09（从指数映射与 BCH 到 Weyl 相位）；
+- **表象主干**：D11 → D12 → D14（从平移、平面波到 $\hat p=-i\partial_q$）；
+- **统计主干**：D05、D12 → D16 → D17（从乘积核与平面波到路径积分到取迹）。
 
-**D01、D02、D13 是地基**：三张引用卡，不证但被多处默认使用（见上表下方说明）。
+**D01、D02、D10 是地基**：三张引用卡，不证但被多处默认使用（见上表下方说明）。
 
 ---
 

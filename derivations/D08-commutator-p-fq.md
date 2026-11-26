@@ -1,7 +1,7 @@
-# D07 · 对易子 $[\hat p,f(\hat q)]=-i f'(\hat q)$
+# D08 · 对易子 $[\hat p,f(\hat q)]=-i f'(\hat q)$
 
 > 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)；默认：D05；旁证：[D01](D01-spectral-theorem.md)
-> 下游：[D14](D14-translation.md)、[D17](D17-momentum-representation.md)
+> 下游：[D11](D11-translation.md)、[D14](D14-momentum-representation.md)
 > 网格登记见 [derivations/README](README.md)
 
 ---

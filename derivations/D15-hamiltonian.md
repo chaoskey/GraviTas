@@ -1,7 +1,7 @@
-# D18 · Hamiltonian 与时间演化
+# D15 · Hamiltonian 与时间演化
 
 > 建档 2026-11-08 · 上游：[D00](D00-commutator-axiom.md)、[D05](D05-functional-calculus-and-kernel.md)
-> 下游：[D19](D19-path-integral-representation.md)、[D21](D21-density-matrix.md)、[D24](D24-energy-basis.md)
+> 下游：[D16](D16-path-integral-representation.md)、[D18](D18-density-matrix.md)、[D21](D21-energy-basis.md)
 > 本卡补的是"$\hat H$ 从哪来"——下游会反复用到它，这里先把它定下来。
 
 ---
@@ -24,7 +24,7 @@ $$
 
 | 要求 | 逼出的部分 |
 |---|---|
-| 平移应当由某个自伴算子生成（[D14](D14-translation.md)） | 动能必须是 $\hat p$ 的函数，最低阶是 $\hat p^{2}/2m$ |
+| 平移应当由某个自伴算子生成（[D11](D11-translation.md)） | 动能必须是 $\hat p$ 的函数，最低阶是 $\hat p^{2}/2m$ |
 | 位置测量要有"势"（经典极限 $\to V(q)$） | 位能是 $\hat q$ 的函数 $V(\hat q)$，在 $q$ 基对角（[D05](D05-functional-calculus-and-kernel.md)） |
 | 概率守恒（演化必须酉） | $\hat H$ 必须**自伴**（[D05](D05-functional-calculus-and-kernel.md) 的酉判据） |
 
@@ -70,7 +70,7 @@ $$
 
 ## 4. 边界
 
-1. **这是非相对论的。** 相对论要用场（[D13](D13-stone-von-neumann.md) §6 的失效条件），$\hat p^{2}/2m$ 换成 Dirac 或 Klein–Gordon 型。
+1. **这是非相对论的。** 相对论要用场（[D10](D10-stone-von-neumann.md) §6 的失效条件），$\hat p^{2}/2m$ 换成 Dirac 或 Klein–Gordon 型。
 2. **时间在量子力学里是参数，不是算子。** 本卡的 $t$ 不是可观测量；这是 [P11](../problems/P11-problem-of-time.md) 的入口。
 3. **$V$ 的形式是输入。** 谐振子、库仑势、自由粒子，都是你选的，不是推出来的。
 4. **多粒子要加张量积与相互作用项**，本卡只写单粒子。

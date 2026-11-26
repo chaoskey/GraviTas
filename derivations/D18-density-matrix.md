@@ -1,7 +1,7 @@
-# D21 · 密度矩阵与配分函数
+# D18 · 密度矩阵与配分函数
 
-> 建档 2026-11-08 · 上游：[D06](D06-trace.md)（迹）、[D18](D18-hamiltonian.md)（$\hat H$）、[D20](D20-trace-is-loop.md)（迹即闭合路径）
-> 下游：[D22](D22-temperature-period.md)、[D24](D24-energy-basis.md)
+> 建档 2026-11-08 · 上游：[D07](D07-trace.md)（迹）、[D15](D15-hamiltonian.md)（$\hat H$）、[D17](D17-trace-is-loop.md)（迹即闭合路径）
+> 下游：[D19](D19-temperature-period.md)、[D21](D21-energy-basis.md)
 > 本卡补的是"纯态之外"的那一半：热平衡与混合态。
 
 ---
@@ -72,7 +72,7 @@ $Z$ 是所有热力学量的母函数：
 
 ## 4. 与路径积分的接口
 
-由 [D20](D20-trace-is-loop.md)：
+由 [D17](D17-trace-is-loop.md)：
 
 $$
 Z=\mathrm{Tr}\,e^{-\beta\hat H}=\oint_{q(0)=q(\beta)}\mathcal{D}q\;e^{-S_E[q]}

@@ -2,7 +2,7 @@
 
 > 建档 2026-11-06 · 类型：**定义 + 定理 + 判据**——三组命题共用一套符号：函数演算、位置表象的核、对角与乘积
 > 上游：[D00](D00-commutator-axiom.md)、[D01](D01-spectral-theorem.md)（§1 谱分解定义与范数公式、§4 投影乘法律）、[D02](D02-gelfand-maurin.md)（§3 完备性、§4 外积密度）、[D04](D04-position-eigen-equation.md)（§2 尺度选择、§3 谱分解与完备性、§4 $\delta$ 归一）
-> 下游：[D07](D07-commutator-p-fq.md)、[D08](D08-hadamard-lemma.md)、[D10](D10-commutator-phase.md)、[D11](D11-three-bch-forms.md)、[D12](D12-weyl-phase.md)、[D14](D14-translation.md)、[D15](D15-qp-overlap.md)、[D18](D18-hamiltonian.md)、[D19](D19-path-integral-representation.md)、[D24](D24-energy-basis.md)
+> 下游：[D06](D06-exponential-map-and-bch.md)、[D08](D08-commutator-p-fq.md)、[D09](D09-weyl-phase.md)、[D11](D11-translation.md)、[D12](D12-qp-overlap.md)、[D15](D15-hamiltonian.md)、[D16](D16-path-integral-representation.md)、[D21](D21-energy-basis.md)
 
 ---
 

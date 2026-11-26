@@ -1,7 +1,7 @@
-# D20 · 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$
+# D17 · 迹即闭合路径：$\mathrm{Tr}\,e^{-\beta H}=\oint\mathcal{D}q\,e^{-S_E}$
 
-> 建档 2026-11-06 · 上游：[D02](D02-gelfand-maurin.md)、[D06](D06-trace.md)、[D19](D19-path-integral-representation.md)；默认：D01
-> 下游：[D21](D21-density-matrix.md)、[D22](D22-temperature-period.md)
+> 建档 2026-11-06 · 上游：[D02](D02-gelfand-maurin.md)、[D07](D07-trace.md)、[D16](D16-path-integral-representation.md)；默认：D01
+> 下游：[D18](D18-density-matrix.md)、[D19](D19-temperature-period.md)
 > 原为 [N002 §2.4](../notes/N002-finite-temperature-path-integral.md)，2026-11-06 移入网格。
 
 ---

@@ -2,7 +2,7 @@
 
 > 建档 2026-11-08 · 类型：推导卡（含一条**公理**）——本卡唯一的新输入是 Born 规则，其余全部是定理
 > 上游：[D00](D00-commutator-axiom.md)（接口约定）、[D01](D01-spectral-theorem.md)（谱定理、函数演算）、[D02](D02-gelfand-maurin.md)（广义本征态、$E(B)$ 的密度）
-> 下游：[D04](D04-position-eigen-equation.md)、[D23](D23-uncertainty.md)
+> 下游：[D04](D04-position-eigen-equation.md)、[D20](D20-uncertainty.md)
 > 本卡补的是"数学怎么变成预言"的那一步。没有它，整个网格算不出一个可检验的数。
 
 ---

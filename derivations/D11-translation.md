@@ -1,7 +1,7 @@
-# D14 · 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$
+# D11 · 平移：$e^{ia\hat p}\lvert q\rangle=\lvert q-a\rangle$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)、[D09](D09-two-term-truncation.md)；默认：D05；旁证：D07、D08
-> 下游：[D15](D15-qp-overlap.md)
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D04](D04-position-eigen-equation.md)、[D06](D06-exponential-map-and-bch.md)；默认：D05；旁证：D08
+> 下游：[D12](D12-qp-overlap.md)
 > 原为 [N004 §6.1](../notes/N004-hadamard-lemma.md)，2026-11-06 移入网格。
 
 ---
@@ -41,7 +41,7 @@ $$
 [A,B]=ia[\hat p,\hat q]=ia\cdot(-i)=a
 $$
 
-$a$ 是数，于是由 [D09](D09-two-term-truncation.md)（两项截断）：
+$a$ 是数，于是由 [D06](D06-exponential-map-and-bch.md)（两项截断）：
 
 $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+[A,B]=\hat q+a
@@ -103,9 +103,9 @@ $$
 
 ### 1.4 顺带：用平移验证 $[\hat p,f(\hat q)]=-if'$
 
-本卡只用到更早的卡（[D07](D07-commutator-p-fq.md)、[D08](D08-hadamard-lemma.md)），所以这条验证放在这里，不放回 D07。
+本卡只用到更早的卡（[D08](D08-commutator-p-fq.md)、[D06](D06-exponential-map-and-bch.md)），所以这条验证放在这里，不放回 D08。
 
-由平移公式与 [D08](D08-hadamard-lemma.md)（Hadamard 引理）：
+由平移公式与 [D06](D06-exponential-map-and-bch.md)（Hadamard 引理）：
 
 $$
 e^{ia\hat p}\,\hat q\,e^{-ia\hat p}=\hat q+a
@@ -135,7 +135,7 @@ $$
 | $a=0$ | 两边都是 $\lvert q\rangle$ ✅ |
 | 群律 | $e^{i(a+b)\hat p}=e^{ia\hat p}e^{ib\hat p}$：两次平移分别把 $q$ 移到 $q-a$、$q-a-b$，合起来是 $e^{i(a+b)\hat p}\lvert q\rangle=\lvert q-a-b\rangle$ ✅ |
 | 波函数形式 | $\langle q'\lvert e^{ia\hat p}\lvert q\rangle=\delta(q'-q+a)$；而 $\langle q'\lvert q-a\rangle=\delta(q'-q+a)$ ✅ |
-| 波函数平移 | 由 [D07](D07-commutator-p-fq.md) 的 $\mathrm{ad}_{\hat p}=-i\partial_q$，平移对 $\psi$ 的作用是 $\psi(q)\to\psi(q+a)$ ✅ |
+| 波函数平移 | 由 [D08](D08-commutator-p-fq.md) 的 $\mathrm{ad}_{\hat p}=-i\partial_q$，平移对 $\psi$ 的作用是 $\psi(q)\to\psi(q+a)$ ✅ |
 | 谱不变 | 共轭保持谱，$\hat q$ 与 $\hat q+a$ 的谱都是 $\mathbb{R}$ ✅ |
 
 ---

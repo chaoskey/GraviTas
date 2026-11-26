@@ -2,7 +2,7 @@
 
 > 建档 2026-11-07 · 类型：**公理卡**——整个网格的输入，不是推导
 > 上游：无（只用定义与标准谱论事实，不依赖网格中任何卡片）
-> 下游：[D01](D01-spectral-theorem.md)、[D02](D02-gelfand-maurin.md)、[D03](D03-born-rule.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-functional-calculus-and-kernel.md)、[D07](D07-commutator-p-fq.md)、[D12](D12-weyl-phase.md)、[D14](D14-translation.md)、[D15](D15-qp-overlap.md)、[D17](D17-momentum-representation.md)、[D18](D18-hamiltonian.md)、[D19](D19-path-integral-representation.md)、[D23](D23-uncertainty.md)
+> 下游：[D01](D01-spectral-theorem.md)、[D02](D02-gelfand-maurin.md)、[D03](D03-born-rule.md)、[D04](D04-position-eigen-equation.md)、[D05](D05-functional-calculus-and-kernel.md)、[D08](D08-commutator-p-fq.md)、[D09](D09-weyl-phase.md)、[D11](D11-translation.md)、[D12](D12-qp-overlap.md)、[D14](D14-momentum-representation.md)、[D15](D15-hamiltonian.md)、[D16](D16-path-integral-representation.md)、[D20](D20-uncertainty.md)
 > 编号规则见 [derivations/README](README.md)：D00 保留给公理，D01 起按拓扑序。
 
 ---

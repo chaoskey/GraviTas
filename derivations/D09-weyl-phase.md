@@ -1,7 +1,7 @@
-# D12 · Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$
+# D09 · Weyl 相位：$e^{ia\hat p}e^{ib\hat q}=e^{iab}e^{ib\hat q}e^{ia\hat p}$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D10](D10-commutator-phase.md)；默认：D05
-> 下游：[D13](D13-stone-von-neumann.md)、[D15](D15-qp-overlap.md)
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D06](D06-exponential-map-and-bch.md)；默认：D05
+> 下游：[D10](D10-stone-von-neumann.md)、[D12](D12-qp-overlap.md)
 > 原为 [N004 §5](../notes/N004-hadamard-lemma.md) 尾部，2026-11-06 移入网格。
 
 ---
@@ -31,7 +31,7 @@ $$
 
 ## 1. 证明
 
-由 [D10](D10-commutator-phase.md)：若 $[A,B]=c$ 是数，则 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。
+由 [D06](D06-exponential-map-and-bch.md)：若 $[A,B]=c$ 是数，则 $e^{A}e^{B}=e^{c}e^{B}e^{A}$。
 
 取
 
@@ -46,7 +46,7 @@ $$
 =-ab\cdot(-i)=iab
 $$
 
-于是 $c=iab$ 是数，代入 D10：
+于是 $c=iab$ 是数，代入 D06：
 
 $$
 \boxed{\,e^{ia\hat p}\,e^{ib\hat q}=e^{iab}\,e^{ib\hat q}\,e^{ia\hat p}\,}
@@ -60,7 +60,7 @@ $$
 
 ### 1.6 反过来：从 Weyl 关系回到对易子
 
-本卡的关系可以"求导"回到 [D00](D00-commutator-axiom.md) 的公理。**这一步是 D12 与 D00 的接缝**，放在这里而不是 D00，是因为它用的全是 Weyl 关系。
+本卡的关系可以"求导"回到 [D00](D00-commutator-axiom.md) 的公理。**这一步是 D09 与 D00 的接缝**，放在这里而不是 D00，是因为它用的全是 Weyl 关系。
 
 **前提**：$U(a)=e^{ia\hat p}$、$V(b)=e^{ib\hat q}$ 强连续（Stone 定理给出生成元）；$\psi$ 取在公共不变稠密域内。
 
@@ -116,7 +116,7 @@ $$
 | 检验 | 结果 |
 |---|---|
 | $a=0$ 或 $b=0$ | 因子为 $1$，两边相等 ✅ |
-| 与 [D10](D10-commutator-phase.md) 一致 | $c=iab$ 直接代回 ✅ |
+| 与 [D06](D06-exponential-map-and-bch.md) 一致 | $c=iab$ 直接代回 ✅ |
 | 两式相除 | $e^{iab}/e^{-iab}=e^{2iab}$，与"$q$ 在前"版本相差 $e^{2iab}$ ✅ |
 | 与 $[\hat p,\hat q]=-i$ 一致 | 若误用 $[\hat p,\hat q]=+i$，会得 $e^{-iab}$，与平移方向矛盾 |
 | 模长 | $\lvert e^{iab}\rvert=1$（$a,b$ 实），两边都是酉算子 ✅ |
@@ -134,7 +134,7 @@ $$
 W(a,b)\,W(a',b')=e^{-\frac{i}{2}(ab'-ba')}\,W(a+a',b+b')
 $$
 
-相位里的 $ab'-ba'$ 是相空间辛形式。**注意这里出现 $1/2$**，与本卡的 $e^{iab}$ 不矛盾：那个 $1/2$ 是"与对称中点比"的结果（见 [D11](D11-three-bch-forms.md) §0），这里是"两个群元相乘"。两条不同的比较，各自的系数不同。
+相位里的 $ab'-ba'$ 是相空间辛形式。**注意这里出现 $1/2$**，与本卡的 $e^{iab}$ 不矛盾：那个 $1/2$ 是"与对称中点比"的结果（见 [D06](D06-exponential-map-and-bch.md) §0），这里是"两个群元相乘"。两条不同的比较，各自的系数不同。
 
 5. **无穷自由度时失效。** 无穷自由度下不可约表示不唯一，本式只在指定表示（如 Fock 表示）内有意义。
 

@@ -1,7 +1,7 @@
-# D19 · 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$
+# D16 · 路径积分表示：$\langle q_f\lvert e^{-\beta H}\lvert q_i\rangle=\int\mathcal{D}q\,e^{-S_E}$
 
-> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D05](D05-functional-calculus-and-kernel.md)、[D15](D15-qp-overlap.md)、[D16](D16-p-completeness.md)、[D18](D18-hamiltonian.md)；默认：D01
-> 下游：[D20](D20-trace-is-loop.md)、[D22](D22-temperature-period.md)
+> 建档 2026-11-06 · 上游：[D00](D00-commutator-axiom.md)、[D02](D02-gelfand-maurin.md)、[D05](D05-functional-calculus-and-kernel.md)、[D12](D12-qp-overlap.md)、[D13](D13-p-completeness.md)、[D15](D15-hamiltonian.md)；默认：D01
+> 下游：[D17](D17-trace-is-loop.md)、[D19](D19-temperature-period.md)
 > 原为 [N002 §2.1–2.3](../notes/N002-finite-temperature-path-integral.md)，2026-11-06 移入网格。
 
 ---
@@ -57,7 +57,7 @@ $$
 e^{-\varepsilon H}=e^{-\varepsilon V(\hat q)}\,e^{-\varepsilon\hat p^{2}/2m}\left(1+\mathcal{O}(\varepsilon^{2})\right)
 $$
 
-$e^{-\varepsilon V}$ 在 $q$ 基下对角，给出 $e^{-\varepsilon V(q')}\delta(q'-q'')$。动能部分插入动量完备性 $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$，并用 [D15](D15-qp-overlap.md) 的 $\langle q\lvert p\rangle=e^{ipq}$：
+$e^{-\varepsilon V}$ 在 $q$ 基下对角，给出 $e^{-\varepsilon V(q')}\delta(q'-q'')$。动能部分插入动量完备性 $\int\frac{dp}{2\pi}\lvert p\rangle\langle p\rvert=\mathbb{1}$，并用 [D12](D12-qp-overlap.md) 的 $\langle q\lvert p\rangle=e^{ipq}$：
 
 $$
 \langle q'\lvert e^{-\varepsilon H}\lvert q\rangle
